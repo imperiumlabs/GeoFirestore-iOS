@@ -1,0 +1,10 @@
+framework module Geofirestore {
+  umbrella header "Geofirestore.h"
+
+  export *
+  module * { export * }
+}
+
+module Geofirestore.__Swift {
+    exclude header "Geofirestore-Swift.h"
+}

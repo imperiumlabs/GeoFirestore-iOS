@@ -13,15 +13,28 @@ import Firebase
 import FirebaseFirestore
 import GeoFire
 
-typealias GFQueryCallback = (() -> Void)
+//Creates a GeoFirestore instance.
 
 class Geofirestore {
-    var geofirestoreCollectionRef: CollectionReference!
     
-    init(collectionRef: CollectionReference!) {
-        self.geofirestoreCollectionRef = collectionRef
+    public typealias Block = () -> Void
+    public typealias AddBlock = (DocumentReference) -> Void
+
+    private var _collectionRef: CollectionReference!
+    
+    init(_collectionRef: CollectionReference) {
+        self._collectionRef = _collectionRef
+
+    }
+    
+    //PUBLIC METHODS
+    
+    //Adds document to Firestore
+    
+    func add(document: DocumentReference, customKey: String? = nil, completionHandler: AddBlock? = nil){
         
     }
+    
     
 }
 

@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': '/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/Geofirestore.framework/Modules'
+    'contents': [{
+      'type': 'file',
+      'name': 'module.modulemap',
+      'external-contents': '/Users/nikhilsridhar/Desktop/Geofirestore/Build/Intermediates/Geofirestore.build/Debug-iphonesimulator/Geofirestore.build/unextended-module.modulemap',
+    }]
+  }]
+}

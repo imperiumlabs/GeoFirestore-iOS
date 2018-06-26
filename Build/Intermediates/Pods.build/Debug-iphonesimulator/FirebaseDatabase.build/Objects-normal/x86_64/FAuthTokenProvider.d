@@ -1,0 +1,36 @@
+dependencies: \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Login/FAuthTokenProvider.m \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Build/Intermediates/Pods.build/Debug-iphonesimulator/FirebaseDatabase.build/module.modulemap \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Login/FAuthTokenProvider.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Utilities/FTypedefs.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Api/Private/FTypedefs_Private.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Utilities/FUtilities.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Utilities/FParsedUrl.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Core/FRepoInfo.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Core/Utilities/FPath.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Build/Intermediates/Pods.build/Debug-iphonesimulator/FirebaseCore.build/module.modulemap \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseCore/Firebase/Core/Private/FIRAppInternal.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseCore/Firebase/Core/Public/FIROptions.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseCore/Firebase/Core/Public/FirebaseCore.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseCore/Firebase/Core/Public/FIRLoggerLevel.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseCore/Firebase/Core/Public/FIRConfiguration.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseCore/Firebase/Core/Public/FIRApp.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseCore/Firebase/Core/Public/FIRAnalyticsConfiguration.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/Target\ Support\ Files/FirebaseCore/FirebaseCore-umbrella.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseCore/Firebase/Core/Private/FIRErrors.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseCore/Firebase/Core/Private/FIRErrorCode.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseCore/Firebase/Core/Private/FIRLogger.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Api/Private/FIRDatabaseQuery_Private.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Core/FRepo.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Core/FPersistentConnection.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Realtime/FConnection.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Realtime/FWebSocketConnection.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/third_party/SocketRocket/FSRWebSocket.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Public/FIRDataEventType.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Utilities/Tuples/FTupleUserCallback.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Core/FQueryParams.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Core/FRepoManager.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Api/FIRDatabaseConfig.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Public/FIRDatabaseQuery.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Public/FIRDataSnapshot.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Login/FIRNoopAuthTokenProvider.h

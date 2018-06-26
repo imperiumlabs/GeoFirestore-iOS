@@ -1,0 +1,21 @@
+dependencies: \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Core/FQueryParams.m \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Build/Intermediates/Pods.build/Debug-iphonesimulator/FirebaseDatabase.build/module.modulemap \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Core/FQueryParams.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Utilities/FValidation.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Core/Utilities/FPath.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Public/FIRDataEventType.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Utilities/FParsedUrl.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Core/FRepoInfo.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Utilities/FTypedefs.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Constants/FConstants.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/FIndex.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/FPriorityIndex.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Utilities/FUtilities.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Core/View/Filter/FNodeFilter.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Core/View/Filter/FIndexedFilter.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Core/View/Filter/FLimitedFilter.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/FRangedFilter.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Snapshot/FNode.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Api/Private/FTypedefs_Private.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseDatabase/Firebase/Database/Snapshot/FSnapshotUtilities.h

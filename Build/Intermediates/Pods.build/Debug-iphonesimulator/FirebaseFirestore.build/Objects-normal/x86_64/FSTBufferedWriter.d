@@ -1,0 +1,31 @@
+dependencies: \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseFirestore/Firestore/Source/Remote/FSTBufferedWriter.mm \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/Protobuf/objectivec/GPBProtocolBuffers.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/Protobuf/objectivec/GPBBootstrap.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/Protobuf/objectivec/GPBArray.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/Protobuf/objectivec/GPBRuntimeTypes.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/Protobuf/objectivec/GPBCodedInputStream.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/Protobuf/objectivec/GPBCodedOutputStream.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/Protobuf/objectivec/GPBWireFormat.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/Protobuf/objectivec/GPBDescriptor.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/Protobuf/objectivec/GPBDictionary.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/Protobuf/objectivec/GPBExtensionRegistry.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/Protobuf/objectivec/GPBMessage.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/Protobuf/objectivec/GPBRootObject.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/Protobuf/objectivec/GPBUnknownField.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/Protobuf/objectivec/GPBUnknownFieldSet.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/Protobuf/objectivec/GPBUtilities.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/Protobuf/objectivec/GPBWellKnownTypes.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/Protobuf/objectivec/google/protobuf/Any.pbobjc.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/Protobuf/objectivec/google/protobuf/Duration.pbobjc.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/Protobuf/objectivec/google/protobuf/Timestamp.pbobjc.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/Protobuf/objectivec/google/protobuf/Api.pbobjc.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/Protobuf/objectivec/google/protobuf/Empty.pbobjc.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/Protobuf/objectivec/google/protobuf/FieldMask.pbobjc.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/Protobuf/objectivec/google/protobuf/SourceContext.pbobjc.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/Protobuf/objectivec/google/protobuf/Struct.pbobjc.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/Protobuf/objectivec/google/protobuf/Type.pbobjc.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/Protobuf/objectivec/google/protobuf/Wrappers.pbobjc.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseFirestore/Firestore/Source/Remote/FSTBufferedWriter.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/gRPC-RxLibrary/RxLibrary.framework/Headers/GRXWriteable.h \
+  /Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/gRPC-RxLibrary/RxLibrary.framework/Headers/GRXWriter.h
