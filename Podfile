@@ -8,6 +8,7 @@ target 'Geofirestore' do
   # Pods for Geofirestore
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
+  
   target 'GeofirestoreTests' do
     inherit! :search_paths
     # Pods for testing
