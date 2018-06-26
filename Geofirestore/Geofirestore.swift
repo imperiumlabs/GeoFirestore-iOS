@@ -11,6 +11,7 @@ import UIKit
 import CoreLocation
 import Firebase
 import FirebaseFirestore
+import GeoFire
 
 typealias GFQueryCallback = (() -> Void)
 
@@ -19,6 +20,7 @@ class Geofirestore {
     
     init(collectionRef: CollectionReference!) {
         self.geofirestoreCollectionRef = collectionRef
+        
     }
     
 }
