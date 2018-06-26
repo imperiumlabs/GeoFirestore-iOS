@@ -10,6 +10,7 @@
 		678FB6CA20E2C939003780F5 /* Geofirestore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 678FB6C020E2C939003780F5 /* Geofirestore.framework */; };
 		678FB6CF20E2C939003780F5 /* GeofirestoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678FB6CE20E2C939003780F5 /* GeofirestoreTests.swift */; };
 		678FB6D120E2C939003780F5 /* Geofirestore.h in Headers */ = {isa = PBXBuildFile; fileRef = 678FB6C320E2C939003780F5 /* Geofirestore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		678FB6DB20E2CA42003780F5 /* Geofirestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678FB6DA20E2CA42003780F5 /* Geofirestore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		678FB6C920E2C939003780F5 /* GeofirestoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeofirestoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		678FB6CE20E2C939003780F5 /* GeofirestoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofirestoreTests.swift; sourceTree = "<group>"; };
 		678FB6D020E2C939003780F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		678FB6DA20E2CA42003780F5 /* Geofirestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geofirestore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				678FB6C320E2C939003780F5 /* Geofirestore.h */,
 				678FB6C420E2C939003780F5 /* Info.plist */,
+				678FB6DA20E2CA42003780F5 /* Geofirestore.swift */,
 			);
 			path = Geofirestore;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					678FB6BF20E2C939003780F5 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					678FB6C820E2C939003780F5 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -194,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				678FB6DB20E2CA42003780F5 /* Geofirestore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +344,8 @@
 		678FB6D520E2C939003780F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -353,9 +360,10 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nikkubaby.Geofirestore;
+				PRODUCT_BUNDLE_IDENTIFIER = nikhildhruv.Geofirestore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +372,8 @@
 		678FB6D620E2C939003780F5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -378,7 +388,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nikkubaby.Geofirestore;
+				PRODUCT_BUNDLE_IDENTIFIER = nikhildhruv.Geofirestore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -389,6 +399,7 @@
 		678FB6D820E2C939003780F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VQXC654T2W;
 				INFOPLIST_FILE = GeofirestoreTests/Info.plist;
@@ -407,6 +418,7 @@
 		678FB6D920E2C939003780F5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VQXC654T2W;
 				INFOPLIST_FILE = GeofirestoreTests/Info.plist;
