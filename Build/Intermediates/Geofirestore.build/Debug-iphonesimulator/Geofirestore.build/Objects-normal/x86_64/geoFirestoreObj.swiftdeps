@@ -1,11 +1,28 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
+- "GeoFirestoreObj"
 provides-nominal:
+- "12Geofirestore15GeoFirestoreObjC"
 provides-member:
+- ["12Geofirestore15GeoFirestoreObjC", ""]
 provides-dynamic-lookup:
 depends-top-level:
+- "AssignmentPrecedence"
+- "Docu"
+- "GeoFirestoreObj"
+- "GeoPoint"
+- "String"
 depends-member:
+- ["12Geofirestore15GeoFirestoreObjC", "Docu"]
+- ["12Geofirestore15GeoFirestoreObjC", "GeoPoint"]
+- ["12Geofirestore15GeoFirestoreObjC", "String"]
+- !private ["12Geofirestore15GeoFirestoreObjC", "d"]
+- ["12Geofirestore15GeoFirestoreObjC", "deinit"]
+- ["12Geofirestore15GeoFirestoreObjC", "g"]
+- ["12Geofirestore15GeoFirestoreObjC", "init"]
+- ["12Geofirestore15GeoFirestoreObjC", "l"]
 depends-nominal:
+- "12Geofirestore15GeoFirestoreObjC"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
@@ -21,11 +38,9 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/MapKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
-- "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/GeoFire/GeoFire.framework/Headers/GeoFire-umbrella.h"
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore-umbrella.h"
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FirebaseFirestore-umbrella.h"
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FirebaseDatabase-umbrella.h"
@@ -37,7 +52,6 @@ depends-external:
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreSource.h"
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentChange.h"
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDataEventType.h"
-- "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/GeoFire/GeoFire.framework/Headers/GeoFire.h"
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore.h"
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestore.h"
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FirebaseFirestore.h"
@@ -46,12 +60,9 @@ depends-external:
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FirebaseDatabase.h"
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Pods/Firebase/CoreOnly/Sources/Firebase.h"
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
-- "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/GeoFire/GeoFire.framework/Headers/GeoFire+Private.h"
-- "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/GeoFire/GeoFire.framework/Headers/GFQuery+Private.h"
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFieldValue.h"
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRServerValue.h"
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRWriteBatch.h"
-- "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/GeoFire/GeoFire.framework/Headers/GFGeoHash.h"
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFieldPath.h"
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRLoggerLevel.h"
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRListenerRegistration.h"
@@ -66,7 +77,6 @@ depends-external:
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreSettings.h"
-- "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/GeoFire/GeoFire.framework/Headers/GFBase32Utils.h"
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIROptions.h"
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreErrors.h"
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
@@ -75,16 +85,11 @@ depends-external:
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentSnapshot.h"
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRQuerySnapshot.h"
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsSwiftNameSupport.h"
-- "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/GeoFire/GeoFire.framework/Headers/GFQuery.h"
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRQuery.h"
-- "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/GeoFire/GeoFire.framework/Headers/GFCircleQuery.h"
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
-- "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/GeoFire/GeoFire.framework/Headers/GFGeoHashQuery.h"
-- "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/GeoFire/GeoFire.framework/Headers/GFRegionQuery.h"
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Intermediates/Geofirestore.build/Debug-iphonesimulator/Geofirestore.build/unextended-module.modulemap"
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Pods/Firebase/CoreOnly/Sources/module.modulemap"
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
-- "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/GeoFire/GeoFire.framework/Modules/module.modulemap"
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Modules/module.modulemap"
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Modules/module.modulemap"
 - "/Users/nikhilsridhar/Desktop/Geofirestore/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Modules/module.modulemap"
@@ -99,6 +104,5 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "5bf39d8b5f0094ca83c744a0da4fb204"
+interface-hash: "734c237e47a05d416b44c04301319a1d"

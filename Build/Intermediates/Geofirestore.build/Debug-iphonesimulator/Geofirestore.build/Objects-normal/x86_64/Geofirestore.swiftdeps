@@ -9,23 +9,52 @@ provides-dynamic-lookup:
 depends-top-level:
 - "AssignmentPrecedence"
 - "CollectionReference"
-- "DocumentReference"
+- "Double"
+- "Error"
+- "GeoPoint"
 - "Geofirestore"
 - "String"
 - "Void"
 depends-member:
-- ["12GeofirestoreAAC", "AddBlock"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s9EquatableP", "init"]
+- !private ["So8GeoPointC", "init"]
 - ["12GeofirestoreAAC", "Block"]
 - ["12GeofirestoreAAC", "CollectionReference"]
-- ["12GeofirestoreAAC", "DocumentReference"]
+- ["12GeofirestoreAAC", "Double"]
+- ["12GeofirestoreAAC", "Error"]
+- ["12GeofirestoreAAC", "GeoPoint"]
+- ["12GeofirestoreAAC", "LocationBlock"]
 - ["12GeofirestoreAAC", "String"]
 - ["12GeofirestoreAAC", "Void"]
-- !private ["12GeofirestoreAAC", "_collectionRef"]
-- ["12GeofirestoreAAC", "add"]
+- ["12GeofirestoreAAC", "collectionRef"]
 - ["12GeofirestoreAAC", "deinit"]
+- ["12GeofirestoreAAC", "distance"]
+- ["12GeofirestoreAAC", "getCollectionReference"]
+- ["12GeofirestoreAAC", "getLocationForDocument"]
 - ["12GeofirestoreAAC", "init"]
+- ["12GeofirestoreAAC", "query"]
+- ["12GeofirestoreAAC", "removeLocationForDocument"]
+- ["12GeofirestoreAAC", "setLocationForDocument"]
+- !private ["s8HashableP", "init"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 depends-nominal:
+- !private "s7CVarArgP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s23CustomStringConvertibleP"
+- !private "s9EquatableP"
+- !private "So8GeoPointC"
 - "12GeofirestoreAAC"
+- !private "s8HashableP"
+- !private "So9NSCopyingP"
+- !private "So8NSObjectC"
+- !private "So16NSObjectProtocolP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
@@ -121,4 +150,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "44d6600f1a19ecabdd7399f1223ebfc3"
+interface-hash: "e055246b56ec6b1a2ec6bfe3986fc6b2"

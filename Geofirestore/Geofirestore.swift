@@ -2,39 +2,46 @@
 //  Geofirestore.swift
 //  Geofirestore
 //
-//  Created by Dhruv Shah on 6/26/18.
+//  Created by Nikhil Sridhar on 6/27/18.
 //  Copyright © 2018 hello. All rights reserved.
 //
 
 import Foundation
-import UIKit
-import CoreLocation
 import Firebase
-import FirebaseFirestore
-import GeoFire
-
-//Creates a GeoFirestore instance.
+import CoreLocation
 
 class Geofirestore {
     
-    public typealias Block = () -> Void
-    public typealias AddBlock = (DocumentReference) -> Void
-
-    private var _collectionRef: CollectionReference!
+    typealias Block = (Error?) -> Void
+    typealias LocationBlock = (GeoPoint?, Error?) -> Void
     
-    init(_collectionRef: CollectionReference) {
-        self._collectionRef = _collectionRef
+    var collectionRef: CollectionReference
 
+    init(collectionRef: CollectionReference) {
+        self.collectionRef = collectionRef
     }
     
-    //PUBLIC METHODS
+    func setLocationForDocument(withDocumentID documentID: String, location: GeoPoint, completion: Block? = nil){
+        let b = GeoPoint(latitude: 180, longitude: 200)
+    }
     
-    //Adds document to Firestore
-    
-    func add(document: DocumentReference, customKey: String? = nil, completionHandler: AddBlock? = nil){
+    func getLocationForDocument(withDocumentID documentID: String, completion: LocationBlock? = nil){
         
     }
     
+    func removeLocationForDocument(withDocumentID documentID: String, completion: Block? = nil){
+        
+    }
     
+    func getCollectionReference() -> CollectionReference{
+        return collectionRef
+    }
+    
+    func query(withCenter center: GeoPoint, radius: Double){
+        
+    }
+    
+    static func distance(location1: GeoPoint, location2: GeoPoint) -> Double{
+        return 0
+    }
 }
-

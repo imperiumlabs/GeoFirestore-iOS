@@ -1,8 +1,6 @@
 version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
 options: "7d427dc5ff421748ba51eb18216ec6fb"
-build_time: [1530056779, 212062000]
+build_time: [1530117881, 175984000]
 inputs:
-  "/Users/nikhilsridhar/Desktop/Geofirestore/Geofirestore/Geofirestore.swift": [1530053094, 0]
-  "/Users/nikhilsridhar/Desktop/Geofirestore/Geofirestore/GFSRegionQuery.swift": [1530053221, 0]
-  "/Users/nikhilsridhar/Desktop/Geofirestore/Geofirestore/GFSQuery.swift": [1530056777, 0]
-  "/Users/nikhilsridhar/Desktop/Geofirestore/Geofirestore/GFSCircleQuery.swift": [1530053239, 0]
+  "/Users/nikhilsridhar/Desktop/Geofirestore/Geofirestore/Utils.swift": [1530117879, 0]
+  "/Users/nikhilsridhar/Desktop/Geofirestore/Geofirestore/Geofirestore.swift": [1530115084, 0]
