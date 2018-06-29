@@ -1,6 +1,5 @@
 version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
-options: "7d427dc5ff421748ba51eb18216ec6fb"
-build_time: [1530117881, 175984000]
+options: "e6e3231d86ef901a4436d800498e38ce"
+build_time: [1530299038, 21875000]
 inputs:
-  "/Users/nikhilsridhar/Desktop/Geofirestore/Geofirestore/Utils.swift": [1530117879, 0]
-  "/Users/nikhilsridhar/Desktop/Geofirestore/Geofirestore/Geofirestore.swift": [1530115084, 0]
+  "/Users/nikhilsridhar/Desktop/Geofirestore/Geofirestore/Geofirestore.swift": !dirty [1530298550, 0]
