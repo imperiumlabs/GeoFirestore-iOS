@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		37E8458111C69BFEC530436E /* Pods_GeofirestoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 344238C71EDDD67EEE8B1113 /* Pods_GeofirestoreTests.framework */; };
-		5809C90C20E3115D006F4B24 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5809C90B20E3115D006F4B24 /* Utils.swift */; };
 		5809C90E20E3E449006F4B24 /* Geofirestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5809C90D20E3E449006F4B24 /* Geofirestore.swift */; };
 		678FB6CA20E2C939003780F5 /* Geofirestore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 678FB6C020E2C939003780F5 /* Geofirestore.framework */; };
 		678FB6CF20E2C939003780F5 /* GeofirestoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678FB6CE20E2C939003780F5 /* GeofirestoreTests.swift */; };
@@ -28,7 +27,6 @@
 
 /* Begin PBXFileReference section */
 		344238C71EDDD67EEE8B1113 /* Pods_GeofirestoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeofirestoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5809C90B20E3115D006F4B24 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		5809C90D20E3E449006F4B24 /* Geofirestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geofirestore.swift; sourceTree = "<group>"; };
 		678FB6C020E2C939003780F5 /* Geofirestore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Geofirestore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		678FB6C320E2C939003780F5 /* Geofirestore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Geofirestore.h; sourceTree = "<group>"; };
@@ -75,13 +73,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		5809C90020E30C1F006F4B24 /* Interfaces */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Interfaces;
-			sourceTree = "<group>";
-		};
 		61220803F84088D6BD617C1F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,11 +105,9 @@
 		678FB6C220E2C939003780F5 /* Geofirestore */ = {
 			isa = PBXGroup;
 			children = (
-				5809C90020E30C1F006F4B24 /* Interfaces */,
 				678FB6C320E2C939003780F5 /* Geofirestore.h */,
 				5809C90D20E3E449006F4B24 /* Geofirestore.swift */,
 				678FB6C420E2C939003780F5 /* Info.plist */,
-				5809C90B20E3115D006F4B24 /* Utils.swift */,
 			);
 			path = Geofirestore;
 			sourceTree = "<group>";
@@ -317,7 +306,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5809C90C20E3115D006F4B24 /* Utils.swift in Sources */,
 				5809C90E20E3E449006F4B24 /* Geofirestore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

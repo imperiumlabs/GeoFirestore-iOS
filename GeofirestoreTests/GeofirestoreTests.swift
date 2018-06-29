@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import CoreLocation
 @testable import Geofirestore
 
 class GeofirestoreTests: XCTestCase {
@@ -35,7 +36,7 @@ class GeofirestoreTests: XCTestCase {
     }
     
     func testRest() {
-        rest()
+
     }
     
 }
