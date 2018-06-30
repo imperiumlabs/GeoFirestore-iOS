@@ -4,7 +4,7 @@ import Firebase
 import GeoFire
 
 // COMPLETE
-extension GeoPoint {
+public extension GeoPoint {
     class func geopointWithLocation(location: CLLocation) -> GeoPoint {
         return GeoPoint(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
     }
@@ -15,7 +15,7 @@ extension GeoPoint {
 }
 
 // COMPLETE
-extension CLLocation {
+public extension CLLocation {
     class func locationWithGeopoint(geopoint: GeoPoint) -> CLLocation {
         return CLLocation(latitude: geopoint.latitude, longitude: geopoint.longitude)
     }
@@ -26,7 +26,7 @@ extension CLLocation {
 }
 
 
-class GeoFirestore {
+public class GeoFirestore {
     
     typealias GFSCompletionBlock = (Error?) -> Void
     typealias GFSLocationCallback = (CLLocation?, Error?) -> Void
@@ -42,17 +42,17 @@ class GeoFirestore {
     }
     
     // COMPLETE
-    func getCollectionReference() -> CollectionReference {
+    public func getCollectionReference() -> CollectionReference {
         return collectionRef
     }
     
     // COMPLETE
-    func setLocation(geopoint: GeoPoint, forDocumentWithID documentID: String, completion: GFSCompletionBlock? = nil) {
+    public func setLocation(geopoint: GeoPoint, forDocumentWithID documentID: String, completion: GFSCompletionBlock? = nil) {
         setLocation(location: geopoint.locationValue(), forDocumentWithID: documentID, completion: completion)
     }
     
     // COMPLETE
-    func setLocation(location: CLLocation, forDocumentWithID documentID: String, completion: GFSCompletionBlock? = nil) {
+    public func setLocation(location: CLLocation, forDocumentWithID documentID: String, completion: GFSCompletionBlock? = nil) {
         if CLLocationCoordinate2DIsValid(location.coordinate) {
             let lat = location.coordinate.latitude
             let lon = location.coordinate.longitude
@@ -69,7 +69,7 @@ class GeoFirestore {
     }
     
     // COMPLETE
-    func getLocation(forDocumentWithID documentID: String, callback: GFSLocationCallback? = nil) {
+    public func getLocation(forDocumentWithID documentID: String, callback: GFSLocationCallback? = nil) {
         self.collectionRef.document(documentID).getDocument { (snap, err) in
             let l = snap?.get("l") as? [Double?]
             if let lat = l?[0], let lon = l?[1] {
@@ -81,7 +81,7 @@ class GeoFirestore {
     }
     
     // COMPLETE
-    func getLocation(forDocumentWithID documentID: String, callback: GFSGeoPointCallback? = nil) {
+    public func getLocation(forDocumentWithID documentID: String, callback: GFSGeoPointCallback? = nil) {
         self.collectionRef.document(documentID).getDocument { (snap, err) in
             let l = snap?.get("l") as? [Double?]
             if let lat = l?[0], let lon = l?[1] {
@@ -93,17 +93,17 @@ class GeoFirestore {
     }
     
     // COMPLETE
-    func query(withCenter center: GeoPoint, radius: Double) -> GFSCircleQuery {
+    public func query(withCenter center: GeoPoint, radius: Double) -> GFSCircleQuery {
         return GFSCircleQuery(geoFirestore: self, center: center.locationValue(), radius: radius)
     }
     
     // COMPLETE
-    func query(withCenter center: CLLocation, radius: Double) -> GFSCircleQuery {
+    public func query(withCenter center: CLLocation, radius: Double) -> GFSCircleQuery {
         return GFSCircleQuery(geoFirestore: self, center: center, radius: radius)
     }
     
     // COMPLETE
-    func query(inRegion region: MKCoordinateRegion) -> GFSRegionQuery{
+    public func query(inRegion region: MKCoordinateRegion) -> GFSRegionQuery{
         return GFSRegionQuery(geoFirestore: self, region: region)
     }
     
@@ -112,15 +112,15 @@ class GeoFirestore {
 
 
 // COMPLETE
-enum GFSEventType {
+public enum GFSEventType {
     case documentEntered
     case documentExited
     case documentMoved
 }
 
-typealias GFSQueryResultBlock = (String?, CLLocation?) -> Void
-typealias GFSReadyBlock = () -> Void
-typealias GFSQueryHandle = UInt
+public typealias GFSQueryResultBlock = (String?, CLLocation?) -> Void
+public typealias GFSReadyBlock = () -> Void
+public typealias GFSQueryHandle = UInt
 
 internal class GFSGeoHashQueryListener {
     var childAddedListener: ListenerRegistration?
@@ -130,14 +130,14 @@ internal class GFSGeoHashQueryListener {
 
 
 
-class GFSQuery {
+public class GFSQuery {
     internal class GFSQueryLocationInfo {
         var isInQuery: Bool?
         var location: CLLocation?
         var geoHash: GFGeoHash?
     }
     
-    var geoFirestore: GeoFirestore
+    public var geoFirestore: GeoFirestore
     
     internal var locationInfos = [String: GFSQueryLocationInfo]()
     internal var queries = Set<GFGeoHashQuery>()
@@ -159,7 +159,7 @@ class GFSQuery {
     }
     
     // COMPLETE
-    func fireStoreQueryForGeoHashQuery(query: GFGeoHashQuery) -> Query {
+    internal func fireStoreQueryForGeoHashQuery(query: GFGeoHashQuery) -> Query {
         return self.geoFirestore.collectionRef.whereField("g", isGreaterThanOrEqualTo: query.startValue).whereField("g", isLessThanOrEqualTo: query.endValue)
     }
     
@@ -173,7 +173,7 @@ class GFSQuery {
     }
     
     // COMPLETE
-    func updateLocationInfo(_ location: CLLocation, forKey key: String) {
+    internal func updateLocationInfo(_ location: CLLocation, forKey key: String) {
         var info: GFSQueryLocationInfo? = locationInfos[key]
         var isNew = false
         if info == nil {
@@ -212,7 +212,7 @@ class GFSQuery {
     }
     
     // COMPLETE
-    func queriesContain(_ geoHash: GFGeoHash?) -> Bool {
+    internal func queriesContain(_ geoHash: GFGeoHash?) -> Bool {
         for query: GFGeoHashQuery? in queries {
             if query?.contains(geoHash) != nil {
                 return true
@@ -222,7 +222,7 @@ class GFSQuery {
     }
     
     // COMPLETE
-    func childAdded(_ snapshot: DocumentSnapshot?) {
+    internal func childAdded(_ snapshot: DocumentSnapshot?) {
         let lockQueue = DispatchQueue(label: "self")
         lockQueue.sync {
             
@@ -238,7 +238,7 @@ class GFSQuery {
     }
     
     // COMPLETE
-    func childChanged(_ snapshot: DocumentSnapshot?) {
+    internal func childChanged(_ snapshot: DocumentSnapshot?) {
         let lockQueue = DispatchQueue(label: "self")
         lockQueue.sync {
             
@@ -254,7 +254,7 @@ class GFSQuery {
     }
     
     // COMPLETE
-    func childRemoved(_ snapshot: DocumentSnapshot?) {
+    internal func childRemoved(_ snapshot: DocumentSnapshot?) {
         let lockQueue = DispatchQueue(label: "self")
         lockQueue.sync {
             
@@ -299,14 +299,14 @@ class GFSQuery {
     }
     
     // COMPLETE
-    func searchCriteriaDidChange() {
+    internal func searchCriteriaDidChange() {
         if !queries.isEmpty {
             updateQueries()
         }
     }
     
     // COMPLETE
-    func checkAndFireReadyEvent() {
+    internal func checkAndFireReadyEvent() {
         if outstandingQueries.count == 0 {
             for (offset: _, element: (key: _, value: block)) in readyObservers.enumerated() {
                 self.geoFirestore.callbackQueue.async {
@@ -317,7 +317,7 @@ class GFSQuery {
     }
     
     // COMPLETE
-    func updateQueries() {
+    internal func updateQueries() {
         let oldQueries = queries
         let newQueries = queriesForCurrentCriteria()
         
@@ -415,7 +415,7 @@ class GFSQuery {
     }
 
     // COMPLETE
-    func reset() {
+    internal func reset() {
         for query: GFGeoHashQuery? in queries {
             var handle: GFSGeoHashQueryListener? = nil
             if let aQuery = query {
@@ -444,12 +444,12 @@ class GFSQuery {
     
     
     // COMPLETE
-    func totalObserverCount() -> Int {
+    public func totalObserverCount() -> Int {
         return keyEnteredObservers.count + keyExitedObservers.count + keyMovedObservers.count + readyObservers.count
     }
     
     // COMPLETE
-    func observe(_ eventType: GFSEventType, with block: @escaping GFSQueryResultBlock) -> GFSQueryHandle {
+    public func observe(_ eventType: GFSEventType, with block: @escaping GFSQueryResultBlock) -> GFSQueryHandle {
         let lockQueue = DispatchQueue(label: "self")
         var firebaseHandle: GFSQueryHandle = 0
         lockQueue.sync {
@@ -486,7 +486,7 @@ class GFSQuery {
     }
     
     // COMPLETE
-    func observeReady(withBlock block: @escaping GFSReadyBlock) -> GFSQueryHandle {
+    public func observeReady(withBlock block: @escaping GFSReadyBlock) -> GFSQueryHandle {
         let lockQueue = DispatchQueue(label: "self")
         var firebaseHandle: GFSQueryHandle = 0
         lockQueue.sync {
@@ -506,7 +506,7 @@ class GFSQuery {
     }
     
     // COMPLETE
-    func removeObserver(withHandle handle: GFSQueryHandle) {
+    public func removeObserver(withHandle handle: GFSQueryHandle) {
         let lockQueue = DispatchQueue(label: "self")
         lockQueue.sync {
             
@@ -523,7 +523,7 @@ class GFSQuery {
     }
     
     // COMPLETE
-    func removeAllObservers() {
+    public func removeAllObservers() {
         let lockQueue = DispatchQueue(label: "self")
         lockQueue.sync {
             reset()
@@ -533,7 +533,7 @@ class GFSQuery {
 }
 
 // COMPLETE
-class GFSCircleQuery: GFSQuery {
+public class GFSCircleQuery: GFSQuery {
     var center: CLLocation
     var radius: Double
     
@@ -553,7 +553,7 @@ class GFSCircleQuery: GFSQuery {
 }
 
 // COMPLETE
-class GFSRegionQuery: GFSQuery {
+public class GFSRegionQuery: GFSQuery {
     var region: MKCoordinateRegion
     
     init(geoFirestore: GeoFirestore, region: MKCoordinateRegion) {

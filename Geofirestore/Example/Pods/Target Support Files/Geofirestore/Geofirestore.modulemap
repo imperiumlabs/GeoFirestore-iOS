@@ -1,0 +1,6 @@
+framework module Geofirestore {
+  umbrella header "Geofirestore-umbrella.h"
+
+  export *
+  module * { export * }
+}

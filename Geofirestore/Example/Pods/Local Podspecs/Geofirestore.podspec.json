@@ -1,0 +1,22 @@
+{
+  "name": "Geofirestore",
+  "version": "0.1.0",
+  "summary": "A short description of Geofirestore.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/dhruvshah1214/Geofirestore",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "dhruvshah1214": "dhruv.shah@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/dhruvshah1214/Geofirestore.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Geofirestore/Classes/**/*"
+}

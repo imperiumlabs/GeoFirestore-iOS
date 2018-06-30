@@ -1,0 +1,27 @@
+PODS:
+  - Geofirestore (0.1.0)
+  - Nimble (7.0.3)
+  - Quick (1.2.0)
+
+DEPENDENCIES:
+  - Geofirestore (from `../`)
+  - Nimble (~> 7.0.2)
+  - Quick (~> 1.2.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Nimble
+    - Quick
+
+EXTERNAL SOURCES:
+  Geofirestore:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Geofirestore: 832aa205178a4fc66ca70c4c2779a1e3d4c2963e
+  Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
+  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+
+PODFILE CHECKSUM: d61ab91739ca476f1fbe12e854366c537b8b1533
+
+COCOAPODS: 1.5.3
