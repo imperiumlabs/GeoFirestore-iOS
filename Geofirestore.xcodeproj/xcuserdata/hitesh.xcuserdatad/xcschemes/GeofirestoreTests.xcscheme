@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "0940"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -8,16 +8,16 @@
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F807203FDA48124BE5128764FC1FFE50"
-               BuildableName = "nanopb.framework"
-               BlueprintName = "nanopb"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               BlueprintIdentifier = "678FB6C820E2C939003780F5"
+               BuildableName = "GeofirestoreTests.xctest"
+               BlueprintName = "GeofirestoreTests"
+               ReferencedContainer = "container:Geofirestore.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "678FB6C820E2C939003780F5"
+               BuildableName = "GeofirestoreTests.xctest"
+               BlueprintName = "GeofirestoreTests"
+               ReferencedContainer = "container:Geofirestore.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "678FB6C820E2C939003780F5"
+            BuildableName = "GeofirestoreTests.xctest"
+            BlueprintName = "GeofirestoreTests"
+            ReferencedContainer = "container:Geofirestore.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -42,15 +61,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F807203FDA48124BE5128764FC1FFE50"
-            BuildableName = "nanopb.framework"
-            BlueprintName = "nanopb"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

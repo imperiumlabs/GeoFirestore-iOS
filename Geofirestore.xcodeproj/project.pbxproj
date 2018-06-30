@@ -12,6 +12,8 @@
 		678FB6CA20E2C939003780F5 /* Geofirestore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 678FB6C020E2C939003780F5 /* Geofirestore.framework */; };
 		678FB6CF20E2C939003780F5 /* GeofirestoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678FB6CE20E2C939003780F5 /* GeofirestoreTests.swift */; };
 		678FB6D120E2C939003780F5 /* Geofirestore.h in Headers */ = {isa = PBXBuildFile; fileRef = 678FB6C320E2C939003780F5 /* Geofirestore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67D6C3C520E83F1C009E57C1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67D6C3C420E83F1C009E57C1 /* GoogleService-Info.plist */; };
+		67D6C3C620E83F1C009E57C1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67D6C3C420E83F1C009E57C1 /* GoogleService-Info.plist */; };
 		B49719EE216AE644EA8F1425 /* Pods_Geofirestore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AF8BA3B0335A9E32C8FB16E /* Pods_Geofirestore.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +36,7 @@
 		678FB6C920E2C939003780F5 /* GeofirestoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeofirestoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		678FB6CE20E2C939003780F5 /* GeofirestoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofirestoreTests.swift; sourceTree = "<group>"; };
 		678FB6D020E2C939003780F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67D6C3C420E83F1C009E57C1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6EF1E257D167EE3A55CB08EF /* Pods-Geofirestore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geofirestore.release.xcconfig"; path = "Pods/Target Support Files/Pods-Geofirestore/Pods-Geofirestore.release.xcconfig"; sourceTree = "<group>"; };
 		733E256DCE4706BA8360D6E2 /* Pods-GeofirestoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeofirestoreTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeofirestoreTests/Pods-GeofirestoreTests.release.xcconfig"; sourceTree = "<group>"; };
 		8AF8BA3B0335A9E32C8FB16E /* Pods_Geofirestore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Geofirestore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +118,7 @@
 		678FB6CD20E2C939003780F5 /* GeofirestoreTests */ = {
 			isa = PBXGroup;
 			children = (
+				67D6C3C420E83F1C009E57C1 /* GoogleService-Info.plist */,
 				678FB6CE20E2C939003780F5 /* GeofirestoreTests.swift */,
 				678FB6D020E2C939003780F5 /* Info.plist */,
 			);
@@ -216,6 +220,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67D6C3C520E83F1C009E57C1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +228,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67D6C3C620E83F1C009E57C1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,7 +476,8 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nikhildhruv.Geofirestore;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.imperiumlabs.geofirestore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -500,7 +507,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nikhildhruv.Geofirestore;
+				PRODUCT_BUNDLE_IDENTIFIER = com.imperiumlabs.geofirestore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -513,6 +520,7 @@
 			baseConfigurationReference = EB779F3D3408E91219DD3099 /* Pods-GeofirestoreTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VQXC654T2W;
 				INFOPLIST_FILE = GeofirestoreTests/Info.plist;
@@ -521,8 +529,10 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = nikkubaby.GeofirestoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -533,6 +543,7 @@
 			baseConfigurationReference = 733E256DCE4706BA8360D6E2 /* Pods-GeofirestoreTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VQXC654T2W;
 				INFOPLIST_FILE = GeofirestoreTests/Info.plist;
@@ -543,6 +554,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = nikkubaby.GeofirestoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
