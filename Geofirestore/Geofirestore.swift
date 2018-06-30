@@ -26,7 +26,7 @@ extension CLLocation {
 }
 
 
-class GeoFireStore {
+class GeoFirestore {
     
     typealias GFSCompletionBlock = (Error?) -> Void
     typealias GFSLocationCallback = (CLLocation?, Error?) -> Void
@@ -94,17 +94,17 @@ class GeoFireStore {
     
     // COMPLETE
     func query(withCenter center: GeoPoint, radius: Double) -> GFSCircleQuery {
-        return GFSCircleQuery(geoFireStore: self, center: center.locationValue(), radius: radius)
+        return GFSCircleQuery(geoFirestore: self, center: center.locationValue(), radius: radius)
     }
     
     // COMPLETE
     func query(withCenter center: CLLocation, radius: Double) -> GFSCircleQuery {
-        return GFSCircleQuery(geoFireStore: self, center: center, radius: radius)
+        return GFSCircleQuery(geoFirestore: self, center: center, radius: radius)
     }
     
     // COMPLETE
     func query(inRegion region: MKCoordinateRegion) -> GFSRegionQuery{
-        return GFSRegionQuery(geoFireStore: self, region: region)
+        return GFSRegionQuery(geoFirestore: self, region: region)
     }
     
 }
@@ -137,7 +137,7 @@ class GFSQuery {
         var geoHash: GFGeoHash?
     }
     
-    var geoFireStore: GeoFireStore
+    var geoFirestore: GeoFirestore
     
     internal var locationInfos = [String: GFSQueryLocationInfo]()
     internal var queries = Set<GFGeoHashQuery>()
@@ -153,14 +153,14 @@ class GFSQuery {
     
     internal var listenerForHandle = [GFSQueryHandle: ListenerRegistration]()
     
-    internal init(geoFireStore: GeoFireStore) {
-        self.geoFireStore = geoFireStore
+    internal init(geoFirestore: GeoFirestore) {
+        self.geoFirestore = geoFirestore
         currentHandle = 1
     }
     
     // COMPLETE
     func fireStoreQueryForGeoHashQuery(query: GFGeoHashQuery) -> Query {
-        return self.geoFireStore.collectionRef.whereField("g", isGreaterThanOrEqualTo: query.startValue).whereField("g", isLessThanOrEqualTo: query.endValue)
+        return self.geoFirestore.collectionRef.whereField("g", isGreaterThanOrEqualTo: query.startValue).whereField("g", isLessThanOrEqualTo: query.endValue)
     }
     
     //overriden
@@ -192,19 +192,19 @@ class GFSQuery {
         
         if (isNew || !(wasInQuery ?? false)) && info?.isInQuery != nil {
             for (offset: _, element: (key: _, value: block)) in keyEnteredObservers.enumerated() {
-                self.geoFireStore.callbackQueue.async {
+                self.geoFirestore.callbackQueue.async {
                     block(key, info!.location)
                 }
             }
         } else if !isNew && changedLocation && info?.isInQuery != nil {
             for (offset: _, element: (key: _, value: block)) in keyMovedObservers.enumerated() {
-                self.geoFireStore.callbackQueue.async {
+                self.geoFirestore.callbackQueue.async {
                     block(key, info!.location)
                 }
             }
         } else if wasInQuery ?? false && info?.isInQuery == nil {
             for (offset: _, element: (key: _, value: block)) in keyExitedObservers.enumerated() {
-                self.geoFireStore.callbackQueue.async {
+                self.geoFirestore.callbackQueue.async {
                     block(key, info!.location)
                 }
             }
@@ -265,7 +265,7 @@ class GFSQuery {
                 info = locationInfos[key]
                 if info != nil{
                     
-                    geoFireStore.collectionRef.document(key).getDocument(completion: { (snapshot, error) in
+                    geoFirestore.collectionRef.document(key).getDocument(completion: { (snapshot, error) in
                         lockQueue.sync {
                             
                             let l = snapshot?.get("l") as? [Double?]
@@ -281,7 +281,7 @@ class GFSQuery {
                                     // Key was in query, notify about key exited
                                     if info?.isInQuery != nil {
                                         for (offset: _, element: (key: _, value: block)) in self.keyExitedObservers.enumerated() {
-                                            self.geoFireStore.callbackQueue.async {
+                                            self.geoFirestore.callbackQueue.async {
                                                 block(key, info!.location)
                                             }
                                         }
@@ -309,7 +309,7 @@ class GFSQuery {
     func checkAndFireReadyEvent() {
         if outstandingQueries.count == 0 {
             for (offset: _, element: (key: _, value: block)) in readyObservers.enumerated() {
-                self.geoFireStore.callbackQueue.async {
+                self.geoFirestore.callbackQueue.async {
                     block()
                 }
             }
@@ -462,7 +462,7 @@ class GFSQuery {
                 keyEnteredObservers[firebaseHandle] = block
                 currentHandle += 1
                 
-                geoFireStore.callbackQueue.async(execute: {
+                geoFirestore.callbackQueue.async(execute: {
                     lockQueue.sync {
                         for (offset: _, element: (key: key, value: info)) in self.locationInfos.enumerated(){
                             if info.isInQuery != nil{
@@ -496,7 +496,7 @@ class GFSQuery {
             readyObservers[firebaseHandle] = block
             
             if self.outstandingQueries.count == 0{
-                self.geoFireStore.callbackQueue.async {
+                self.geoFirestore.callbackQueue.async {
                     block()
                 }
             }
@@ -537,10 +537,10 @@ class GFSCircleQuery: GFSQuery {
     var center: CLLocation
     var radius: Double
     
-    init(geoFireStore: GeoFireStore, center: CLLocation, radius: Double) {
+    init(geoFirestore: GeoFirestore, center: CLLocation, radius: Double) {
         self.radius = radius
         self.center = center
-        super.init(geoFireStore: geoFireStore)
+        super.init(geoFirestore: geoFirestore)
     }
     
     override internal func locationIsInQuery(loc: CLLocation) -> Bool {
@@ -556,9 +556,9 @@ class GFSCircleQuery: GFSQuery {
 class GFSRegionQuery: GFSQuery {
     var region: MKCoordinateRegion
     
-    init(geoFireStore: GeoFireStore, region: MKCoordinateRegion) {
+    init(geoFirestore: GeoFirestore, region: MKCoordinateRegion) {
         self.region = region
-        super.init(geoFireStore: geoFireStore)
+        super.init(geoFirestore: geoFirestore)
     }
     
     override internal func locationIsInQuery(loc: CLLocation) -> Bool {
