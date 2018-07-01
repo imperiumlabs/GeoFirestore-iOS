@@ -1,9 +1,9 @@
 {
   "name": "Geofirestore",
   "version": "0.1.0",
-  "summary": "A short description of Geofirestore.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/dhruvshah1214/Geofirestore",
+  "summary": "Realtime location queries with Firebase Cloud Firestore.",
+  "description": "An alternative to the GeoFire library provided by Firebase, but compatible with Cloud Firestore. To use, just create a Geofirestore instance and point it to a collection reference containing the documents you'd like to run location queries on.",
+  "homepage": "https://github.com/dhruvshah1214/Geofirestore.git",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -16,7 +16,20 @@
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
-  "source_files": "Geofirestore/Classes/**/*"
+  "source_files": "Geofirestore/Classes/**/*",
+  "frameworks": "CoreLocation",
+  "static_framework": true,
+  "dependencies": {
+    "GeoFire": [
+      "~> 3.0"
+    ],
+    "FirebaseFirestore": [
+      "~> 0.12.3"
+    ],
+    "FirebaseCore": [
+      "~> 5.0.3"
+    ]
+  }
 }
