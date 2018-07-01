@@ -215,6 +215,16 @@ SOFTWARE.
 		</dict>
 		<dict>
 			<key>FooterText</key>
+			<string>Copyright 2018 Google</string>
+			<key>License</key>
+			<string>Copyright</string>
+			<key>Title</key>
+			<string>FirebaseAnalytics</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
 			<string>
                                  Apache License
                            Version 2.0, January 2004
@@ -846,6 +856,16 @@ SOFTWARE.
 			<string>Apache</string>
 			<key>Title</key>
 			<string>FirebaseFirestore</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
+			<string>Copyright 2018 Google</string>
+			<key>License</key>
+			<string>Copyright</string>
+			<key>Title</key>
+			<string>FirebaseInstanceID</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>

@@ -5,11 +5,21 @@ PODS:
   - BoringSSL/Implementation (10.0.5):
     - BoringSSL/Interface (= 10.0.5)
   - BoringSSL/Interface (10.0.5)
+  - Firebase (5.4.0):
+    - Firebase/Core (= 5.4.0)
+  - Firebase/Core (5.4.0):
+    - Firebase/CoreOnly
+    - FirebaseAnalytics (= 5.0.1)
   - Firebase/CoreOnly (5.4.0):
     - FirebaseCore (= 5.0.5)
   - Firebase/Database (5.4.0):
     - Firebase/CoreOnly
     - FirebaseDatabase (= 5.0.2)
+  - FirebaseAnalytics (5.0.1):
+    - FirebaseCore (~> 5.0)
+    - FirebaseInstanceID (~> 3.0)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - nanopb (~> 0.3)
   - FirebaseCore (5.0.5):
     - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
   - FirebaseDatabase (5.0.2):
@@ -28,9 +38,12 @@ PODS:
     - leveldb-library (~> 1.18)
     - nanopb (~> 0.3.8)
     - Protobuf (~> 3.1)
+  - FirebaseInstanceID (3.1.1):
+    - FirebaseCore (~> 5.0)
   - GeoFire (3.0.0):
     - Firebase/Database (~> 5.0)
   - Geofirestore (0.1.0):
+    - Firebase (~> 5.4)
     - FirebaseCore (~> 5.0.3)
     - FirebaseFirestore (~> 0.12.3)
     - GeoFire (~> 3.0)
@@ -77,9 +90,11 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - BoringSSL
     - Firebase
+    - FirebaseAnalytics
     - FirebaseCore
     - FirebaseDatabase
     - FirebaseFirestore
+    - FirebaseInstanceID
     - GeoFire
     - GoogleToolboxForMac
     - gRPC
@@ -99,11 +114,13 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   BoringSSL: cf3f1793eb6e3c445c4d150456341f149c268a35
   Firebase: d66f4f29c23f22d96808d9abc174d81d8eee968f
+  FirebaseAnalytics: b3628aea54c50464c32c393fb2ea032566e7ecc2
   FirebaseCore: 42b3267233bd21a5abd54117ccc38ca3dd0f8e83
   FirebaseDatabase: 27be5ac5bc75e0b17537b2bbfada8258addcc8cd
   FirebaseFirestore: b041e4a94601e18e82a863e0dcfa9d3e55cc2031
+  FirebaseInstanceID: f3f0657372592ecdfdfe2cac604a5a75758376a6
   GeoFire: e3ae6f4be3f2466c3467ef6c1c203db3af935c59
-  Geofirestore: 622aa596d8872a641fef05884bde1d72f873a408
+  Geofirestore: 923bb0bd41bc9f7ff2e98d8933ccfc69245ff6ee
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
   gRPC: 81b990caa01d7c32605d300c2ffd1b5ba0ef9e49
   gRPC-Core: a56b086a8ef5ced6f6ba5be5bc0a63fca185015a

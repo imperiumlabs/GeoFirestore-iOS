@@ -1,6 +1,7 @@
 import Foundation
 import CoreLocation
-import Firebase
+import FirebaseCore
+import FirebaseFirestore
 import GeoFire
 
 // COMPLETE
@@ -9,7 +10,7 @@ public extension GeoPoint {
         return GeoPoint(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
     }
     
-    func locationValue() -> CLLocation {
+    public func locationValue() -> CLLocation {
         return CLLocation(latitude: self.latitude, longitude: self.longitude)
     }
 }
@@ -20,7 +21,7 @@ public extension CLLocation {
         return CLLocation(latitude: geopoint.latitude, longitude: geopoint.longitude)
     }
     
-    func geopointValue() -> GeoPoint {
+    public func geopointValue() -> GeoPoint {
         return GeoPoint(latitude: self.coordinate.latitude, longitude: self.coordinate.longitude)
     }
 }
@@ -28,15 +29,15 @@ public extension CLLocation {
 
 public class GeoFirestore {
     
-    typealias GFSCompletionBlock = (Error?) -> Void
-    typealias GFSLocationCallback = (CLLocation?, Error?) -> Void
-    typealias GFSGeoPointCallback = (GeoPoint?, Error?) -> Void
+    public typealias GFSCompletionBlock = (Error?) -> Void
+    public typealias GFSLocationCallback = (CLLocation?, Error?) -> Void
+    public typealias GFSGeoPointCallback = (GeoPoint?, Error?) -> Void
     
-    var collectionRef: CollectionReference
+    public var collectionRef: CollectionReference
     
     internal var callbackQueue: DispatchQueue
 
-    init(collectionRef: CollectionReference) {
+    public init(collectionRef: CollectionReference) {
         self.collectionRef = collectionRef
         self.callbackQueue = DispatchQueue.main
     }
@@ -156,11 +157,12 @@ public class GFSQuery {
     internal init(geoFirestore: GeoFirestore) {
         self.geoFirestore = geoFirestore
         currentHandle = 1
+        self.reset()
     }
     
     // COMPLETE
     internal func fireStoreQueryForGeoHashQuery(query: GFGeoHashQuery) -> Query {
-        return self.geoFirestore.collectionRef.whereField("g", isGreaterThanOrEqualTo: query.startValue).whereField("g", isLessThanOrEqualTo: query.endValue)
+        return self.geoFirestore.collectionRef.order(by: "g").whereField("g", isGreaterThanOrEqualTo: query.startValue).whereField("g", isLessThanOrEqualTo: query.endValue)
     }
     
     //overriden
@@ -182,7 +184,7 @@ public class GFSQuery {
             locationInfos[key] = info
         }
         
-        let changedLocation: Bool = !(info?.location!.coordinate.latitude == location.coordinate.latitude && info?.location!.coordinate.longitude == location.coordinate.longitude)
+        let changedLocation: Bool = !isNew && !(info?.location?.coordinate.latitude == location.coordinate.latitude && info?.location!.coordinate.longitude == location.coordinate.longitude)
         let wasInQuery = info?.isInQuery
         
         // we know it exists now so force unwrap is ok
@@ -258,39 +260,32 @@ public class GFSQuery {
         let lockQueue = DispatchQueue(label: "self")
         lockQueue.sync {
             
-            if let snapshot = snapshot{
+            if let snapshot = snapshot {
                 
                 var info: GFSQueryLocationInfo? = nil
                 let key = snapshot.documentID
                 info = locationInfos[key]
-                if info != nil{
-                    
-                    geoFirestore.collectionRef.document(key).getDocument(completion: { (snapshot, error) in
-                        lockQueue.sync {
-                            
-                            let l = snapshot?.get("l") as? [Double?]
-                            if let lat = l?[0], let lon = l?[1]{
-                                let location = CLLocation(latitude: lat, longitude: lon)
-                                let geoHash = GFGeoHash(location: location.coordinate)
-                                // Only notify observers if key is not part of any other geohash query or this actually might not be
-                                // a key exited event, but a key moved or entered event. These events will be triggered by updates
-                                // to a different query
-                                if !self.queriesContain(geoHash) {
-                                    let info: GFSQueryLocationInfo? = self.locationInfos[key]
-                                    self.locationInfos.removeValue(forKey: key)
-                                    // Key was in query, notify about key exited
-                                    if info?.isInQuery != nil {
-                                        for (offset: _, element: (key: _, value: block)) in self.keyExitedObservers.enumerated() {
-                                            self.geoFirestore.callbackQueue.async {
-                                                block(key, info!.location)
-                                            }
-                                        }
+                if info != nil{                            
+                    let l = snapshot.get("l") as? [Double?]
+                    if let lat = l?[0], let lon = l?[1]{
+                        let location = CLLocation(latitude: lat, longitude: lon)
+                        let geoHash = GFGeoHash(location: location.coordinate)
+                        // Only notify observers if key is not part of any other geohash query or this actually might not be
+                        // a key exited event, but a key moved or entered event. These events will be triggered by updates
+                        // to a different query
+                        if self.queriesContain(geoHash) {
+                            let info: GFSQueryLocationInfo? = self.locationInfos[key]
+                            self.locationInfos.removeValue(forKey: key)
+                            // Key was in query, notify about key exited
+                            if info?.isInQuery != nil {
+                                for (offset: _, element: (key: _, value: block)) in self.keyExitedObservers.enumerated() {
+                                    self.geoFirestore.callbackQueue.async {
+                                        block(key, info!.location)
                                     }
                                 }
                             }
-                            
                         }
-                    })
+                    }
                     
                 }
             }
@@ -367,7 +362,7 @@ public class GFSQuery {
                     if let snapshot = querySnapshot, err == nil {
                         for docChange in snapshot.documentChanges {
                             if docChange.type == DocumentChangeType.modified {
-                                self.childAdded(docChange.document)
+                                self.childChanged(docChange.document)
                             }
                         }
                     }
@@ -377,7 +372,7 @@ public class GFSQuery {
                     if let snapshot = querySnapshot, err == nil {
                         for docChange in snapshot.documentChanges {
                             if docChange.type == DocumentChangeType.removed {
-                                self.childAdded(docChange.document)
+                                self.childRemoved(docChange.document)
                             }
                         }
                     }
@@ -416,30 +411,30 @@ public class GFSQuery {
 
     // COMPLETE
     internal func reset() {
-        for query: GFGeoHashQuery? in queries {
-            var handle: GFSGeoHashQueryListener? = nil
-            if let aQuery = query {
-                handle = self.handles[aQuery]
-                if handle == nil {
-                    NSException.raise(.internalInconsistencyException, format: "Wanted to remove a geohash query that was not registered!", arguments: getVaList(["nil"]))
+        if !queries.isEmpty {
+            for query: GFGeoHashQuery? in queries {
+                var handle: GFSGeoHashQueryListener?
+                if let aQuery = query {
+                    handle = self.handles[aQuery]
+                    if handle == nil {
+                        NSException.raise(.internalInconsistencyException, format: "Wanted to remove a geohash query that was not registered!", arguments: getVaList(["nil"]))
+                    }
+                    handle?.childAddedListener?.remove()
+                    handle?.childChangedListener?.remove()
+                    handle?.childRemovedListener?.remove()
                 }
-                handle?.childAddedListener?.remove()
-                handle?.childChangedListener?.remove()
-                handle?.childRemovedListener?.remove()
+                
             }
-            
         }
+        locationInfos.removeAll()
+        queries.removeAll()
+        handles.removeAll()
+        outstandingQueries.removeAll()
         
-        locationInfos = [String: GFSQueryLocationInfo]()
-        queries = Set<GFGeoHashQuery>()
-        handles = [GFGeoHashQuery: GFSGeoHashQueryListener]()
-        outstandingQueries = Set<GFGeoHashQuery>()
-        
-        keyEnteredObservers = [GFSQueryHandle: GFSQueryResultBlock]()
-        keyExitedObservers = [GFSQueryHandle: GFSQueryResultBlock]()
-        keyMovedObservers = [GFSQueryHandle: GFSQueryResultBlock]()
-        readyObservers = [GFSQueryHandle: GFSReadyBlock]()
-        
+        keyEnteredObservers.removeAll()
+        keyExitedObservers.removeAll()
+        keyMovedObservers.removeAll()
+        readyObservers.removeAll()
     }
     
     
@@ -480,9 +475,12 @@ public class GFSQuery {
             default:
                 NSException.raise(.invalidArgumentException, format: "Event type was not a GFEventType!", arguments: getVaList(["nil"]))
             }
-            
+            if self.queries.isEmpty {
+                self.updateQueries()
+            }
         }
         return firebaseHandle
+
     }
     
     // COMPLETE
@@ -494,7 +492,9 @@ public class GFSQuery {
             currentHandle += 1
             firebaseHandle = currentHandle
             readyObservers[firebaseHandle] = block
-            
+            if self.queries.isEmpty {
+                self.updateQueries()
+            }
             if self.outstandingQueries.count == 0{
                 self.geoFirestore.callbackQueue.async {
                     block()
@@ -509,7 +509,7 @@ public class GFSQuery {
     public func removeObserver(withHandle handle: GFSQueryHandle) {
         let lockQueue = DispatchQueue(label: "self")
         lockQueue.sync {
-            
+            listenerForHandle[handle]?.remove()
             keyEnteredObservers.removeValue(forKey: handle)
             keyExitedObservers.removeValue(forKey: handle)
             keyMovedObservers.removeValue(forKey: handle)
@@ -534,10 +534,18 @@ public class GFSQuery {
 
 // COMPLETE
 public class GFSCircleQuery: GFSQuery {
-    var center: CLLocation
-    var radius: Double
+    public var center: CLLocation {
+        didSet {
+            self.searchCriteriaDidChange()
+        }
+    }
+    public var radius: Double {
+        didSet {
+            self.searchCriteriaDidChange()
+        }
+    }
     
-    init(geoFirestore: GeoFirestore, center: CLLocation, radius: Double) {
+    public init(geoFirestore: GeoFirestore, center: CLLocation, radius: Double) {
         self.radius = radius
         self.center = center
         super.init(geoFirestore: geoFirestore)
@@ -554,9 +562,13 @@ public class GFSCircleQuery: GFSQuery {
 
 // COMPLETE
 public class GFSRegionQuery: GFSQuery {
-    var region: MKCoordinateRegion
+    public var region: MKCoordinateRegion {
+        didSet {
+            self.searchCriteriaDidChange()
+        }
+    }
     
-    init(geoFirestore: GeoFirestore, region: MKCoordinateRegion) {
+    public init(geoFirestore: GeoFirestore, region: MKCoordinateRegion) {
         self.region = region
         super.init(geoFirestore: geoFirestore)
     }

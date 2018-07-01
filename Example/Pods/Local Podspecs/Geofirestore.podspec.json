@@ -19,17 +19,21 @@
     "ios": "9.0"
   },
   "source_files": "Geofirestore/Classes/**/*",
+  "swift_version": "4.0",
   "frameworks": "CoreLocation",
   "static_framework": true,
   "dependencies": {
+    "Firebase": [
+      "~> 5.4"
+    ],
     "GeoFire": [
       "~> 3.0"
     ],
-    "FirebaseFirestore": [
-      "~> 0.12.3"
-    ],
     "FirebaseCore": [
       "~> 5.0.3"
+    ],
+    "FirebaseFirestore": [
+      "~> 0.12.3"
     ]
   }
 }

@@ -32,16 +32,20 @@ An alternative to the GeoFire library provided by Firebase, but compatible with 
 
   s.source_files = 'Geofirestore/Classes/**/*'
   
+  s.swift_version = '4.0'
+  
   # s.resource_bundles = {
   #   'Geofirestore' => ['Geofirestore/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'CoreLocation'
+  
   s.static_framework = true
   
+  s.dependency 'Firebase', '~> 5.4'
   s.dependency 'GeoFire', '~> 3.0'
-  s.dependency 'FirebaseFirestore', '~> 0.12.3'
   s.dependency 'FirebaseCore', '~> 5.0.3'
+  s.dependency 'FirebaseFirestore', '~> 0.12.3'
 
 end

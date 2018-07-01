@@ -190,6 +190,10 @@ SOFTWARE.
 
 Copyright 2018 Google
 
+## FirebaseAnalytics
+
+Copyright 2018 Google
+
 ## FirebaseCore
 
 
@@ -807,6 +811,10 @@ Copyright 2018 Google
    See the License for the specific language governing permissions and
    limitations under the License.
 
+
+## FirebaseInstanceID
+
+Copyright 2018 Google
 
 ## GeoFire
 

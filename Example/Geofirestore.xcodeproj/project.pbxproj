@@ -14,6 +14,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		67D6C3CD20E8660E009E57C1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67D6C3CC20E8660D009E57C1 /* GoogleService-Info.plist */; };
 		87F80585A63207E1F1A2EAE3 /* Pods_Geofirestore_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E450D56E79B8DDA0CAB6F1D5 /* Pods_Geofirestore_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		607FACE51AFB9204008FA782 /* Geofirestore_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Geofirestore_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		67D6C3CC20E8660D009E57C1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		703682421BAD14A374C71131 /* Pods-Geofirestore_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geofirestore_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Geofirestore_Tests/Pods-Geofirestore_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9EF7A639EEAD46D3C8F5D968 /* Pods-Geofirestore_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geofirestore_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Geofirestore_Tests/Pods-Geofirestore_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A0B0AC00BE85C862B19F3299 /* Pods_Geofirestore_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Geofirestore_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +95,7 @@
 		607FACD21AFB9204008FA782 /* Example for Geofirestore */ = {
 			isa = PBXGroup;
 			children = (
+				67D6C3CC20E8660D009E57C1 /* GoogleService-Info.plist */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -247,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67D6C3CD20E8660E009E57C1 /* GoogleService-Info.plist in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
@@ -511,7 +515,7 @@
 				INFOPLIST_FILE = Geofirestore/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.imperiumlabs.geofirestore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
@@ -527,7 +531,7 @@
 				INFOPLIST_FILE = Geofirestore/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.imperiumlabs.geofirestore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
