@@ -4,7 +4,6 @@ import FirebaseCore
 import FirebaseFirestore
 import GeoFire
 
-// COMPLETE
 public extension GeoPoint {
     class func geopointWithLocation(location: CLLocation) -> GeoPoint {
         return GeoPoint(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
@@ -15,7 +14,6 @@ public extension GeoPoint {
     }
 }
 
-// COMPLETE
 public extension CLLocation {
     class func locationWithGeopoint(geopoint: GeoPoint) -> CLLocation {
         return CLLocation(latitude: geopoint.latitude, longitude: geopoint.longitude)
@@ -26,33 +24,58 @@ public extension CLLocation {
     }
 }
 
-
+/**
+ * A GeoFirestore instance is used to store geo location data at a Firestore document.
+ */
 public class GeoFirestore {
     
     public typealias GFSCompletionBlock = (Error?) -> Void
     public typealias GFSLocationCallback = (CLLocation?, Error?) -> Void
     public typealias GFSGeoPointCallback = (GeoPoint?, Error?) -> Void
     
+    /**
+     * The Firestore collection reference this GeoFirestore instance uses.
+     */
     public var collectionRef: CollectionReference
     
+    /**
+     * The dispatch queue this GeoFirestore object and all its GFSQueries use for callbacks.
+     */
     internal var callbackQueue: DispatchQueue
 
+    /** @name Creating new GeoFirestore objects */
+    
+    /**
+     * Initializes a new GeoFirestore instance using a given Firestore collection.
+     * @param collectionRef The Firestore collection to attach this GeoFirestore instance to
+     */
     public init(collectionRef: CollectionReference) {
         self.collectionRef = collectionRef
         self.callbackQueue = DispatchQueue.main
     }
     
-    // COMPLETE
     public func getCollectionReference() -> CollectionReference {
         return collectionRef
     }
     
-    // COMPLETE
+    /**
+     * Updates the location for a document and calls the completion callback once the location was successfully updated on the
+     * server.
+     * @param geopoint The location as a geographic coordinate (GeoPoint)
+     * @param documentID The documentID of the document for which this location is saved
+     * @param completion The completion block that is called once the location was successfully updated on the server
+     */
     public func setLocation(geopoint: GeoPoint, forDocumentWithID documentID: String, completion: GFSCompletionBlock? = nil) {
         setLocation(location: geopoint.locationValue(), forDocumentWithID: documentID, completion: completion)
     }
     
-    // COMPLETE
+    /**
+     * Updates the location for a document and calls the completion callback once the location was successfully updated on the
+     * server.
+     * @param location The location as a geographic coordinate (CLLocation)
+     * @param documentID The documentID of the document for which this location is saved
+     * @param completion The completion block that is called once the location was successfully updated on the server
+     */
     public func setLocation(location: CLLocation, forDocumentWithID documentID: String, completion: GFSCompletionBlock? = nil) {
         if CLLocationCoordinate2DIsValid(location.coordinate) {
             let lat = location.coordinate.latitude
@@ -69,19 +92,23 @@ public class GeoFirestore {
         }
     }
     
-    // COMPLETE
-    public func getLocation(forDocumentWithID documentID: String, callback: GFSLocationCallback? = nil) {
-        self.collectionRef.document(documentID).getDocument { (snap, err) in
-            let l = snap?.get("l") as? [Double?]
-            if let lat = l?[0], let lon = l?[1] {
-                let loc = CLLocation(latitude: lat, longitude: lon)
-                callback?(loc, err)
-            }
-            callback?(nil, err)
-        }
+    /**
+     * Removes the location for a document with a given documentID and calls the completion callback once the location was successfully updated on
+     * the server.
+     * @param documentID The documentID of the document for which this location is removed
+     * @param completion The completion block that is called once the location was successfully updated on the server
+     */
+    public func removeLocation(forDocumentWithID documentID: String, completion: GFSCompletionBlock? = nil){
+        self.collectionRef.document(documentID).updateData(["l": FieldValue.delete(), "g": FieldValue.delete()], completion: completion)
     }
     
-    // COMPLETE
+    /**
+     * Gets the current location for the document with the given documentID and calls the callback with the location or nil if there is no
+     * location for the document. If an error occurred, the callback will be called with the error and location
+     * will be nil.
+     * @param documentID The documentID of the document to observe the location for
+     * @param callback The callback that is called for the current location (as a GeoPoint)
+     */
     public func getLocation(forDocumentWithID documentID: String, callback: GFSGeoPointCallback? = nil) {
         self.collectionRef.document(documentID).getDocument { (snap, err) in
             let l = snap?.get("l") as? [Double?]
@@ -93,17 +120,52 @@ public class GeoFirestore {
         }
     }
     
-    // COMPLETE
+    /**
+     * Gets the current location for the document with the given documentID and calls the callback with the location or nil if there is no
+     * location for the document. If an error occurred, the callback will be called with the error and location
+     * will be nil.
+     * @param documentID The documentID of the document to observe the location for
+     * @param callback The callback that is called for the current location (as a CLLocation)
+     */
+    public func getLocation(forDocumentWithID documentID: String, callback: GFSLocationCallback? = nil) {
+        self.collectionRef.document(documentID).getDocument { (snap, err) in
+            let l = snap?.get("l") as? [Double?]
+            if let lat = l?[0], let lon = l?[1] {
+                let loc = CLLocation(latitude: lat, longitude: lon)
+                callback?(loc, err)
+            }
+            callback?(nil, err)
+        }
+    }
+    
+    /**
+     * Creates a new GeoFirestore query centered at a given location with a given radius. The GFSQuery object can be used to query
+     * documents that enter, move, and exit the search radius.
+     * @param location The location at which the query is centered (as a GeoPoint)
+     * @param radius The radius in kilometers of the geo query
+     * @return The GFSCircleQuery object that can be used for geo queries.
+     */
     public func query(withCenter center: GeoPoint, radius: Double) -> GFSCircleQuery {
         return GFSCircleQuery(geoFirestore: self, center: center.locationValue(), radius: radius)
     }
     
-    // COMPLETE
+    /**
+     * Creates a new GeoFirestore query centered at a given location with a given radius. The GFSQuery object can be used to query
+     * documents that enter, move, and exit the search radius.
+     * @param location The location at which the query is centered (as a CLLocation)
+     * @param radius The radius in kilometers of the geo query
+     * @return The GFSCircleQuery object that can be used for geo queries.
+     */
     public func query(withCenter center: CLLocation, radius: Double) -> GFSCircleQuery {
         return GFSCircleQuery(geoFirestore: self, center: center, radius: radius)
     }
     
-    // COMPLETE
+    /**
+     * Creates a new GeoFirestore query for a given region. The GFSQuery object can be used to query
+     * documents that enter, move, and exit the search region.
+     * @param region The region which this query searches
+     * @return The GFSRegionQuery object that can be used for geo queries.
+     */
     public func query(inRegion region: MKCoordinateRegion) -> GFSRegionQuery{
         return GFSRegionQuery(geoFirestore: self, region: region)
     }
@@ -112,12 +174,13 @@ public class GeoFirestore {
 
 
 
-// COMPLETE
 public enum GFSEventType {
     case documentEntered
     case documentExited
     case documentMoved
 }
+
+
 
 public typealias GFSQueryResultBlock = (String?, CLLocation?) -> Void
 public typealias GFSReadyBlock = () -> Void
@@ -130,7 +193,9 @@ internal class GFSGeoHashQueryListener {
 }
 
 
-
+/**
+ * A GFSQuery object handles geo queries in a Firestore collection.
+ */
 public class GFSQuery {
     internal class GFSQueryLocationInfo {
         var isInQuery: Bool?
@@ -138,6 +203,9 @@ public class GFSQuery {
         var geoHash: GFGeoHash?
     }
     
+    /**
+     * The GeoFirestore this GFSQuery object uses.
+     */
     public var geoFirestore: GeoFirestore
     
     internal var locationInfos = [String: GFSQueryLocationInfo]()
@@ -160,7 +228,6 @@ public class GFSQuery {
         self.reset()
     }
     
-    // COMPLETE
     internal func fireStoreQueryForGeoHashQuery(query: GFGeoHashQuery) -> Query {
         return self.geoFirestore.collectionRef.order(by: "g").whereField("g", isGreaterThanOrEqualTo: query.startValue).whereField("g", isLessThanOrEqualTo: query.endValue)
     }
@@ -174,7 +241,6 @@ public class GFSQuery {
         fatalError("Override in subclass.")
     }
     
-    // COMPLETE
     internal func updateLocationInfo(_ location: CLLocation, forKey key: String) {
         var info: GFSQueryLocationInfo? = locationInfos[key]
         var isNew = false
@@ -213,7 +279,6 @@ public class GFSQuery {
         }
     }
     
-    // COMPLETE
     internal func queriesContain(_ geoHash: GFGeoHash?) -> Bool {
         for query: GFGeoHashQuery? in queries {
             if query?.contains(geoHash) != nil {
@@ -223,7 +288,6 @@ public class GFSQuery {
         return false
     }
     
-    // COMPLETE
     internal func childAdded(_ snapshot: DocumentSnapshot?) {
         let lockQueue = DispatchQueue(label: "self")
         lockQueue.sync {
@@ -239,7 +303,6 @@ public class GFSQuery {
         }
     }
     
-    // COMPLETE
     internal func childChanged(_ snapshot: DocumentSnapshot?) {
         let lockQueue = DispatchQueue(label: "self")
         lockQueue.sync {
@@ -255,7 +318,6 @@ public class GFSQuery {
         }
     }
     
-    // COMPLETE
     internal func childRemoved(_ snapshot: DocumentSnapshot?) {
         let lockQueue = DispatchQueue(label: "self")
         lockQueue.sync {
@@ -293,14 +355,12 @@ public class GFSQuery {
         }
     }
     
-    // COMPLETE
     internal func searchCriteriaDidChange() {
         if !queries.isEmpty {
             updateQueries()
         }
     }
     
-    // COMPLETE
     internal func checkAndFireReadyEvent() {
         if outstandingQueries.count == 0 {
             for (offset: _, element: (key: _, value: block)) in readyObservers.enumerated() {
@@ -311,7 +371,6 @@ public class GFSQuery {
         }
     }
     
-    // COMPLETE
     internal func updateQueries() {
         let oldQueries = queries
         let newQueries = queriesForCurrentCriteria()
@@ -409,7 +468,6 @@ public class GFSQuery {
         checkAndFireReadyEvent()
     }
 
-    // COMPLETE
     internal func reset() {
         if !queries.isEmpty {
             for query: GFGeoHashQuery? in queries {
@@ -437,13 +495,24 @@ public class GFSQuery {
         readyObservers.removeAll()
     }
     
-    
-    // COMPLETE
     public func totalObserverCount() -> Int {
         return keyEnteredObservers.count + keyExitedObservers.count + keyMovedObservers.count + readyObservers.count
     }
     
-    // COMPLETE
+    /*!
+     Adds an observer for an event type.
+     The following event types are supported:
+     typedef NS_ENUM(NSUInteger, GFEventType) {
+     GFSEventType.documentEntered, // A document entered the search area
+     GFSEventType.documentExited,  // A document exited the search area
+     GFSEventType.documentMoved    // A document moved within the search area
+     };
+     The block is called for each event and document.
+     Use removeObserver:withHandle: to stop receiving callbacks.
+     @param eventType The event type to receive updates for
+     @param block The block that is called for updates
+     @return A handle to remove the observer with
+     */
     public func observe(_ eventType: GFSEventType, with block: @escaping GFSQueryResultBlock) -> GFSQueryHandle {
         let lockQueue = DispatchQueue(label: "self")
         var firebaseHandle: GFSQueryHandle = 0
@@ -483,7 +552,14 @@ public class GFSQuery {
 
     }
     
-    // COMPLETE
+    /**
+     * Adds an observer that is called once all initial GeoFirestore data has been loaded and the relevant events have
+     * been fired for this query. Every time the query criteria is updated, this observer will be called after the
+     * updated query has fired the appropriate document entered or document exited events.
+     *
+     * @param block The block that is called for the ready event
+     * @return A handle to remove the observer with
+     */
     public func observeReady(withBlock block: @escaping GFSReadyBlock) -> GFSQueryHandle {
         let lockQueue = DispatchQueue(label: "self")
         var firebaseHandle: GFSQueryHandle = 0
@@ -505,7 +581,10 @@ public class GFSQuery {
         return firebaseHandle
     }
     
-    // COMPLETE
+    /**
+     * Removes a callback with a given GFSQueryHandle. After this no further updates are received for this handle.
+     * @param handle The handle that was returned by observe:with:
+     */
     public func removeObserver(withHandle handle: GFSQueryHandle) {
         let lockQueue = DispatchQueue(label: "self")
         lockQueue.sync {
@@ -522,7 +601,10 @@ public class GFSQuery {
         }
     }
     
-    // COMPLETE
+    /**
+     * Removes all observers for this GFSQuery object. Note that with multiple GFSQuery objects only this object stops
+     * its callbacks.
+     */
     public func removeAllObservers() {
         let lockQueue = DispatchQueue(label: "self")
         lockQueue.sync {
@@ -532,13 +614,24 @@ public class GFSQuery {
     
 }
 
-// COMPLETE
+
+
 public class GFSCircleQuery: GFSQuery {
+    
+    /**
+     * The center of the search area. Update this value to update the query. Events are triggered for any documents that move
+     * in or out of the search area.
+     */
     public var center: CLLocation {
         didSet {
             self.searchCriteriaDidChange()
         }
     }
+    
+    /**
+     * The radius of the geo query in kilometers. Update this value to update the query. Events are triggered for any documents
+     * that move in or out of the search area.
+     */
     public var radius: Double {
         didSet {
             self.searchCriteriaDidChange()
@@ -560,8 +653,14 @@ public class GFSCircleQuery: GFSQuery {
     }
 }
 
-// COMPLETE
+
+
 public class GFSRegionQuery: GFSQuery {
+    
+    /**
+     * The region to search for this query. Update this value to update the query. Events are triggered for any documents that
+     * move in or out of the search area.
+     */
     public var region: MKCoordinateRegion {
         didSet {
             self.searchCriteriaDidChange()

@@ -24,7 +24,7 @@ An alternative to the GeoFire library provided by Firebase, but compatible with 
   s.homepage         = 'https://github.com/dhruvshah1214/Geofirestore.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'dhruvshah1214' => 'dhruv.shah@gmail.com' }
+  s.author           = { 'Dhruv Shah' => 'dhruv.shah@gmail.com', 'Nikhil Sridhar' => 'nik.sridhar@gmail.com' }
   s.source           = { :git => 'https://github.com/dhruvshah1214/Geofirestore.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
