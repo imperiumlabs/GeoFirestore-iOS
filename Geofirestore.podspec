@@ -30,7 +30,7 @@ An alternative to the GeoFire library provided by Firebase, but compatible with 
 
   s.ios.deployment_target = '9.0'
 
-#s.source_files = 'Geofirestore/Classes/**/*'
+  s.source_files = 'Geofirestore/Classes/**/*'
   
   # s.resource_bundles = {
   #   'Geofirestore' => ['Geofirestore/Assets/*.png']
