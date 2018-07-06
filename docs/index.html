@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Geofirestore  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="Geofirestore  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">Geofirestore Docs</a> (46% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">Geofirestore Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Geofirestore  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/GFSCircleQuery.html">GFSCircleQuery</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/GFSQuery.html">GFSQuery</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/GFSRegionQuery.html">GFSRegionQuery</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/GeoFirestore.html">GeoFirestore</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/GFSEventType.html">GFSEventType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/CLLocation.html">CLLocation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/GeoPoint.html">GeoPoint</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:12Geofirestore14GFSQueryHandlea">GFSQueryHandle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:12Geofirestore19GFSQueryResultBlocka">GFSQueryResultBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:12Geofirestore13GFSReadyBlocka">GFSReadyBlock</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='geofirestore-for-ios-realtime-location-queries-with-firestore' class='heading'>GeoFirestore for iOS — Realtime location queries with Firestore</h1>
+
+<p>GeoFirestore is an open-source library for Swift that allows you to store and query a set of documents based on their geographic location.</p>
+
+<p>At its heart, GeoFirestore simply stores locations with string keys. Its main benefit however, is the possibility of querying documents within a given geographic area - all in realtime.</p>
+
+<p>GeoFirestore uses the Firestore database for data storage, allowing query results to be updated in realtime as they change. GeoFirestore selectively loads only the data near certain locations, keeping your applications light and responsive, even with extremely large datasets.</p>
+<h3 id='integrating-geofirestore-with-your-data' class='heading'>Integrating GeoFirestore with your data</h3>
+
+<p>GeoFirestore is designed as a lightweight add-on to Firestore. However, to keep things simple, GeoFirestore stores data in its own format and its own location within your Firestore database. This allows your existing data format and security rules to remain unchanged and for you to add GeoFirestore as an easy solution for geo queries without modifying your existing data.</p>
+<h3 id='example-usage' class='heading'>Example usage</h3>
+
+<p>Assume you are building an app to rate bars, and you store all information for a bar (e.g. name, business hours and price range) at <code>collection(bars).document(bar-id)</code>. Later, you want to add the possibility for users to search for bars in their vicinity. This is where GeoFirestore comes in. You can store the location for each bar document using GeoFirestore. GeoFirestore then allows you to easily query which bar are nearby.</p>
+<h2 id='example' class='heading'>Example</h2>
+
+<p>To run the example project, clone the repo, and run <code>pod install</code> from the Example directory first.</p>
+<h2 id='downloading-geofirestore-for-ios' class='heading'>Downloading GeoFirestore for iOS</h2>
+
+<p>If you&rsquo;re using <a href="https://cocoapods.org/">CocoaPods</a> add the following to your Podfile:</p>
+<pre class="highlight plaintext"><code>pod ‘Geofirestore'
+</code></pre>
+<h2 id='getting-started-with-firestore' class='heading'>Getting Started with Firestore</h2>
+
+<p>GeoFirestore requires the Firestore database in order to store location data. You can <a href="https://firebase.google.com/docs/firestore/">learn more about Firestore here</a>.</p>
+<h2 id='using-geofirestore' class='heading'>Using GeoFirestore</h2>
+<h3 id='geofirestore' class='heading'>GeoFirestore</h3>
+
+<p>A <code><a href="Classes/GeoFirestore.html">GeoFirestore</a></code> object is used to read and write geo location data to your Firestore database and to create queries. To create a new <code><a href="Classes/GeoFirestore.html">GeoFirestore</a></code> instance you need to attach it to a Firestore collection reference:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">geoFirestoreRef</span> <span class="o">=</span> <span class="kt">Firestore</span><span class="o">.</span><span class="nf">firestore</span><span class="p">()</span><span class="o">.</span><span class="nf">collection</span><span class="p">(</span><span class="s">"my-collection"</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">geoFirestore</span> <span class="o">=</span> <span class="kt">GeoFirestore</span><span class="p">(</span><span class="nv">collectionRef</span><span class="p">:</span> <span class="n">geoFirestoreRef</span><span class="p">)</span>
+</code></pre>
+<h4 id='setting-location-data' class='heading'>Setting location data</h4>
+
+<p>To set the location of a document simply call the <code>setLocation</code> method:</p>
+<pre class="highlight swift"><code><span class="n">geoFirestore</span><span class="o">.</span><span class="nf">setLocation</span><span class="p">(</span><span class="nv">location</span><span class="p">:</span> <span class="kt">CLLocation</span><span class="p">(</span><span class="nv">latitude</span><span class="p">:</span> <span class="mf">37.7853889</span><span class="p">,</span> <span class="nv">longitude</span><span class="p">:</span> <span class="o">-</span><span class="mf">122.4056973</span><span class="p">),</span> <span class="nv">forDocumentWithID</span><span class="p">:</span> <span class="s">"que8B9fxxjcvbC81h32VRjeBSUW2"</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">!=</span> <span class="kc">nil</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"An error occured: </span><span class="se">\(</span><span class="n">error</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Saved location successfully!"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Alternatively set the location using a <code>GeoPoint</code> :</p>
+<pre class="highlight swift"><code><span class="n">geoFirestore</span><span class="o">.</span><span class="nf">setLocation</span><span class="p">(</span><span class="nv">geopoint</span><span class="p">:</span> <span class="kt">GeoPoint</span><span class="p">(</span><span class="nv">latitude</span><span class="p">:</span> <span class="mf">37.7853889</span><span class="p">,</span> <span class="nv">longitude</span><span class="p">:</span> <span class="o">-</span><span class="mf">122.4056973</span><span class="p">),</span> <span class="nv">forDocumentWithID</span><span class="p">:</span> <span class="s">"que8B9fxxjcvbC81h32VRjeBSUW2"</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">!=</span> <span class="kc">nil</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"An error occured: </span><span class="se">\(</span><span class="n">error</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Saved location successfully!"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>To remove a location and delete the location from your database simply call:</p>
+<pre class="highlight swift"><code><span class="n">geoFirestore</span><span class="o">.</span><span class="nf">removeLocation</span><span class="p">(</span><span class="nv">forDocumentWithID</span><span class="p">:</span> <span class="s">"que8B9fxxjcvbC81h32VRjeBSUW2"</span><span class="p">)</span> 
+</code></pre>
+<h4 id='retrieving-a-location' class='heading'>Retrieving a location</h4>
+
+<p>Retrieving locations happens with callbacks. If the document is not present in GeoFirestore, the callback will be called with <code>nil</code>. If an error occurred, the callback is passed the error and the location will be <code>nil</code>.</p>
+<pre class="highlight swift"><code><span class="n">geoFirestore</span><span class="o">.</span><span class="nf">getLocation</span><span class="p">(</span><span class="nv">forDocumentWithID</span><span class="p">:</span> <span class="s">"que8B9fxxjcvbC81h32VRjeBSUW2"</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="nv">location</span><span class="p">:</span> <span class="kt">CLLocation</span><span class="p">?,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">!=</span> <span class="kc">nil</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"An error occurred: </span><span class="se">\(</span><span class="n">error</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">location</span> <span class="o">!=</span> <span class="kc">nil</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Location: [</span><span class="se">\(</span><span class="n">location</span><span class="o">!.</span><span class="n">coordinate</span><span class="o">.</span><span class="n">latitude</span><span class="se">)</span><span class="s">, </span><span class="se">\(</span><span class="n">location</span><span class="o">!.</span><span class="n">coordinate</span><span class="o">.</span><span class="n">longitude</span><span class="se">)</span><span class="s">]"</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"GeoFirestore does not contain a location for this document"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Alternatively get the location as a <code>GeoPoint</code> :</p>
+<pre class="highlight swift"><code><span class="n">geoFirestore</span><span class="o">.</span><span class="nf">getLocation</span><span class="p">(</span><span class="nv">forDocumentWithID</span><span class="p">:</span> <span class="s">"que8B9fxxjcvbC81h32VRjeBSUW2"</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="nv">location</span><span class="p">:</span> <span class="kt">GeoPoint</span><span class="p">?,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">!=</span> <span class="kc">nil</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"An error occurred: </span><span class="se">\(</span><span class="n">error</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">location</span> <span class="o">!=</span> <span class="kc">nil</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Location: [</span><span class="se">\(</span><span class="n">location</span><span class="o">!.</span><span class="n">latitude</span><span class="se">)</span><span class="s">, </span><span class="se">\(</span><span class="n">location</span><span class="o">!.</span><span class="n">longitude</span><span class="se">)</span><span class="s">]"</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"GeoFirestore does not contain a location for this document"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<h3 id='geofirestore-queries' class='heading'>GeoFirestore Queries</h3>
+
+<p>GeoFirestore allows you to query all documents within a geographic area using <code><a href="Classes/GFSQuery.html">GFSQuery</a></code>
+objects. As the locations for documents change, the query is updated in realtime and fires events
+letting you know if any relevant documents have moved. <code><a href="Classes/GFSQuery.html">GFSQuery</a></code> parameters can be updated
+later to change the size and center of the queried area.</p>
+<pre class="highlight swift"><code><span class="c1">// Query using CLLocation</span>
+<span class="k">let</span> <span class="nv">center</span> <span class="o">=</span> <span class="kt">CLLocation</span><span class="p">(</span><span class="nv">latitude</span><span class="p">:</span> <span class="mf">37.7832889</span><span class="p">,</span> <span class="nv">longitude</span><span class="p">:</span> <span class="o">-</span><span class="mf">122.4056973</span><span class="p">)</span>
+<span class="c1">// Query locations at [37.7832889, -122.4056973] with a radius of 600 meters</span>
+<span class="k">var</span> <span class="nv">circleQuery</span> <span class="o">=</span> <span class="n">geoFirestore</span><span class="o">.</span><span class="nf">query</span><span class="p">(</span><span class="nv">withCenter</span><span class="p">:</span> <span class="n">center</span><span class="p">,</span> <span class="nv">radius</span><span class="p">:</span> <span class="mf">0.6</span><span class="p">)</span>
+
+<span class="c1">// Query using GeoPoint</span>
+<span class="k">let</span> <span class="nv">center2</span> <span class="o">=</span> <span class="kt">GeoPoint</span><span class="p">(</span><span class="nv">latitude</span><span class="p">:</span> <span class="mf">37.7832889</span><span class="p">,</span> <span class="nv">longitude</span><span class="p">:</span> <span class="o">-</span><span class="mf">122.4056973</span><span class="p">)</span>
+<span class="c1">// Query locations at [37.7832889, -122.4056973] with a radius of 600 meters</span>
+<span class="k">var</span> <span class="nv">circleQuery2</span> <span class="o">=</span> <span class="n">geoFirestore</span><span class="o">.</span><span class="nf">query</span><span class="p">(</span><span class="nv">withCenter</span><span class="p">:</span> <span class="n">center2</span><span class="p">,</span> <span class="nv">radius</span><span class="p">:</span> <span class="mf">0.6</span><span class="p">)</span>
+
+<span class="c1">// Query location by region</span>
+<span class="k">let</span> <span class="nv">span</span> <span class="o">=</span> <span class="kt">MKCoordinateSpanMake</span><span class="p">(</span><span class="mf">0.001</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">region</span> <span class="o">=</span> <span class="kt">MKCoordinateRegionMake</span><span class="p">(</span><span class="n">center</span><span class="o">.</span><span class="n">coordinate</span><span class="p">,</span> <span class="n">span</span><span class="p">)</span>
+<span class="k">var</span> <span class="nv">regionQuery</span> <span class="o">=</span> <span class="n">geoFirestore</span><span class="o">.</span><span class="nf">query</span><span class="p">(</span><span class="nv">inRegion</span><span class="p">:</span> <span class="n">region</span><span class="p">)</span>
+</code></pre>
+<h4 id='receiving-events-for-geo-queries' class='heading'>Receiving events for geo queries</h4>
+
+<p>There are three kinds of events that can occur with a geo query:</p>
+
+<ol>
+<li><strong>Document Entered</strong>: The location of a document now matches the query criteria.</li>
+<li><strong>Document Exited</strong>: The location of a document no longer matches the query criteria.</li>
+<li><strong>Document Moved</strong>: The location of a document changed but the location still matches the query criteria.</li>
+</ol>
+
+<p>Document entered events will be fired for all documents initially matching the query as well as any time
+afterwards that a document enters the query. Document moved and document exited events are guaranteed to be preceded by a document entered event.</p>
+
+<p>To observe events for a geo query you can register a callback with <code>observe:with:</code>:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">queryHandle</span> <span class="o">=</span> <span class="n">query</span><span class="o">.</span><span class="nf">observe</span><span class="p">(</span><span class="o">.</span><span class="n">documentEntered</span><span class="p">,</span> <span class="nv">with</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">location</span><span class="p">)</span> <span class="k">in</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"The document with documentID '</span><span class="se">\(</span><span class="n">key</span><span class="se">)</span><span class="s">' entered the search area and is at location '</span><span class="se">\(</span><span class="n">location</span><span class="se">)</span><span class="s">'"</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre>
+
+<p>To cancel one or all callbacks for a geo query, call
+<code>removeObserver:withHandle:</code> or <code>removeAllObservers:</code>, respectively.</p>
+<h4 id='waiting-for-queries-to-be-q-ready-q' class='heading'>Waiting for queries to be <q>ready</q></h4>
+
+<p>Sometimes you want to know when the data for all the initial documents has been
+loaded from the server and the corresponding events for those documents have been
+fired. For example, you may want to hide a loading animation after your data has
+fully loaded. <code><a href="Classes/GFSQuery.html">GFSQuery</a></code> offers a method to listen for these ready events:</p>
+<pre class="highlight swift"><code><span class="n">query</span><span class="o">.</span><span class="n">observeReady</span> <span class="p">{</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"All initial data has been loaded and events have been fired!"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Note that locations might change while initially loading the data and document moved and document
+exited events might therefore still occur before the ready event was fired.</p>
+
+<p>When the query criteria is updated, the existing locations are re-queried and the
+ready event is fired again once all events for the updated query have been
+fired. This includes document exited events for documents that no longer match the query.</p>
+<h4 id='updating-the-query-criteria' class='heading'>Updating the query criteria</h4>
+
+<p>To update the query criteria you can use the <code>center</code> and <code>radius</code> properties on
+the <code><a href="Classes/GFSQuery.html">GFSQuery</a></code> object. Document exited and document entered events will be fired for
+documents moving in and out of the old and new search area, respectively. No document moved
+events will be fired as a result of the query criteria changing; however, document moved
+events might occur independently.</p>
+<h4 id='convenient-extensions' class='heading'>Convenient extensions</h4>
+
+<p>To make it easier to convert between a <code>GeoPoint</code>  and a <code>CLLocation</code> we have provided some useful extensions: </p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">cllocation</span> <span class="o">=</span> <span class="kt">CLLocation</span><span class="p">(</span><span class="nv">latitude</span><span class="p">:</span> <span class="mf">37.7832889</span><span class="p">,</span> <span class="nv">longitude</span><span class="p">:</span> <span class="o">-</span><span class="mf">122.4056973</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">geopoint</span> <span class="o">=</span> <span class="kt">GeoPoint</span><span class="p">(</span><span class="nv">latitude</span><span class="p">:</span> <span class="mf">37.7832889</span><span class="p">,</span> <span class="nv">longitude</span><span class="p">:</span> <span class="o">-</span><span class="mf">122.4056973</span><span class="p">)</span>
+
+<span class="c1">// Converting from CLLocation to Geopoint</span>
+<span class="k">let</span> <span class="nv">loc1</span><span class="p">:</span> <span class="kt">GeoPoint</span> <span class="o">=</span> <span class="n">cllocation</span><span class="o">.</span><span class="nf">geopointValue</span><span class="p">()</span>
+<span class="k">let</span> <span class="nv">loc2</span><span class="p">:</span> <span class="kt">GeoPoint</span> <span class="o">=</span> <span class="kt">GeoPoint</span><span class="o">.</span><span class="nf">geopointWithLocation</span><span class="p">(</span><span class="nv">location</span><span class="p">:</span> <span class="n">cllocation</span><span class="p">)</span>
+
+<span class="c1">// Converting from Geopoint to CLLocation</span>
+<span class="k">let</span> <span class="nv">loc3</span><span class="p">:</span> <span class="kt">CLLocation</span> <span class="o">=</span> <span class="n">geopoint</span><span class="o">.</span><span class="nf">locationValue</span><span class="p">()</span>
+<span class="k">let</span> <span class="nv">loc4</span><span class="p">:</span> <span class="kt">CLLocation</span> <span class="o">=</span> <span class="kt">CLLocation</span><span class="o">.</span><span class="nf">locationWithGeopoint</span><span class="p">(</span><span class="nv">geopoint</span><span class="p">:</span> <span class="n">geopoint</span><span class="p">)</span>
+</code></pre>
+<h2 id='api-reference-amp-documentation' class='heading'>API Reference &amp; Documentation</h2>
+
+<p>Full API reference and documentation is available <a href="apilink">here</a></p>
+<h2 id='license' class='heading'>License</h2>
+
+<p>GeoFirestore is available under the MIT license. See the LICENSE file for more info.</p>
+
+<p>Copyright &copy; 2018 Imperium Labs</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/imperiumlabs/Geofirestore-ios.git" target="_blank" rel="external">Dhruv Shah and Nikhil Sridhar</a>. All rights reserved. (Last updated: 2018-07-06)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

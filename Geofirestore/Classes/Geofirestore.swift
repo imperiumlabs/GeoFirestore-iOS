@@ -43,11 +43,11 @@ public class GeoFirestore {
      */
     internal var callbackQueue: DispatchQueue
 
-    /** @name Creating new GeoFirestore objects */
+    /** @name Creating new `GeoFirestore` objects */
     
     /**
      * Initializes a new GeoFirestore instance using a given Firestore collection.
-     * @param collectionRef The Firestore collection to attach this GeoFirestore instance to
+     * @param collectionRef The Firestore collection to attach this `GeoFirestore` instance to
      */
     public init(collectionRef: CollectionReference) {
         self.collectionRef = collectionRef
@@ -61,7 +61,7 @@ public class GeoFirestore {
     /**
      * Updates the location for a document and calls the completion callback once the location was successfully updated on the
      * server.
-     * @param geopoint The location as a geographic coordinate (GeoPoint)
+     * @param geopoint The location as a geographic coordinate (`GeoPoint`)
      * @param documentID The documentID of the document for which this location is saved
      * @param completion The completion block that is called once the location was successfully updated on the server
      */
@@ -72,7 +72,7 @@ public class GeoFirestore {
     /**
      * Updates the location for a document and calls the completion callback once the location was successfully updated on the
      * server.
-     * @param location The location as a geographic coordinate (CLLocation)
+     * @param location The location as a geographic coordinate (`CLLocation`)
      * @param documentID The documentID of the document for which this location is saved
      * @param completion The completion block that is called once the location was successfully updated on the server
      */
@@ -107,7 +107,7 @@ public class GeoFirestore {
      * location for the document. If an error occurred, the callback will be called with the error and location
      * will be nil.
      * @param documentID The documentID of the document to observe the location for
-     * @param callback The callback that is called for the current location (as a GeoPoint)
+     * @param callback The callback that is called for the current location (as a `GeoPoint`)
      */
     public func getLocation(forDocumentWithID documentID: String, callback: GFSGeoPointCallback? = nil) {
         self.collectionRef.document(documentID).getDocument { (snap, err) in
@@ -125,7 +125,7 @@ public class GeoFirestore {
      * location for the document. If an error occurred, the callback will be called with the error and location
      * will be nil.
      * @param documentID The documentID of the document to observe the location for
-     * @param callback The callback that is called for the current location (as a CLLocation)
+     * @param callback The callback that is called for the current location (as a `CLLocation`)
      */
     public func getLocation(forDocumentWithID documentID: String, callback: GFSLocationCallback? = nil) {
         self.collectionRef.document(documentID).getDocument { (snap, err) in
@@ -139,22 +139,20 @@ public class GeoFirestore {
     }
     
     /**
-     * Creates a new GeoFirestore query centered at a given location with a given radius. The GFSQuery object can be used to query
-     * documents that enter, move, and exit the search radius.
-     * @param location The location at which the query is centered (as a GeoPoint)
+     * Creates a new GeoFirestore query centered at a given location with a given radius. The `GFSQuery` object can be used to query documents that enter, move, and exit the search radius.
+     * @param location The location at which the query is centered (as a `GeoPoint`)
      * @param radius The radius in kilometers of the geo query
-     * @return The GFSCircleQuery object that can be used for geo queries.
+     * @return The `GFSCircleQuery` object that can be used for geo queries.
      */
     public func query(withCenter center: GeoPoint, radius: Double) -> GFSCircleQuery {
         return GFSCircleQuery(geoFirestore: self, center: center.locationValue(), radius: radius)
     }
     
     /**
-     * Creates a new GeoFirestore query centered at a given location with a given radius. The GFSQuery object can be used to query
-     * documents that enter, move, and exit the search radius.
+     * Creates a new GeoFirestore query centered at a given location with a given radius. The `GFSQuery` object can be used to query documents that enter, move, and exit the search radius.
      * @param location The location at which the query is centered (as a CLLocation)
      * @param radius The radius in kilometers of the geo query
-     * @return The GFSCircleQuery object that can be used for geo queries.
+     * @return The `GFSCircleQuery` object that can be used for geo queries.
      */
     public func query(withCenter center: CLLocation, radius: Double) -> GFSCircleQuery {
         return GFSCircleQuery(geoFirestore: self, center: center, radius: radius)

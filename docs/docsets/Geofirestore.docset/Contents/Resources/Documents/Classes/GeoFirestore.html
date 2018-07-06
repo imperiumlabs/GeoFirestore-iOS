@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>GeoFirestore Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/GeoFirestore" class="dashAnchor"></a>
+    <a title="GeoFirestore Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Geofirestore Docs</a> (46% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Geofirestore Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        GeoFirestore Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/GFSCircleQuery.html">GFSCircleQuery</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GFSQuery.html">GFSQuery</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GFSRegionQuery.html">GFSRegionQuery</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GeoFirestore.html">GeoFirestore</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/GFSEventType.html">GFSEventType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/CLLocation.html">CLLocation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/GeoPoint.html">GeoPoint</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:12Geofirestore14GFSQueryHandlea">GFSQueryHandle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:12Geofirestore19GFSQueryResultBlocka">GFSQueryResultBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:12Geofirestore13GFSReadyBlocka">GFSReadyBlock</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>GeoFirestore</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">GeoFirestore</span></code></pre>
+
+                </div>
+              </div>
+            <p>A GeoFirestore instance is used to store geo location data at a Firestore document.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12Geofirestore12GeoFirestoreC18GFSCompletionBlocka"></a>
+                    <a name="//apple_ref/swift/Alias/GFSCompletionBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Geofirestore12GeoFirestoreC18GFSCompletionBlocka">GFSCompletionBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">GFSCompletionBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12Geofirestore12GeoFirestoreC19GFSLocationCallbacka"></a>
+                    <a name="//apple_ref/swift/Alias/GFSLocationCallback" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Geofirestore12GeoFirestoreC19GFSLocationCallbacka">GFSLocationCallback</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">GFSLocationCallback</span> <span class="o">=</span> <span class="p">(</span><span class="kt">CLLocation</span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12Geofirestore12GeoFirestoreC19GFSGeoPointCallbacka"></a>
+                    <a name="//apple_ref/swift/Alias/GFSGeoPointCallback" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Geofirestore12GeoFirestoreC19GFSGeoPointCallbacka">GFSGeoPointCallback</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">GFSGeoPointCallback</span> <span class="o">=</span> <span class="p">(</span><span class="kt">GeoPoint</span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12Geofirestore12GeoFirestoreC13collectionRefSo19CollectionReferenceCvp"></a>
+                    <a name="//apple_ref/swift/Property/collectionRef" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Geofirestore12GeoFirestoreC13collectionRefSo19CollectionReferenceCvp">collectionRef</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The Firestore collection reference this GeoFirestore instance uses.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">collectionRef</span><span class="p">:</span> <span class="kt">CollectionReference</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12Geofirestore12GeoFirestoreCACSo19CollectionReferenceC13collectionRef_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(collectionRef:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Geofirestore12GeoFirestoreCACSo19CollectionReferenceC13collectionRef_tcfc">init(collectionRef:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">collectionRef</span><span class="p">:</span> <span class="kt">CollectionReference</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12Geofirestore12GeoFirestoreC22getCollectionReferenceSo0eF0CyF"></a>
+                    <a name="//apple_ref/swift/Method/getCollectionReference()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Geofirestore12GeoFirestoreC22getCollectionReferenceSo0eF0CyF">getCollectionReference()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getCollectionReference</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">CollectionReference</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12Geofirestore12GeoFirestoreC11setLocationySo0B5PointC8geopoint_SS17forDocumentWithIDys5Error_pSgcSg10completiontF"></a>
+                    <a name="//apple_ref/swift/Method/setLocation(geopoint:forDocumentWithID:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Geofirestore12GeoFirestoreC11setLocationySo0B5PointC8geopoint_SS17forDocumentWithIDys5Error_pSgcSg10completiontF">setLocation(geopoint:forDocumentWithID:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Updates the location for a document and calls the completion callback once the location was successfully updated on the
+server.
+@param geopoint The location as a geographic coordinate (<code>GeoPoint</code>)
+@param documentID The documentID of the document for which this location is saved
+@param completion The completion block that is called once the location was successfully updated on the server</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setLocation</span><span class="p">(</span><span class="nv">geopoint</span><span class="p">:</span> <span class="kt">GeoPoint</span><span class="p">,</span> <span class="n">forDocumentWithID</span> <span class="nv">documentID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt"><a href="../Classes/GeoFirestore.html#/s:12Geofirestore12GeoFirestoreC18GFSCompletionBlocka">GFSCompletionBlock</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12Geofirestore12GeoFirestoreC11setLocationySo10CLLocationC8location_SS17forDocumentWithIDys5Error_pSgcSg10completiontF"></a>
+                    <a name="//apple_ref/swift/Method/setLocation(location:forDocumentWithID:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Geofirestore12GeoFirestoreC11setLocationySo10CLLocationC8location_SS17forDocumentWithIDys5Error_pSgcSg10completiontF">setLocation(location:forDocumentWithID:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Updates the location for a document and calls the completion callback once the location was successfully updated on the
+server.
+@param location The location as a geographic coordinate (<code>CLLocation</code>)
+@param documentID The documentID of the document for which this location is saved
+@param completion The completion block that is called once the location was successfully updated on the server</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setLocation</span><span class="p">(</span><span class="nv">location</span><span class="p">:</span> <span class="kt">CLLocation</span><span class="p">,</span> <span class="n">forDocumentWithID</span> <span class="nv">documentID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt"><a href="../Classes/GeoFirestore.html#/s:12Geofirestore12GeoFirestoreC18GFSCompletionBlocka">GFSCompletionBlock</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12Geofirestore12GeoFirestoreC14removeLocationySS17forDocumentWithID_ys5Error_pSgcSg10completiontF"></a>
+                    <a name="//apple_ref/swift/Method/removeLocation(forDocumentWithID:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Geofirestore12GeoFirestoreC14removeLocationySS17forDocumentWithID_ys5Error_pSgcSg10completiontF">removeLocation(forDocumentWithID:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Removes the location for a document with a given documentID and calls the completion callback once the location was successfully updated on
+the server.
+@param documentID The documentID of the document for which this location is removed
+@param completion The completion block that is called once the location was successfully updated on the server</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">removeLocation</span><span class="p">(</span><span class="n">forDocumentWithID</span> <span class="nv">documentID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt"><a href="../Classes/GeoFirestore.html#/s:12Geofirestore12GeoFirestoreC18GFSCompletionBlocka">GFSCompletionBlock</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12Geofirestore12GeoFirestoreC11getLocationySS17forDocumentWithID_ySo0B5PointCSg_s5Error_pSgtcSg8callbacktF"></a>
+                    <a name="//apple_ref/swift/Method/getLocation(forDocumentWithID:callback:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Geofirestore12GeoFirestoreC11getLocationySS17forDocumentWithID_ySo0B5PointCSg_s5Error_pSgtcSg8callbacktF">getLocation(forDocumentWithID:callback:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets the current location for the document with the given documentID and calls the callback with the location or nil if there is no
+location for the document. If an error occurred, the callback will be called with the error and location
+will be nil.
+@param documentID The documentID of the document to observe the location for
+@param callback The callback that is called for the current location (as a <code>GeoPoint</code>)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getLocation</span><span class="p">(</span><span class="n">forDocumentWithID</span> <span class="nv">documentID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">callback</span><span class="p">:</span> <span class="kt"><a href="../Classes/GeoFirestore.html#/s:12Geofirestore12GeoFirestoreC19GFSGeoPointCallbacka">GFSGeoPointCallback</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12Geofirestore12GeoFirestoreC11getLocationySS17forDocumentWithID_ySo10CLLocationCSg_s5Error_pSgtcSg8callbacktF"></a>
+                    <a name="//apple_ref/swift/Method/getLocation(forDocumentWithID:callback:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Geofirestore12GeoFirestoreC11getLocationySS17forDocumentWithID_ySo10CLLocationCSg_s5Error_pSgtcSg8callbacktF">getLocation(forDocumentWithID:callback:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets the current location for the document with the given documentID and calls the callback with the location or nil if there is no
+location for the document. If an error occurred, the callback will be called with the error and location
+will be nil.
+@param documentID The documentID of the document to observe the location for
+@param callback The callback that is called for the current location (as a <code>CLLocation</code>)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getLocation</span><span class="p">(</span><span class="n">forDocumentWithID</span> <span class="nv">documentID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">callback</span><span class="p">:</span> <span class="kt"><a href="../Classes/GeoFirestore.html#/s:12Geofirestore12GeoFirestoreC19GFSLocationCallbacka">GFSLocationCallback</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12Geofirestore12GeoFirestoreC5queryAA14GFSCircleQueryCSo0B5PointC10withCenter_Sd6radiustF"></a>
+                    <a name="//apple_ref/swift/Method/query(withCenter:radius:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Geofirestore12GeoFirestoreC5queryAA14GFSCircleQueryCSo0B5PointC10withCenter_Sd6radiustF">query(withCenter:radius:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new GeoFirestore query centered at a given location with a given radius. The <code><a href="../Classes/GFSQuery.html">GFSQuery</a></code> object can be used to query documents that enter, move, and exit the search radius.
+@param location The location at which the query is centered (as a <code>GeoPoint</code>)
+@param radius The radius in kilometers of the geo query
+@return The <code><a href="../Classes/GFSCircleQuery.html">GFSCircleQuery</a></code> object that can be used for geo queries.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">query</span><span class="p">(</span><span class="n">withCenter</span> <span class="nv">center</span><span class="p">:</span> <span class="kt">GeoPoint</span><span class="p">,</span> <span class="nv">radius</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/GFSCircleQuery.html">GFSCircleQuery</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12Geofirestore12GeoFirestoreC5queryAA14GFSCircleQueryCSo10CLLocationC10withCenter_Sd6radiustF"></a>
+                    <a name="//apple_ref/swift/Method/query(withCenter:radius:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Geofirestore12GeoFirestoreC5queryAA14GFSCircleQueryCSo10CLLocationC10withCenter_Sd6radiustF">query(withCenter:radius:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new GeoFirestore query centered at a given location with a given radius. The <code><a href="../Classes/GFSQuery.html">GFSQuery</a></code> object can be used to query documents that enter, move, and exit the search radius.
+@param location The location at which the query is centered (as a CLLocation)
+@param radius The radius in kilometers of the geo query
+@return The <code><a href="../Classes/GFSCircleQuery.html">GFSCircleQuery</a></code> object that can be used for geo queries.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">query</span><span class="p">(</span><span class="n">withCenter</span> <span class="nv">center</span><span class="p">:</span> <span class="kt">CLLocation</span><span class="p">,</span> <span class="nv">radius</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/GFSCircleQuery.html">GFSCircleQuery</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12Geofirestore12GeoFirestoreC5queryAA14GFSRegionQueryCSC18MKCoordinateRegionV02inH0_tF"></a>
+                    <a name="//apple_ref/swift/Method/query(inRegion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Geofirestore12GeoFirestoreC5queryAA14GFSRegionQueryCSC18MKCoordinateRegionV02inH0_tF">query(inRegion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new GeoFirestore query for a given region. The GFSQuery object can be used to query
+documents that enter, move, and exit the search region.
+@param region The region which this query searches
+@return The GFSRegionQuery object that can be used for geo queries.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">query</span><span class="p">(</span><span class="n">inRegion</span> <span class="nv">region</span><span class="p">:</span> <span class="kt">MKCoordinateRegion</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/GFSRegionQuery.html">GFSRegionQuery</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/imperiumlabs/Geofirestore-ios.git" target="_blank" rel="external">Dhruv Shah and Nikhil Sridhar</a>. All rights reserved. (Last updated: 2018-07-06)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

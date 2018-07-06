@@ -1,0 +1,159 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/hitesh/Documents/GitHub/Geofirestore-ios/Geofirestore/Classes/Geofirestore.swift",
+      "line": 8,
+      "symbol": "GeoPoint.geopointWithLocation(location:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hitesh/Documents/GitHub/Geofirestore-ios/Geofirestore/Classes/Geofirestore.swift",
+      "line": 12,
+      "symbol": "GeoPoint.locationValue()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hitesh/Documents/GitHub/Geofirestore-ios/Geofirestore/Classes/Geofirestore.swift",
+      "line": 18,
+      "symbol": "CLLocation.locationWithGeopoint(geopoint:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hitesh/Documents/GitHub/Geofirestore-ios/Geofirestore/Classes/Geofirestore.swift",
+      "line": 22,
+      "symbol": "CLLocation.geopointValue()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hitesh/Documents/GitHub/Geofirestore-ios/Geofirestore/Classes/Geofirestore.swift",
+      "line": 32,
+      "symbol": "GeoFirestore.GFSCompletionBlock",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hitesh/Documents/GitHub/Geofirestore-ios/Geofirestore/Classes/Geofirestore.swift",
+      "line": 33,
+      "symbol": "GeoFirestore.GFSLocationCallback",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hitesh/Documents/GitHub/Geofirestore-ios/Geofirestore/Classes/Geofirestore.swift",
+      "line": 34,
+      "symbol": "GeoFirestore.GFSGeoPointCallback",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hitesh/Documents/GitHub/Geofirestore-ios/Geofirestore/Classes/Geofirestore.swift",
+      "line": 52,
+      "symbol": "GeoFirestore.init(collectionRef:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hitesh/Documents/GitHub/Geofirestore-ios/Geofirestore/Classes/Geofirestore.swift",
+      "line": 57,
+      "symbol": "GeoFirestore.getCollectionReference()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hitesh/Documents/GitHub/Geofirestore-ios/Geofirestore/Classes/Geofirestore.swift",
+      "line": 175,
+      "symbol": "GFSEventType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hitesh/Documents/GitHub/Geofirestore-ios/Geofirestore/Classes/Geofirestore.swift",
+      "line": 176,
+      "symbol": "GFSEventType.documentEntered",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hitesh/Documents/GitHub/Geofirestore-ios/Geofirestore/Classes/Geofirestore.swift",
+      "line": 177,
+      "symbol": "GFSEventType.documentExited",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hitesh/Documents/GitHub/Geofirestore-ios/Geofirestore/Classes/Geofirestore.swift",
+      "line": 178,
+      "symbol": "GFSEventType.documentMoved",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hitesh/Documents/GitHub/Geofirestore-ios/Geofirestore/Classes/Geofirestore.swift",
+      "line": 183,
+      "symbol": "GFSQueryResultBlock",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hitesh/Documents/GitHub/Geofirestore-ios/Geofirestore/Classes/Geofirestore.swift",
+      "line": 184,
+      "symbol": "GFSReadyBlock",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hitesh/Documents/GitHub/Geofirestore-ios/Geofirestore/Classes/Geofirestore.swift",
+      "line": 185,
+      "symbol": "GFSQueryHandle",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hitesh/Documents/GitHub/Geofirestore-ios/Geofirestore/Classes/Geofirestore.swift",
+      "line": 496,
+      "symbol": "GFSQuery.totalObserverCount()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hitesh/Documents/GitHub/Geofirestore-ios/Geofirestore/Classes/Geofirestore.swift",
+      "line": 514,
+      "symbol": "GFSQuery.observe(_:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hitesh/Documents/GitHub/Geofirestore-ios/Geofirestore/Classes/Geofirestore.swift",
+      "line": 617,
+      "symbol": "GFSCircleQuery",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hitesh/Documents/GitHub/Geofirestore-ios/Geofirestore/Classes/Geofirestore.swift",
+      "line": 639,
+      "symbol": "GFSCircleQuery.init(geoFirestore:center:radius:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hitesh/Documents/GitHub/Geofirestore-ios/Geofirestore/Classes/Geofirestore.swift",
+      "line": 656,
+      "symbol": "GFSRegionQuery",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hitesh/Documents/GitHub/Geofirestore-ios/Geofirestore/Classes/Geofirestore.swift",
+      "line": 668,
+      "symbol": "GFSRegionQuery.init(geoFirestore:region:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/hitesh/Documents/GitHub/Geofirestore-ios"
+}
