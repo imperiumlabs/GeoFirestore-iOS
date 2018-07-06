@@ -191,7 +191,7 @@ let loc4: CLLocation = CLLocation.locationWithGeopoint(geopoint: geopoint)
 
 ## API Reference & Documentation
 
-Full API reference and documentation is available [here](apilink)
+Full API reference and documentation is available [here](docs/index.html)
 
 ## License
 
