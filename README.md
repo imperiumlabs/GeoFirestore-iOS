@@ -6,6 +6,8 @@ At its heart, GeoFirestore simply stores locations with string keys. Its main be
 
 GeoFirestore uses the Firestore database for data storage, allowing query results to be updated in realtime as they change. GeoFirestore selectively loads only the data near certain locations, keeping your applications light and responsive, even with extremely large datasets.
 
+A compatible GeoFirestore client is also available for [Android](https://github.com/imperiumlabs/GeoFirestore-Android).
+
 ### Integrating GeoFirestore with your data
 
 GeoFirestore is designed as a lightweight add-on to Firestore. However, to keep things simple, GeoFirestore stores data in its own format and its own location within your Firestore database. This allows your existing data format and security rules to remain unchanged and for you to add GeoFirestore as an easy solution for geo queries without modifying your existing data.
