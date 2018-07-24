@@ -27,6 +27,12 @@ If you're using [CocoaPods](https://cocoapods.org/) add the following to your Po
 ```
 pod ‘Geofirestore'
 ```
+Then run the following in terminal:
+
+```
+pod repo update
+pod install
+```
 
 ## Getting Started with Firestore
 
