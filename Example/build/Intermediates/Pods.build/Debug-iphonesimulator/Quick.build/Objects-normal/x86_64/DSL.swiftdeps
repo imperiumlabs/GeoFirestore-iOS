@@ -1,0 +1,337 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "beforeSuite"
+- "afterSuite"
+- "sharedExamples"
+- "sharedExamples"
+- "describe"
+- "context"
+- "beforeEach"
+- "beforeEach"
+- "afterEach"
+- "afterEach"
+- "it"
+- "itBehavesLike"
+- "itBehavesLike"
+- "itBehavesLike"
+- "pending"
+- "xdescribe"
+- "xcontext"
+- "xit"
+- "xitBehavesLike"
+- "fdescribe"
+- "fcontext"
+- "fit"
+- "fitBehavesLike"
+- "fitBehavesLike"
+- "fitBehavesLike"
+provides-nominal:
+provides-member:
+provides-dynamic-lookup:
+depends-top-level:
+- "AfterExampleClosure"
+- "AfterExampleWithMetadataClosure"
+- "AfterSuiteClosure"
+- "BeforeExampleClosure"
+- "BeforeExampleWithMetadataClosure"
+- "BeforeSuiteClosure"
+- "Behavior"
+- !private "Dictionary"
+- "FilterFlags"
+- "SharedExampleClosure"
+- "SharedExampleContext"
+- "String"
+- "StringLiteralType"
+- "UInt"
+- "Void"
+- !private "World"
+- "afterEach"
+- "afterSuite"
+- "beforeEach"
+- "beforeSuite"
+- "context"
+- "describe"
+- "fcontext"
+- "fdescribe"
+- "fit"
+- "fitBehavesLike"
+- "it"
+- "itBehavesLike"
+- "pending"
+- "sharedExamples"
+- "xcontext"
+- "xdescribe"
+- "xit"
+- "xitBehavesLike"
+depends-member:
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s7CVarArgP", "afterEach"]
+- !private ["s7CVarArgP", "afterSuite"]
+- !private ["s7CVarArgP", "beforeEach"]
+- !private ["s7CVarArgP", "beforeSuite"]
+- !private ["s7CVarArgP", "context"]
+- !private ["s7CVarArgP", "describe"]
+- !private ["s7CVarArgP", "fdescribe"]
+- !private ["s7CVarArgP", "fit"]
+- !private ["s7CVarArgP", "fitBehavesLike"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "it"]
+- !private ["s7CVarArgP", "itBehavesLike"]
+- !private ["s7CVarArgP", "pending"]
+- !private ["s7CVarArgP", "sharedExamples"]
+- !private ["s7CVarArgP", "sharedWorld"]
+- !private ["s7CVarArgP", "xdescribe"]
+- !private ["s7CVarArgP", "xit"]
+- !private ["s7CVarArgP", "xitBehavesLike"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "afterEach"]
+- !private ["s28CustomDebugStringConvertibleP", "afterSuite"]
+- !private ["s28CustomDebugStringConvertibleP", "beforeEach"]
+- !private ["s28CustomDebugStringConvertibleP", "beforeSuite"]
+- !private ["s28CustomDebugStringConvertibleP", "context"]
+- !private ["s28CustomDebugStringConvertibleP", "describe"]
+- !private ["s28CustomDebugStringConvertibleP", "fdescribe"]
+- !private ["s28CustomDebugStringConvertibleP", "fit"]
+- !private ["s28CustomDebugStringConvertibleP", "fitBehavesLike"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "it"]
+- !private ["s28CustomDebugStringConvertibleP", "itBehavesLike"]
+- !private ["s28CustomDebugStringConvertibleP", "pending"]
+- !private ["s28CustomDebugStringConvertibleP", "sharedExamples"]
+- !private ["s28CustomDebugStringConvertibleP", "sharedWorld"]
+- !private ["s28CustomDebugStringConvertibleP", "xdescribe"]
+- !private ["s28CustomDebugStringConvertibleP", "xit"]
+- !private ["s28CustomDebugStringConvertibleP", "xitBehavesLike"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "afterEach"]
+- !private ["s23CustomStringConvertibleP", "afterSuite"]
+- !private ["s23CustomStringConvertibleP", "beforeEach"]
+- !private ["s23CustomStringConvertibleP", "beforeSuite"]
+- !private ["s23CustomStringConvertibleP", "context"]
+- !private ["s23CustomStringConvertibleP", "describe"]
+- !private ["s23CustomStringConvertibleP", "fdescribe"]
+- !private ["s23CustomStringConvertibleP", "fit"]
+- !private ["s23CustomStringConvertibleP", "fitBehavesLike"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "it"]
+- !private ["s23CustomStringConvertibleP", "itBehavesLike"]
+- !private ["s23CustomStringConvertibleP", "pending"]
+- !private ["s23CustomStringConvertibleP", "sharedExamples"]
+- !private ["s23CustomStringConvertibleP", "sharedWorld"]
+- !private ["s23CustomStringConvertibleP", "xdescribe"]
+- !private ["s23CustomStringConvertibleP", "xit"]
+- !private ["s23CustomStringConvertibleP", "xitBehavesLike"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EquatableP", "afterEach"]
+- !private ["s9EquatableP", "afterSuite"]
+- !private ["s9EquatableP", "beforeEach"]
+- !private ["s9EquatableP", "beforeSuite"]
+- !private ["s9EquatableP", "context"]
+- !private ["s9EquatableP", "describe"]
+- !private ["s9EquatableP", "fdescribe"]
+- !private ["s9EquatableP", "fit"]
+- !private ["s9EquatableP", "fitBehavesLike"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "it"]
+- !private ["s9EquatableP", "itBehavesLike"]
+- !private ["s9EquatableP", "pending"]
+- !private ["s9EquatableP", "sharedExamples"]
+- !private ["s9EquatableP", "sharedWorld"]
+- !private ["s9EquatableP", "xdescribe"]
+- !private ["s9EquatableP", "xit"]
+- !private ["s9EquatableP", "xitBehavesLike"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s8HashableP", "afterEach"]
+- !private ["s8HashableP", "afterSuite"]
+- !private ["s8HashableP", "beforeEach"]
+- !private ["s8HashableP", "beforeSuite"]
+- !private ["s8HashableP", "context"]
+- !private ["s8HashableP", "describe"]
+- !private ["s8HashableP", "fdescribe"]
+- !private ["s8HashableP", "fit"]
+- !private ["s8HashableP", "fitBehavesLike"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "it"]
+- !private ["s8HashableP", "itBehavesLike"]
+- !private ["s8HashableP", "pending"]
+- !private ["s8HashableP", "sharedExamples"]
+- !private ["s8HashableP", "sharedWorld"]
+- !private ["s8HashableP", "xdescribe"]
+- !private ["s8HashableP", "xit"]
+- !private ["s8HashableP", "xitBehavesLike"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["So8NSObjectC", "afterEach"]
+- !private ["So8NSObjectC", "afterSuite"]
+- !private ["So8NSObjectC", "beforeEach"]
+- !private ["So8NSObjectC", "beforeSuite"]
+- !private ["So8NSObjectC", "context"]
+- !private ["So8NSObjectC", "describe"]
+- !private ["So8NSObjectC", "fdescribe"]
+- !private ["So8NSObjectC", "fit"]
+- !private ["So8NSObjectC", "fitBehavesLike"]
+- !private ["So8NSObjectC", "it"]
+- !private ["So8NSObjectC", "itBehavesLike"]
+- !private ["So8NSObjectC", "pending"]
+- !private ["So8NSObjectC", "sharedExamples"]
+- !private ["So8NSObjectC", "sharedWorld"]
+- !private ["So8NSObjectC", "xdescribe"]
+- !private ["So8NSObjectC", "xit"]
+- !private ["So8NSObjectC", "xitBehavesLike"]
+- !private ["So16NSObjectProtocolP", "afterEach"]
+- !private ["So16NSObjectProtocolP", "afterSuite"]
+- !private ["So16NSObjectProtocolP", "beforeEach"]
+- !private ["So16NSObjectProtocolP", "beforeSuite"]
+- !private ["So16NSObjectProtocolP", "context"]
+- !private ["So16NSObjectProtocolP", "describe"]
+- !private ["So16NSObjectProtocolP", "fdescribe"]
+- !private ["So16NSObjectProtocolP", "fit"]
+- !private ["So16NSObjectProtocolP", "fitBehavesLike"]
+- !private ["So16NSObjectProtocolP", "it"]
+- !private ["So16NSObjectProtocolP", "itBehavesLike"]
+- !private ["So16NSObjectProtocolP", "pending"]
+- !private ["So16NSObjectProtocolP", "sharedExamples"]
+- !private ["So16NSObjectProtocolP", "sharedWorld"]
+- !private ["So16NSObjectProtocolP", "xdescribe"]
+- !private ["So16NSObjectProtocolP", "xit"]
+- !private ["So16NSObjectProtocolP", "xitBehavesLike"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s8SequenceP", "init"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["5Quick5WorldC", "afterEach"]
+- !private ["5Quick5WorldC", "afterSuite"]
+- !private ["5Quick5WorldC", "beforeEach"]
+- !private ["5Quick5WorldC", "beforeSuite"]
+- !private ["5Quick5WorldC", "context"]
+- !private ["5Quick5WorldC", "describe"]
+- !private ["5Quick5WorldC", "fdescribe"]
+- !private ["5Quick5WorldC", "fit"]
+- !private ["5Quick5WorldC", "fitBehavesLike"]
+- !private ["5Quick5WorldC", "it"]
+- !private ["5Quick5WorldC", "itBehavesLike"]
+- !private ["5Quick5WorldC", "pending"]
+- !private ["5Quick5WorldC", "sharedExamples"]
+- !private ["5Quick5WorldC", "sharedWorld"]
+- !private ["5Quick5WorldC", "xdescribe"]
+- !private ["5Quick5WorldC", "xit"]
+- !private ["5Quick5WorldC", "xitBehavesLike"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "afterEach"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "afterSuite"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "beforeEach"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "beforeSuite"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "context"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "describe"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fdescribe"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fit"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fitBehavesLike"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "it"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "itBehavesLike"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "pending"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "sharedExamples"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "sharedWorld"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "xdescribe"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "xit"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "xitBehavesLike"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+- !private ["5Quick10_WorldBaseC", "afterEach"]
+- !private ["5Quick10_WorldBaseC", "afterSuite"]
+- !private ["5Quick10_WorldBaseC", "beforeEach"]
+- !private ["5Quick10_WorldBaseC", "beforeSuite"]
+- !private ["5Quick10_WorldBaseC", "context"]
+- !private ["5Quick10_WorldBaseC", "describe"]
+- !private ["5Quick10_WorldBaseC", "fdescribe"]
+- !private ["5Quick10_WorldBaseC", "fit"]
+- !private ["5Quick10_WorldBaseC", "fitBehavesLike"]
+- !private ["5Quick10_WorldBaseC", "it"]
+- !private ["5Quick10_WorldBaseC", "itBehavesLike"]
+- !private ["5Quick10_WorldBaseC", "pending"]
+- !private ["5Quick10_WorldBaseC", "sharedExamples"]
+- !private ["5Quick10_WorldBaseC", "sharedWorld"]
+- !private ["5Quick10_WorldBaseC", "xdescribe"]
+- !private ["5Quick10_WorldBaseC", "xit"]
+- !private ["5Quick10_WorldBaseC", "xitBehavesLike"]
+depends-nominal:
+- !private "s23BidirectionalCollectionP"
+- !private "s7CVarArgP"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- !private "s9EquatableP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s8HashableP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "So8NSObjectC"
+- !private "So16NSObjectProtocolP"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s8SequenceP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "5Quick5WorldC"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s16_SwiftStringViewP"
+- !private "5Quick10_WorldBaseC"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/XCTest.swiftmodule"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Quick/Sources/QuickObjectiveC/DSL/QCKDSL.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Target Support Files/Quick/Quick-umbrella.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Quick/Sources/QuickObjectiveC/QuickSpec.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Quick/Sources/QuickObjectiveC/Quick.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Quick/Sources/QuickObjectiveC/Configuration/QuickConfiguration.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Intermediates/Pods.build/Debug-iphonesimulator/Quick.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "feb59eafdda6dfceb04c990dc07874ce"

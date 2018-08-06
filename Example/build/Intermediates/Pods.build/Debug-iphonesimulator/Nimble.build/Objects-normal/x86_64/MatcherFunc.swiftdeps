@@ -1,0 +1,199 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "MatcherFunc"
+- "NonNilMatcherFunc"
+provides-nominal:
+- "6Nimble11MatcherFuncV"
+- "6Nimble17NonNilMatcherFuncV"
+provides-member:
+- ["6Nimble11MatcherFuncV", ""]
+- ["6Nimble17NonNilMatcherFuncV", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!"
+- !private "=="
+- "AssignmentPrecedence"
+- "Bool"
+- !private "BooleanLiteralType"
+- "Expression"
+- "FailureMessage"
+- "Matcher"
+- "MatcherFunc"
+- "NonNilMatcherFunc"
+- "Predicate"
+- !private "StringLiteralType"
+depends-member:
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "postfixActual"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "postfixActual"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "postfixActual"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "postfixActual"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["6Nimble10ExpressionV", "evaluate"]
+- !private ["6Nimble14FailureMessageC", "postfixActual"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "postfixActual"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["6Nimble7MatcherP", "Predicate"]
+- ["6Nimble7MatcherP", "ValueType"]
+- ["6Nimble7MatcherP", ""]
+- ["6Nimble7MatcherP", "_Default_ValueType"]
+- !private ["6Nimble7MatcherP", "attachNilErrorIfNeeded"]
+- ["6Nimble7MatcherP", "doesNotMatch"]
+- !private ["6Nimble7MatcherP", "fromDeprecatedMatcher"]
+- !private ["6Nimble7MatcherP", "matcher"]
+- ["6Nimble7MatcherP", "matches"]
+- ["6Nimble11MatcherFuncV", "Bool"]
+- ["6Nimble11MatcherFuncV", "Expression"]
+- ["6Nimble11MatcherFuncV", "FailureMessage"]
+- ["6Nimble11MatcherFuncV", "Predicate"]
+- ["6Nimble11MatcherFuncV", "T"]
+- ["6Nimble11MatcherFuncV", "ValueType"]
+- ["6Nimble11MatcherFuncV", "_Default_ValueType"]
+- ["6Nimble11MatcherFuncV", "deinit"]
+- ["6Nimble11MatcherFuncV", "doesNotMatch"]
+- ["6Nimble11MatcherFuncV", "init"]
+- ["6Nimble11MatcherFuncV", "matcher"]
+- ["6Nimble11MatcherFuncV", "matches"]
+- ["6Nimble11MatcherFuncV", "predicate"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["So8NSObjectC", "postfixActual"]
+- !private ["So16NSObjectProtocolP", "postfixActual"]
+- ["6Nimble17NonNilMatcherFuncV", "Bool"]
+- ["6Nimble17NonNilMatcherFuncV", "Expression"]
+- ["6Nimble17NonNilMatcherFuncV", "FailureMessage"]
+- ["6Nimble17NonNilMatcherFuncV", "Predicate"]
+- ["6Nimble17NonNilMatcherFuncV", "T"]
+- ["6Nimble17NonNilMatcherFuncV", "ValueType"]
+- ["6Nimble17NonNilMatcherFuncV", "_Default_ValueType"]
+- ["6Nimble17NonNilMatcherFuncV", "attachNilErrorIfNeeded"]
+- ["6Nimble17NonNilMatcherFuncV", "deinit"]
+- ["6Nimble17NonNilMatcherFuncV", "doesNotMatch"]
+- ["6Nimble17NonNilMatcherFuncV", "init"]
+- ["6Nimble17NonNilMatcherFuncV", "matcher"]
+- ["6Nimble17NonNilMatcherFuncV", "matches"]
+- ["6Nimble17NonNilMatcherFuncV", "predicate"]
+- !private ["6Nimble9PredicateV", "fromDeprecatedMatcher"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s8SequenceP", "init"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["6Nimble27TestOutputStringConvertibleP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "postfixActual"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "s23BidirectionalCollectionP"
+- !private "Sb"
+- !private "s7CVarArgP"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- !private "s9EquatableP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "6Nimble10ExpressionV"
+- !private "6Nimble14FailureMessageC"
+- !private "s8HashableP"
+- !private "s25LosslessStringConvertibleP"
+- "6Nimble7MatcherP"
+- "6Nimble11MatcherFuncV"
+- !private "s10MirrorPathP"
+- !private "So8NSObjectC"
+- !private "So16NSObjectProtocolP"
+- "6Nimble17NonNilMatcherFuncV"
+- !private "6Nimble9PredicateV"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s8SequenceP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "6Nimble27TestOutputStringConvertibleP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/XCTest.swiftmodule"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Sources/NimbleObjectiveC/DSL.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Target Support Files/Nimble/Nimble-umbrella.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Sources/Nimble/Nimble.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Sources/NimbleObjectiveC/NMBExceptionCapture.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlPreconditionTesting/Mach/CwlPreconditionTesting.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Carthage/Checkouts/CwlCatchException/Sources/CwlCatchExceptionSupport/include/CwlCatchException.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/include/CwlMachBadInstructionHandler.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/mach_excServer.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Sources/NimbleObjectiveC/NMBStringify.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Intermediates/Pods.build/Debug-iphonesimulator/Nimble.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "e54db31c6993d087dbd343deb7cbf989"

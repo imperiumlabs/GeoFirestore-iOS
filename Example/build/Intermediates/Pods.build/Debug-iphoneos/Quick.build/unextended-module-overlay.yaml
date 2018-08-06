@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': '/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphoneos/Quick/Quick.framework/Modules'
+    'contents': [{
+      'type': 'file',
+      'name': 'module.modulemap',
+      'external-contents': '/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Intermediates/Pods.build/Debug-iphoneos/Quick.build/unextended-module.modulemap',
+    }]
+  }]
+}

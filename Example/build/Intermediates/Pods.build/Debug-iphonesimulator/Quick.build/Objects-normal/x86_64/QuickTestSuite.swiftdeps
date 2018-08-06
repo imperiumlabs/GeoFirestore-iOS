@@ -1,0 +1,192 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "QuickTestSuiteBuilder"
+- "QuickTestSuite"
+provides-nominal:
+- "5Quick0A16TestSuiteBuilderP"
+- "5Quick0A9TestSuiteC"
+provides-member:
+- ["5Quick0A16TestSuiteBuilderP", ""]
+- ["5Quick0A9TestSuiteC", ""]
+provides-dynamic-lookup:
+- "selectedTestSuite"
+depends-top-level:
+- !private "QuickSelectedTestSuiteBuilder"
+- "QuickTestSuite"
+- "QuickTestSuiteBuilder"
+- "Set"
+- "String"
+- "XCTestSuite"
+depends-member:
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "QuickSelectedTestSuiteBuilder"]
+- ["s7CVarArgP", "Set"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "builtTestSuites"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "insert"]
+- ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "insert"]
+- !private ["s28CustomDebugStringConvertibleP", "QuickSelectedTestSuiteBuilder"]
+- ["s28CustomDebugStringConvertibleP", "Set"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "builtTestSuites"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "insert"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "insert"]
+- !private ["s23CustomStringConvertibleP", "QuickSelectedTestSuiteBuilder"]
+- ["s23CustomStringConvertibleP", "Set"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "builtTestSuites"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "insert"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "insert"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "insert"]
+- !private ["s9EquatableP", "QuickSelectedTestSuiteBuilder"]
+- ["s9EquatableP", "Set"]
+- ["s9EquatableP", ""]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "builtTestSuites"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "insert"]
+- ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "insert"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "QuickSelectedTestSuiteBuilder"]
+- ["s8HashableP", "Set"]
+- ["s8HashableP", ""]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "builtTestSuites"]
+- ["s8HashableP", "init"]
+- !private ["s8HashableP", "insert"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["So8NSObjectC", "QuickSelectedTestSuiteBuilder"]
+- ["So8NSObjectC", "QuickTestSuite"]
+- ["So8NSObjectC", "Set"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "builtTestSuites"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "selectedTestSuite"]
+- !private ["So16NSObjectProtocolP", "QuickSelectedTestSuiteBuilder"]
+- ["So16NSObjectProtocolP", "Set"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["So16NSObjectProtocolP", "builtTestSuites"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["5Quick0A24SelectedTestSuiteBuilderC", "buildTestSuite"]
+- !private ["5Quick0A24SelectedTestSuiteBuilderC", "deinit"]
+- !private ["5Quick0A24SelectedTestSuiteBuilderC", "init"]
+- !private ["5Quick0A24SelectedTestSuiteBuilderC", "testSuiteClassName"]
+- !private ["5Quick0A9TestSuiteC", "QuickSelectedTestSuiteBuilder"]
+- ["5Quick0A9TestSuiteC", "QuickTestSuite"]
+- ["5Quick0A9TestSuiteC", "Set"]
+- ["5Quick0A9TestSuiteC", "String"]
+- !private ["5Quick0A9TestSuiteC", "builtTestSuites"]
+- ["5Quick0A9TestSuiteC", "deinit"]
+- ["5Quick0A9TestSuiteC", "init"]
+- ["5Quick0A9TestSuiteC", "selectedTestSuite"]
+- ["5Quick0A16TestSuiteBuilderP", "QuickTestSuite"]
+- ["5Quick0A16TestSuiteBuilderP", "buildTestSuite"]
+- !private ["5Quick0A16TestSuiteBuilderP", "init"]
+- !private ["5Quick0A16TestSuiteBuilderP", "testSuiteClassName"]
+- ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "insert"]
+- ["s3SetV", "init"]
+- !private ["s3SetV", "insert"]
+- ["s10SetAlgebraP", "init"]
+- !private ["s10SetAlgebraP", "insert"]
+- !private ["So6XCTestC", "QuickSelectedTestSuiteBuilder"]
+- ["So6XCTestC", "QuickTestSuite"]
+- ["So6XCTestC", "Set"]
+- ["So6XCTestC", "String"]
+- ["So6XCTestC", "builtTestSuites"]
+- ["So6XCTestC", "init"]
+- ["So6XCTestC", "selectedTestSuite"]
+- !private ["So11XCTestSuiteC", "QuickSelectedTestSuiteBuilder"]
+- ["So11XCTestSuiteC", "QuickTestSuite"]
+- ["So11XCTestSuiteC", "Set"]
+- ["So11XCTestSuiteC", "String"]
+- ["So11XCTestSuiteC", ""]
+- ["So11XCTestSuiteC", "builtTestSuites"]
+- ["So11XCTestSuiteC", "init"]
+- ["So11XCTestSuiteC", "selectedTestSuite"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "QuickSelectedTestSuiteBuilder"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Set"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "builtTestSuites"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "insert"]
+depends-nominal:
+- !private "Sb"
+- "s7CVarArgP"
+- "s10CollectionP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "s9DecodableP"
+- "s9EncodableP"
+- "s9EquatableP"
+- "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- "s8HashableP"
+- !private "s25LosslessStringConvertibleP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- !private "5Quick0A24SelectedTestSuiteBuilderC"
+- "5Quick0A9TestSuiteC"
+- "5Quick0A16TestSuiteBuilderP"
+- "s8SequenceP"
+- "s3SetV"
+- "s10SetAlgebraP"
+- "So6XCTestC"
+- "So11XCTestSuiteC"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/XCTest.swiftmodule"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Quick/Sources/QuickObjectiveC/DSL/QCKDSL.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Target Support Files/Quick/Quick-umbrella.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Quick/Sources/QuickObjectiveC/QuickSpec.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Quick/Sources/QuickObjectiveC/Quick.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Quick/Sources/QuickObjectiveC/Configuration/QuickConfiguration.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Intermediates/Pods.build/Debug-iphonesimulator/Quick.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "0e466b9000c7a517df239a560e759053"

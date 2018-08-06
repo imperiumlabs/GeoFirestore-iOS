@@ -1,0 +1,1270 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/BoringSSL/openssl.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "openssl-Swift.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/BoringSSL/openssl.framework/Headers/openssl-Swift.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/BoringSSL/openssl.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Intermediates/Pods.build/Debug-iphonesimulator/BoringSSL.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "FIRAnalyticsConfiguration.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseCore/Firebase/Core/Public/FIRAnalyticsConfiguration.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRApp.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseCore/Firebase/Core/Public/FIRApp.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRConfiguration.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseCore/Firebase/Core/Public/FIRConfiguration.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRLoggerLevel.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseCore/Firebase/Core/Public/FIRLoggerLevel.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIROptions.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseCore/Firebase/Core/Public/FIROptions.h"
+        },
+        {
+          'type': 'file',
+          'name': "FirebaseCore-Swift.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "FirebaseCore-umbrella.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Target Support Files/FirebaseCore/FirebaseCore-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "FirebaseCore.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseCore/Firebase/Core/Public/FirebaseCore.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Intermediates/Pods.build/Debug-iphonesimulator/FirebaseCore.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/PrivateHeaders",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "FIRAnalyticsConfiguration+Internal.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseCore/Firebase/Core/Private/FIRAnalyticsConfiguration+Internal.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRAppAssociationRegistration.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseCore/Firebase/Core/Private/FIRAppAssociationRegistration.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRAppEnvironmentUtil.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseCore/Firebase/Core/third_party/FIRAppEnvironmentUtil.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRAppInternal.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseCore/Firebase/Core/Private/FIRAppInternal.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRBundleUtil.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseCore/Firebase/Core/Private/FIRBundleUtil.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRErrorCode.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseCore/Firebase/Core/Private/FIRErrorCode.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRErrors.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseCore/Firebase/Core/Private/FIRErrors.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRLogger.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseCore/Firebase/Core/Private/FIRLogger.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRMutableDictionary.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseCore/Firebase/Core/Private/FIRMutableDictionary.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRNetwork.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseCore/Firebase/Core/Private/FIRNetwork.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRNetworkConstants.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseCore/Firebase/Core/Private/FIRNetworkConstants.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRNetworkLoggerProtocol.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseCore/Firebase/Core/Private/FIRNetworkLoggerProtocol.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRNetworkMessageCode.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseCore/Firebase/Core/Private/FIRNetworkMessageCode.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRNetworkURLSession.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseCore/Firebase/Core/Private/FIRNetworkURLSession.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIROptionsInternal.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseCore/Firebase/Core/Private/FIROptionsInternal.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRReachabilityChecker+Internal.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseCore/Firebase/Core/Private/FIRReachabilityChecker+Internal.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRReachabilityChecker.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseCore/Firebase/Core/Private/FIRReachabilityChecker.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRVersion.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseCore/Firebase/Core/Private/FIRVersion.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "FIRDataEventType.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseDatabase/Firebase/Database/Public/FIRDataEventType.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRDataSnapshot.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseDatabase/Firebase/Database/Public/FIRDataSnapshot.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRDatabase.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseDatabase/Firebase/Database/Public/FIRDatabase.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRDatabaseQuery.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseDatabase/Firebase/Database/Public/FIRDatabaseQuery.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRDatabaseReference.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseDatabase/Firebase/Database/Public/FIRDatabaseReference.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRMutableData.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseDatabase/Firebase/Database/Public/FIRMutableData.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRServerValue.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseDatabase/Firebase/Database/Public/FIRServerValue.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRTransactionResult.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseDatabase/Firebase/Database/Public/FIRTransactionResult.h"
+        },
+        {
+          'type': 'file',
+          'name': "FirebaseDatabase-Swift.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Headers/FirebaseDatabase-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "FirebaseDatabase-umbrella.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Target Support Files/FirebaseDatabase/FirebaseDatabase-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "FirebaseDatabase.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseDatabase/Firebase/Database/Public/FirebaseDatabase.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseDatabase/FirebaseDatabase.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Intermediates/Pods.build/Debug-iphonesimulator/FirebaseDatabase.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "FIRCollectionReference.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FIRCollectionReference.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRDocumentChange.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FIRDocumentChange.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRDocumentReference.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FIRDocumentReference.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRDocumentSnapshot.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FIRDocumentSnapshot.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRFieldPath.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FIRFieldPath.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRFieldValue.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FIRFieldValue.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRFirestore.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FIRFirestore.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRFirestoreErrors.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FIRFirestoreErrors.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRFirestoreSettings.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FIRFirestoreSettings.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRFirestoreSource.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FIRFirestoreSource.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRGeoPoint.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FIRGeoPoint.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRListenerRegistration.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FIRListenerRegistration.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRQuery.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FIRQuery.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRQuerySnapshot.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FIRQuerySnapshot.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRSnapshotMetadata.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FIRSnapshotMetadata.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRTimestamp.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FIRTimestamp.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRTransaction.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FIRTransaction.h"
+        },
+        {
+          'type': 'file',
+          'name': "FIRWriteBatch.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FIRWriteBatch.h"
+        },
+        {
+          'type': 'file',
+          'name': "FirebaseFirestore-Swift.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FirebaseFirestore-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "FirebaseFirestore-umbrella.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Target Support Files/FirebaseFirestore/FirebaseFirestore-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "FirebaseFirestore.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FirebaseFirestore.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Intermediates/Pods.build/Debug-iphonesimulator/FirebaseFirestore.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/GeoFire/GeoFire.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "GFBase32Utils.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/GeoFire/GeoFire/Implementation/GFBase32Utils.h"
+        },
+        {
+          'type': 'file',
+          'name': "GFCircleQuery.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/GeoFire/GeoFire/API/GFCircleQuery.h"
+        },
+        {
+          'type': 'file',
+          'name': "GFGeoHash.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/GeoFire/GeoFire/Implementation/GFGeoHash.h"
+        },
+        {
+          'type': 'file',
+          'name': "GFGeoHashQuery.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/GeoFire/GeoFire/Implementation/GFGeoHashQuery.h"
+        },
+        {
+          'type': 'file',
+          'name': "GFQuery+Private.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/GeoFire/GeoFire/Implementation/GFQuery+Private.h"
+        },
+        {
+          'type': 'file',
+          'name': "GFQuery.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/GeoFire/GeoFire/API/GFQuery.h"
+        },
+        {
+          'type': 'file',
+          'name': "GFRegionQuery.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/GeoFire/GeoFire/API/GFRegionQuery.h"
+        },
+        {
+          'type': 'file',
+          'name': "GeoFire+Private.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/GeoFire/GeoFire/Implementation/GeoFire+Private.h"
+        },
+        {
+          'type': 'file',
+          'name': "GeoFire-Swift.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/GeoFire/GeoFire.framework/Headers/GeoFire-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "GeoFire-umbrella.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Target Support Files/GeoFire/GeoFire-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "GeoFire.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/GeoFire/GeoFire/API/GeoFire.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/GeoFire/GeoFire.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Intermediates/Pods.build/Debug-iphonesimulator/GeoFire.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Geofirestore/Geofirestore.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Geofirestore-Swift.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Geofirestore/Geofirestore.framework/Headers/Geofirestore-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "Geofirestore-umbrella.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Target Support Files/Geofirestore/Geofirestore-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Geofirestore/Geofirestore.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Intermediates/Pods.build/Debug-iphonesimulator/Geofirestore.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/GoogleToolboxForMac/GoogleToolboxForMac.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "GTMDefines.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/GoogleToolboxForMac/GTMDefines.h"
+        },
+        {
+          'type': 'file',
+          'name': "GTMNSData+zlib.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/GoogleToolboxForMac/Foundation/GTMNSData+zlib.h"
+        },
+        {
+          'type': 'file',
+          'name': "GoogleToolboxForMac-Swift.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/GoogleToolboxForMac/GoogleToolboxForMac.framework/Headers/GoogleToolboxForMac-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "GoogleToolboxForMac-umbrella.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/GoogleToolboxForMac/GoogleToolboxForMac.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Intermediates/Pods.build/Debug-iphonesimulator/GoogleToolboxForMac.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Nimble/Nimble.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "CwlCatchException.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Carthage/Checkouts/CwlCatchException/Sources/CwlCatchExceptionSupport/include/CwlCatchException.h"
+        },
+        {
+          'type': 'file',
+          'name': "CwlMachBadInstructionHandler.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/include/CwlMachBadInstructionHandler.h"
+        },
+        {
+          'type': 'file',
+          'name': "CwlPreconditionTesting.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlPreconditionTesting/Mach/CwlPreconditionTesting.h"
+        },
+        {
+          'type': 'file',
+          'name': "DSL.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Sources/NimbleObjectiveC/DSL.h"
+        },
+        {
+          'type': 'file',
+          'name': "NMBExceptionCapture.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Sources/NimbleObjectiveC/NMBExceptionCapture.h"
+        },
+        {
+          'type': 'file',
+          'name': "NMBStringify.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Sources/NimbleObjectiveC/NMBStringify.h"
+        },
+        {
+          'type': 'file',
+          'name': "Nimble-Swift.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Nimble/Nimble.framework/Headers/Nimble-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "Nimble-umbrella.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Target Support Files/Nimble/Nimble-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "Nimble.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Sources/Nimble/Nimble.h"
+        },
+        {
+          'type': 'file',
+          'name': "mach_excServer.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/mach_excServer.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Nimble/Nimble.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Intermediates/Pods.build/Debug-iphonesimulator/Nimble.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Nimble/Nimble.framework/PrivateHeaders",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "CurrentTestCaseTracker.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Sources/NimbleObjectiveC/CurrentTestCaseTracker.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Pods_Geofirestore_Example.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Pods-Geofirestore_Example-umbrella.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Target Support Files/Pods-Geofirestore_Example/Pods-Geofirestore_Example-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "Pods_Geofirestore_Example-Swift.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Pods_Geofirestore_Example.framework/Headers/Pods_Geofirestore_Example-Swift.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Pods_Geofirestore_Example.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-Geofirestore_Example.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Pods_Geofirestore_Tests.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Pods-Geofirestore_Tests-umbrella.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Target Support Files/Pods-Geofirestore_Tests/Pods-Geofirestore_Tests-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "Pods_Geofirestore_Tests-Swift.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Pods_Geofirestore_Tests.framework/Headers/Pods_Geofirestore_Tests-Swift.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Pods_Geofirestore_Tests.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-Geofirestore_Tests.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Protobuf/Protobuf.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Any.pbobjc.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/google/protobuf/Any.pbobjc.h"
+        },
+        {
+          'type': 'file',
+          'name': "Api.pbobjc.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/google/protobuf/Api.pbobjc.h"
+        },
+        {
+          'type': 'file',
+          'name': "Duration.pbobjc.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/google/protobuf/Duration.pbobjc.h"
+        },
+        {
+          'type': 'file',
+          'name': "Empty.pbobjc.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/google/protobuf/Empty.pbobjc.h"
+        },
+        {
+          'type': 'file',
+          'name': "FieldMask.pbobjc.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/google/protobuf/FieldMask.pbobjc.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBArray.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/GPBArray.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBArray_PackagePrivate.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/GPBArray_PackagePrivate.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBBootstrap.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/GPBBootstrap.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBCodedInputStream.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/GPBCodedInputStream.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBCodedInputStream_PackagePrivate.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/GPBCodedInputStream_PackagePrivate.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBCodedOutputStream.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/GPBCodedOutputStream.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBCodedOutputStream_PackagePrivate.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/GPBCodedOutputStream_PackagePrivate.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBDescriptor.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/GPBDescriptor.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBDescriptor_PackagePrivate.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/GPBDescriptor_PackagePrivate.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBDictionary.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/GPBDictionary.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBDictionary_PackagePrivate.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/GPBDictionary_PackagePrivate.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBExtensionInternals.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/GPBExtensionInternals.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBExtensionRegistry.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/GPBExtensionRegistry.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBMessage.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/GPBMessage.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBMessage_PackagePrivate.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/GPBMessage_PackagePrivate.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBProtocolBuffers.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/GPBProtocolBuffers.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBProtocolBuffers_RuntimeSupport.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/GPBProtocolBuffers_RuntimeSupport.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBRootObject.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/GPBRootObject.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBRootObject_PackagePrivate.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/GPBRootObject_PackagePrivate.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBRuntimeTypes.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/GPBRuntimeTypes.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBUnknownField.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/GPBUnknownField.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBUnknownFieldSet.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/GPBUnknownFieldSet.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBUnknownFieldSet_PackagePrivate.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/GPBUnknownFieldSet_PackagePrivate.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBUnknownField_PackagePrivate.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/GPBUnknownField_PackagePrivate.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBUtilities.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/GPBUtilities.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBUtilities_PackagePrivate.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/GPBUtilities_PackagePrivate.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBWellKnownTypes.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/GPBWellKnownTypes.h"
+        },
+        {
+          'type': 'file',
+          'name': "GPBWireFormat.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/GPBWireFormat.h"
+        },
+        {
+          'type': 'file',
+          'name': "Protobuf-Swift.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Protobuf/Protobuf.framework/Headers/Protobuf-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "Protobuf-umbrella.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Target Support Files/Protobuf/Protobuf-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "SourceContext.pbobjc.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/google/protobuf/SourceContext.pbobjc.h"
+        },
+        {
+          'type': 'file',
+          'name': "Struct.pbobjc.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/google/protobuf/Struct.pbobjc.h"
+        },
+        {
+          'type': 'file',
+          'name': "Timestamp.pbobjc.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/google/protobuf/Timestamp.pbobjc.h"
+        },
+        {
+          'type': 'file',
+          'name': "Type.pbobjc.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/google/protobuf/Type.pbobjc.h"
+        },
+        {
+          'type': 'file',
+          'name': "Wrappers.pbobjc.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Protobuf/objectivec/google/protobuf/Wrappers.pbobjc.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Protobuf/Protobuf.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Intermediates/Pods.build/Debug-iphonesimulator/Protobuf.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Quick/Quick.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "QCKDSL.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Quick/Sources/QuickObjectiveC/DSL/QCKDSL.h"
+        },
+        {
+          'type': 'file',
+          'name': "Quick-Swift.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Quick/Quick.framework/Headers/Quick-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "Quick-umbrella.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Target Support Files/Quick/Quick-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "Quick.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Quick/Sources/QuickObjectiveC/Quick.h"
+        },
+        {
+          'type': 'file',
+          'name': "QuickConfiguration.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Quick/Sources/QuickObjectiveC/Configuration/QuickConfiguration.h"
+        },
+        {
+          'type': 'file',
+          'name': "QuickSpec.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Quick/Sources/QuickObjectiveC/QuickSpec.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Quick/Quick.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Intermediates/Pods.build/Debug-iphonesimulator/Quick.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/gRPC-Core/grpc.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "grpc-Swift.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/gRPC-Core/grpc.framework/Headers/grpc-Swift.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/gRPC-Core/grpc.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Intermediates/Pods.build/Debug-iphonesimulator/gRPC-Core.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/gRPC-ProtoRPC/ProtoRPC.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "ProtoMethod.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/gRPC-ProtoRPC/src/objective-c/ProtoRPC/ProtoMethod.h"
+        },
+        {
+          'type': 'file',
+          'name': "ProtoRPC-Swift.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/gRPC-ProtoRPC/ProtoRPC.framework/Headers/ProtoRPC-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "ProtoRPC.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/gRPC-ProtoRPC/src/objective-c/ProtoRPC/ProtoRPC.h"
+        },
+        {
+          'type': 'file',
+          'name': "ProtoService.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/gRPC-ProtoRPC/src/objective-c/ProtoRPC/ProtoService.h"
+        },
+        {
+          'type': 'file',
+          'name': "gRPC-ProtoRPC-umbrella.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Target Support Files/gRPC-ProtoRPC/gRPC-ProtoRPC-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/gRPC-ProtoRPC/ProtoRPC.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Intermediates/Pods.build/Debug-iphonesimulator/gRPC-ProtoRPC.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/gRPC-RxLibrary/RxLibrary.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "RxLibrary-Swift.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/gRPC-RxLibrary/RxLibrary.framework/Headers/RxLibrary-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "gRPC-RxLibrary-umbrella.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Target Support Files/gRPC-RxLibrary/gRPC-RxLibrary-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/gRPC-RxLibrary/RxLibrary.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Intermediates/Pods.build/Debug-iphonesimulator/gRPC-RxLibrary.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/gRPC/GRPCClient.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "GRPCCall+ChannelArg.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/gRPC/src/objective-c/GRPCClient/GRPCCall+ChannelArg.h"
+        },
+        {
+          'type': 'file',
+          'name': "GRPCCall+ChannelCredentials.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/gRPC/src/objective-c/GRPCClient/GRPCCall+ChannelCredentials.h"
+        },
+        {
+          'type': 'file',
+          'name': "GRPCCall+Cronet.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/gRPC/src/objective-c/GRPCClient/GRPCCall+Cronet.h"
+        },
+        {
+          'type': 'file',
+          'name': "GRPCCall+InternalTests.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/gRPC/src/objective-c/GRPCClient/internal_testing/GRPCCall+InternalTests.h"
+        },
+        {
+          'type': 'file',
+          'name': "GRPCCall+OAuth2.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/gRPC/src/objective-c/GRPCClient/GRPCCall+OAuth2.h"
+        },
+        {
+          'type': 'file',
+          'name': "GRPCCall+Tests.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/gRPC/src/objective-c/GRPCClient/GRPCCall+Tests.h"
+        },
+        {
+          'type': 'file',
+          'name': "GRPCCall.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/gRPC/src/objective-c/GRPCClient/GRPCCall.h"
+        },
+        {
+          'type': 'file',
+          'name': "GRPCClient-Swift.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/gRPC/GRPCClient.framework/Headers/GRPCClient-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "gRPC-umbrella.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Target Support Files/gRPC/gRPC-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/gRPC/GRPCClient.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Intermediates/Pods.build/Debug-iphonesimulator/gRPC.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/gRPC/GRPCClient.framework/PrivateHeaders",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "GRPCChannel.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/gRPC/src/objective-c/GRPCClient/private/GRPCChannel.h"
+        },
+        {
+          'type': 'file',
+          'name': "GRPCCompletionQueue.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/gRPC/src/objective-c/GRPCClient/private/GRPCCompletionQueue.h"
+        },
+        {
+          'type': 'file',
+          'name': "GRPCConnectivityMonitor.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/gRPC/src/objective-c/GRPCClient/private/GRPCConnectivityMonitor.h"
+        },
+        {
+          'type': 'file',
+          'name': "GRPCHost.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/gRPC/src/objective-c/GRPCClient/private/GRPCHost.h"
+        },
+        {
+          'type': 'file',
+          'name': "GRPCOpBatchLog.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/gRPC/src/objective-c/GRPCClient/private/GRPCOpBatchLog.h"
+        },
+        {
+          'type': 'file',
+          'name': "GRPCReachabilityFlagNames.xmacro.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/gRPC/src/objective-c/GRPCClient/private/GRPCReachabilityFlagNames.xmacro.h"
+        },
+        {
+          'type': 'file',
+          'name': "GRPCRequestHeaders.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/gRPC/src/objective-c/GRPCClient/private/GRPCRequestHeaders.h"
+        },
+        {
+          'type': 'file',
+          'name': "GRPCWrappedCall.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/gRPC/src/objective-c/GRPCClient/private/GRPCWrappedCall.h"
+        },
+        {
+          'type': 'file',
+          'name': "NSData+GRPC.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/gRPC/src/objective-c/GRPCClient/private/NSData+GRPC.h"
+        },
+        {
+          'type': 'file',
+          'name': "NSDictionary+GRPC.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/gRPC/src/objective-c/GRPCClient/private/NSDictionary+GRPC.h"
+        },
+        {
+          'type': 'file',
+          'name': "NSError+GRPC.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/gRPC/src/objective-c/GRPCClient/private/NSError+GRPC.h"
+        },
+        {
+          'type': 'file',
+          'name': "version.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/gRPC/src/objective-c/GRPCClient/private/version.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/leveldb-library/leveldb.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "c.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/leveldb-library/include/leveldb/c.h"
+        },
+        {
+          'type': 'file',
+          'name': "cache.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/leveldb-library/include/leveldb/cache.h"
+        },
+        {
+          'type': 'file',
+          'name': "comparator.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/leveldb-library/include/leveldb/comparator.h"
+        },
+        {
+          'type': 'file',
+          'name': "db.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/leveldb-library/include/leveldb/db.h"
+        },
+        {
+          'type': 'file',
+          'name': "dumpfile.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/leveldb-library/include/leveldb/dumpfile.h"
+        },
+        {
+          'type': 'file',
+          'name': "env.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/leveldb-library/include/leveldb/env.h"
+        },
+        {
+          'type': 'file',
+          'name': "filter_policy.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/leveldb-library/include/leveldb/filter_policy.h"
+        },
+        {
+          'type': 'file',
+          'name': "iterator.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/leveldb-library/include/leveldb/iterator.h"
+        },
+        {
+          'type': 'file',
+          'name': "leveldb-Swift.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/leveldb-library/leveldb.framework/Headers/leveldb-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "leveldb-library-umbrella.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Target Support Files/leveldb-library/leveldb-library-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "options.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/leveldb-library/include/leveldb/options.h"
+        },
+        {
+          'type': 'file',
+          'name': "slice.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/leveldb-library/include/leveldb/slice.h"
+        },
+        {
+          'type': 'file',
+          'name': "status.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/leveldb-library/include/leveldb/status.h"
+        },
+        {
+          'type': 'file',
+          'name': "table.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/leveldb-library/include/leveldb/table.h"
+        },
+        {
+          'type': 'file',
+          'name': "table_builder.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/leveldb-library/include/leveldb/table_builder.h"
+        },
+        {
+          'type': 'file',
+          'name': "write_batch.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/leveldb-library/include/leveldb/write_batch.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/leveldb-library/leveldb.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Intermediates/Pods.build/Debug-iphonesimulator/leveldb-library.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/nanopb/nanopb.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "nanopb-Swift.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/nanopb/nanopb.framework/Headers/nanopb-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "nanopb-umbrella.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Target Support Files/nanopb/nanopb-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "pb.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/nanopb/pb.h"
+        },
+        {
+          'type': 'file',
+          'name': "pb_common.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/nanopb/pb_common.h"
+        },
+        {
+          'type': 'file',
+          'name': "pb_decode.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/nanopb/pb_decode.h"
+        },
+        {
+          'type': 'file',
+          'name': "pb_encode.h",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/nanopb/pb_encode.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/nanopb/nanopb.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Intermediates/Pods.build/Debug-iphonesimulator/nanopb.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

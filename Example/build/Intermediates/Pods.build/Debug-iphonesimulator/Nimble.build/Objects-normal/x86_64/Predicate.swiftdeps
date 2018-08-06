@@ -1,0 +1,514 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Predicate"
+- "ExpectationStyle"
+- "PredicateResult"
+- "PredicateStatus"
+- "PredicateBlock"
+- "NMBPredicate"
+- "NMBPredicateResult"
+- "NMBPredicateStatus"
+provides-nominal:
+- "6Nimble9PredicateV"
+- "6Nimble16ExpectationStyleO"
+- "6Nimble15PredicateResultV"
+- "6Nimble15PredicateStatusO"
+- "6Nimble12NMBPredicateC"
+- "6Nimble18NMBPredicateResultC"
+- "6Nimble18NMBPredicateStatusC"
+provides-member:
+- ["6Nimble9PredicateV", ""]
+- ["6Nimble16ExpectationStyleO", ""]
+- ["6Nimble15PredicateResultV", ""]
+- ["6Nimble15PredicateStatusO", ""]
+- ["6Nimble12NMBPredicateC", ""]
+- ["6Nimble18NMBPredicateResultC", ""]
+- ["6Nimble18NMBPredicateStatusC", ""]
+- ["6Nimble9PredicateV", "define"]
+- ["6Nimble9PredicateV", "define"]
+- ["6Nimble9PredicateV", "defineNilable"]
+- ["6Nimble9PredicateV", "simple"]
+- ["6Nimble9PredicateV", "simpleNilable"]
+- ["6Nimble9PredicateV", "after"]
+- ["6Nimble9PredicateV", "requireNonNil"]
+- ["6Nimble15PredicateResultV", "toObjectiveC"]
+- ["6Nimble15PredicateStatusO", "toObjectiveC"]
+provides-dynamic-lookup:
+- "doesNotMatch"
+- "hashValue"
+- "isEqual"
+- "matches"
+depends-top-level:
+- "=="
+- "AssignmentPrecedence"
+- "Bool"
+- !private "BooleanLiteralType"
+- "CastingPrecedence"
+- "ExpectationMessage"
+- "ExpectationStyle"
+- "Expression"
+- "FailureMessage"
+- "Int"
+- "Matcher"
+- "NMBExpectationMessage"
+- "NMBMatcher"
+- "NMBPredicate"
+- "NMBPredicateResult"
+- "NMBPredicateStatus"
+- "NSObject"
+- "Predicate"
+- "PredicateBlock"
+- "PredicateResult"
+- "PredicateStatus"
+- "SourceLocation"
+- "String"
+- !private "StringLiteralType"
+- !private "internalError"
+- !private "~="
+depends-member:
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s13BinaryIntegerP", "hashValue"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "Expression"]
+- ["s7CVarArgP", "NMBPredicateStatus"]
+- !private ["s7CVarArgP", "PredicateResult"]
+- !private ["s7CVarArgP", "PredicateStatus"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- ["s7CVarArgP", "doesNotMatch"]
+- ["s7CVarArgP", "fail"]
+- !private ["s7CVarArgP", "from"]
+- !private ["s7CVarArgP", "hashValue"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "internalError"]
+- ["s7CVarArgP", "matches"]
+- !private ["s7CVarArgP", "message"]
+- !private ["s7CVarArgP", "predicate"]
+- !private ["s7CVarArgP", "satisfies"]
+- !private ["s7CVarArgP", "status"]
+- !private ["s7CVarArgP", "toExpectationMessage"]
+- !private ["s7CVarArgP", "toSwift"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10ComparableP", "hashValue"]
+- !private ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "Expression"]
+- ["s28CustomDebugStringConvertibleP", "NMBPredicateStatus"]
+- !private ["s28CustomDebugStringConvertibleP", "PredicateResult"]
+- !private ["s28CustomDebugStringConvertibleP", "PredicateStatus"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- ["s28CustomDebugStringConvertibleP", "doesNotMatch"]
+- ["s28CustomDebugStringConvertibleP", "fail"]
+- !private ["s28CustomDebugStringConvertibleP", "from"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "internalError"]
+- ["s28CustomDebugStringConvertibleP", "matches"]
+- !private ["s28CustomDebugStringConvertibleP", "message"]
+- !private ["s28CustomDebugStringConvertibleP", "predicate"]
+- !private ["s28CustomDebugStringConvertibleP", "satisfies"]
+- !private ["s28CustomDebugStringConvertibleP", "status"]
+- !private ["s28CustomDebugStringConvertibleP", "toExpectationMessage"]
+- !private ["s28CustomDebugStringConvertibleP", "toSwift"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "hashValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "hashValue"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "Expression"]
+- ["s23CustomStringConvertibleP", "NMBPredicateStatus"]
+- !private ["s23CustomStringConvertibleP", "PredicateResult"]
+- !private ["s23CustomStringConvertibleP", "PredicateStatus"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- ["s23CustomStringConvertibleP", "doesNotMatch"]
+- ["s23CustomStringConvertibleP", "fail"]
+- !private ["s23CustomStringConvertibleP", "from"]
+- !private ["s23CustomStringConvertibleP", "hashValue"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "internalError"]
+- ["s23CustomStringConvertibleP", "matches"]
+- !private ["s23CustomStringConvertibleP", "message"]
+- !private ["s23CustomStringConvertibleP", "predicate"]
+- !private ["s23CustomStringConvertibleP", "satisfies"]
+- !private ["s23CustomStringConvertibleP", "status"]
+- !private ["s23CustomStringConvertibleP", "toExpectationMessage"]
+- !private ["s23CustomStringConvertibleP", "toSwift"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "hashValue"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "hashValue"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EquatableP", "Expression"]
+- ["s9EquatableP", "NMBPredicateStatus"]
+- !private ["s9EquatableP", "PredicateResult"]
+- !private ["s9EquatableP", "PredicateStatus"]
+- ["s9EquatableP", ""]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- ["s9EquatableP", "doesNotMatch"]
+- ["s9EquatableP", "fail"]
+- !private ["s9EquatableP", "from"]
+- ["s9EquatableP", "hashValue"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "internalError"]
+- ["s9EquatableP", "matches"]
+- !private ["s9EquatableP", "message"]
+- !private ["s9EquatableP", "predicate"]
+- !private ["s9EquatableP", "satisfies"]
+- !private ["s9EquatableP", "shouldMatch"]
+- !private ["s9EquatableP", "shouldNotMatch"]
+- !private ["s9EquatableP", "status"]
+- !private ["s9EquatableP", "toBoolean"]
+- !private ["s9EquatableP", "toExpectationMessage"]
+- !private ["s9EquatableP", "toMatch"]
+- !private ["s9EquatableP", "toNotMatch"]
+- !private ["s9EquatableP", "toObjectiveC"]
+- !private ["s9EquatableP", "toSwift"]
+- !private ["6Nimble18ExpectationMessageO", "appendedBeNilHint"]
+- !private ["6Nimble18ExpectationMessageO", "expectedActualValueTo"]
+- !private ["6Nimble18ExpectationMessageO", "toObjectiveC"]
+- !private ["6Nimble18ExpectationMessageO", "update"]
+- ["6Nimble16ExpectationStyleO", "__derived_enum_equals"]
+- ["6Nimble16ExpectationStyleO", "deinit"]
+- ["6Nimble16ExpectationStyleO", "hashValue"]
+- ["6Nimble16ExpectationStyleO", "toMatch"]
+- ["6Nimble16ExpectationStyleO", "toNotMatch"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s27ExpressibleByBooleanLiteralP", "hashValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "hashValue"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["6Nimble10ExpressionV", "evaluate"]
+- !private ["6Nimble10ExpressionV", "init"]
+- !private ["6Nimble14FailureMessageC", "init"]
+- !private ["6Nimble14FailureMessageC", "toExpectationMessage"]
+- !private ["s17FixedWidthIntegerP", "hashValue"]
+- !private ["s8HashableP", "Expression"]
+- ["s8HashableP", "NMBPredicateStatus"]
+- !private ["s8HashableP", "PredicateResult"]
+- !private ["s8HashableP", "PredicateStatus"]
+- ["s8HashableP", ""]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- ["s8HashableP", "doesNotMatch"]
+- ["s8HashableP", "fail"]
+- !private ["s8HashableP", "from"]
+- ["s8HashableP", "hashValue"]
+- ["s8HashableP", "init"]
+- !private ["s8HashableP", "internalError"]
+- ["s8HashableP", "matches"]
+- !private ["s8HashableP", "message"]
+- !private ["s8HashableP", "predicate"]
+- !private ["s8HashableP", "satisfies"]
+- !private ["s8HashableP", "shouldMatch"]
+- !private ["s8HashableP", "shouldNotMatch"]
+- !private ["s8HashableP", "status"]
+- !private ["s8HashableP", "toBoolean"]
+- !private ["s8HashableP", "toExpectationMessage"]
+- !private ["s8HashableP", "toMatch"]
+- !private ["s8HashableP", "toNotMatch"]
+- !private ["s8HashableP", "toObjectiveC"]
+- !private ["s8HashableP", "toSwift"]
+- !private ["Si", "hashValue"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "hashValue"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["6Nimble7MatcherP", "FailureMessage"]
+- !private ["6Nimble7MatcherP", "Predicate"]
+- !private ["6Nimble7MatcherP", "PredicateResult"]
+- !private ["6Nimble7MatcherP", "PredicateStatus"]
+- ["6Nimble7MatcherP", "ValueType"]
+- ["6Nimble7MatcherP", ""]
+- ["6Nimble7MatcherP", "_Default_ValueType"]
+- !private ["6Nimble7MatcherP", "after"]
+- ["6Nimble7MatcherP", "doesNotMatch"]
+- !private ["6Nimble7MatcherP", "fromDeprecatedFullClosure"]
+- !private ["6Nimble7MatcherP", "init"]
+- !private ["6Nimble7MatcherP", "matcher"]
+- ["6Nimble7MatcherP", "matches"]
+- !private ["6Nimble7MatcherP", "requireNonNil"]
+- !private ["6Nimble7MatcherP", "satisfies"]
+- !private ["6Nimble7MatcherP", "toClosure"]
+- !private ["s10MirrorPathP", "hashValue"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["6Nimble21NMBExpectationMessageC", "toSwift"]
+- !private ["6Nimble10NMBMatcherP", "Expression"]
+- ["6Nimble10NMBMatcherP", ""]
+- ["6Nimble10NMBMatcherP", "doesNotMatch"]
+- ["6Nimble10NMBMatcherP", "matches"]
+- !private ["6Nimble10NMBMatcherP", "predicate"]
+- !private ["6Nimble10NMBMatcherP", "satisfies"]
+- ["6Nimble12NMBPredicateC", "Bool"]
+- !private ["6Nimble12NMBPredicateC", "Expression"]
+- ["6Nimble12NMBPredicateC", "FailureMessage"]
+- ["6Nimble12NMBPredicateC", "NMBPredicateResult"]
+- ["6Nimble12NMBPredicateC", "NSObject"]
+- ["6Nimble12NMBPredicateC", "PredicateBlock"]
+- ["6Nimble12NMBPredicateC", "SourceLocation"]
+- ["6Nimble12NMBPredicateC", "deinit"]
+- ["6Nimble12NMBPredicateC", "doesNotMatch"]
+- ["6Nimble12NMBPredicateC", "init"]
+- ["6Nimble12NMBPredicateC", "matches"]
+- !private ["6Nimble12NMBPredicateC", "predicate"]
+- ["6Nimble12NMBPredicateC", "satisfies"]
+- ["6Nimble18NMBPredicateResultC", "Bool"]
+- ["6Nimble18NMBPredicateResultC", "NMBExpectationMessage"]
+- ["6Nimble18NMBPredicateResultC", "NMBPredicateStatus"]
+- ["6Nimble18NMBPredicateResultC", "PredicateResult"]
+- ["6Nimble18NMBPredicateResultC", "deinit"]
+- ["6Nimble18NMBPredicateResultC", "init"]
+- ["6Nimble18NMBPredicateResultC", "message"]
+- ["6Nimble18NMBPredicateResultC", "status"]
+- ["6Nimble18NMBPredicateResultC", "toSwift"]
+- ["6Nimble18NMBPredicateStatusC", "Bool"]
+- ["6Nimble18NMBPredicateStatusC", "Int"]
+- ["6Nimble18NMBPredicateStatusC", "NMBPredicateStatus"]
+- ["6Nimble18NMBPredicateStatusC", "PredicateStatus"]
+- ["6Nimble18NMBPredicateStatusC", "deinit"]
+- ["6Nimble18NMBPredicateStatusC", "doesNotMatch"]
+- ["6Nimble18NMBPredicateStatusC", "fail"]
+- ["6Nimble18NMBPredicateStatusC", "from"]
+- ["6Nimble18NMBPredicateStatusC", "hashValue"]
+- ["6Nimble18NMBPredicateStatusC", "init"]
+- !private ["6Nimble18NMBPredicateStatusC", "internalError"]
+- ["6Nimble18NMBPredicateStatusC", "isEqual"]
+- ["6Nimble18NMBPredicateStatusC", "matches"]
+- !private ["6Nimble18NMBPredicateStatusC", "status"]
+- ["6Nimble18NMBPredicateStatusC", "toSwift"]
+- ["So8NSObjectC", "Bool"]
+- !private ["So8NSObjectC", "Expression"]
+- ["So8NSObjectC", "FailureMessage"]
+- ["So8NSObjectC", "Int"]
+- ["So8NSObjectC", "NMBExpectationMessage"]
+- ["So8NSObjectC", "NMBPredicateResult"]
+- ["So8NSObjectC", "NMBPredicateStatus"]
+- ["So8NSObjectC", "NSObject"]
+- ["So8NSObjectC", "PredicateBlock"]
+- ["So8NSObjectC", "PredicateResult"]
+- ["So8NSObjectC", "PredicateStatus"]
+- ["So8NSObjectC", "SourceLocation"]
+- ["So8NSObjectC", ""]
+- ["So8NSObjectC", "doesNotMatch"]
+- ["So8NSObjectC", "fail"]
+- ["So8NSObjectC", "from"]
+- ["So8NSObjectC", "hashValue"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "internalError"]
+- ["So8NSObjectC", "isEqual"]
+- ["So8NSObjectC", "matches"]
+- ["So8NSObjectC", "message"]
+- ["So8NSObjectC", "predicate"]
+- ["So8NSObjectC", "satisfies"]
+- ["So8NSObjectC", "status"]
+- !private ["So8NSObjectC", "toExpectationMessage"]
+- ["So8NSObjectC", "toSwift"]
+- !private ["So16NSObjectProtocolP", "Expression"]
+- ["So16NSObjectProtocolP", "NMBPredicateStatus"]
+- !private ["So16NSObjectProtocolP", "PredicateResult"]
+- !private ["So16NSObjectProtocolP", "PredicateStatus"]
+- ["So16NSObjectProtocolP", ""]
+- ["So16NSObjectProtocolP", "doesNotMatch"]
+- ["So16NSObjectProtocolP", "fail"]
+- !private ["So16NSObjectProtocolP", "from"]
+- ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "internalError"]
+- ["So16NSObjectProtocolP", "matches"]
+- !private ["So16NSObjectProtocolP", "message"]
+- !private ["So16NSObjectProtocolP", "predicate"]
+- !private ["So16NSObjectProtocolP", "satisfies"]
+- !private ["So16NSObjectProtocolP", "status"]
+- !private ["So16NSObjectProtocolP", "toExpectationMessage"]
+- !private ["So16NSObjectProtocolP", "toSwift"]
+- !private ["s7NumericP", "hashValue"]
+- ["6Nimble9PredicateV", "Bool"]
+- ["6Nimble9PredicateV", "ExpectationMessage"]
+- ["6Nimble9PredicateV", "Expression"]
+- ["6Nimble9PredicateV", "FailureMessage"]
+- ["6Nimble9PredicateV", "Matcher"]
+- ["6Nimble9PredicateV", "Predicate"]
+- ["6Nimble9PredicateV", "PredicateResult"]
+- ["6Nimble9PredicateV", "PredicateStatus"]
+- ["6Nimble9PredicateV", "String"]
+- ["6Nimble9PredicateV", "T"]
+- ["6Nimble9PredicateV", "ValueType"]
+- ["6Nimble9PredicateV", "_Default_ValueType"]
+- ["6Nimble9PredicateV", "after"]
+- ["6Nimble9PredicateV", "define"]
+- ["6Nimble9PredicateV", "defineNilable"]
+- ["6Nimble9PredicateV", "deinit"]
+- ["6Nimble9PredicateV", "doesNotMatch"]
+- ["6Nimble9PredicateV", "fromDeprecatedClosure"]
+- ["6Nimble9PredicateV", "fromDeprecatedFullClosure"]
+- ["6Nimble9PredicateV", "fromDeprecatedMatcher"]
+- ["6Nimble9PredicateV", "init"]
+- !private ["6Nimble9PredicateV", "matcher"]
+- ["6Nimble9PredicateV", "matches"]
+- ["6Nimble9PredicateV", "requireNonNil"]
+- ["6Nimble9PredicateV", "satisfies"]
+- ["6Nimble9PredicateV", "simple"]
+- ["6Nimble9PredicateV", "simpleNilable"]
+- ["6Nimble15PredicateResultV", "Bool"]
+- ["6Nimble15PredicateResultV", "ExpectationMessage"]
+- ["6Nimble15PredicateResultV", "ExpectationStyle"]
+- ["6Nimble15PredicateResultV", "NMBPredicateResult"]
+- ["6Nimble15PredicateResultV", "PredicateStatus"]
+- ["6Nimble15PredicateResultV", "init"]
+- ["6Nimble15PredicateResultV", "message"]
+- ["6Nimble15PredicateResultV", "status"]
+- ["6Nimble15PredicateResultV", "toBoolean"]
+- ["6Nimble15PredicateResultV", "toObjectiveC"]
+- ["6Nimble15PredicateStatusO", "Bool"]
+- ["6Nimble15PredicateStatusO", "ExpectationStyle"]
+- ["6Nimble15PredicateStatusO", "NMBPredicateStatus"]
+- ["6Nimble15PredicateStatusO", "__derived_enum_equals"]
+- ["6Nimble15PredicateStatusO", "deinit"]
+- ["6Nimble15PredicateStatusO", "doesNotMatch"]
+- ["6Nimble15PredicateStatusO", "fail"]
+- ["6Nimble15PredicateStatusO", "hashValue"]
+- ["6Nimble15PredicateStatusO", "init"]
+- ["6Nimble15PredicateStatusO", "matches"]
+- !private ["6Nimble15PredicateStatusO", "shouldMatch"]
+- !private ["6Nimble15PredicateStatusO", "shouldNotMatch"]
+- ["6Nimble15PredicateStatusO", "toBoolean"]
+- ["6Nimble15PredicateStatusO", "toObjectiveC"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s8SequenceP", "init"]
+- !private ["s13SignedIntegerP", "hashValue"]
+- !private ["s13SignedNumericP", "hashValue"]
+- !private ["s12StaticStringV", "init"]
+- !private ["s10StrideableP", "hashValue"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["6Nimble27TestOutputStringConvertibleP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s18_BitwiseOperationsP", "hashValue"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "hashValue"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Expression"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "NMBPredicateStatus"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "PredicateResult"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "PredicateStatus"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- ["10Foundation27_KeyValueCodingAndObservingP", "doesNotMatch"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "fail"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "from"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "internalError"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "matches"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "message"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "predicate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "satisfies"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "status"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "toExpectationMessage"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "toSwift"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "hashValue"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "s23BidirectionalCollectionP"
+- !private "s13BinaryIntegerP"
+- !private "Sb"
+- "s7CVarArgP"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "6Nimble18ExpectationMessageO"
+- "6Nimble16ExpectationStyleO"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "6Nimble10ExpressionV"
+- !private "6Nimble14FailureMessageC"
+- !private "s17FixedWidthIntegerP"
+- "s8HashableP"
+- !private "Si"
+- !private "s25LosslessStringConvertibleP"
+- "6Nimble7MatcherP"
+- !private "s10MirrorPathP"
+- !private "6Nimble21NMBExpectationMessageC"
+- "6Nimble10NMBMatcherP"
+- "6Nimble12NMBPredicateC"
+- "6Nimble18NMBPredicateResultC"
+- "6Nimble18NMBPredicateStatusC"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- !private "s7NumericP"
+- "6Nimble9PredicateV"
+- "6Nimble15PredicateResultV"
+- "6Nimble15PredicateStatusO"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s8SequenceP"
+- !private "s13SignedIntegerP"
+- !private "s13SignedNumericP"
+- !private "s12StaticStringV"
+- !private "s10StrideableP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "6Nimble27TestOutputStringConvertibleP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "s18_BitwiseOperationsP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/XCTest.swiftmodule"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Sources/NimbleObjectiveC/DSL.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Target Support Files/Nimble/Nimble-umbrella.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Sources/Nimble/Nimble.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Sources/NimbleObjectiveC/NMBExceptionCapture.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlPreconditionTesting/Mach/CwlPreconditionTesting.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Carthage/Checkouts/CwlCatchException/Sources/CwlCatchExceptionSupport/include/CwlCatchException.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/include/CwlMachBadInstructionHandler.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/mach_excServer.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Sources/NimbleObjectiveC/NMBStringify.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Intermediates/Pods.build/Debug-iphonesimulator/Nimble.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "4595758333a4d4a9af4636b5cbc01b3c"

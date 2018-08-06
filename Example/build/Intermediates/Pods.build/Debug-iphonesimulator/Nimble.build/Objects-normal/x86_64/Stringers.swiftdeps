@@ -1,0 +1,797 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "identityAsString"
+- "arrayAsString"
+- "TestOutputStringConvertible"
+- "stringify"
+- "stringify"
+- "NMBStringer"
+- "prettyCollectionType"
+- "prettyCollectionType"
+provides-nominal:
+- "6Nimble27TestOutputStringConvertibleP"
+- "Sd"
+- "Sf"
+- "So8NSNumberC"
+- "Sa"
+- "s11AnySequenceV"
+- "So7NSArrayC"
+- "So10NSIndexSetC"
+- "SS"
+- "10Foundation4DataV"
+- "6Nimble11NMBStringerC"
+provides-member:
+- ["6Nimble27TestOutputStringConvertibleP", ""]
+- ["Sd", ""]
+- ["Sf", ""]
+- ["So8NSNumberC", ""]
+- ["Sa", ""]
+- ["s11AnySequenceV", ""]
+- ["So7NSArrayC", ""]
+- ["So10NSIndexSetC", ""]
+- ["SS", ""]
+- ["10Foundation4DataV", ""]
+- ["6Nimble11NMBStringerC", ""]
+provides-dynamic-lookup:
+- "stringify"
+depends-top-level:
+- !private "!="
+- !private "+"
+- !private "AnyObject"
+- "AnySequence"
+- "Array"
+- "AssignmentPrecedence"
+- "CastingPrecedence"
+- "Collection"
+- !private "CustomDebugStringConvertible"
+- "Data"
+- "Double"
+- "Float"
+- !private "Int"
+- "NMBStringer"
+- "NSArray"
+- !private "NSData"
+- !private "NSDictionary"
+- "NSIndexSet"
+- "NSNumber"
+- "NSObject"
+- !private "NSSet"
+- !private "NSString"
+- !private "Nimble"
+- "String"
+- !private "StringLiteralType"
+- !private "TernaryPrecedence"
+- "TestOutputStringConvertible"
+- !private "UnicodeScalarType"
+- "arrayAsString"
+- "identityAsString"
+- "prettyCollectionType"
+- "stringify"
+- !private "type"
+- !private "unsafeBitCast"
+- !private "~="
+depends-member:
+- !private ["s11AnyIteratorV", "Element"]
+- !private ["s11AnyIteratorV", "next"]
+- !private ["s11AnySequenceV", "AnySequence"]
+- !private ["s11AnySequenceV", "Iterator"]
+- ["s11AnySequenceV", "String"]
+- ["s11AnySequenceV", "deinit"]
+- !private ["s11AnySequenceV", "makeIterator"]
+- !private ["s11AnySequenceV", "stringify"]
+- ["s11AnySequenceV", "testDescription"]
+- !private ["Sa", "Nimble"]
+- ["Sa", "String"]
+- !private ["Sa", "append"]
+- ["Sa", "deinit"]
+- !private ["Sa", "init"]
+- !private ["Sa", "joined"]
+- !private ["Sa", "map"]
+- !private ["Sa", "reduce"]
+- !private ["Sa", "subscript"]
+- ["Sa", "testDescription"]
+- !private ["s23BidirectionalCollectionP", "Nimble"]
+- !private ["s23BidirectionalCollectionP", "append"]
+- !private ["s23BidirectionalCollectionP", "contains"]
+- !private ["s23BidirectionalCollectionP", "count"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "isEmpty"]
+- !private ["s23BidirectionalCollectionP", "joined"]
+- !private ["s23BidirectionalCollectionP", "map"]
+- !private ["s23BidirectionalCollectionP", "reduce"]
+- !private ["s23BidirectionalCollectionP", "subscript"]
+- ["s23BidirectionalCollectionP", "testDescription"]
+- !private ["s19BinaryFloatingPointP", "NSNumber"]
+- ["s19BinaryFloatingPointP", "testDescription"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "Array"]
+- !private ["s7CVarArgP", "NSNumber"]
+- !private ["s7CVarArgP", "NSString"]
+- !private ["s7CVarArgP", "Nimble"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "components"]
+- !private ["s7CVarArgP", "contains"]
+- !private ["s7CVarArgP", "description"]
+- !private ["s7CVarArgP", "doubleValue"]
+- !private ["s7CVarArgP", "hash"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "isEmpty"]
+- !private ["s7CVarArgP", "joined"]
+- !private ["s7CVarArgP", "length"]
+- !private ["s7CVarArgP", "map"]
+- !private ["s7CVarArgP", "reduce"]
+- !private ["s7CVarArgP", "subscript"]
+- ["s7CVarArgP", "testDescription"]
+- !private ["s10CollectionP", "Nimble"]
+- !private ["s10CollectionP", "append"]
+- !private ["s10CollectionP", "contains"]
+- !private ["s10CollectionP", "count"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "isEmpty"]
+- !private ["s10CollectionP", "joined"]
+- !private ["s10CollectionP", "map"]
+- !private ["s10CollectionP", "reduce"]
+- !private ["s10CollectionP", "subscript"]
+- ["s10CollectionP", "testDescription"]
+- !private ["s10ComparableP", "NSNumber"]
+- !private ["s10ComparableP", "contains"]
+- !private ["s10ComparableP", "init"]
+- !private ["s10ComparableP", "isEmpty"]
+- ["s10ComparableP", "testDescription"]
+- !private ["s28CustomDebugStringConvertibleP", "Array"]
+- !private ["s28CustomDebugStringConvertibleP", "NSNumber"]
+- !private ["s28CustomDebugStringConvertibleP", "NSString"]
+- !private ["s28CustomDebugStringConvertibleP", "Nimble"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "components"]
+- !private ["s28CustomDebugStringConvertibleP", "contains"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "debugDescription"]
+- !private ["s28CustomDebugStringConvertibleP", "description"]
+- !private ["s28CustomDebugStringConvertibleP", "doubleValue"]
+- !private ["s28CustomDebugStringConvertibleP", "hash"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "isEmpty"]
+- !private ["s28CustomDebugStringConvertibleP", "joined"]
+- !private ["s28CustomDebugStringConvertibleP", "length"]
+- !private ["s28CustomDebugStringConvertibleP", "map"]
+- !private ["s28CustomDebugStringConvertibleP", "reduce"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- ["s28CustomDebugStringConvertibleP", "testDescription"]
+- !private ["s29CustomPlaygroundQuickLookableP", "NSNumber"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "components"]
+- !private ["s29CustomPlaygroundQuickLookableP", "contains"]
+- !private ["s29CustomPlaygroundQuickLookableP", "description"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "isEmpty"]
+- !private ["s29CustomPlaygroundQuickLookableP", "length"]
+- ["s29CustomPlaygroundQuickLookableP", "testDescription"]
+- !private ["s17CustomReflectableP", "Array"]
+- !private ["s17CustomReflectableP", "NSNumber"]
+- !private ["s17CustomReflectableP", "Nimble"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "contains"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "isEmpty"]
+- !private ["s17CustomReflectableP", "joined"]
+- !private ["s17CustomReflectableP", "map"]
+- !private ["s17CustomReflectableP", "reduce"]
+- !private ["s17CustomReflectableP", "subscript"]
+- ["s17CustomReflectableP", "testDescription"]
+- !private ["s23CustomStringConvertibleP", "Array"]
+- !private ["s23CustomStringConvertibleP", "NSNumber"]
+- !private ["s23CustomStringConvertibleP", "NSString"]
+- !private ["s23CustomStringConvertibleP", "Nimble"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "components"]
+- !private ["s23CustomStringConvertibleP", "contains"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "description"]
+- !private ["s23CustomStringConvertibleP", "doubleValue"]
+- !private ["s23CustomStringConvertibleP", "hash"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "isEmpty"]
+- !private ["s23CustomStringConvertibleP", "joined"]
+- !private ["s23CustomStringConvertibleP", "length"]
+- !private ["s23CustomStringConvertibleP", "map"]
+- !private ["s23CustomStringConvertibleP", "reduce"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- ["s23CustomStringConvertibleP", "testDescription"]
+- !private ["10Foundation4DataV", "NSData"]
+- ["10Foundation4DataV", "String"]
+- !private ["10Foundation4DataV", "count"]
+- ["10Foundation4DataV", "deinit"]
+- ["10Foundation4DataV", "testDescription"]
+- !private ["s9DecodableP", "NSNumber"]
+- !private ["s9DecodableP", "Nimble"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "append"]
+- !private ["s9DecodableP", "contains"]
+- !private ["s9DecodableP", "count"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "isEmpty"]
+- !private ["s9DecodableP", "joined"]
+- !private ["s9DecodableP", "map"]
+- !private ["s9DecodableP", "reduce"]
+- !private ["s9DecodableP", "subscript"]
+- ["s9DecodableP", "testDescription"]
+- !private ["Sd", "NSNumber"]
+- ["Sd", "String"]
+- ["Sd", "deinit"]
+- ["Sd", "testDescription"]
+- !private ["s9EncodableP", "NSNumber"]
+- !private ["s9EncodableP", "Nimble"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "append"]
+- !private ["s9EncodableP", "contains"]
+- !private ["s9EncodableP", "count"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "isEmpty"]
+- !private ["s9EncodableP", "joined"]
+- !private ["s9EncodableP", "map"]
+- !private ["s9EncodableP", "reduce"]
+- !private ["s9EncodableP", "subscript"]
+- ["s9EncodableP", "testDescription"]
+- !private ["s9EquatableP", "Array"]
+- !private ["s9EquatableP", "NSNumber"]
+- !private ["s9EquatableP", "NSString"]
+- !private ["s9EquatableP", "Nimble"]
+- ["s9EquatableP", ""]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "append"]
+- !private ["s9EquatableP", "components"]
+- !private ["s9EquatableP", "contains"]
+- !private ["s9EquatableP", "count"]
+- !private ["s9EquatableP", "description"]
+- !private ["s9EquatableP", "doubleValue"]
+- !private ["s9EquatableP", "hash"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "isEmpty"]
+- !private ["s9EquatableP", "joined"]
+- !private ["s9EquatableP", "length"]
+- !private ["s9EquatableP", "map"]
+- !private ["s9EquatableP", "reduce"]
+- !private ["s9EquatableP", "subscript"]
+- ["s9EquatableP", "testDescription"]
+- !private ["s25ExpressibleByArrayLiteralP", "Array"]
+- !private ["s25ExpressibleByArrayLiteralP", "Nimble"]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "joined"]
+- !private ["s25ExpressibleByArrayLiteralP", "map"]
+- !private ["s25ExpressibleByArrayLiteralP", "reduce"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- ["s25ExpressibleByArrayLiteralP", "testDescription"]
+- !private ["s27ExpressibleByBooleanLiteralP", "NSNumber"]
+- !private ["s27ExpressibleByBooleanLiteralP", "NSString"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s27ExpressibleByBooleanLiteralP", "description"]
+- !private ["s27ExpressibleByBooleanLiteralP", "doubleValue"]
+- !private ["s27ExpressibleByBooleanLiteralP", "init"]
+- ["s27ExpressibleByBooleanLiteralP", "testDescription"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "components"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "contains"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "description"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "isEmpty"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "length"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "testDescription"]
+- !private ["s25ExpressibleByFloatLiteralP", "NSNumber"]
+- !private ["s25ExpressibleByFloatLiteralP", "NSString"]
+- !private ["s25ExpressibleByFloatLiteralP", "description"]
+- !private ["s25ExpressibleByFloatLiteralP", "doubleValue"]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- ["s25ExpressibleByFloatLiteralP", "testDescription"]
+- !private ["s27ExpressibleByIntegerLiteralP", "NSNumber"]
+- !private ["s27ExpressibleByIntegerLiteralP", "NSString"]
+- !private ["s27ExpressibleByIntegerLiteralP", "description"]
+- !private ["s27ExpressibleByIntegerLiteralP", "doubleValue"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- ["s27ExpressibleByIntegerLiteralP", "testDescription"]
+- !private ["s26ExpressibleByStringLiteralP", "components"]
+- !private ["s26ExpressibleByStringLiteralP", "contains"]
+- !private ["s26ExpressibleByStringLiteralP", "description"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "isEmpty"]
+- !private ["s26ExpressibleByStringLiteralP", "length"]
+- ["s26ExpressibleByStringLiteralP", "testDescription"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "components"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "contains"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "description"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "isEmpty"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "length"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "testDescription"]
+- !private ["Sf", "NSNumber"]
+- ["Sf", "String"]
+- ["Sf", "deinit"]
+- ["Sf", "testDescription"]
+- !private ["s13FloatingPointP", "NSNumber"]
+- ["s13FloatingPointP", "testDescription"]
+- !private ["s8HashableP", "Array"]
+- !private ["s8HashableP", "NSNumber"]
+- !private ["s8HashableP", "NSString"]
+- !private ["s8HashableP", "Nimble"]
+- ["s8HashableP", ""]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "components"]
+- !private ["s8HashableP", "contains"]
+- !private ["s8HashableP", "count"]
+- !private ["s8HashableP", "description"]
+- !private ["s8HashableP", "doubleValue"]
+- !private ["s8HashableP", "hash"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "isEmpty"]
+- !private ["s8HashableP", "length"]
+- ["s8HashableP", "testDescription"]
+- !private ["s16IteratorProtocolP", "Element"]
+- !private ["s16IteratorProtocolP", "next"]
+- !private ["s25LosslessStringConvertibleP", "NSNumber"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "contains"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "isEmpty"]
+- ["s25LosslessStringConvertibleP", "testDescription"]
+- !private ["s10MirrorPathP", "contains"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s10MirrorPathP", "isEmpty"]
+- ["s10MirrorPathP", "testDescription"]
+- !private ["s17MutableCollectionP", "Nimble"]
+- !private ["s17MutableCollectionP", "append"]
+- !private ["s17MutableCollectionP", "count"]
+- !private ["s17MutableCollectionP", "init"]
+- !private ["s17MutableCollectionP", "joined"]
+- !private ["s17MutableCollectionP", "map"]
+- !private ["s17MutableCollectionP", "reduce"]
+- !private ["s17MutableCollectionP", "subscript"]
+- ["s17MutableCollectionP", "testDescription"]
+- !private ["6Nimble13NMBCollectionP", "Array"]
+- !private ["6Nimble13NMBCollectionP", "Nimble"]
+- ["6Nimble13NMBCollectionP", "testDescription"]
+- !private ["6Nimble13NMBComparableP", "NSString"]
+- !private ["6Nimble13NMBComparableP", "components"]
+- !private ["6Nimble13NMBComparableP", "contains"]
+- !private ["6Nimble13NMBComparableP", "description"]
+- !private ["6Nimble13NMBComparableP", "doubleValue"]
+- !private ["6Nimble13NMBComparableP", "init"]
+- !private ["6Nimble13NMBComparableP", "isEmpty"]
+- !private ["6Nimble13NMBComparableP", "length"]
+- ["6Nimble13NMBComparableP", "testDescription"]
+- !private ["6Nimble12NMBContainerP", "Array"]
+- !private ["6Nimble12NMBContainerP", "Nimble"]
+- ["6Nimble12NMBContainerP", "testDescription"]
+- !private ["6Nimble20NMBDoubleConvertibleP", "NSNumber"]
+- !private ["6Nimble20NMBDoubleConvertibleP", "NSString"]
+- !private ["6Nimble20NMBDoubleConvertibleP", "description"]
+- !private ["6Nimble20NMBDoubleConvertibleP", "doubleValue"]
+- !private ["6Nimble20NMBDoubleConvertibleP", "init"]
+- ["6Nimble20NMBDoubleConvertibleP", "testDescription"]
+- !private ["6Nimble20NMBOrderedCollectionP", "Array"]
+- !private ["6Nimble20NMBOrderedCollectionP", "Nimble"]
+- ["6Nimble20NMBOrderedCollectionP", "testDescription"]
+- !private ["6Nimble11NMBStringerC", "Nimble"]
+- ["6Nimble11NMBStringerC", "String"]
+- ["6Nimble11NMBStringerC", "deinit"]
+- ["6Nimble11NMBStringerC", "init"]
+- ["6Nimble11NMBStringerC", "stringify"]
+- !private ["So7NSArrayC", "Array"]
+- !private ["So7NSArrayC", "Nimble"]
+- ["So7NSArrayC", "String"]
+- ["So7NSArrayC", "deinit"]
+- ["So7NSArrayC", "testDescription"]
+- !private ["So8NSCodingP", "Array"]
+- !private ["So8NSCodingP", "NSString"]
+- !private ["So8NSCodingP", "Nimble"]
+- !private ["So8NSCodingP", "components"]
+- !private ["So8NSCodingP", "contains"]
+- !private ["So8NSCodingP", "description"]
+- !private ["So8NSCodingP", "doubleValue"]
+- !private ["So8NSCodingP", "hash"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "isEmpty"]
+- !private ["So8NSCodingP", "length"]
+- ["So8NSCodingP", "testDescription"]
+- !private ["So9NSCopyingP", "Array"]
+- !private ["So9NSCopyingP", "NSString"]
+- !private ["So9NSCopyingP", "Nimble"]
+- !private ["So9NSCopyingP", "components"]
+- !private ["So9NSCopyingP", "contains"]
+- !private ["So9NSCopyingP", "description"]
+- !private ["So9NSCopyingP", "doubleValue"]
+- !private ["So9NSCopyingP", "hash"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "isEmpty"]
+- !private ["So9NSCopyingP", "length"]
+- ["So9NSCopyingP", "testDescription"]
+- !private ["So6NSDataC", "hash"]
+- !private ["So17NSFastEnumerationP", "Array"]
+- !private ["So17NSFastEnumerationP", "Nimble"]
+- ["So17NSFastEnumerationP", "testDescription"]
+- !private ["So10NSIndexSetC", "Array"]
+- !private ["So10NSIndexSetC", "Nimble"]
+- ["So10NSIndexSetC", "String"]
+- ["So10NSIndexSetC", "deinit"]
+- ["So10NSIndexSetC", "testDescription"]
+- !private ["So21NSItemProviderReadingP", "components"]
+- !private ["So21NSItemProviderReadingP", "contains"]
+- !private ["So21NSItemProviderReadingP", "description"]
+- !private ["So21NSItemProviderReadingP", "init"]
+- !private ["So21NSItemProviderReadingP", "isEmpty"]
+- !private ["So21NSItemProviderReadingP", "length"]
+- !private ["So21NSItemProviderWritingP", "components"]
+- !private ["So21NSItemProviderWritingP", "contains"]
+- !private ["So21NSItemProviderWritingP", "description"]
+- !private ["So21NSItemProviderWritingP", "init"]
+- !private ["So21NSItemProviderWritingP", "isEmpty"]
+- !private ["So21NSItemProviderWritingP", "length"]
+- !private ["So16NSMutableCopyingP", "Array"]
+- !private ["So16NSMutableCopyingP", "Nimble"]
+- !private ["So16NSMutableCopyingP", "components"]
+- !private ["So16NSMutableCopyingP", "contains"]
+- !private ["So16NSMutableCopyingP", "description"]
+- !private ["So16NSMutableCopyingP", "hash"]
+- !private ["So16NSMutableCopyingP", "init"]
+- !private ["So16NSMutableCopyingP", "isEmpty"]
+- !private ["So16NSMutableCopyingP", "length"]
+- ["So16NSMutableCopyingP", "testDescription"]
+- !private ["So8NSNumberC", "NSString"]
+- ["So8NSNumberC", "String"]
+- ["So8NSNumberC", "deinit"]
+- !private ["So8NSNumberC", "description"]
+- !private ["So8NSNumberC", "doubleValue"]
+- !private ["So8NSNumberC", "init"]
+- ["So8NSNumberC", "testDescription"]
+- !private ["So8NSObjectC", "Array"]
+- !private ["So8NSObjectC", "NSString"]
+- !private ["So8NSObjectC", "Nimble"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", ""]
+- !private ["So8NSObjectC", "components"]
+- !private ["So8NSObjectC", "contains"]
+- !private ["So8NSObjectC", "description"]
+- !private ["So8NSObjectC", "doubleValue"]
+- !private ["So8NSObjectC", "hash"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "isEmpty"]
+- !private ["So8NSObjectC", "length"]
+- ["So8NSObjectC", "stringify"]
+- ["So8NSObjectC", "testDescription"]
+- !private ["So16NSObjectProtocolP", "Array"]
+- !private ["So16NSObjectProtocolP", "NSString"]
+- !private ["So16NSObjectProtocolP", "Nimble"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["So16NSObjectProtocolP", "components"]
+- !private ["So16NSObjectProtocolP", "contains"]
+- !private ["So16NSObjectProtocolP", "description"]
+- !private ["So16NSObjectProtocolP", "doubleValue"]
+- !private ["So16NSObjectProtocolP", "hash"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "isEmpty"]
+- !private ["So16NSObjectProtocolP", "length"]
+- ["So16NSObjectProtocolP", "testDescription"]
+- !private ["So14NSSecureCodingP", "Array"]
+- !private ["So14NSSecureCodingP", "NSString"]
+- !private ["So14NSSecureCodingP", "Nimble"]
+- !private ["So14NSSecureCodingP", "components"]
+- !private ["So14NSSecureCodingP", "contains"]
+- !private ["So14NSSecureCodingP", "description"]
+- !private ["So14NSSecureCodingP", "doubleValue"]
+- !private ["So14NSSecureCodingP", "hash"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "isEmpty"]
+- !private ["So14NSSecureCodingP", "length"]
+- ["So14NSSecureCodingP", "testDescription"]
+- !private ["So8NSStringC", "components"]
+- !private ["So8NSStringC", "contains"]
+- !private ["So8NSStringC", "description"]
+- !private ["So8NSStringC", "init"]
+- !private ["So8NSStringC", "isEmpty"]
+- !private ["So8NSStringC", "length"]
+- !private ["So7NSValueC", "NSString"]
+- ["So7NSValueC", "String"]
+- !private ["So7NSValueC", "description"]
+- !private ["So7NSValueC", "doubleValue"]
+- ["So7NSValueC", "testDescription"]
+- !private ["s7NumericP", "NSNumber"]
+- ["s7NumericP", "testDescription"]
+- !private ["s22RandomAccessCollectionP", "Nimble"]
+- !private ["s22RandomAccessCollectionP", "append"]
+- !private ["s22RandomAccessCollectionP", "count"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- !private ["s22RandomAccessCollectionP", "joined"]
+- !private ["s22RandomAccessCollectionP", "map"]
+- !private ["s22RandomAccessCollectionP", "reduce"]
+- !private ["s22RandomAccessCollectionP", "subscript"]
+- ["s22RandomAccessCollectionP", "testDescription"]
+- !private ["s26RangeReplaceableCollectionP", "Nimble"]
+- !private ["s26RangeReplaceableCollectionP", "append"]
+- !private ["s26RangeReplaceableCollectionP", "contains"]
+- !private ["s26RangeReplaceableCollectionP", "count"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "isEmpty"]
+- !private ["s26RangeReplaceableCollectionP", "joined"]
+- !private ["s26RangeReplaceableCollectionP", "map"]
+- !private ["s26RangeReplaceableCollectionP", "reduce"]
+- !private ["s26RangeReplaceableCollectionP", "subscript"]
+- ["s26RangeReplaceableCollectionP", "testDescription"]
+- !private ["10Foundation20ReferenceConvertibleP", "count"]
+- ["10Foundation20ReferenceConvertibleP", "testDescription"]
+- !private ["s8SequenceP", "Array"]
+- !private ["s8SequenceP", "Element"]
+- !private ["s8SequenceP", "Iterator"]
+- !private ["s8SequenceP", "Nimble"]
+- !private ["s8SequenceP", "String"]
+- !private ["s8SequenceP", "append"]
+- !private ["s8SequenceP", "contains"]
+- !private ["s8SequenceP", "count"]
+- !private ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "isEmpty"]
+- !private ["s8SequenceP", "joined"]
+- !private ["s8SequenceP", "makeIterator"]
+- !private ["s8SequenceP", "map"]
+- !private ["s8SequenceP", "next"]
+- !private ["s8SequenceP", "reduce"]
+- !private ["s8SequenceP", "stringify"]
+- !private ["s8SequenceP", "subscript"]
+- ["s8SequenceP", "testDescription"]
+- !private ["s13SignedNumericP", "NSNumber"]
+- ["s13SignedNumericP", "testDescription"]
+- !private ["s12StaticStringV", "init"]
+- !private ["s10StrideableP", "NSNumber"]
+- ["s10StrideableP", "testDescription"]
+- ["SS", "String"]
+- !private ["SS", "contains"]
+- ["SS", "deinit"]
+- !private ["SS", "init"]
+- !private ["SS", "isEmpty"]
+- ["SS", "testDescription"]
+- !private ["s14StringProtocolP", "contains"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s14StringProtocolP", "isEmpty"]
+- ["s14StringProtocolP", "testDescription"]
+- !private ["6Nimble27TestOutputStringConvertibleP", "Array"]
+- !private ["6Nimble27TestOutputStringConvertibleP", "Iterator"]
+- !private ["6Nimble27TestOutputStringConvertibleP", "NSNumber"]
+- !private ["6Nimble27TestOutputStringConvertibleP", "NSString"]
+- !private ["6Nimble27TestOutputStringConvertibleP", "Nimble"]
+- ["6Nimble27TestOutputStringConvertibleP", "String"]
+- ["6Nimble27TestOutputStringConvertibleP", ""]
+- !private ["6Nimble27TestOutputStringConvertibleP", "append"]
+- !private ["6Nimble27TestOutputStringConvertibleP", "contains"]
+- !private ["6Nimble27TestOutputStringConvertibleP", "count"]
+- !private ["6Nimble27TestOutputStringConvertibleP", "description"]
+- !private ["6Nimble27TestOutputStringConvertibleP", "doubleValue"]
+- !private ["6Nimble27TestOutputStringConvertibleP", "init"]
+- !private ["6Nimble27TestOutputStringConvertibleP", "isEmpty"]
+- !private ["6Nimble27TestOutputStringConvertibleP", "joined"]
+- !private ["6Nimble27TestOutputStringConvertibleP", "makeIterator"]
+- !private ["6Nimble27TestOutputStringConvertibleP", "map"]
+- !private ["6Nimble27TestOutputStringConvertibleP", "reduce"]
+- !private ["6Nimble27TestOutputStringConvertibleP", "stringify"]
+- !private ["6Nimble27TestOutputStringConvertibleP", "subscript"]
+- ["6Nimble27TestOutputStringConvertibleP", "testDescription"]
+- !private ["s16TextOutputStreamP", "contains"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "isEmpty"]
+- ["s16TextOutputStreamP", "testDescription"]
+- !private ["s20TextOutputStreamableP", "contains"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s20TextOutputStreamableP", "isEmpty"]
+- ["s20TextOutputStreamableP", "testDescription"]
+- !private ["s14_ArrayProtocolP", "Nimble"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s14_ArrayProtocolP", "init"]
+- !private ["s14_ArrayProtocolP", "joined"]
+- !private ["s14_ArrayProtocolP", "map"]
+- !private ["s14_ArrayProtocolP", "reduce"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- ["s14_ArrayProtocolP", "testDescription"]
+- !private ["s15_CVarArgAlignedP", "NSNumber"]
+- ["s15_CVarArgAlignedP", "testDescription"]
+- !private ["s22_CVarArgPassedAsDoubleP", "NSNumber"]
+- ["s22_CVarArgPassedAsDoubleP", "testDescription"]
+- !private ["s24_DestructorSafeContainerP", "Nimble"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- !private ["s24_DestructorSafeContainerP", "init"]
+- !private ["s24_DestructorSafeContainerP", "joined"]
+- !private ["s24_DestructorSafeContainerP", "map"]
+- !private ["s24_DestructorSafeContainerP", "reduce"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- ["s24_DestructorSafeContainerP", "testDescription"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "contains"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "isEmpty"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "testDescription"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "NSNumber"]
+- ["s33_ExpressibleByBuiltinFloatLiteralP", "testDescription"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "NSNumber"]
+- ["s35_ExpressibleByBuiltinIntegerLiteralP", "testDescription"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "contains"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "isEmpty"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "testDescription"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "contains"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "isEmpty"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "testDescription"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "contains"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "isEmpty"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "testDescription"]
+- !private ["s33_ExpressibleByStringInterpolationP", "contains"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "isEmpty"]
+- ["s33_ExpressibleByStringInterpolationP", "testDescription"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "Array"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "NSString"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "Nimble"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "components"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "contains"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "description"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "doubleValue"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "hash"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "isEmpty"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "length"]
+- ["s35_HasCustomAnyHashableRepresentationP", "testDescription"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Array"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSString"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Nimble"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "components"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "contains"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "description"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "doubleValue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "hash"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isEmpty"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "length"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "testDescription"]
+- !private ["s21_ObjectiveCBridgeableP", "NSNumber"]
+- !private ["s21_ObjectiveCBridgeableP", "Nimble"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "contains"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "isEmpty"]
+- !private ["s21_ObjectiveCBridgeableP", "joined"]
+- !private ["s21_ObjectiveCBridgeableP", "map"]
+- !private ["s21_ObjectiveCBridgeableP", "reduce"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- ["s21_ObjectiveCBridgeableP", "testDescription"]
+- !private ["s16_SwiftStringViewP", "contains"]
+- !private ["s16_SwiftStringViewP", "init"]
+- !private ["s16_SwiftStringViewP", "isEmpty"]
+- ["s16_SwiftStringViewP", "testDescription"]
+depends-nominal:
+- !private "s11AnyIteratorV"
+- "s11AnySequenceV"
+- "Sa"
+- "s23BidirectionalCollectionP"
+- "s19BinaryFloatingPointP"
+- !private "Sb"
+- "s7CVarArgP"
+- "s10CollectionP"
+- "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "10Foundation4DataV"
+- "s9DecodableP"
+- "Sd"
+- "s9EncodableP"
+- "s9EquatableP"
+- "s25ExpressibleByArrayLiteralP"
+- "s27ExpressibleByBooleanLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s25ExpressibleByFloatLiteralP"
+- "s27ExpressibleByIntegerLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- "Sf"
+- "s13FloatingPointP"
+- "s8HashableP"
+- !private "s16IteratorProtocolP"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
+- "s17MutableCollectionP"
+- "6Nimble13NMBCollectionP"
+- "6Nimble13NMBComparableP"
+- "6Nimble12NMBContainerP"
+- "6Nimble20NMBDoubleConvertibleP"
+- "6Nimble20NMBOrderedCollectionP"
+- "6Nimble11NMBStringerC"
+- "So7NSArrayC"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- !private "So6NSDataC"
+- "So17NSFastEnumerationP"
+- "So10NSIndexSetC"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- "So16NSMutableCopyingP"
+- "So8NSNumberC"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- "So7NSValueC"
+- "s7NumericP"
+- "s22RandomAccessCollectionP"
+- "s26RangeReplaceableCollectionP"
+- "10Foundation20ReferenceConvertibleP"
+- "s8SequenceP"
+- "s13SignedNumericP"
+- !private "s12StaticStringV"
+- "s10StrideableP"
+- "SS"
+- "s14StringProtocolP"
+- "6Nimble27TestOutputStringConvertibleP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- "s14_ArrayProtocolP"
+- "s15_CVarArgAlignedP"
+- "s22_CVarArgPassedAsDoubleP"
+- "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s33_ExpressibleByBuiltinFloatLiteralP"
+- "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+- "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/XCTest.swiftmodule"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Sources/NimbleObjectiveC/DSL.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Target Support Files/Nimble/Nimble-umbrella.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Sources/Nimble/Nimble.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Sources/NimbleObjectiveC/NMBExceptionCapture.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlPreconditionTesting/Mach/CwlPreconditionTesting.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Carthage/Checkouts/CwlCatchException/Sources/CwlCatchExceptionSupport/include/CwlCatchException.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/include/CwlMachBadInstructionHandler.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/mach_excServer.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Sources/NimbleObjectiveC/NMBStringify.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Intermediates/Pods.build/Debug-iphonesimulator/Nimble.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "3110072e942c507211fa1d469e5c99e2"

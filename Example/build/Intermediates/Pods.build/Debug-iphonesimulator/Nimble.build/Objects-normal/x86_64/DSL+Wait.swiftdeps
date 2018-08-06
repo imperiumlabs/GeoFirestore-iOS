@@ -1,0 +1,303 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "NMBWait"
+- "blockedRunLoopErrorMessageFor"
+- "waitUntil"
+provides-nominal:
+- "6Nimble7NMBWaitC"
+provides-member:
+- ["6Nimble7NMBWaitC", ""]
+provides-dynamic-lookup:
+- "until"
+depends-top-level:
+- !private "/"
+- !private "=="
+- !private "DispatchQueue"
+- "Error"
+- !private "ErrorResult"
+- "FileString"
+- !private "NMBExceptionCapture"
+- "NMBWait"
+- "NSException"
+- "NSObject"
+- !private "NimbleEnvironment"
+- "String"
+- "StringLiteralType"
+- "TernaryPrecedence"
+- "TimeInterval"
+- "UInt"
+- !private "UnicodeScalarType"
+- "Void"
+- "blockedRunLoopErrorMessageFor"
+- !private "fail"
+- !private "internalError"
+- "waitUntil"
+depends-member:
+- !private ["6Nimble19AwaitPromiseBuilderC", "timeout"]
+- !private ["6Nimble19AwaitPromiseBuilderC", "wait"]
+- ["6Nimble11AwaitResultO", "blockedRunLoop"]
+- ["6Nimble11AwaitResultO", "completed"]
+- ["6Nimble11AwaitResultO", "errorThrown"]
+- ["6Nimble11AwaitResultO", "incomplete"]
+- ["6Nimble11AwaitResultO", "raisedException"]
+- ["6Nimble11AwaitResultO", "timedOut"]
+- !private ["6Nimble7AwaiterC", "performBlock"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "DispatchQueue"]
+- !private ["s7CVarArgP", "NMBExceptionCapture"]
+- !private ["s7CVarArgP", "NimbleEnvironment"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "async"]
+- !private ["s7CVarArgP", "blockedRunLoopErrorMessageFor"]
+- !private ["s7CVarArgP", "fail"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "internalError"]
+- !private ["s7CVarArgP", "main"]
+- !private ["s7CVarArgP", "throwableUntil"]
+- !private ["s7CVarArgP", "tryBlock"]
+- !private ["s7CVarArgP", "until"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "DispatchQueue"]
+- !private ["s28CustomDebugStringConvertibleP", "NMBExceptionCapture"]
+- !private ["s28CustomDebugStringConvertibleP", "NimbleEnvironment"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "async"]
+- !private ["s28CustomDebugStringConvertibleP", "blockedRunLoopErrorMessageFor"]
+- !private ["s28CustomDebugStringConvertibleP", "fail"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "internalError"]
+- !private ["s28CustomDebugStringConvertibleP", "main"]
+- !private ["s28CustomDebugStringConvertibleP", "throwableUntil"]
+- !private ["s28CustomDebugStringConvertibleP", "tryBlock"]
+- !private ["s28CustomDebugStringConvertibleP", "until"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "DispatchQueue"]
+- !private ["s23CustomStringConvertibleP", "NMBExceptionCapture"]
+- !private ["s23CustomStringConvertibleP", "NimbleEnvironment"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "async"]
+- !private ["s23CustomStringConvertibleP", "blockedRunLoopErrorMessageFor"]
+- !private ["s23CustomStringConvertibleP", "fail"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "internalError"]
+- !private ["s23CustomStringConvertibleP", "main"]
+- !private ["s23CustomStringConvertibleP", "throwableUntil"]
+- !private ["s23CustomStringConvertibleP", "tryBlock"]
+- !private ["s23CustomStringConvertibleP", "until"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "init"]
+- !private ["So14DispatchObjectC", "async"]
+- !private ["So14DispatchObjectC", "main"]
+- !private ["So13DispatchQueueC", "async"]
+- !private ["So13DispatchQueueC", "main"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EquatableP", "DispatchQueue"]
+- !private ["s9EquatableP", "NMBExceptionCapture"]
+- !private ["s9EquatableP", "NimbleEnvironment"]
+- ["s9EquatableP", ""]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "async"]
+- !private ["s9EquatableP", "blockedRunLoopErrorMessageFor"]
+- !private ["s9EquatableP", "fail"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "internalError"]
+- !private ["s9EquatableP", "main"]
+- !private ["s9EquatableP", "throwableUntil"]
+- !private ["s9EquatableP", "tryBlock"]
+- !private ["s9EquatableP", "until"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s8HashableP", "DispatchQueue"]
+- !private ["s8HashableP", "NMBExceptionCapture"]
+- !private ["s8HashableP", "NimbleEnvironment"]
+- ["s8HashableP", ""]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "async"]
+- !private ["s8HashableP", "blockedRunLoopErrorMessageFor"]
+- !private ["s8HashableP", "fail"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "internalError"]
+- !private ["s8HashableP", "main"]
+- !private ["s8HashableP", "throwableUntil"]
+- !private ["s8HashableP", "tryBlock"]
+- !private ["s8HashableP", "until"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["So19NMBExceptionCaptureC", "init"]
+- !private ["So19NMBExceptionCaptureC", "tryBlock"]
+- !private ["6Nimble7NMBWaitC", "DispatchQueue"]
+- !private ["6Nimble7NMBWaitC", "ErrorResult"]
+- ["6Nimble7NMBWaitC", "FileString"]
+- !private ["6Nimble7NMBWaitC", "NMBExceptionCapture"]
+- !private ["6Nimble7NMBWaitC", "NimbleEnvironment"]
+- ["6Nimble7NMBWaitC", "TimeInterval"]
+- ["6Nimble7NMBWaitC", "UInt"]
+- ["6Nimble7NMBWaitC", "Void"]
+- !private ["6Nimble7NMBWaitC", "blockedRunLoopErrorMessageFor"]
+- ["6Nimble7NMBWaitC", "deinit"]
+- !private ["6Nimble7NMBWaitC", "fail"]
+- ["6Nimble7NMBWaitC", "init"]
+- !private ["6Nimble7NMBWaitC", "internalError"]
+- ["6Nimble7NMBWaitC", "throwableUntil"]
+- ["6Nimble7NMBWaitC", "until"]
+- !private ["So8NSObjectC", "DispatchQueue"]
+- !private ["So8NSObjectC", "ErrorResult"]
+- ["So8NSObjectC", "FileString"]
+- !private ["So8NSObjectC", "NMBExceptionCapture"]
+- !private ["So8NSObjectC", "NimbleEnvironment"]
+- ["So8NSObjectC", "TimeInterval"]
+- ["So8NSObjectC", "UInt"]
+- ["So8NSObjectC", "Void"]
+- ["So8NSObjectC", ""]
+- !private ["So8NSObjectC", "async"]
+- !private ["So8NSObjectC", "blockedRunLoopErrorMessageFor"]
+- !private ["So8NSObjectC", "fail"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "internalError"]
+- !private ["So8NSObjectC", "main"]
+- ["So8NSObjectC", "throwableUntil"]
+- !private ["So8NSObjectC", "tryBlock"]
+- ["So8NSObjectC", "until"]
+- !private ["So16NSObjectProtocolP", "DispatchQueue"]
+- !private ["So16NSObjectProtocolP", "NMBExceptionCapture"]
+- !private ["So16NSObjectProtocolP", "NimbleEnvironment"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["So16NSObjectProtocolP", "async"]
+- !private ["So16NSObjectProtocolP", "blockedRunLoopErrorMessageFor"]
+- !private ["So16NSObjectProtocolP", "fail"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "internalError"]
+- !private ["So16NSObjectProtocolP", "main"]
+- !private ["So16NSObjectProtocolP", "throwableUntil"]
+- !private ["So16NSObjectProtocolP", "tryBlock"]
+- !private ["So16NSObjectProtocolP", "until"]
+- !private ["6Nimble0A11EnvironmentC", "activeInstance"]
+- !private ["6Nimble0A11EnvironmentC", "awaiter"]
+- !private ["So9OS_objectC", "async"]
+- !private ["So9OS_objectC", "main"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s8SequenceP", "init"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["6Nimble27TestOutputStringConvertibleP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "DispatchQueue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NMBExceptionCapture"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NimbleEnvironment"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "async"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "blockedRunLoopErrorMessageFor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fail"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "internalError"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "throwableUntil"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "tryBlock"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "until"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "6Nimble19AwaitPromiseBuilderC"
+- "6Nimble11AwaitResultO"
+- !private "6Nimble7AwaiterC"
+- !private "s23BidirectionalCollectionP"
+- !private "Sb"
+- "s7CVarArgP"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "So14DispatchObjectC"
+- !private "So13DispatchQueueC"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "s8HashableP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "So19NMBExceptionCaptureC"
+- "6Nimble7NMBWaitC"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- !private "6Nimble0A11EnvironmentC"
+- !private "So9OS_objectC"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s8SequenceP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "6Nimble27TestOutputStringConvertibleP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/XCTest.swiftmodule"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Sources/NimbleObjectiveC/DSL.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Target Support Files/Nimble/Nimble-umbrella.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Sources/Nimble/Nimble.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Sources/NimbleObjectiveC/NMBExceptionCapture.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlPreconditionTesting/Mach/CwlPreconditionTesting.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Carthage/Checkouts/CwlCatchException/Sources/CwlCatchExceptionSupport/include/CwlCatchException.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/include/CwlMachBadInstructionHandler.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/mach_excServer.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Sources/NimbleObjectiveC/NMBStringify.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Intermediates/Pods.build/Debug-iphonesimulator/Nimble.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "cf9e67058e18114f1ce002e1a44bca1b"

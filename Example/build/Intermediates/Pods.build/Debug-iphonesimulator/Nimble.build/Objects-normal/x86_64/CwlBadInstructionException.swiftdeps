@@ -1,0 +1,530 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "BadInstructionException"
+provides-nominal:
+- "6Nimble23BadInstructionExceptionC"
+provides-member:
+- ["6Nimble23BadInstructionExceptionC", ""]
+provides-dynamic-lookup:
+- "receiveReply"
+depends-top-level:
+- !private "!="
+- !private "-="
+- !private "<"
+- "AssignmentPrecedence"
+- "BadInstructionException"
+- !private "Int"
+- !private "KERN_INVALID_ARGUMENT"
+- !private "KERN_SUCCESS"
+- !private "MemoryLayout"
+- "NSCoder"
+- "NSException"
+- !private "NSExceptionName"
+- "NSNumber"
+- "NSValue"
+- "String"
+- "StringLiteralType"
+- !private "UInt"
+- !private "UnsafeMutablePointer"
+- !private "UnsafeMutableRawPointer"
+- !private "UnsafePointer"
+- !private "Void"
+- !private "__uint64_t"
+- !private "bad_instruction_exception_reply_t"
+- !private "mach_msg_type_number_t"
+- !private "natural_t"
+- !private "raiseBadInstructionException"
+- !private "thread_state_t"
+- !private "withUnsafeMutablePointer"
+- !private "withUnsafePointer"
+- !private "x86_THREAD_STATE64_COUNT"
+- !private "x86_thread_state64_t"
+- !private "||"
+depends-member:
+- !private ["6Nimble23BadInstructionExceptionC", "BadInstructionException"]
+- !private ["6Nimble23BadInstructionExceptionC", "Int"]
+- !private ["6Nimble23BadInstructionExceptionC", "KERN_INVALID_ARGUMENT"]
+- !private ["6Nimble23BadInstructionExceptionC", "KERN_SUCCESS"]
+- !private ["6Nimble23BadInstructionExceptionC", "MemoryLayout"]
+- ["6Nimble23BadInstructionExceptionC", "NSCoder"]
+- !private ["6Nimble23BadInstructionExceptionC", "NSExceptionName"]
+- ["6Nimble23BadInstructionExceptionC", "NSNumber"]
+- ["6Nimble23BadInstructionExceptionC", "NSValue"]
+- ["6Nimble23BadInstructionExceptionC", "String"]
+- !private ["6Nimble23BadInstructionExceptionC", "UInt"]
+- !private ["6Nimble23BadInstructionExceptionC", "UnsafeMutablePointer"]
+- !private ["6Nimble23BadInstructionExceptionC", "UnsafeMutableRawPointer"]
+- !private ["6Nimble23BadInstructionExceptionC", "UnsafePointer"]
+- !private ["6Nimble23BadInstructionExceptionC", "Void"]
+- !private ["6Nimble23BadInstructionExceptionC", "__uint64_t"]
+- !private ["6Nimble23BadInstructionExceptionC", "bad_instruction_exception_reply_t"]
+- ["6Nimble23BadInstructionExceptionC", "deinit"]
+- ["6Nimble23BadInstructionExceptionC", "init"]
+- !private ["6Nimble23BadInstructionExceptionC", "mach_msg_type_number_t"]
+- ["6Nimble23BadInstructionExceptionC", "name"]
+- !private ["6Nimble23BadInstructionExceptionC", "natural_t"]
+- !private ["6Nimble23BadInstructionExceptionC", "raise"]
+- !private ["6Nimble23BadInstructionExceptionC", "raiseBadInstructionException"]
+- ["6Nimble23BadInstructionExceptionC", "receiveReply"]
+- !private ["6Nimble23BadInstructionExceptionC", "thread_state_t"]
+- !private ["6Nimble23BadInstructionExceptionC", "withUnsafeMutablePointer"]
+- !private ["6Nimble23BadInstructionExceptionC", "withUnsafePointer"]
+- !private ["6Nimble23BadInstructionExceptionC", "x86_THREAD_STATE64_COUNT"]
+- !private ["6Nimble23BadInstructionExceptionC", "x86_thread_state64_t"]
+- ["s23BidirectionalCollectionP", "init"]
+- !private ["s13BinaryIntegerP", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "BadInstructionException"]
+- !private ["s7CVarArgP", "KERN_INVALID_ARGUMENT"]
+- !private ["s7CVarArgP", "KERN_SUCCESS"]
+- !private ["s7CVarArgP", "MemoryLayout"]
+- !private ["s7CVarArgP", "NSExceptionName"]
+- !private ["s7CVarArgP", "NSNumber"]
+- !private ["s7CVarArgP", "UInt"]
+- !private ["s7CVarArgP", "UnsafeMutablePointer"]
+- !private ["s7CVarArgP", "UnsafeMutableRawPointer"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "__uint64_t"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "bad_instruction_exception_reply_t"]
+- !private ["s7CVarArgP", "getValue"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "name"]
+- !private ["s7CVarArgP", "pointee"]
+- !private ["s7CVarArgP", "raise"]
+- !private ["s7CVarArgP", "raiseBadInstructionException"]
+- !private ["s7CVarArgP", "withMemoryRebound"]
+- !private ["s7CVarArgP", "withUnsafeMutablePointer"]
+- !private ["s7CVarArgP", "withUnsafePointer"]
+- !private ["s7CVarArgP", "x86_THREAD_STATE64_COUNT"]
+- !private ["s7CVarArgP", "x86_thread_state64_t"]
+- ["s10CollectionP", "init"]
+- ["s10ComparableP", "init"]
+- !private ["s10ComparableP", "pointee"]
+- !private ["s10ComparableP", "withMemoryRebound"]
+- !private ["s28CustomDebugStringConvertibleP", "BadInstructionException"]
+- !private ["s28CustomDebugStringConvertibleP", "KERN_INVALID_ARGUMENT"]
+- !private ["s28CustomDebugStringConvertibleP", "KERN_SUCCESS"]
+- !private ["s28CustomDebugStringConvertibleP", "MemoryLayout"]
+- !private ["s28CustomDebugStringConvertibleP", "NSExceptionName"]
+- !private ["s28CustomDebugStringConvertibleP", "NSNumber"]
+- !private ["s28CustomDebugStringConvertibleP", "UInt"]
+- !private ["s28CustomDebugStringConvertibleP", "UnsafeMutablePointer"]
+- !private ["s28CustomDebugStringConvertibleP", "UnsafeMutableRawPointer"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "__uint64_t"]
+- !private ["s28CustomDebugStringConvertibleP", "bad_instruction_exception_reply_t"]
+- !private ["s28CustomDebugStringConvertibleP", "getValue"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "name"]
+- !private ["s28CustomDebugStringConvertibleP", "pointee"]
+- !private ["s28CustomDebugStringConvertibleP", "raise"]
+- !private ["s28CustomDebugStringConvertibleP", "raiseBadInstructionException"]
+- !private ["s28CustomDebugStringConvertibleP", "withMemoryRebound"]
+- !private ["s28CustomDebugStringConvertibleP", "withUnsafeMutablePointer"]
+- !private ["s28CustomDebugStringConvertibleP", "withUnsafePointer"]
+- !private ["s28CustomDebugStringConvertibleP", "x86_THREAD_STATE64_COUNT"]
+- !private ["s28CustomDebugStringConvertibleP", "x86_thread_state64_t"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "pointee"]
+- !private ["s29CustomPlaygroundQuickLookableP", "withMemoryRebound"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "pointee"]
+- !private ["s17CustomReflectableP", "withMemoryRebound"]
+- !private ["s23CustomStringConvertibleP", "BadInstructionException"]
+- !private ["s23CustomStringConvertibleP", "KERN_INVALID_ARGUMENT"]
+- !private ["s23CustomStringConvertibleP", "KERN_SUCCESS"]
+- !private ["s23CustomStringConvertibleP", "MemoryLayout"]
+- !private ["s23CustomStringConvertibleP", "NSExceptionName"]
+- !private ["s23CustomStringConvertibleP", "NSNumber"]
+- !private ["s23CustomStringConvertibleP", "UInt"]
+- !private ["s23CustomStringConvertibleP", "UnsafeMutablePointer"]
+- !private ["s23CustomStringConvertibleP", "UnsafeMutableRawPointer"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "__uint64_t"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "bad_instruction_exception_reply_t"]
+- !private ["s23CustomStringConvertibleP", "getValue"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "name"]
+- !private ["s23CustomStringConvertibleP", "raise"]
+- !private ["s23CustomStringConvertibleP", "raiseBadInstructionException"]
+- !private ["s23CustomStringConvertibleP", "withUnsafeMutablePointer"]
+- !private ["s23CustomStringConvertibleP", "withUnsafePointer"]
+- !private ["s23CustomStringConvertibleP", "x86_THREAD_STATE64_COUNT"]
+- !private ["s23CustomStringConvertibleP", "x86_thread_state64_t"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- ["s9DecodableP", "init"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- ["s9EncodableP", "init"]
+- !private ["s9EquatableP", "BadInstructionException"]
+- !private ["s9EquatableP", "KERN_INVALID_ARGUMENT"]
+- !private ["s9EquatableP", "KERN_SUCCESS"]
+- !private ["s9EquatableP", "MemoryLayout"]
+- !private ["s9EquatableP", "NSExceptionName"]
+- !private ["s9EquatableP", "NSNumber"]
+- !private ["s9EquatableP", "UInt"]
+- !private ["s9EquatableP", "UnsafeMutablePointer"]
+- !private ["s9EquatableP", "UnsafeMutableRawPointer"]
+- ["s9EquatableP", ""]
+- !private ["s9EquatableP", "__uint64_t"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "bad_instruction_exception_reply_t"]
+- !private ["s9EquatableP", "getValue"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "name"]
+- !private ["s9EquatableP", "pointee"]
+- !private ["s9EquatableP", "raise"]
+- !private ["s9EquatableP", "raiseBadInstructionException"]
+- !private ["s9EquatableP", "withMemoryRebound"]
+- !private ["s9EquatableP", "withUnsafeMutablePointer"]
+- !private ["s9EquatableP", "withUnsafePointer"]
+- !private ["s9EquatableP", "x86_THREAD_STATE64_COUNT"]
+- !private ["s9EquatableP", "x86_thread_state64_t"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s27ExpressibleByBooleanLiteralP", "init"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- !private ["s8HashableP", "BadInstructionException"]
+- !private ["s8HashableP", "KERN_INVALID_ARGUMENT"]
+- !private ["s8HashableP", "KERN_SUCCESS"]
+- !private ["s8HashableP", "MemoryLayout"]
+- !private ["s8HashableP", "NSExceptionName"]
+- !private ["s8HashableP", "NSNumber"]
+- !private ["s8HashableP", "UInt"]
+- !private ["s8HashableP", "UnsafeMutablePointer"]
+- !private ["s8HashableP", "UnsafeMutableRawPointer"]
+- ["s8HashableP", ""]
+- !private ["s8HashableP", "__uint64_t"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "bad_instruction_exception_reply_t"]
+- !private ["s8HashableP", "getValue"]
+- ["s8HashableP", "init"]
+- !private ["s8HashableP", "name"]
+- !private ["s8HashableP", "pointee"]
+- !private ["s8HashableP", "raise"]
+- !private ["s8HashableP", "raiseBadInstructionException"]
+- !private ["s8HashableP", "withMemoryRebound"]
+- !private ["s8HashableP", "withUnsafeMutablePointer"]
+- !private ["s8HashableP", "withUnsafePointer"]
+- !private ["s8HashableP", "x86_THREAD_STATE64_COUNT"]
+- !private ["s8HashableP", "x86_thread_state64_t"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- ["s25LosslessStringConvertibleP", "init"]
+- !private ["s12MemoryLayoutO", "size"]
+- ["s10MirrorPathP", "init"]
+- !private ["6Nimble13NMBComparableP", "init"]
+- !private ["6Nimble20NMBDoubleConvertibleP", "init"]
+- !private ["So8NSCodingP", "BadInstructionException"]
+- !private ["So8NSCodingP", "KERN_INVALID_ARGUMENT"]
+- !private ["So8NSCodingP", "KERN_SUCCESS"]
+- !private ["So8NSCodingP", "MemoryLayout"]
+- !private ["So8NSCodingP", "NSExceptionName"]
+- !private ["So8NSCodingP", "NSNumber"]
+- !private ["So8NSCodingP", "UInt"]
+- !private ["So8NSCodingP", "UnsafeMutablePointer"]
+- !private ["So8NSCodingP", "UnsafeMutableRawPointer"]
+- ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "__uint64_t"]
+- !private ["So8NSCodingP", "bad_instruction_exception_reply_t"]
+- !private ["So8NSCodingP", "getValue"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "name"]
+- !private ["So8NSCodingP", "raise"]
+- !private ["So8NSCodingP", "raiseBadInstructionException"]
+- !private ["So8NSCodingP", "withUnsafeMutablePointer"]
+- !private ["So8NSCodingP", "withUnsafePointer"]
+- !private ["So8NSCodingP", "x86_THREAD_STATE64_COUNT"]
+- !private ["So8NSCodingP", "x86_thread_state64_t"]
+- !private ["So9NSCopyingP", "BadInstructionException"]
+- !private ["So9NSCopyingP", "KERN_INVALID_ARGUMENT"]
+- !private ["So9NSCopyingP", "KERN_SUCCESS"]
+- !private ["So9NSCopyingP", "MemoryLayout"]
+- !private ["So9NSCopyingP", "NSExceptionName"]
+- !private ["So9NSCopyingP", "NSNumber"]
+- !private ["So9NSCopyingP", "UInt"]
+- !private ["So9NSCopyingP", "UnsafeMutablePointer"]
+- !private ["So9NSCopyingP", "UnsafeMutableRawPointer"]
+- ["So9NSCopyingP", ""]
+- !private ["So9NSCopyingP", "__uint64_t"]
+- !private ["So9NSCopyingP", "bad_instruction_exception_reply_t"]
+- !private ["So9NSCopyingP", "getValue"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "name"]
+- !private ["So9NSCopyingP", "raise"]
+- !private ["So9NSCopyingP", "raiseBadInstructionException"]
+- !private ["So9NSCopyingP", "withUnsafeMutablePointer"]
+- !private ["So9NSCopyingP", "withUnsafePointer"]
+- !private ["So9NSCopyingP", "x86_THREAD_STATE64_COUNT"]
+- !private ["So9NSCopyingP", "x86_thread_state64_t"]
+- !private ["So11NSExceptionC", "BadInstructionException"]
+- !private ["So11NSExceptionC", "Int"]
+- !private ["So11NSExceptionC", "KERN_INVALID_ARGUMENT"]
+- !private ["So11NSExceptionC", "KERN_SUCCESS"]
+- !private ["So11NSExceptionC", "MemoryLayout"]
+- ["So11NSExceptionC", "NSCoder"]
+- !private ["So11NSExceptionC", "NSExceptionName"]
+- ["So11NSExceptionC", "NSNumber"]
+- ["So11NSExceptionC", "NSValue"]
+- ["So11NSExceptionC", "String"]
+- !private ["So11NSExceptionC", "UInt"]
+- !private ["So11NSExceptionC", "UnsafeMutablePointer"]
+- !private ["So11NSExceptionC", "UnsafeMutableRawPointer"]
+- !private ["So11NSExceptionC", "UnsafePointer"]
+- !private ["So11NSExceptionC", "Void"]
+- ["So11NSExceptionC", ""]
+- !private ["So11NSExceptionC", "__uint64_t"]
+- !private ["So11NSExceptionC", "bad_instruction_exception_reply_t"]
+- ["So11NSExceptionC", "init"]
+- !private ["So11NSExceptionC", "mach_msg_type_number_t"]
+- ["So11NSExceptionC", "name"]
+- !private ["So11NSExceptionC", "natural_t"]
+- !private ["So11NSExceptionC", "raise"]
+- !private ["So11NSExceptionC", "raiseBadInstructionException"]
+- ["So11NSExceptionC", "receiveReply"]
+- !private ["So11NSExceptionC", "thread_state_t"]
+- !private ["So11NSExceptionC", "withUnsafeMutablePointer"]
+- !private ["So11NSExceptionC", "withUnsafePointer"]
+- !private ["So11NSExceptionC", "x86_THREAD_STATE64_COUNT"]
+- !private ["So11NSExceptionC", "x86_thread_state64_t"]
+- !private ["SC15NSExceptionNameV", "init"]
+- !private ["So8NSNumberC", "init"]
+- !private ["So8NSObjectC", "BadInstructionException"]
+- !private ["So8NSObjectC", "Int"]
+- !private ["So8NSObjectC", "KERN_INVALID_ARGUMENT"]
+- !private ["So8NSObjectC", "KERN_SUCCESS"]
+- !private ["So8NSObjectC", "MemoryLayout"]
+- ["So8NSObjectC", "NSCoder"]
+- !private ["So8NSObjectC", "NSExceptionName"]
+- ["So8NSObjectC", "NSNumber"]
+- ["So8NSObjectC", "NSValue"]
+- ["So8NSObjectC", "String"]
+- !private ["So8NSObjectC", "UInt"]
+- !private ["So8NSObjectC", "UnsafeMutablePointer"]
+- !private ["So8NSObjectC", "UnsafeMutableRawPointer"]
+- !private ["So8NSObjectC", "UnsafePointer"]
+- !private ["So8NSObjectC", "Void"]
+- !private ["So8NSObjectC", "__uint64_t"]
+- !private ["So8NSObjectC", "bad_instruction_exception_reply_t"]
+- !private ["So8NSObjectC", "getValue"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "mach_msg_type_number_t"]
+- ["So8NSObjectC", "name"]
+- !private ["So8NSObjectC", "natural_t"]
+- !private ["So8NSObjectC", "raise"]
+- !private ["So8NSObjectC", "raiseBadInstructionException"]
+- ["So8NSObjectC", "receiveReply"]
+- !private ["So8NSObjectC", "thread_state_t"]
+- !private ["So8NSObjectC", "withUnsafeMutablePointer"]
+- !private ["So8NSObjectC", "withUnsafePointer"]
+- !private ["So8NSObjectC", "x86_THREAD_STATE64_COUNT"]
+- !private ["So8NSObjectC", "x86_thread_state64_t"]
+- !private ["So16NSObjectProtocolP", "BadInstructionException"]
+- !private ["So16NSObjectProtocolP", "KERN_INVALID_ARGUMENT"]
+- !private ["So16NSObjectProtocolP", "KERN_SUCCESS"]
+- !private ["So16NSObjectProtocolP", "MemoryLayout"]
+- !private ["So16NSObjectProtocolP", "NSExceptionName"]
+- !private ["So16NSObjectProtocolP", "NSNumber"]
+- !private ["So16NSObjectProtocolP", "UInt"]
+- !private ["So16NSObjectProtocolP", "UnsafeMutablePointer"]
+- !private ["So16NSObjectProtocolP", "UnsafeMutableRawPointer"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["So16NSObjectProtocolP", "__uint64_t"]
+- !private ["So16NSObjectProtocolP", "bad_instruction_exception_reply_t"]
+- !private ["So16NSObjectProtocolP", "getValue"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "name"]
+- !private ["So16NSObjectProtocolP", "raise"]
+- !private ["So16NSObjectProtocolP", "raiseBadInstructionException"]
+- !private ["So16NSObjectProtocolP", "withUnsafeMutablePointer"]
+- !private ["So16NSObjectProtocolP", "withUnsafePointer"]
+- !private ["So16NSObjectProtocolP", "x86_THREAD_STATE64_COUNT"]
+- !private ["So16NSObjectProtocolP", "x86_thread_state64_t"]
+- !private ["So14NSSecureCodingP", "getValue"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So7NSValueC", "getValue"]
+- !private ["s7NumericP", "init"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s16RawRepresentableP", "init"]
+- ["s8SequenceP", "init"]
+- !private ["s12StaticStringV", "init"]
+- !private ["s10StrideableP", "init"]
+- !private ["s10StrideableP", "pointee"]
+- !private ["s10StrideableP", "withMemoryRebound"]
+- ["SS", "init"]
+- ["s14StringProtocolP", "init"]
+- ["6Nimble27TestOutputStringConvertibleP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- !private ["Su", "deinit"]
+- !private ["Su", "init"]
+- !private ["s6UInt64V", "deinit"]
+- !private ["s6UInt64V", "init"]
+- !private ["Sp", "init"]
+- !private ["Sp", "pointee"]
+- !private ["Sp", "withMemoryRebound"]
+- !private ["Sv", "init"]
+- !private ["SP", "pointee"]
+- !private ["SP", "withMemoryRebound"]
+- !private ["s15UnsignedIntegerP", "init"]
+- !private ["s18_BitwiseOperationsP", "init"]
+- !private ["s15_CVarArgAlignedP", "init"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "BadInstructionException"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "KERN_INVALID_ARGUMENT"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "KERN_SUCCESS"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "MemoryLayout"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSExceptionName"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSNumber"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UInt"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UnsafeMutablePointer"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UnsafeMutableRawPointer"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "__uint64_t"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "bad_instruction_exception_reply_t"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getValue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "name"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "raise"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "raiseBadInstructionException"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "withUnsafeMutablePointer"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "withUnsafePointer"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "x86_THREAD_STATE64_COUNT"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "x86_thread_state64_t"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s8_PointerP", "init"]
+- !private ["s8_PointerP", "pointee"]
+- !private ["s8_PointerP", "withMemoryRebound"]
+- !private ["s20_SwiftNewtypeWrapperP", "init"]
+- ["s16_SwiftStringViewP", "init"]
+- !private ["SC27__darwin_x86_thread_state64V", "__rip"]
+- !private ["SC27__darwin_x86_thread_state64V", "__rsp"]
+- !private ["SC33bad_instruction_exception_reply_tV", "init"]
+- !private ["SC33bad_instruction_exception_reply_tV", "new_state"]
+- !private ["SC33bad_instruction_exception_reply_tV", "new_stateCnt"]
+- !private ["SC33bad_instruction_exception_reply_tV", "old_state"]
+- !private ["SC33bad_instruction_exception_reply_tV", "old_stateCnt"]
+depends-nominal:
+- "6Nimble23BadInstructionExceptionC"
+- "s23BidirectionalCollectionP"
+- !private "s13BinaryIntegerP"
+- !private "Sb"
+- "s7CVarArgP"
+- "s10CollectionP"
+- "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "s9DecodableP"
+- "s9EncodableP"
+- "s9EquatableP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s17FixedWidthIntegerP"
+- "s8HashableP"
+- "s25LosslessStringConvertibleP"
+- !private "s12MemoryLayoutO"
+- "s10MirrorPathP"
+- !private "6Nimble13NMBComparableP"
+- !private "6Nimble20NMBDoubleConvertibleP"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- "So11NSExceptionC"
+- !private "SC15NSExceptionNameV"
+- !private "So8NSNumberC"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- !private "So14NSSecureCodingP"
+- !private "So7NSValueC"
+- !private "s7NumericP"
+- "s26RangeReplaceableCollectionP"
+- !private "s16RawRepresentableP"
+- "s8SequenceP"
+- !private "s12StaticStringV"
+- !private "s10StrideableP"
+- "SS"
+- "s14StringProtocolP"
+- "6Nimble27TestOutputStringConvertibleP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- !private "Su"
+- !private "s6UInt64V"
+- !private "Sp"
+- !private "Sv"
+- !private "SP"
+- !private "s15UnsignedIntegerP"
+- !private "s18_BitwiseOperationsP"
+- !private "s15_CVarArgAlignedP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+- !private "s8_PointerP"
+- !private "s20_SwiftNewtypeWrapperP"
+- "s16_SwiftStringViewP"
+- !private "SC27__darwin_x86_thread_state64V"
+- !private "SC33bad_instruction_exception_reply_tV"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/XCTest.swiftmodule"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Sources/NimbleObjectiveC/DSL.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Target Support Files/Nimble/Nimble-umbrella.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Sources/Nimble/Nimble.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Sources/NimbleObjectiveC/NMBExceptionCapture.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlPreconditionTesting/Mach/CwlPreconditionTesting.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Carthage/Checkouts/CwlCatchException/Sources/CwlCatchExceptionSupport/include/CwlCatchException.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/include/CwlMachBadInstructionHandler.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/mach_excServer.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Sources/NimbleObjectiveC/NMBStringify.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Intermediates/Pods.build/Debug-iphonesimulator/Nimble.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "859ace2289984e6f0c2dc27637090921"

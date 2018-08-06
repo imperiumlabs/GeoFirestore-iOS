@@ -1,0 +1,11 @@
+framework module Geofirestore {
+  umbrella header "Geofirestore-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module Geofirestore.Swift {
+    header "Geofirestore-Swift.h"
+    requires objc
+}

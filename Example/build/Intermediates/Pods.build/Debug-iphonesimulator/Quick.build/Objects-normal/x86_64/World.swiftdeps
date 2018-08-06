@@ -1,0 +1,704 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "SharedExampleContext"
+- "SharedExampleClosure"
+- "_WorldBase"
+- "World"
+provides-nominal:
+- "5Quick10_WorldBaseC"
+- "5Quick5WorldC"
+provides-member:
+- ["5Quick10_WorldBaseC", ""]
+- ["5Quick5WorldC", ""]
+provides-dynamic-lookup:
+- "aftersCurrentlyExecuting"
+- "beforesCurrentlyExecuting"
+- "configure"
+- "currentExampleGroup"
+- "currentExampleMetadata"
+- "examples"
+- "finalizeConfiguration"
+- "includedExampleCount"
+- "isConfigurationFinalized"
+- "isRunningAdditionalSuites"
+- "objc_examples"
+- "performWithCurrentExampleGroup"
+- "registerSharedExample"
+- "rootExampleGroupForSpecClass"
+- "sharedExample"
+- "sharedWorld"
+depends-top-level:
+- !private "!"
+- !private "!="
+- !private "&&"
+- !private "=="
+- "AnyClass"
+- !private "Array"
+- "AssignmentPrecedence"
+- "Bool"
+- "BooleanLiteralType"
+- "Configuration"
+- !private "Dictionary"
+- "Example"
+- "ExampleGroup"
+- "ExampleHooks"
+- "ExampleMetadata"
+- "Int"
+- "NSObject"
+- "QuickConfigurer"
+- "SharedExampleClosure"
+- "SharedExampleContext"
+- "String"
+- !private "StringLiteralType"
+- "SuiteHooks"
+- !private "UnicodeScalarType"
+- "Void"
+- "World"
+- "_WorldBase"
+- !private "assert"
+- !private "raiseError"
+- !private "||"
+depends-member:
+- !private ["Sa", "append"]
+- !private ["Sa", "contains"]
+- !private ["Sa", "count"]
+- !private ["Sa", "filter"]
+- !private ["Sa", "init"]
+- !private ["Sa", "isEmpty"]
+- !private ["Sa", "reduce"]
+- !private ["s23BidirectionalCollectionP", "append"]
+- !private ["s23BidirectionalCollectionP", "contains"]
+- !private ["s23BidirectionalCollectionP", "count"]
+- !private ["s23BidirectionalCollectionP", "filter"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "isEmpty"]
+- !private ["s23BidirectionalCollectionP", "reduce"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "Array"]
+- ["s7CVarArgP", "Configuration"]
+- !private ["s7CVarArgP", "ExampleGroup"]
+- !private ["s7CVarArgP", "String"]
+- ["s7CVarArgP", "World"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "allExamples"]
+- !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "assert"]
+- !private ["s7CVarArgP", "configuration"]
+- !private ["s7CVarArgP", "contains"]
+- !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "currentExampleGroup"]
+- !private ["s7CVarArgP", "currentExampleMetadata"]
+- !private ["s7CVarArgP", "example"]
+- !private ["s7CVarArgP", "exampleHooks"]
+- !private ["s7CVarArgP", "examples"]
+- !private ["s7CVarArgP", "exclusionFilters"]
+- !private ["s7CVarArgP", "filter"]
+- !private ["s7CVarArgP", "group"]
+- !private ["s7CVarArgP", "includedExamples"]
+- !private ["s7CVarArgP", "inclusionFilters"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "isConfigurationFinalized"]
+- !private ["s7CVarArgP", "isEmpty"]
+- !private ["s7CVarArgP", "keys"]
+- !private ["s7CVarArgP", "phase"]
+- !private ["s7CVarArgP", "raiseError"]
+- !private ["s7CVarArgP", "raiseIfSharedExampleAlreadyRegistered"]
+- !private ["s7CVarArgP", "raiseIfSharedExampleNotRegistered"]
+- !private ["s7CVarArgP", "reduce"]
+- !private ["s7CVarArgP", "rootExampleGroupForSpecClass"]
+- !private ["s7CVarArgP", "runAllWhenEverythingFiltered"]
+- !private ["s7CVarArgP", "sharedExamples"]
+- !private ["s7CVarArgP", "specs"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "suiteHooks"]
+- !private ["s7CVarArgP", "walkDownExamples"]
+- !private ["s10CollectionP", "append"]
+- !private ["s10CollectionP", "contains"]
+- !private ["s10CollectionP", "count"]
+- !private ["s10CollectionP", "filter"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "isEmpty"]
+- !private ["s10CollectionP", "keys"]
+- !private ["s10CollectionP", "reduce"]
+- !private ["s10CollectionP", "subscript"]
+- !private ["s10ComparableP", "init"]
+- !private ["5Quick13ConfigurationC", "exampleHooks"]
+- !private ["5Quick13ConfigurationC", "exclusionFilters"]
+- !private ["5Quick13ConfigurationC", "inclusionFilters"]
+- ["5Quick13ConfigurationC", "init"]
+- !private ["5Quick13ConfigurationC", "runAllWhenEverythingFiltered"]
+- !private ["5Quick13ConfigurationC", "suiteHooks"]
+- !private ["s28CustomDebugStringConvertibleP", "Array"]
+- ["s28CustomDebugStringConvertibleP", "Configuration"]
+- !private ["s28CustomDebugStringConvertibleP", "ExampleGroup"]
+- !private ["s28CustomDebugStringConvertibleP", "String"]
+- ["s28CustomDebugStringConvertibleP", "World"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "allExamples"]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "assert"]
+- !private ["s28CustomDebugStringConvertibleP", "configuration"]
+- !private ["s28CustomDebugStringConvertibleP", "contains"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "currentExampleGroup"]
+- !private ["s28CustomDebugStringConvertibleP", "currentExampleMetadata"]
+- !private ["s28CustomDebugStringConvertibleP", "example"]
+- !private ["s28CustomDebugStringConvertibleP", "exampleHooks"]
+- !private ["s28CustomDebugStringConvertibleP", "examples"]
+- !private ["s28CustomDebugStringConvertibleP", "exclusionFilters"]
+- !private ["s28CustomDebugStringConvertibleP", "filter"]
+- !private ["s28CustomDebugStringConvertibleP", "group"]
+- !private ["s28CustomDebugStringConvertibleP", "includedExamples"]
+- !private ["s28CustomDebugStringConvertibleP", "inclusionFilters"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "isConfigurationFinalized"]
+- !private ["s28CustomDebugStringConvertibleP", "isEmpty"]
+- !private ["s28CustomDebugStringConvertibleP", "keys"]
+- !private ["s28CustomDebugStringConvertibleP", "phase"]
+- !private ["s28CustomDebugStringConvertibleP", "raiseError"]
+- !private ["s28CustomDebugStringConvertibleP", "raiseIfSharedExampleAlreadyRegistered"]
+- !private ["s28CustomDebugStringConvertibleP", "raiseIfSharedExampleNotRegistered"]
+- !private ["s28CustomDebugStringConvertibleP", "reduce"]
+- !private ["s28CustomDebugStringConvertibleP", "rootExampleGroupForSpecClass"]
+- !private ["s28CustomDebugStringConvertibleP", "runAllWhenEverythingFiltered"]
+- !private ["s28CustomDebugStringConvertibleP", "sharedExamples"]
+- !private ["s28CustomDebugStringConvertibleP", "specs"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "suiteHooks"]
+- !private ["s28CustomDebugStringConvertibleP", "walkDownExamples"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "contains"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "filter"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "isEmpty"]
+- !private ["s17CustomReflectableP", "keys"]
+- !private ["s17CustomReflectableP", "reduce"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "Array"]
+- ["s23CustomStringConvertibleP", "Configuration"]
+- !private ["s23CustomStringConvertibleP", "ExampleGroup"]
+- !private ["s23CustomStringConvertibleP", "String"]
+- ["s23CustomStringConvertibleP", "World"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "allExamples"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "assert"]
+- !private ["s23CustomStringConvertibleP", "configuration"]
+- !private ["s23CustomStringConvertibleP", "contains"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "currentExampleGroup"]
+- !private ["s23CustomStringConvertibleP", "currentExampleMetadata"]
+- !private ["s23CustomStringConvertibleP", "example"]
+- !private ["s23CustomStringConvertibleP", "exampleHooks"]
+- !private ["s23CustomStringConvertibleP", "examples"]
+- !private ["s23CustomStringConvertibleP", "exclusionFilters"]
+- !private ["s23CustomStringConvertibleP", "filter"]
+- !private ["s23CustomStringConvertibleP", "group"]
+- !private ["s23CustomStringConvertibleP", "includedExamples"]
+- !private ["s23CustomStringConvertibleP", "inclusionFilters"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "isConfigurationFinalized"]
+- !private ["s23CustomStringConvertibleP", "isEmpty"]
+- !private ["s23CustomStringConvertibleP", "keys"]
+- !private ["s23CustomStringConvertibleP", "phase"]
+- !private ["s23CustomStringConvertibleP", "raiseError"]
+- !private ["s23CustomStringConvertibleP", "raiseIfSharedExampleAlreadyRegistered"]
+- !private ["s23CustomStringConvertibleP", "raiseIfSharedExampleNotRegistered"]
+- !private ["s23CustomStringConvertibleP", "reduce"]
+- !private ["s23CustomStringConvertibleP", "rootExampleGroupForSpecClass"]
+- !private ["s23CustomStringConvertibleP", "runAllWhenEverythingFiltered"]
+- !private ["s23CustomStringConvertibleP", "sharedExamples"]
+- !private ["s23CustomStringConvertibleP", "specs"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "suiteHooks"]
+- !private ["s23CustomStringConvertibleP", "walkDownExamples"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "append"]
+- !private ["s9DecodableP", "contains"]
+- !private ["s9DecodableP", "count"]
+- !private ["s9DecodableP", "filter"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "isEmpty"]
+- !private ["s9DecodableP", "keys"]
+- !private ["s9DecodableP", "reduce"]
+- !private ["s9DecodableP", "subscript"]
+- !private ["s10DictionaryV", "keys"]
+- !private ["s10DictionaryV", "subscript"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "append"]
+- !private ["s9EncodableP", "contains"]
+- !private ["s9EncodableP", "count"]
+- !private ["s9EncodableP", "filter"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "isEmpty"]
+- !private ["s9EncodableP", "keys"]
+- !private ["s9EncodableP", "reduce"]
+- !private ["s9EncodableP", "subscript"]
+- !private ["s9EquatableP", "Array"]
+- ["s9EquatableP", "Configuration"]
+- !private ["s9EquatableP", "ExampleGroup"]
+- !private ["s9EquatableP", "String"]
+- ["s9EquatableP", "World"]
+- ["s9EquatableP", ""]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "aftersExecuting"]
+- !private ["s9EquatableP", "allExamples"]
+- !private ["s9EquatableP", "append"]
+- !private ["s9EquatableP", "assert"]
+- !private ["s9EquatableP", "beforesExecuting"]
+- !private ["s9EquatableP", "configuration"]
+- !private ["s9EquatableP", "contains"]
+- !private ["s9EquatableP", "count"]
+- !private ["s9EquatableP", "currentExampleGroup"]
+- !private ["s9EquatableP", "currentExampleMetadata"]
+- !private ["s9EquatableP", "example"]
+- !private ["s9EquatableP", "exampleHooks"]
+- !private ["s9EquatableP", "examples"]
+- !private ["s9EquatableP", "exclusionFilters"]
+- !private ["s9EquatableP", "filter"]
+- !private ["s9EquatableP", "group"]
+- !private ["s9EquatableP", "includedExamples"]
+- !private ["s9EquatableP", "inclusionFilters"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "isConfigurationFinalized"]
+- !private ["s9EquatableP", "isEmpty"]
+- !private ["s9EquatableP", "keys"]
+- !private ["s9EquatableP", "phase"]
+- !private ["s9EquatableP", "raiseError"]
+- !private ["s9EquatableP", "raiseIfSharedExampleAlreadyRegistered"]
+- !private ["s9EquatableP", "raiseIfSharedExampleNotRegistered"]
+- !private ["s9EquatableP", "reduce"]
+- !private ["s9EquatableP", "rootExampleGroupForSpecClass"]
+- !private ["s9EquatableP", "runAllWhenEverythingFiltered"]
+- !private ["s9EquatableP", "sharedExamples"]
+- !private ["s9EquatableP", "specs"]
+- !private ["s9EquatableP", "subscript"]
+- !private ["s9EquatableP", "suiteHooks"]
+- !private ["s9EquatableP", "walkDownExamples"]
+- !private ["5Quick7ExampleC", "deinit"]
+- !private ["5Quick7ExampleC", "group"]
+- !private ["5Quick12ExampleGroupC", "examples"]
+- !private ["5Quick12ExampleGroupC", "init"]
+- !private ["5Quick12ExampleGroupC", "phase"]
+- !private ["5Quick12ExampleGroupC", "walkDownExamples"]
+- !private ["5Quick12ExampleHooksC", "phase"]
+- !private ["5Quick15ExampleMetadataC", "example"]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- !private ["s25ExpressibleByArrayLiteralP", "contains"]
+- !private ["s25ExpressibleByArrayLiteralP", "count"]
+- !private ["s25ExpressibleByArrayLiteralP", "filter"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "isEmpty"]
+- !private ["s25ExpressibleByArrayLiteralP", "reduce"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "keys"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s8HashableP", "Array"]
+- ["s8HashableP", "Configuration"]
+- !private ["s8HashableP", "ExampleGroup"]
+- !private ["s8HashableP", "String"]
+- ["s8HashableP", "World"]
+- ["s8HashableP", ""]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "aftersExecuting"]
+- !private ["s8HashableP", "allExamples"]
+- !private ["s8HashableP", "assert"]
+- !private ["s8HashableP", "beforesExecuting"]
+- !private ["s8HashableP", "configuration"]
+- !private ["s8HashableP", "currentExampleGroup"]
+- !private ["s8HashableP", "currentExampleMetadata"]
+- !private ["s8HashableP", "example"]
+- !private ["s8HashableP", "exampleHooks"]
+- !private ["s8HashableP", "examples"]
+- !private ["s8HashableP", "exclusionFilters"]
+- !private ["s8HashableP", "group"]
+- !private ["s8HashableP", "includedExamples"]
+- !private ["s8HashableP", "inclusionFilters"]
+- ["s8HashableP", "init"]
+- !private ["s8HashableP", "isConfigurationFinalized"]
+- !private ["s8HashableP", "phase"]
+- !private ["s8HashableP", "raiseError"]
+- !private ["s8HashableP", "raiseIfSharedExampleAlreadyRegistered"]
+- !private ["s8HashableP", "raiseIfSharedExampleNotRegistered"]
+- !private ["s8HashableP", "rootExampleGroupForSpecClass"]
+- !private ["s8HashableP", "runAllWhenEverythingFiltered"]
+- !private ["s8HashableP", "sharedExamples"]
+- !private ["s8HashableP", "specs"]
+- !private ["s8HashableP", "suiteHooks"]
+- !private ["s8HashableP", "walkDownExamples"]
+- !private ["5Quick10HooksPhaseO", "aftersExecuting"]
+- !private ["5Quick10HooksPhaseO", "beforesExecuting"]
+- !private ["5Quick10HooksPhaseO", "deinit"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "append"]
+- !private ["s17MutableCollectionP", "contains"]
+- !private ["s17MutableCollectionP", "count"]
+- !private ["s17MutableCollectionP", "filter"]
+- !private ["s17MutableCollectionP", "init"]
+- !private ["s17MutableCollectionP", "isEmpty"]
+- !private ["s17MutableCollectionP", "reduce"]
+- ["So8NSObjectC", "AnyClass"]
+- !private ["So8NSObjectC", "Array"]
+- ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "Configuration"]
+- ["So8NSObjectC", "Example"]
+- ["So8NSObjectC", "ExampleGroup"]
+- ["So8NSObjectC", "ExampleHooks"]
+- ["So8NSObjectC", "ExampleMetadata"]
+- ["So8NSObjectC", "Int"]
+- ["So8NSObjectC", "QuickConfigurer"]
+- ["So8NSObjectC", "SharedExampleClosure"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "SuiteHooks"]
+- ["So8NSObjectC", "Void"]
+- ["So8NSObjectC", "World"]
+- ["So8NSObjectC", ""]
+- ["So8NSObjectC", "aftersCurrentlyExecuting"]
+- ["So8NSObjectC", "allExamples"]
+- !private ["So8NSObjectC", "assert"]
+- ["So8NSObjectC", "beforesCurrentlyExecuting"]
+- ["So8NSObjectC", "configuration"]
+- ["So8NSObjectC", "configure"]
+- ["So8NSObjectC", "currentExampleGroup"]
+- ["So8NSObjectC", "currentExampleMetadata"]
+- !private ["So8NSObjectC", "example"]
+- ["So8NSObjectC", "exampleHooks"]
+- ["So8NSObjectC", "examples"]
+- !private ["So8NSObjectC", "exclusionFilters"]
+- ["So8NSObjectC", "finalizeConfiguration"]
+- !private ["So8NSObjectC", "group"]
+- ["So8NSObjectC", "includedExampleCount"]
+- ["So8NSObjectC", "includedExamples"]
+- !private ["So8NSObjectC", "inclusionFilters"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "isConfigurationFinalized"]
+- ["So8NSObjectC", "isRunningAdditionalSuites"]
+- ["So8NSObjectC", "objc_examples"]
+- ["So8NSObjectC", "performWithCurrentExampleGroup"]
+- !private ["So8NSObjectC", "phase"]
+- !private ["So8NSObjectC", "raiseError"]
+- ["So8NSObjectC", "raiseIfSharedExampleAlreadyRegistered"]
+- ["So8NSObjectC", "raiseIfSharedExampleNotRegistered"]
+- ["So8NSObjectC", "registerSharedExample"]
+- ["So8NSObjectC", "rootExampleGroupForSpecClass"]
+- !private ["So8NSObjectC", "runAllWhenEverythingFiltered"]
+- ["So8NSObjectC", "sharedExample"]
+- ["So8NSObjectC", "sharedExamples"]
+- ["So8NSObjectC", "sharedWorld"]
+- ["So8NSObjectC", "specs"]
+- ["So8NSObjectC", "suiteHooks"]
+- !private ["So8NSObjectC", "walkDownExamples"]
+- !private ["So16NSObjectProtocolP", "Array"]
+- ["So16NSObjectProtocolP", "Configuration"]
+- !private ["So16NSObjectProtocolP", "ExampleGroup"]
+- !private ["So16NSObjectProtocolP", "String"]
+- ["So16NSObjectProtocolP", "World"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["So16NSObjectProtocolP", "allExamples"]
+- !private ["So16NSObjectProtocolP", "assert"]
+- !private ["So16NSObjectProtocolP", "configuration"]
+- !private ["So16NSObjectProtocolP", "currentExampleGroup"]
+- !private ["So16NSObjectProtocolP", "currentExampleMetadata"]
+- !private ["So16NSObjectProtocolP", "example"]
+- !private ["So16NSObjectProtocolP", "exampleHooks"]
+- !private ["So16NSObjectProtocolP", "examples"]
+- !private ["So16NSObjectProtocolP", "exclusionFilters"]
+- !private ["So16NSObjectProtocolP", "group"]
+- !private ["So16NSObjectProtocolP", "includedExamples"]
+- !private ["So16NSObjectProtocolP", "inclusionFilters"]
+- ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "isConfigurationFinalized"]
+- !private ["So16NSObjectProtocolP", "phase"]
+- !private ["So16NSObjectProtocolP", "raiseError"]
+- !private ["So16NSObjectProtocolP", "raiseIfSharedExampleAlreadyRegistered"]
+- !private ["So16NSObjectProtocolP", "raiseIfSharedExampleNotRegistered"]
+- !private ["So16NSObjectProtocolP", "rootExampleGroupForSpecClass"]
+- !private ["So16NSObjectProtocolP", "runAllWhenEverythingFiltered"]
+- !private ["So16NSObjectProtocolP", "sharedExamples"]
+- !private ["So16NSObjectProtocolP", "specs"]
+- !private ["So16NSObjectProtocolP", "suiteHooks"]
+- !private ["So16NSObjectProtocolP", "walkDownExamples"]
+- !private ["s22RandomAccessCollectionP", "append"]
+- !private ["s22RandomAccessCollectionP", "contains"]
+- !private ["s22RandomAccessCollectionP", "count"]
+- !private ["s22RandomAccessCollectionP", "filter"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- !private ["s22RandomAccessCollectionP", "isEmpty"]
+- !private ["s22RandomAccessCollectionP", "reduce"]
+- !private ["s26RangeReplaceableCollectionP", "append"]
+- !private ["s26RangeReplaceableCollectionP", "contains"]
+- !private ["s26RangeReplaceableCollectionP", "count"]
+- !private ["s26RangeReplaceableCollectionP", "filter"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "isEmpty"]
+- !private ["s26RangeReplaceableCollectionP", "reduce"]
+- !private ["s8SequenceP", "append"]
+- !private ["s8SequenceP", "contains"]
+- !private ["s8SequenceP", "count"]
+- !private ["s8SequenceP", "filter"]
+- !private ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "isEmpty"]
+- !private ["s8SequenceP", "keys"]
+- !private ["s8SequenceP", "reduce"]
+- !private ["s8SequenceP", "subscript"]
+- !private ["s12StaticStringV", "init"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["5Quick10SuiteHooksC", "phase"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- ["5Quick5WorldC", "AnyClass"]
+- !private ["5Quick5WorldC", "Array"]
+- ["5Quick5WorldC", "Bool"]
+- ["5Quick5WorldC", "Configuration"]
+- ["5Quick5WorldC", "Example"]
+- ["5Quick5WorldC", "ExampleGroup"]
+- ["5Quick5WorldC", "ExampleHooks"]
+- ["5Quick5WorldC", "ExampleMetadata"]
+- ["5Quick5WorldC", "Int"]
+- ["5Quick5WorldC", "QuickConfigurer"]
+- ["5Quick5WorldC", "SharedExampleClosure"]
+- ["5Quick5WorldC", "String"]
+- ["5Quick5WorldC", "SuiteHooks"]
+- ["5Quick5WorldC", "Void"]
+- ["5Quick5WorldC", "World"]
+- ["5Quick5WorldC", "aftersCurrentlyExecuting"]
+- !private ["5Quick5WorldC", "allExamples"]
+- !private ["5Quick5WorldC", "assert"]
+- ["5Quick5WorldC", "beforesCurrentlyExecuting"]
+- !private ["5Quick5WorldC", "configuration"]
+- ["5Quick5WorldC", "configure"]
+- ["5Quick5WorldC", "currentExampleGroup"]
+- ["5Quick5WorldC", "currentExampleMetadata"]
+- ["5Quick5WorldC", "deinit"]
+- ["5Quick5WorldC", "exampleHooks"]
+- ["5Quick5WorldC", "examples"]
+- ["5Quick5WorldC", "finalizeConfiguration"]
+- ["5Quick5WorldC", "includedExampleCount"]
+- !private ["5Quick5WorldC", "includedExamples"]
+- ["5Quick5WorldC", "init"]
+- ["5Quick5WorldC", "isConfigurationFinalized"]
+- ["5Quick5WorldC", "isRunningAdditionalSuites"]
+- !private ["5Quick5WorldC", "objc_examples"]
+- ["5Quick5WorldC", "performWithCurrentExampleGroup"]
+- !private ["5Quick5WorldC", "raiseError"]
+- !private ["5Quick5WorldC", "raiseIfSharedExampleAlreadyRegistered"]
+- !private ["5Quick5WorldC", "raiseIfSharedExampleNotRegistered"]
+- ["5Quick5WorldC", "registerSharedExample"]
+- ["5Quick5WorldC", "rootExampleGroupForSpecClass"]
+- ["5Quick5WorldC", "sharedExample"]
+- !private ["5Quick5WorldC", "sharedExamples"]
+- ["5Quick5WorldC", "sharedWorld"]
+- !private ["5Quick5WorldC", "specs"]
+- ["5Quick5WorldC", "suiteHooks"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s14_ArrayProtocolP", "contains"]
+- !private ["s14_ArrayProtocolP", "count"]
+- !private ["s14_ArrayProtocolP", "filter"]
+- !private ["s14_ArrayProtocolP", "init"]
+- !private ["s14_ArrayProtocolP", "isEmpty"]
+- !private ["s14_ArrayProtocolP", "reduce"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- !private ["s24_DestructorSafeContainerP", "contains"]
+- !private ["s24_DestructorSafeContainerP", "count"]
+- !private ["s24_DestructorSafeContainerP", "filter"]
+- !private ["s24_DestructorSafeContainerP", "init"]
+- !private ["s24_DestructorSafeContainerP", "isEmpty"]
+- !private ["s24_DestructorSafeContainerP", "reduce"]
+- !private ["5Quick12_ExampleBaseC", "group"]
+- !private ["5Quick20_ExampleMetadataBaseC", "example"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Array"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Configuration"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "ExampleGroup"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "String"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "World"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "allExamples"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "assert"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "configuration"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "currentExampleGroup"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "currentExampleMetadata"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "example"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "exampleHooks"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "examples"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "exclusionFilters"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "group"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "includedExamples"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "inclusionFilters"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isConfigurationFinalized"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "phase"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "raiseError"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "raiseIfSharedExampleAlreadyRegistered"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "raiseIfSharedExampleNotRegistered"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "rootExampleGroupForSpecClass"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "runAllWhenEverythingFiltered"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "sharedExamples"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "specs"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "suiteHooks"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "walkDownExamples"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "contains"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "filter"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "isEmpty"]
+- !private ["s21_ObjectiveCBridgeableP", "keys"]
+- !private ["s21_ObjectiveCBridgeableP", "reduce"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s16_SwiftStringViewP", "init"]
+- ["5Quick10_WorldBaseC", "AnyClass"]
+- !private ["5Quick10_WorldBaseC", "Array"]
+- ["5Quick10_WorldBaseC", "Bool"]
+- ["5Quick10_WorldBaseC", "Configuration"]
+- ["5Quick10_WorldBaseC", "Example"]
+- ["5Quick10_WorldBaseC", "ExampleGroup"]
+- ["5Quick10_WorldBaseC", "ExampleHooks"]
+- ["5Quick10_WorldBaseC", "ExampleMetadata"]
+- ["5Quick10_WorldBaseC", "Int"]
+- ["5Quick10_WorldBaseC", "QuickConfigurer"]
+- ["5Quick10_WorldBaseC", "SharedExampleClosure"]
+- ["5Quick10_WorldBaseC", "String"]
+- ["5Quick10_WorldBaseC", "SuiteHooks"]
+- ["5Quick10_WorldBaseC", "Void"]
+- ["5Quick10_WorldBaseC", "World"]
+- ["5Quick10_WorldBaseC", ""]
+- ["5Quick10_WorldBaseC", "aftersCurrentlyExecuting"]
+- ["5Quick10_WorldBaseC", "allExamples"]
+- !private ["5Quick10_WorldBaseC", "assert"]
+- ["5Quick10_WorldBaseC", "beforesCurrentlyExecuting"]
+- ["5Quick10_WorldBaseC", "configuration"]
+- ["5Quick10_WorldBaseC", "configure"]
+- ["5Quick10_WorldBaseC", "currentExampleGroup"]
+- ["5Quick10_WorldBaseC", "currentExampleMetadata"]
+- ["5Quick10_WorldBaseC", "deinit"]
+- ["5Quick10_WorldBaseC", "exampleHooks"]
+- ["5Quick10_WorldBaseC", "examples"]
+- ["5Quick10_WorldBaseC", "finalizeConfiguration"]
+- ["5Quick10_WorldBaseC", "includedExampleCount"]
+- ["5Quick10_WorldBaseC", "includedExamples"]
+- ["5Quick10_WorldBaseC", "init"]
+- ["5Quick10_WorldBaseC", "isConfigurationFinalized"]
+- ["5Quick10_WorldBaseC", "isRunningAdditionalSuites"]
+- ["5Quick10_WorldBaseC", "objc_examples"]
+- ["5Quick10_WorldBaseC", "performWithCurrentExampleGroup"]
+- !private ["5Quick10_WorldBaseC", "raiseError"]
+- ["5Quick10_WorldBaseC", "raiseIfSharedExampleAlreadyRegistered"]
+- ["5Quick10_WorldBaseC", "raiseIfSharedExampleNotRegistered"]
+- ["5Quick10_WorldBaseC", "registerSharedExample"]
+- ["5Quick10_WorldBaseC", "rootExampleGroupForSpecClass"]
+- ["5Quick10_WorldBaseC", "sharedExample"]
+- ["5Quick10_WorldBaseC", "sharedExamples"]
+- ["5Quick10_WorldBaseC", "sharedWorld"]
+- ["5Quick10_WorldBaseC", "specs"]
+- ["5Quick10_WorldBaseC", "suiteHooks"]
+depends-nominal:
+- !private "Sa"
+- !private "s23BidirectionalCollectionP"
+- !private "Sb"
+- "s7CVarArgP"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- "5Quick13ConfigurationC"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s10DictionaryV"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "5Quick7ExampleC"
+- !private "5Quick12ExampleGroupC"
+- !private "5Quick12ExampleHooksC"
+- !private "5Quick15ExampleMetadataC"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "s8HashableP"
+- !private "5Quick10HooksPhaseO"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "s17MutableCollectionP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s8SequenceP"
+- !private "s12StaticStringV"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "5Quick10SuiteHooksC"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- "5Quick5WorldC"
+- !private "s14_ArrayProtocolP"
+- !private "s24_DestructorSafeContainerP"
+- !private "5Quick12_ExampleBaseC"
+- !private "5Quick20_ExampleMetadataBaseC"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s16_SwiftStringViewP"
+- "5Quick10_WorldBaseC"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/XCTest.swiftmodule"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Quick/Sources/QuickObjectiveC/DSL/QCKDSL.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Target Support Files/Quick/Quick-umbrella.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Quick/Sources/QuickObjectiveC/QuickSpec.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Quick/Sources/QuickObjectiveC/Quick.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Quick/Sources/QuickObjectiveC/Configuration/QuickConfiguration.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Intermediates/Pods.build/Debug-iphonesimulator/Quick.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "1ddec946f730b45ff9507ac4130ee46c"

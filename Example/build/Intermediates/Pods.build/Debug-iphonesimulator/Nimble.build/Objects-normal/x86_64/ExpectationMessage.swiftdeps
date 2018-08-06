@@ -1,0 +1,320 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ExpectationMessage"
+- "NMBExpectationMessage"
+provides-nominal:
+- "6Nimble18ExpectationMessageO"
+- "6Nimble21NMBExpectationMessageC"
+provides-member:
+- ["6Nimble18ExpectationMessageO", ""]
+- ["6Nimble14FailureMessageC", ""]
+- ["6Nimble21NMBExpectationMessageC", ""]
+- ["6Nimble14FailureMessageC", "toExpectationMessage"]
+- ["6Nimble18ExpectationMessageO", "toObjectiveC"]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!="
+- !private "&&"
+- !private "+"
+- !private "=="
+- !private "??"
+- "AssignmentPrecedence"
+- "ExpectationMessage"
+- "FailureMessage"
+- "NMBExpectationMessage"
+- "NSObject"
+- "String"
+- !private "StringLiteralType"
+- !private "UnicodeScalarType"
+- !private "||"
+depends-member:
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "FailureMessage"]
+- !private ["s7CVarArgP", "NMBExpectationMessage"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "_stringValueOverride"]
+- !private ["s7CVarArgP", "actualValue"]
+- !private ["s7CVarArgP", "appendDetails"]
+- !private ["s7CVarArgP", "appendMessage"]
+- !private ["s7CVarArgP", "expected"]
+- !private ["s7CVarArgP", "extendedMessage"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "msg"]
+- !private ["s7CVarArgP", "postfixActual"]
+- !private ["s7CVarArgP", "postfixMessage"]
+- !private ["s7CVarArgP", "stringValue"]
+- !private ["s7CVarArgP", "userDescription"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "FailureMessage"]
+- !private ["s28CustomDebugStringConvertibleP", "NMBExpectationMessage"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "_stringValueOverride"]
+- !private ["s28CustomDebugStringConvertibleP", "actualValue"]
+- !private ["s28CustomDebugStringConvertibleP", "appendDetails"]
+- !private ["s28CustomDebugStringConvertibleP", "appendMessage"]
+- !private ["s28CustomDebugStringConvertibleP", "expected"]
+- !private ["s28CustomDebugStringConvertibleP", "extendedMessage"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "msg"]
+- !private ["s28CustomDebugStringConvertibleP", "postfixActual"]
+- !private ["s28CustomDebugStringConvertibleP", "postfixMessage"]
+- !private ["s28CustomDebugStringConvertibleP", "stringValue"]
+- !private ["s28CustomDebugStringConvertibleP", "userDescription"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "FailureMessage"]
+- !private ["s23CustomStringConvertibleP", "NMBExpectationMessage"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "_stringValueOverride"]
+- !private ["s23CustomStringConvertibleP", "actualValue"]
+- !private ["s23CustomStringConvertibleP", "appendDetails"]
+- !private ["s23CustomStringConvertibleP", "appendMessage"]
+- !private ["s23CustomStringConvertibleP", "expected"]
+- !private ["s23CustomStringConvertibleP", "extendedMessage"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "msg"]
+- !private ["s23CustomStringConvertibleP", "postfixActual"]
+- !private ["s23CustomStringConvertibleP", "postfixMessage"]
+- !private ["s23CustomStringConvertibleP", "stringValue"]
+- !private ["s23CustomStringConvertibleP", "userDescription"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EquatableP", "FailureMessage"]
+- !private ["s9EquatableP", "NMBExpectationMessage"]
+- ["s9EquatableP", ""]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "_stringValueOverride"]
+- !private ["s9EquatableP", "actualValue"]
+- !private ["s9EquatableP", "appendDetails"]
+- !private ["s9EquatableP", "appendMessage"]
+- !private ["s9EquatableP", "expected"]
+- !private ["s9EquatableP", "extendedMessage"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "msg"]
+- !private ["s9EquatableP", "postfixActual"]
+- !private ["s9EquatableP", "postfixMessage"]
+- !private ["s9EquatableP", "stringValue"]
+- !private ["s9EquatableP", "userDescription"]
+- ["6Nimble18ExpectationMessageO", "ExpectationMessage"]
+- ["6Nimble18ExpectationMessageO", "FailureMessage"]
+- ["6Nimble18ExpectationMessageO", "NMBExpectationMessage"]
+- ["6Nimble18ExpectationMessageO", "String"]
+- ["6Nimble18ExpectationMessageO", "appended"]
+- ["6Nimble18ExpectationMessageO", "appendedBeNilHint"]
+- ["6Nimble18ExpectationMessageO", "appends"]
+- ["6Nimble18ExpectationMessageO", "details"]
+- ["6Nimble18ExpectationMessageO", "expectedActualValueTo"]
+- ["6Nimble18ExpectationMessageO", "expectedCustomValueTo"]
+- ["6Nimble18ExpectationMessageO", "expectedMessage"]
+- ["6Nimble18ExpectationMessageO", "expectedTo"]
+- ["6Nimble18ExpectationMessageO", "fail"]
+- ["6Nimble18ExpectationMessageO", "prepended"]
+- ["6Nimble18ExpectationMessageO", "prepends"]
+- ["6Nimble18ExpectationMessageO", "replacedExpectation"]
+- ["6Nimble18ExpectationMessageO", "sampleMessage"]
+- ["6Nimble18ExpectationMessageO", "toObjectiveC"]
+- ["6Nimble18ExpectationMessageO", "toString"]
+- ["6Nimble18ExpectationMessageO", "update"]
+- ["6Nimble18ExpectationMessageO", "visitLeafs"]
+- ["6Nimble18ExpectationMessageO", "wrappedExpectation"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["6Nimble14FailureMessageC", "ExpectationMessage"]
+- !private ["6Nimble14FailureMessageC", "FailureMessage"]
+- !private ["6Nimble14FailureMessageC", "_stringValueOverride"]
+- !private ["6Nimble14FailureMessageC", "actualValue"]
+- !private ["6Nimble14FailureMessageC", "appendDetails"]
+- !private ["6Nimble14FailureMessageC", "appendMessage"]
+- !private ["6Nimble14FailureMessageC", "expected"]
+- !private ["6Nimble14FailureMessageC", "extendedMessage"]
+- !private ["6Nimble14FailureMessageC", "init"]
+- !private ["6Nimble14FailureMessageC", "postfixActual"]
+- !private ["6Nimble14FailureMessageC", "postfixMessage"]
+- !private ["6Nimble14FailureMessageC", "stringValue"]
+- ["6Nimble14FailureMessageC", "toExpectationMessage"]
+- !private ["6Nimble14FailureMessageC", "userDescription"]
+- !private ["s8HashableP", "FailureMessage"]
+- !private ["s8HashableP", "NMBExpectationMessage"]
+- ["s8HashableP", ""]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "_stringValueOverride"]
+- !private ["s8HashableP", "actualValue"]
+- !private ["s8HashableP", "appendDetails"]
+- !private ["s8HashableP", "appendMessage"]
+- !private ["s8HashableP", "expected"]
+- !private ["s8HashableP", "extendedMessage"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "msg"]
+- !private ["s8HashableP", "postfixActual"]
+- !private ["s8HashableP", "postfixMessage"]
+- !private ["s8HashableP", "stringValue"]
+- !private ["s8HashableP", "userDescription"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- ["6Nimble21NMBExpectationMessageC", "ExpectationMessage"]
+- ["6Nimble21NMBExpectationMessageC", "NMBExpectationMessage"]
+- ["6Nimble21NMBExpectationMessageC", "String"]
+- ["6Nimble21NMBExpectationMessageC", "appendedBeNilHint"]
+- ["6Nimble21NMBExpectationMessageC", "deinit"]
+- ["6Nimble21NMBExpectationMessageC", "init"]
+- !private ["6Nimble21NMBExpectationMessageC", "msg"]
+- ["6Nimble21NMBExpectationMessageC", "toSwift"]
+- ["So8NSObjectC", "ExpectationMessage"]
+- !private ["So8NSObjectC", "FailureMessage"]
+- ["So8NSObjectC", "NMBExpectationMessage"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", ""]
+- !private ["So8NSObjectC", "_stringValueOverride"]
+- !private ["So8NSObjectC", "actualValue"]
+- !private ["So8NSObjectC", "appendDetails"]
+- !private ["So8NSObjectC", "appendMessage"]
+- ["So8NSObjectC", "appendedBeNilHint"]
+- !private ["So8NSObjectC", "expected"]
+- !private ["So8NSObjectC", "extendedMessage"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "msg"]
+- !private ["So8NSObjectC", "postfixActual"]
+- !private ["So8NSObjectC", "postfixMessage"]
+- !private ["So8NSObjectC", "stringValue"]
+- ["So8NSObjectC", "toExpectationMessage"]
+- ["So8NSObjectC", "toSwift"]
+- !private ["So8NSObjectC", "userDescription"]
+- !private ["So16NSObjectProtocolP", "FailureMessage"]
+- !private ["So16NSObjectProtocolP", "NMBExpectationMessage"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["So16NSObjectProtocolP", "_stringValueOverride"]
+- !private ["So16NSObjectProtocolP", "actualValue"]
+- !private ["So16NSObjectProtocolP", "appendDetails"]
+- !private ["So16NSObjectProtocolP", "appendMessage"]
+- !private ["So16NSObjectProtocolP", "expected"]
+- !private ["So16NSObjectProtocolP", "extendedMessage"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "msg"]
+- !private ["So16NSObjectProtocolP", "postfixActual"]
+- !private ["So16NSObjectProtocolP", "postfixMessage"]
+- !private ["So16NSObjectProtocolP", "stringValue"]
+- !private ["So16NSObjectProtocolP", "userDescription"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s8SequenceP", "init"]
+- !private ["s12StaticStringV", "init"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["6Nimble27TestOutputStringConvertibleP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "FailureMessage"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NMBExpectationMessage"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_stringValueOverride"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "actualValue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "appendDetails"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "appendMessage"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "expected"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "extendedMessage"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "msg"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "postfixActual"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "postfixMessage"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stringValue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "userDescription"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "s23BidirectionalCollectionP"
+- !private "Sb"
+- "s7CVarArgP"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- "6Nimble18ExpectationMessageO"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "6Nimble14FailureMessageC"
+- "s8HashableP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- "6Nimble21NMBExpectationMessageC"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s8SequenceP"
+- !private "s12StaticStringV"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "6Nimble27TestOutputStringConvertibleP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/XCTest.swiftmodule"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Sources/NimbleObjectiveC/DSL.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Target Support Files/Nimble/Nimble-umbrella.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Sources/Nimble/Nimble.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Sources/NimbleObjectiveC/NMBExceptionCapture.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlPreconditionTesting/Mach/CwlPreconditionTesting.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Carthage/Checkouts/CwlCatchException/Sources/CwlCatchExceptionSupport/include/CwlCatchException.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/include/CwlMachBadInstructionHandler.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/mach_excServer.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Nimble/Sources/NimbleObjectiveC/NMBStringify.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Intermediates/Pods.build/Debug-iphonesimulator/Nimble.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "30223c167fce017b91e31ce4a48b390b"

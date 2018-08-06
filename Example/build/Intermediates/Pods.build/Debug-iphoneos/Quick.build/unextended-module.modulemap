@@ -1,0 +1,10 @@
+framework module Quick {
+  umbrella header "Quick-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module Quick.__Swift {
+    exclude header "Quick-Swift.h"
+}

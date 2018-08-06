@@ -1,0 +1,6 @@
+version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
+options: "5c569e774c5f1f55b406bb5af55cdbf5"
+build_time: [1533591678, 311081000]
+inputs:
+  "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Geofirestore/ViewController.swift": [1533591562, 0]
+  "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Geofirestore/AppDelegate.swift": [1533591164, 0]

@@ -1,0 +1,273 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "QuickConfigurer"
+- "ExampleFilter"
+- "Configuration"
+provides-nominal:
+- "5Quick13ConfigurationC"
+provides-member:
+- ["5Quick13ConfigurationC", ""]
+provides-dynamic-lookup:
+- "afterEach"
+- "beforeEach"
+depends-top-level:
+- "AfterExampleClosure"
+- "AfterExampleWithMetadataClosure"
+- "AfterSuiteClosure"
+- "BeforeExampleClosure"
+- "BeforeExampleWithMetadataClosure"
+- "BeforeSuiteClosure"
+- "Bool"
+- "BooleanLiteralType"
+- "Configuration"
+- "Example"
+- "ExampleFilter"
+- "ExampleHooks"
+- "Filter"
+- "NSObject"
+- "QuickConfigurer"
+- "SuiteHooks"
+- "Void"
+depends-member:
+- !private ["Sa", "append"]
+- !private ["s23BidirectionalCollectionP", "append"]
+- ["s7CVarArgP", "ExampleHooks"]
+- ["s7CVarArgP", "Filter"]
+- ["s7CVarArgP", "SuiteHooks"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "exampleHooks"]
+- !private ["s7CVarArgP", "exclusionFilters"]
+- ["s7CVarArgP", "filterFlags"]
+- ["s7CVarArgP", "focused"]
+- !private ["s7CVarArgP", "inclusionFilters"]
+- !private ["s7CVarArgP", "init"]
+- ["s7CVarArgP", "pending"]
+- ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "suiteHooks"]
+- !private ["s10CollectionP", "append"]
+- ["s10CollectionP", "subscript"]
+- ["5Quick13ConfigurationC", "AfterExampleClosure"]
+- ["5Quick13ConfigurationC", "AfterExampleWithMetadataClosure"]
+- ["5Quick13ConfigurationC", "AfterSuiteClosure"]
+- ["5Quick13ConfigurationC", "BeforeExampleClosure"]
+- ["5Quick13ConfigurationC", "BeforeExampleWithMetadataClosure"]
+- ["5Quick13ConfigurationC", "BeforeSuiteClosure"]
+- ["5Quick13ConfigurationC", "ExampleFilter"]
+- ["5Quick13ConfigurationC", "ExampleHooks"]
+- ["5Quick13ConfigurationC", "Filter"]
+- ["5Quick13ConfigurationC", "SuiteHooks"]
+- ["5Quick13ConfigurationC", "afterEach"]
+- ["5Quick13ConfigurationC", "afterSuite"]
+- ["5Quick13ConfigurationC", "beforeEach"]
+- ["5Quick13ConfigurationC", "beforeSuite"]
+- ["5Quick13ConfigurationC", "deinit"]
+- ["5Quick13ConfigurationC", "exampleHooks"]
+- ["5Quick13ConfigurationC", "exclude"]
+- ["5Quick13ConfigurationC", "exclusionFilters"]
+- ["5Quick13ConfigurationC", "include"]
+- ["5Quick13ConfigurationC", "inclusionFilters"]
+- ["5Quick13ConfigurationC", "init"]
+- ["5Quick13ConfigurationC", "runAllWhenEverythingFiltered"]
+- ["5Quick13ConfigurationC", "suiteHooks"]
+- ["s28CustomDebugStringConvertibleP", "ExampleHooks"]
+- ["s28CustomDebugStringConvertibleP", "Filter"]
+- ["s28CustomDebugStringConvertibleP", "SuiteHooks"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "exampleHooks"]
+- !private ["s28CustomDebugStringConvertibleP", "exclusionFilters"]
+- ["s28CustomDebugStringConvertibleP", "filterFlags"]
+- ["s28CustomDebugStringConvertibleP", "focused"]
+- !private ["s28CustomDebugStringConvertibleP", "inclusionFilters"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "pending"]
+- ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "suiteHooks"]
+- !private ["s17CustomReflectableP", "append"]
+- ["s17CustomReflectableP", "subscript"]
+- ["s23CustomStringConvertibleP", "ExampleHooks"]
+- ["s23CustomStringConvertibleP", "Filter"]
+- ["s23CustomStringConvertibleP", "SuiteHooks"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "exampleHooks"]
+- !private ["s23CustomStringConvertibleP", "exclusionFilters"]
+- ["s23CustomStringConvertibleP", "filterFlags"]
+- ["s23CustomStringConvertibleP", "focused"]
+- !private ["s23CustomStringConvertibleP", "inclusionFilters"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "pending"]
+- ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "suiteHooks"]
+- !private ["s9DecodableP", "append"]
+- ["s9DecodableP", "subscript"]
+- ["s10DictionaryV", "subscript"]
+- !private ["s9EncodableP", "append"]
+- ["s9EncodableP", "subscript"]
+- ["s9EquatableP", "ExampleHooks"]
+- ["s9EquatableP", "Filter"]
+- ["s9EquatableP", "SuiteHooks"]
+- ["s9EquatableP", ""]
+- !private ["s9EquatableP", "append"]
+- !private ["s9EquatableP", "exampleHooks"]
+- !private ["s9EquatableP", "exclusionFilters"]
+- ["s9EquatableP", "filterFlags"]
+- ["s9EquatableP", "focused"]
+- !private ["s9EquatableP", "inclusionFilters"]
+- !private ["s9EquatableP", "init"]
+- ["s9EquatableP", "pending"]
+- ["s9EquatableP", "subscript"]
+- !private ["s9EquatableP", "suiteHooks"]
+- ["5Quick7ExampleC", "filterFlags"]
+- !private ["5Quick12ExampleHooksC", "appendAfter"]
+- !private ["5Quick12ExampleHooksC", "appendBefore"]
+- ["5Quick12ExampleHooksC", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- ["5Quick6FilterC", "focused"]
+- ["5Quick6FilterC", "pending"]
+- ["s8HashableP", "ExampleHooks"]
+- ["s8HashableP", "Filter"]
+- ["s8HashableP", "SuiteHooks"]
+- ["s8HashableP", ""]
+- !private ["s8HashableP", "exampleHooks"]
+- !private ["s8HashableP", "exclusionFilters"]
+- ["s8HashableP", "filterFlags"]
+- ["s8HashableP", "focused"]
+- !private ["s8HashableP", "inclusionFilters"]
+- !private ["s8HashableP", "init"]
+- ["s8HashableP", "pending"]
+- !private ["s8HashableP", "suiteHooks"]
+- !private ["s17MutableCollectionP", "append"]
+- ["So8NSObjectC", "AfterExampleClosure"]
+- ["So8NSObjectC", "AfterExampleWithMetadataClosure"]
+- ["So8NSObjectC", "AfterSuiteClosure"]
+- ["So8NSObjectC", "BeforeExampleClosure"]
+- ["So8NSObjectC", "BeforeExampleWithMetadataClosure"]
+- ["So8NSObjectC", "BeforeSuiteClosure"]
+- ["So8NSObjectC", "ExampleFilter"]
+- ["So8NSObjectC", "ExampleHooks"]
+- ["So8NSObjectC", "Filter"]
+- ["So8NSObjectC", "SuiteHooks"]
+- ["So8NSObjectC", ""]
+- ["So8NSObjectC", "afterEach"]
+- ["So8NSObjectC", "afterSuite"]
+- ["So8NSObjectC", "beforeEach"]
+- ["So8NSObjectC", "beforeSuite"]
+- ["So8NSObjectC", "exampleHooks"]
+- ["So8NSObjectC", "exclude"]
+- ["So8NSObjectC", "exclusionFilters"]
+- ["So8NSObjectC", "filterFlags"]
+- ["So8NSObjectC", "focused"]
+- ["So8NSObjectC", "include"]
+- ["So8NSObjectC", "inclusionFilters"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "pending"]
+- ["So8NSObjectC", "runAllWhenEverythingFiltered"]
+- ["So8NSObjectC", "suiteHooks"]
+- ["So16NSObjectProtocolP", "ExampleHooks"]
+- ["So16NSObjectProtocolP", "Filter"]
+- ["So16NSObjectProtocolP", "SuiteHooks"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["So16NSObjectProtocolP", "exampleHooks"]
+- !private ["So16NSObjectProtocolP", "exclusionFilters"]
+- ["So16NSObjectProtocolP", "filterFlags"]
+- ["So16NSObjectProtocolP", "focused"]
+- !private ["So16NSObjectProtocolP", "inclusionFilters"]
+- !private ["So16NSObjectProtocolP", "init"]
+- ["So16NSObjectProtocolP", "pending"]
+- !private ["So16NSObjectProtocolP", "suiteHooks"]
+- !private ["s22RandomAccessCollectionP", "append"]
+- !private ["s26RangeReplaceableCollectionP", "append"]
+- !private ["s8SequenceP", "append"]
+- ["s8SequenceP", "subscript"]
+- !private ["5Quick10SuiteHooksC", "appendAfter"]
+- !private ["5Quick10SuiteHooksC", "appendBefore"]
+- ["5Quick10SuiteHooksC", "init"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- ["5Quick12_ExampleBaseC", "filterFlags"]
+- ["5Quick11_FilterBaseC", "focused"]
+- ["5Quick11_FilterBaseC", "pending"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "ExampleHooks"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Filter"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "SuiteHooks"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "exampleHooks"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "exclusionFilters"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "filterFlags"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "focused"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "inclusionFilters"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "pending"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "suiteHooks"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- ["s21_ObjectiveCBridgeableP", "subscript"]
+depends-nominal:
+- !private "Sa"
+- !private "s23BidirectionalCollectionP"
+- "s7CVarArgP"
+- "s10CollectionP"
+- "5Quick13ConfigurationC"
+- "s28CustomDebugStringConvertibleP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "s9DecodableP"
+- "s10DictionaryV"
+- "s9EncodableP"
+- "s9EquatableP"
+- "5Quick7ExampleC"
+- "5Quick12ExampleHooksC"
+- !private "s25ExpressibleByArrayLiteralP"
+- "s30ExpressibleByDictionaryLiteralP"
+- "5Quick6FilterC"
+- "s8HashableP"
+- !private "s17MutableCollectionP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- "s8SequenceP"
+- "5Quick10SuiteHooksC"
+- !private "s14_ArrayProtocolP"
+- !private "s24_DestructorSafeContainerP"
+- "5Quick12_ExampleBaseC"
+- "5Quick11_FilterBaseC"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/XCTest.swiftmodule"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Quick/Sources/QuickObjectiveC/DSL/QCKDSL.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Target Support Files/Quick/Quick-umbrella.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Quick/Sources/QuickObjectiveC/QuickSpec.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Quick/Sources/QuickObjectiveC/Quick.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Quick/Sources/QuickObjectiveC/Configuration/QuickConfiguration.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Intermediates/Pods.build/Debug-iphonesimulator/Quick.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "84e8a3e64958582a6a928baf731046a7"

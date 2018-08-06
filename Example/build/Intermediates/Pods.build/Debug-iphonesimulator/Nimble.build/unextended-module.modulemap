@@ -1,0 +1,10 @@
+framework module Nimble {
+  umbrella header "Nimble-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module Nimble.__Swift {
+    exclude header "Nimble-Swift.h"
+}

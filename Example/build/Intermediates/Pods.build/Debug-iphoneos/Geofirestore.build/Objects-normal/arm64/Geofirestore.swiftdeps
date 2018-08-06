@@ -1,0 +1,1014 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "GeoFirestore"
+- "GFSEventType"
+- "GFSQueryResultBlock"
+- "GFSReadyBlock"
+- "GFSQueryHandle"
+- "GFSGeoHashQueryListener"
+- "GFSQuery"
+- "GFSCircleQuery"
+- "GFSRegionQuery"
+provides-nominal:
+- "12Geofirestore12GeoFirestoreC"
+- "12Geofirestore12GFSEventTypeO"
+- "12Geofirestore23GFSGeoHashQueryListenerC"
+- "12Geofirestore8GFSQueryC"
+- "12Geofirestore8GFSQueryC0B12LocationInfoC"
+- "12Geofirestore14GFSCircleQueryC"
+- "12Geofirestore14GFSRegionQueryC"
+provides-member:
+- ["So8GeoPointC", ""]
+- ["So10CLLocationC", ""]
+- ["12Geofirestore12GeoFirestoreC", ""]
+- ["12Geofirestore12GFSEventTypeO", ""]
+- ["12Geofirestore23GFSGeoHashQueryListenerC", ""]
+- ["12Geofirestore8GFSQueryC", ""]
+- ["12Geofirestore8GFSQueryC0B12LocationInfoC", ""]
+- ["12Geofirestore14GFSCircleQueryC", ""]
+- ["12Geofirestore14GFSRegionQueryC", ""]
+- ["So8GeoPointC", "geopointWithLocation"]
+- ["So8GeoPointC", "locationValue"]
+- ["So10CLLocationC", "locationWithGeopoint"]
+- ["So10CLLocationC", "geopointValue"]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!"
+- !private "!="
+- !private "&&"
+- !private "*"
+- !private "+"
+- !private "+="
+- !private "-"
+- !private "/"
+- !private "<="
+- "=="
+- !private ">="
+- !private "??"
+- "AnyHashable"
+- !private "Array"
+- "AssignmentPrecedence"
+- "Bool"
+- !private "BooleanLiteralType"
+- "CLLocation"
+- !private "CLLocationCoordinate2D"
+- !private "CLLocationCoordinate2DIsValid"
+- !private "CLLocationDegrees"
+- "CastingPrecedence"
+- "CollectionReference"
+- !private "Dictionary"
+- "DispatchQueue"
+- !private "DocumentChangeType"
+- "DocumentSnapshot"
+- "Double"
+- "Error"
+- !private "FieldValue"
+- "GFGeoHash"
+- "GFGeoHashQuery"
+- "GFSCircleQuery"
+- "GFSEventType"
+- "GFSGeoHashQueryListener"
+- "GFSQuery"
+- "GFSQueryHandle"
+- "GFSQueryResultBlock"
+- "GFSReadyBlock"
+- "GFSRegionQuery"
+- "GeoFirestore"
+- "GeoPoint"
+- "Int"
+- "ListenerRegistration"
+- "MKCoordinateRegion"
+- !private "NSException"
+- !private "NSExceptionName"
+- "Query"
+- !private "QuerySnapshot"
+- "Set"
+- "String"
+- !private "StringLiteralType"
+- "UInt"
+- !private "UnicodeScalarType"
+- "Void"
+- !private "fatalError"
+- !private "getVaList"
+- !private "print"
+- !private "||"
+depends-member:
+- !private ["Sa", "append"]
+- !private ["Sa", "init"]
+- !private ["Sa", "subscript"]
+- !private ["s23BidirectionalCollectionP", "append"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "subscript"]
+- !private ["s19BinaryFloatingPointP", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- ["So10CLLocationC", "CLLocation"]
+- ["So10CLLocationC", "GeoPoint"]
+- !private ["So10CLLocationC", "coordinate"]
+- !private ["So10CLLocationC", "distance"]
+- ["So10CLLocationC", "geopointValue"]
+- !private ["So10CLLocationC", "init"]
+- ["So10CLLocationC", "locationWithGeopoint"]
+- !private ["SC22CLLocationCoordinate2DV", "latitude"]
+- !private ["SC22CLLocationCoordinate2DV", "longitude"]
+- !private ["s7CVarArgP", "CLLocation"]
+- !private ["s7CVarArgP", "GeoPoint"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "addSnapshotListener"]
+- !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "async"]
+- !private ["s7CVarArgP", "contains"]
+- !private ["s7CVarArgP", "coordinate"]
+- !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "delete"]
+- !private ["s7CVarArgP", "distance"]
+- !private ["s7CVarArgP", "document"]
+- !private ["s7CVarArgP", "documentChanges"]
+- !private ["s7CVarArgP", "documentID"]
+- !private ["s7CVarArgP", "endValue"]
+- !private ["s7CVarArgP", "enumerated"]
+- !private ["s7CVarArgP", "geoHashValue"]
+- !private ["s7CVarArgP", "get"]
+- !private ["s7CVarArgP", "getDocument"]
+- !private ["s7CVarArgP", "getDocuments"]
+- !private ["s7CVarArgP", "index"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "insert"]
+- !private ["s7CVarArgP", "isEmpty"]
+- !private ["s7CVarArgP", "latitude"]
+- !private ["s7CVarArgP", "locationValue"]
+- !private ["s7CVarArgP", "longitude"]
+- !private ["s7CVarArgP", "main"]
+- !private ["s7CVarArgP", "new"]
+- !private ["s7CVarArgP", "order"]
+- !private ["s7CVarArgP", "queries"]
+- !private ["s7CVarArgP", "raise"]
+- !private ["s7CVarArgP", "remove"]
+- !private ["s7CVarArgP", "removeAll"]
+- !private ["s7CVarArgP", "removeValue"]
+- !private ["s7CVarArgP", "setData"]
+- !private ["s7CVarArgP", "startValue"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "subtract"]
+- !private ["s7CVarArgP", "sync"]
+- !private ["s7CVarArgP", "type"]
+- !private ["s7CVarArgP", "union"]
+- !private ["s7CVarArgP", "updateData"]
+- !private ["s7CVarArgP", "whereField"]
+- !private ["s10CollectionP", "append"]
+- !private ["s10CollectionP", "count"]
+- !private ["s10CollectionP", "enumerated"]
+- !private ["s10CollectionP", "index"]
+- ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "insert"]
+- !private ["s10CollectionP", "isEmpty"]
+- !private ["s10CollectionP", "remove"]
+- !private ["s10CollectionP", "removeAll"]
+- !private ["s10CollectionP", "removeValue"]
+- !private ["s10CollectionP", "subscript"]
+- !private ["s10CollectionP", "subtract"]
+- !private ["s10CollectionP", "union"]
+- !private ["So19CollectionReferenceC", "document"]
+- !private ["So19CollectionReferenceC", "order"]
+- !private ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "CLLocation"]
+- !private ["s28CustomDebugStringConvertibleP", "GeoPoint"]
+- !private ["s28CustomDebugStringConvertibleP", "addSnapshotListener"]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "async"]
+- !private ["s28CustomDebugStringConvertibleP", "contains"]
+- !private ["s28CustomDebugStringConvertibleP", "coordinate"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "delete"]
+- !private ["s28CustomDebugStringConvertibleP", "distance"]
+- !private ["s28CustomDebugStringConvertibleP", "document"]
+- !private ["s28CustomDebugStringConvertibleP", "documentChanges"]
+- !private ["s28CustomDebugStringConvertibleP", "documentID"]
+- !private ["s28CustomDebugStringConvertibleP", "endValue"]
+- !private ["s28CustomDebugStringConvertibleP", "enumerated"]
+- !private ["s28CustomDebugStringConvertibleP", "geoHashValue"]
+- !private ["s28CustomDebugStringConvertibleP", "get"]
+- !private ["s28CustomDebugStringConvertibleP", "getDocument"]
+- !private ["s28CustomDebugStringConvertibleP", "getDocuments"]
+- !private ["s28CustomDebugStringConvertibleP", "index"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "insert"]
+- !private ["s28CustomDebugStringConvertibleP", "isEmpty"]
+- !private ["s28CustomDebugStringConvertibleP", "latitude"]
+- !private ["s28CustomDebugStringConvertibleP", "locationValue"]
+- !private ["s28CustomDebugStringConvertibleP", "longitude"]
+- !private ["s28CustomDebugStringConvertibleP", "main"]
+- !private ["s28CustomDebugStringConvertibleP", "new"]
+- !private ["s28CustomDebugStringConvertibleP", "order"]
+- !private ["s28CustomDebugStringConvertibleP", "queries"]
+- !private ["s28CustomDebugStringConvertibleP", "raise"]
+- !private ["s28CustomDebugStringConvertibleP", "remove"]
+- !private ["s28CustomDebugStringConvertibleP", "removeAll"]
+- !private ["s28CustomDebugStringConvertibleP", "removeValue"]
+- !private ["s28CustomDebugStringConvertibleP", "setData"]
+- !private ["s28CustomDebugStringConvertibleP", "startValue"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "subtract"]
+- !private ["s28CustomDebugStringConvertibleP", "sync"]
+- !private ["s28CustomDebugStringConvertibleP", "type"]
+- !private ["s28CustomDebugStringConvertibleP", "union"]
+- !private ["s28CustomDebugStringConvertibleP", "updateData"]
+- !private ["s28CustomDebugStringConvertibleP", "whereField"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "enumerated"]
+- !private ["s17CustomReflectableP", "index"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "insert"]
+- !private ["s17CustomReflectableP", "isEmpty"]
+- !private ["s17CustomReflectableP", "remove"]
+- !private ["s17CustomReflectableP", "removeAll"]
+- !private ["s17CustomReflectableP", "removeValue"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s17CustomReflectableP", "subtract"]
+- !private ["s17CustomReflectableP", "union"]
+- !private ["s23CustomStringConvertibleP", "CLLocation"]
+- !private ["s23CustomStringConvertibleP", "GeoPoint"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "addSnapshotListener"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "async"]
+- !private ["s23CustomStringConvertibleP", "contains"]
+- !private ["s23CustomStringConvertibleP", "coordinate"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "delete"]
+- !private ["s23CustomStringConvertibleP", "distance"]
+- !private ["s23CustomStringConvertibleP", "document"]
+- !private ["s23CustomStringConvertibleP", "documentChanges"]
+- !private ["s23CustomStringConvertibleP", "documentID"]
+- !private ["s23CustomStringConvertibleP", "endValue"]
+- !private ["s23CustomStringConvertibleP", "enumerated"]
+- !private ["s23CustomStringConvertibleP", "geoHashValue"]
+- !private ["s23CustomStringConvertibleP", "get"]
+- !private ["s23CustomStringConvertibleP", "getDocument"]
+- !private ["s23CustomStringConvertibleP", "getDocuments"]
+- !private ["s23CustomStringConvertibleP", "index"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "insert"]
+- !private ["s23CustomStringConvertibleP", "isEmpty"]
+- !private ["s23CustomStringConvertibleP", "latitude"]
+- !private ["s23CustomStringConvertibleP", "locationValue"]
+- !private ["s23CustomStringConvertibleP", "longitude"]
+- !private ["s23CustomStringConvertibleP", "main"]
+- !private ["s23CustomStringConvertibleP", "new"]
+- !private ["s23CustomStringConvertibleP", "order"]
+- !private ["s23CustomStringConvertibleP", "queries"]
+- !private ["s23CustomStringConvertibleP", "raise"]
+- !private ["s23CustomStringConvertibleP", "remove"]
+- !private ["s23CustomStringConvertibleP", "removeAll"]
+- !private ["s23CustomStringConvertibleP", "removeValue"]
+- !private ["s23CustomStringConvertibleP", "setData"]
+- !private ["s23CustomStringConvertibleP", "startValue"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "subtract"]
+- !private ["s23CustomStringConvertibleP", "sync"]
+- !private ["s23CustomStringConvertibleP", "type"]
+- !private ["s23CustomStringConvertibleP", "union"]
+- !private ["s23CustomStringConvertibleP", "updateData"]
+- !private ["s23CustomStringConvertibleP", "whereField"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "append"]
+- !private ["s9DecodableP", "count"]
+- !private ["s9DecodableP", "enumerated"]
+- !private ["s9DecodableP", "index"]
+- ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "insert"]
+- !private ["s9DecodableP", "isEmpty"]
+- !private ["s9DecodableP", "remove"]
+- !private ["s9DecodableP", "removeAll"]
+- !private ["s9DecodableP", "removeValue"]
+- !private ["s9DecodableP", "subscript"]
+- !private ["s9DecodableP", "subtract"]
+- !private ["s9DecodableP", "union"]
+- !private ["s10DictionaryV", "count"]
+- !private ["s10DictionaryV", "enumerated"]
+- ["s10DictionaryV", "init"]
+- !private ["s10DictionaryV", "removeAll"]
+- !private ["s10DictionaryV", "removeValue"]
+- !private ["s10DictionaryV", "subscript"]
+- !private ["So14DispatchObjectC", "async"]
+- !private ["So14DispatchObjectC", "main"]
+- !private ["So14DispatchObjectC", "sync"]
+- !private ["So13DispatchQueueC", "async"]
+- !private ["So13DispatchQueueC", "init"]
+- !private ["So13DispatchQueueC", "main"]
+- !private ["So13DispatchQueueC", "sync"]
+- !private ["So14DocumentChangeC", "document"]
+- !private ["So14DocumentChangeC", "type"]
+- !private ["SC18DocumentChangeTypeO", "added"]
+- !private ["SC18DocumentChangeTypeO", "modified"]
+- !private ["SC18DocumentChangeTypeO", "removed"]
+- !private ["So17DocumentReferenceC", "getDocument"]
+- !private ["So17DocumentReferenceC", "setData"]
+- !private ["So17DocumentReferenceC", "updateData"]
+- !private ["So16DocumentSnapshotC", "documentID"]
+- !private ["So16DocumentSnapshotC", "get"]
+- !private ["Sd", "init"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "append"]
+- !private ["s9EncodableP", "count"]
+- !private ["s9EncodableP", "enumerated"]
+- !private ["s9EncodableP", "index"]
+- ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "insert"]
+- !private ["s9EncodableP", "isEmpty"]
+- !private ["s9EncodableP", "remove"]
+- !private ["s9EncodableP", "removeAll"]
+- !private ["s9EncodableP", "removeValue"]
+- !private ["s9EncodableP", "subscript"]
+- !private ["s9EncodableP", "subtract"]
+- !private ["s9EncodableP", "union"]
+- !private ["s9EquatableP", "CLLocation"]
+- !private ["s9EquatableP", "GeoPoint"]
+- ["s9EquatableP", ""]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "addSnapshotListener"]
+- !private ["s9EquatableP", "added"]
+- !private ["s9EquatableP", "append"]
+- !private ["s9EquatableP", "async"]
+- !private ["s9EquatableP", "contains"]
+- !private ["s9EquatableP", "coordinate"]
+- !private ["s9EquatableP", "count"]
+- !private ["s9EquatableP", "delete"]
+- !private ["s9EquatableP", "distance"]
+- !private ["s9EquatableP", "document"]
+- !private ["s9EquatableP", "documentChanges"]
+- !private ["s9EquatableP", "documentEntered"]
+- !private ["s9EquatableP", "documentExited"]
+- !private ["s9EquatableP", "documentID"]
+- !private ["s9EquatableP", "documentMoved"]
+- !private ["s9EquatableP", "endValue"]
+- !private ["s9EquatableP", "enumerated"]
+- !private ["s9EquatableP", "geoHashValue"]
+- !private ["s9EquatableP", "get"]
+- !private ["s9EquatableP", "getDocument"]
+- !private ["s9EquatableP", "getDocuments"]
+- ["s9EquatableP", "hashValue"]
+- !private ["s9EquatableP", "index"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "insert"]
+- !private ["s9EquatableP", "internalInconsistencyException"]
+- !private ["s9EquatableP", "invalidArgumentException"]
+- !private ["s9EquatableP", "isEmpty"]
+- !private ["s9EquatableP", "latitude"]
+- !private ["s9EquatableP", "locationValue"]
+- !private ["s9EquatableP", "longitude"]
+- !private ["s9EquatableP", "main"]
+- !private ["s9EquatableP", "modified"]
+- !private ["s9EquatableP", "new"]
+- !private ["s9EquatableP", "order"]
+- !private ["s9EquatableP", "queries"]
+- !private ["s9EquatableP", "raise"]
+- !private ["s9EquatableP", "remove"]
+- !private ["s9EquatableP", "removeAll"]
+- !private ["s9EquatableP", "removeValue"]
+- !private ["s9EquatableP", "removed"]
+- !private ["s9EquatableP", "setData"]
+- !private ["s9EquatableP", "startValue"]
+- !private ["s9EquatableP", "subscript"]
+- !private ["s9EquatableP", "subtract"]
+- !private ["s9EquatableP", "sync"]
+- !private ["s9EquatableP", "type"]
+- !private ["s9EquatableP", "union"]
+- !private ["s9EquatableP", "updateData"]
+- !private ["s9EquatableP", "whereField"]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- !private ["s25ExpressibleByArrayLiteralP", "count"]
+- !private ["s25ExpressibleByArrayLiteralP", "enumerated"]
+- !private ["s25ExpressibleByArrayLiteralP", "index"]
+- ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "insert"]
+- !private ["s25ExpressibleByArrayLiteralP", "isEmpty"]
+- !private ["s25ExpressibleByArrayLiteralP", "remove"]
+- !private ["s25ExpressibleByArrayLiteralP", "removeAll"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s25ExpressibleByArrayLiteralP", "subtract"]
+- !private ["s25ExpressibleByArrayLiteralP", "union"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "count"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "enumerated"]
+- ["s30ExpressibleByDictionaryLiteralP", "init"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "removeAll"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "removeValue"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["So10FieldValueC", "delete"]
+- !private ["s13FloatingPointP", "init"]
+- !private ["So9GFGeoHashC", "geoHashValue"]
+- !private ["So9GFGeoHashC", "init"]
+- !private ["So9GFGeoHashC", "new"]
+- !private ["So14GFGeoHashQueryC", "contains"]
+- !private ["So14GFGeoHashQueryC", "endValue"]
+- !private ["So14GFGeoHashQueryC", "queries"]
+- !private ["So14GFGeoHashQueryC", "startValue"]
+- ["12Geofirestore14GFSCircleQueryC", "AnyHashable"]
+- ["12Geofirestore14GFSCircleQueryC", "Bool"]
+- ["12Geofirestore14GFSCircleQueryC", "CLLocation"]
+- ["12Geofirestore14GFSCircleQueryC", "Double"]
+- !private ["12Geofirestore14GFSCircleQueryC", "GFGeoHashQuery"]
+- ["12Geofirestore14GFSCircleQueryC", "GeoFirestore"]
+- ["12Geofirestore14GFSCircleQueryC", "Set"]
+- ["12Geofirestore14GFSCircleQueryC", "center"]
+- ["12Geofirestore14GFSCircleQueryC", "deinit"]
+- ["12Geofirestore14GFSCircleQueryC", "init"]
+- ["12Geofirestore14GFSCircleQueryC", "locationIsInQuery"]
+- ["12Geofirestore14GFSCircleQueryC", "queriesForCurrentCriteria"]
+- ["12Geofirestore14GFSCircleQueryC", "radius"]
+- !private ["12Geofirestore14GFSCircleQueryC", "searchCriteriaDidChange"]
+- ["12Geofirestore12GFSEventTypeO", "__derived_enum_equals"]
+- ["12Geofirestore12GFSEventTypeO", "deinit"]
+- ["12Geofirestore12GFSEventTypeO", "documentEntered"]
+- ["12Geofirestore12GFSEventTypeO", "documentExited"]
+- ["12Geofirestore12GFSEventTypeO", "documentMoved"]
+- ["12Geofirestore12GFSEventTypeO", "hashValue"]
+- ["12Geofirestore23GFSGeoHashQueryListenerC", "ListenerRegistration"]
+- ["12Geofirestore23GFSGeoHashQueryListenerC", "childAddedListener"]
+- ["12Geofirestore23GFSGeoHashQueryListenerC", "childChangedListener"]
+- ["12Geofirestore23GFSGeoHashQueryListenerC", "childRemovedListener"]
+- ["12Geofirestore23GFSGeoHashQueryListenerC", "deinit"]
+- ["12Geofirestore23GFSGeoHashQueryListenerC", "init"]
+- ["12Geofirestore8GFSQueryC", "AnyHashable"]
+- ["12Geofirestore8GFSQueryC", "Bool"]
+- ["12Geofirestore8GFSQueryC", "CLLocation"]
+- !private ["12Geofirestore8GFSQueryC", "CLLocationCoordinate2D"]
+- !private ["12Geofirestore8GFSQueryC", "CLLocationDegrees"]
+- !private ["12Geofirestore8GFSQueryC", "DispatchQueue"]
+- !private ["12Geofirestore8GFSQueryC", "DocumentChangeType"]
+- ["12Geofirestore8GFSQueryC", "DocumentSnapshot"]
+- ["12Geofirestore8GFSQueryC", "Double"]
+- ["12Geofirestore8GFSQueryC", "GFGeoHash"]
+- ["12Geofirestore8GFSQueryC", "GFGeoHashQuery"]
+- ["12Geofirestore8GFSQueryC", "GFSEventType"]
+- ["12Geofirestore8GFSQueryC", "GFSGeoHashQueryListener"]
+- ["12Geofirestore8GFSQueryC", "GFSQueryHandle"]
+- ["12Geofirestore8GFSQueryC", "GFSQueryLocationInfo"]
+- ["12Geofirestore8GFSQueryC", "GFSQueryResultBlock"]
+- ["12Geofirestore8GFSQueryC", "GFSReadyBlock"]
+- ["12Geofirestore8GFSQueryC", "GeoFirestore"]
+- ["12Geofirestore8GFSQueryC", "Int"]
+- ["12Geofirestore8GFSQueryC", "ListenerRegistration"]
+- ["12Geofirestore8GFSQueryC", "MKCoordinateRegion"]
+- !private ["12Geofirestore8GFSQueryC", "NSException"]
+- ["12Geofirestore8GFSQueryC", "Query"]
+- !private ["12Geofirestore8GFSQueryC", "QuerySnapshot"]
+- ["12Geofirestore8GFSQueryC", "Set"]
+- ["12Geofirestore8GFSQueryC", "String"]
+- ["12Geofirestore8GFSQueryC", "UInt"]
+- ["12Geofirestore8GFSQueryC", ""]
+- ["12Geofirestore8GFSQueryC", "center"]
+- ["12Geofirestore8GFSQueryC", "checkAndFireReadyEvent"]
+- ["12Geofirestore8GFSQueryC", "childAdded"]
+- ["12Geofirestore8GFSQueryC", "childChanged"]
+- ["12Geofirestore8GFSQueryC", "childRemoved"]
+- ["12Geofirestore8GFSQueryC", "currentHandle"]
+- ["12Geofirestore8GFSQueryC", "deinit"]
+- !private ["12Geofirestore8GFSQueryC", "fatalError"]
+- ["12Geofirestore8GFSQueryC", "fireStoreQueryForGeoHashQuery"]
+- ["12Geofirestore8GFSQueryC", "geoFirestore"]
+- !private ["12Geofirestore8GFSQueryC", "getVaList"]
+- ["12Geofirestore8GFSQueryC", "handles"]
+- ["12Geofirestore8GFSQueryC", "init"]
+- ["12Geofirestore8GFSQueryC", "keyEnteredObservers"]
+- ["12Geofirestore8GFSQueryC", "keyExitedObservers"]
+- ["12Geofirestore8GFSQueryC", "keyMovedObservers"]
+- ["12Geofirestore8GFSQueryC", "listenerForHandle"]
+- ["12Geofirestore8GFSQueryC", "locationInfos"]
+- ["12Geofirestore8GFSQueryC", "locationIsInQuery"]
+- ["12Geofirestore8GFSQueryC", "observe"]
+- ["12Geofirestore8GFSQueryC", "observeReady"]
+- ["12Geofirestore8GFSQueryC", "outstandingQueries"]
+- ["12Geofirestore8GFSQueryC", "queries"]
+- ["12Geofirestore8GFSQueryC", "queriesContain"]
+- ["12Geofirestore8GFSQueryC", "queriesForCurrentCriteria"]
+- ["12Geofirestore8GFSQueryC", "radius"]
+- ["12Geofirestore8GFSQueryC", "readyObservers"]
+- ["12Geofirestore8GFSQueryC", "region"]
+- ["12Geofirestore8GFSQueryC", "removeAllObservers"]
+- ["12Geofirestore8GFSQueryC", "removeObserver"]
+- ["12Geofirestore8GFSQueryC", "reset"]
+- ["12Geofirestore8GFSQueryC", "searchCriteriaDidChange"]
+- ["12Geofirestore8GFSQueryC", "totalObserverCount"]
+- ["12Geofirestore8GFSQueryC", "updateLocationInfo"]
+- ["12Geofirestore8GFSQueryC", "updateQueries"]
+- ["12Geofirestore8GFSQueryC0B12LocationInfoC", "Bool"]
+- ["12Geofirestore8GFSQueryC0B12LocationInfoC", "CLLocation"]
+- ["12Geofirestore8GFSQueryC0B12LocationInfoC", "GFGeoHash"]
+- ["12Geofirestore8GFSQueryC0B12LocationInfoC", "deinit"]
+- ["12Geofirestore8GFSQueryC0B12LocationInfoC", "geoHash"]
+- ["12Geofirestore8GFSQueryC0B12LocationInfoC", "init"]
+- ["12Geofirestore8GFSQueryC0B12LocationInfoC", "isInQuery"]
+- ["12Geofirestore8GFSQueryC0B12LocationInfoC", "location"]
+- ["12Geofirestore14GFSRegionQueryC", "AnyHashable"]
+- ["12Geofirestore14GFSRegionQueryC", "Bool"]
+- ["12Geofirestore14GFSRegionQueryC", "CLLocation"]
+- !private ["12Geofirestore14GFSRegionQueryC", "CLLocationCoordinate2D"]
+- !private ["12Geofirestore14GFSRegionQueryC", "CLLocationDegrees"]
+- !private ["12Geofirestore14GFSRegionQueryC", "GFGeoHashQuery"]
+- ["12Geofirestore14GFSRegionQueryC", "GeoFirestore"]
+- ["12Geofirestore14GFSRegionQueryC", "MKCoordinateRegion"]
+- ["12Geofirestore14GFSRegionQueryC", "Set"]
+- ["12Geofirestore14GFSRegionQueryC", "deinit"]
+- ["12Geofirestore14GFSRegionQueryC", "init"]
+- ["12Geofirestore14GFSRegionQueryC", "locationIsInQuery"]
+- ["12Geofirestore14GFSRegionQueryC", "queriesForCurrentCriteria"]
+- ["12Geofirestore14GFSRegionQueryC", "region"]
+- !private ["12Geofirestore14GFSRegionQueryC", "searchCriteriaDidChange"]
+- ["12Geofirestore12GeoFirestoreC", "CLLocation"]
+- !private ["12Geofirestore12GeoFirestoreC", "CLLocationCoordinate2DIsValid"]
+- ["12Geofirestore12GeoFirestoreC", "CollectionReference"]
+- ["12Geofirestore12GeoFirestoreC", "DispatchQueue"]
+- ["12Geofirestore12GeoFirestoreC", "Double"]
+- ["12Geofirestore12GeoFirestoreC", "Error"]
+- !private ["12Geofirestore12GeoFirestoreC", "FieldValue"]
+- !private ["12Geofirestore12GeoFirestoreC", "GFGeoHash"]
+- ["12Geofirestore12GeoFirestoreC", "GFSCircleQuery"]
+- ["12Geofirestore12GeoFirestoreC", "GFSCompletionBlock"]
+- ["12Geofirestore12GeoFirestoreC", "GFSGeoPointCallback"]
+- ["12Geofirestore12GeoFirestoreC", "GFSLocationCallback"]
+- ["12Geofirestore12GeoFirestoreC", "GFSRegionQuery"]
+- ["12Geofirestore12GeoFirestoreC", "GeoPoint"]
+- ["12Geofirestore12GeoFirestoreC", "MKCoordinateRegion"]
+- !private ["12Geofirestore12GeoFirestoreC", "NSException"]
+- !private ["12Geofirestore12GeoFirestoreC", "NSExceptionName"]
+- ["12Geofirestore12GeoFirestoreC", "String"]
+- ["12Geofirestore12GeoFirestoreC", "Void"]
+- ["12Geofirestore12GeoFirestoreC", "callbackQueue"]
+- ["12Geofirestore12GeoFirestoreC", "collectionRef"]
+- ["12Geofirestore12GeoFirestoreC", "deinit"]
+- ["12Geofirestore12GeoFirestoreC", "getCollectionReference"]
+- ["12Geofirestore12GeoFirestoreC", "getLocation"]
+- !private ["12Geofirestore12GeoFirestoreC", "getVaList"]
+- ["12Geofirestore12GeoFirestoreC", "init"]
+- !private ["12Geofirestore12GeoFirestoreC", "print"]
+- ["12Geofirestore12GeoFirestoreC", "query"]
+- ["12Geofirestore12GeoFirestoreC", "removeLocation"]
+- ["12Geofirestore12GeoFirestoreC", "setLocation"]
+- ["So8GeoPointC", "CLLocation"]
+- ["So8GeoPointC", "GeoPoint"]
+- ["So8GeoPointC", "geopointWithLocation"]
+- !private ["So8GeoPointC", "init"]
+- !private ["So8GeoPointC", "latitude"]
+- ["So8GeoPointC", "locationValue"]
+- !private ["So8GeoPointC", "longitude"]
+- !private ["s8HashableP", "CLLocation"]
+- !private ["s8HashableP", "GeoPoint"]
+- ["s8HashableP", ""]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "addSnapshotListener"]
+- !private ["s8HashableP", "added"]
+- !private ["s8HashableP", "async"]
+- !private ["s8HashableP", "contains"]
+- !private ["s8HashableP", "coordinate"]
+- !private ["s8HashableP", "count"]
+- !private ["s8HashableP", "delete"]
+- !private ["s8HashableP", "distance"]
+- !private ["s8HashableP", "document"]
+- !private ["s8HashableP", "documentChanges"]
+- !private ["s8HashableP", "documentEntered"]
+- !private ["s8HashableP", "documentExited"]
+- !private ["s8HashableP", "documentID"]
+- !private ["s8HashableP", "documentMoved"]
+- !private ["s8HashableP", "endValue"]
+- !private ["s8HashableP", "enumerated"]
+- !private ["s8HashableP", "geoHashValue"]
+- !private ["s8HashableP", "get"]
+- !private ["s8HashableP", "getDocument"]
+- !private ["s8HashableP", "getDocuments"]
+- ["s8HashableP", "hashValue"]
+- !private ["s8HashableP", "index"]
+- ["s8HashableP", "init"]
+- !private ["s8HashableP", "insert"]
+- !private ["s8HashableP", "internalInconsistencyException"]
+- !private ["s8HashableP", "invalidArgumentException"]
+- !private ["s8HashableP", "isEmpty"]
+- !private ["s8HashableP", "latitude"]
+- !private ["s8HashableP", "locationValue"]
+- !private ["s8HashableP", "longitude"]
+- !private ["s8HashableP", "main"]
+- !private ["s8HashableP", "modified"]
+- !private ["s8HashableP", "new"]
+- !private ["s8HashableP", "order"]
+- !private ["s8HashableP", "queries"]
+- !private ["s8HashableP", "raise"]
+- !private ["s8HashableP", "remove"]
+- !private ["s8HashableP", "removeAll"]
+- !private ["s8HashableP", "removed"]
+- !private ["s8HashableP", "setData"]
+- !private ["s8HashableP", "startValue"]
+- !private ["s8HashableP", "subtract"]
+- !private ["s8HashableP", "sync"]
+- !private ["s8HashableP", "type"]
+- !private ["s8HashableP", "union"]
+- !private ["s8HashableP", "updateData"]
+- !private ["s8HashableP", "whereField"]
+- !private ["So20ListenerRegistrationP", "remove"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["SC18MKCoordinateRegionV", "center"]
+- !private ["SC18MKCoordinateRegionV", "span"]
+- !private ["SC16MKCoordinateSpanV", "latitudeDelta"]
+- !private ["SC16MKCoordinateSpanV", "longitudeDelta"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "append"]
+- !private ["s17MutableCollectionP", "init"]
+- !private ["s17MutableCollectionP", "subscript"]
+- !private ["So8NSCodingP", "CLLocation"]
+- !private ["So8NSCodingP", "GeoPoint"]
+- !private ["So8NSCodingP", "coordinate"]
+- !private ["So8NSCodingP", "distance"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "raise"]
+- !private ["So9NSCopyingP", "CLLocation"]
+- !private ["So9NSCopyingP", "GeoPoint"]
+- !private ["So9NSCopyingP", "contains"]
+- !private ["So9NSCopyingP", "coordinate"]
+- !private ["So9NSCopyingP", "distance"]
+- !private ["So9NSCopyingP", "endValue"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "latitude"]
+- !private ["So9NSCopyingP", "locationValue"]
+- !private ["So9NSCopyingP", "longitude"]
+- !private ["So9NSCopyingP", "queries"]
+- !private ["So9NSCopyingP", "raise"]
+- !private ["So9NSCopyingP", "startValue"]
+- !private ["So11NSExceptionC", "raise"]
+- !private ["SC15NSExceptionNameV", "internalInconsistencyException"]
+- !private ["SC15NSExceptionNameV", "invalidArgumentException"]
+- ["So8NSObjectC", "CLLocation"]
+- ["So8NSObjectC", "GeoPoint"]
+- !private ["So8NSObjectC", "addSnapshotListener"]
+- !private ["So8NSObjectC", "async"]
+- !private ["So8NSObjectC", "contains"]
+- !private ["So8NSObjectC", "coordinate"]
+- !private ["So8NSObjectC", "delete"]
+- !private ["So8NSObjectC", "distance"]
+- !private ["So8NSObjectC", "document"]
+- !private ["So8NSObjectC", "documentChanges"]
+- !private ["So8NSObjectC", "documentID"]
+- !private ["So8NSObjectC", "endValue"]
+- !private ["So8NSObjectC", "geoHashValue"]
+- ["So8NSObjectC", "geopointValue"]
+- ["So8NSObjectC", "geopointWithLocation"]
+- !private ["So8NSObjectC", "get"]
+- !private ["So8NSObjectC", "getDocument"]
+- !private ["So8NSObjectC", "getDocuments"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "latitude"]
+- ["So8NSObjectC", "locationValue"]
+- ["So8NSObjectC", "locationWithGeopoint"]
+- !private ["So8NSObjectC", "longitude"]
+- !private ["So8NSObjectC", "main"]
+- !private ["So8NSObjectC", "new"]
+- !private ["So8NSObjectC", "order"]
+- !private ["So8NSObjectC", "queries"]
+- !private ["So8NSObjectC", "raise"]
+- !private ["So8NSObjectC", "setData"]
+- !private ["So8NSObjectC", "startValue"]
+- !private ["So8NSObjectC", "sync"]
+- !private ["So8NSObjectC", "type"]
+- !private ["So8NSObjectC", "updateData"]
+- !private ["So8NSObjectC", "whereField"]
+- !private ["So16NSObjectProtocolP", "CLLocation"]
+- !private ["So16NSObjectProtocolP", "GeoPoint"]
+- !private ["So16NSObjectProtocolP", "addSnapshotListener"]
+- !private ["So16NSObjectProtocolP", "async"]
+- !private ["So16NSObjectProtocolP", "contains"]
+- !private ["So16NSObjectProtocolP", "coordinate"]
+- !private ["So16NSObjectProtocolP", "delete"]
+- !private ["So16NSObjectProtocolP", "distance"]
+- !private ["So16NSObjectProtocolP", "document"]
+- !private ["So16NSObjectProtocolP", "documentChanges"]
+- !private ["So16NSObjectProtocolP", "documentID"]
+- !private ["So16NSObjectProtocolP", "endValue"]
+- !private ["So16NSObjectProtocolP", "geoHashValue"]
+- !private ["So16NSObjectProtocolP", "get"]
+- !private ["So16NSObjectProtocolP", "getDocument"]
+- !private ["So16NSObjectProtocolP", "getDocuments"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "latitude"]
+- !private ["So16NSObjectProtocolP", "locationValue"]
+- !private ["So16NSObjectProtocolP", "longitude"]
+- !private ["So16NSObjectProtocolP", "main"]
+- !private ["So16NSObjectProtocolP", "new"]
+- !private ["So16NSObjectProtocolP", "order"]
+- !private ["So16NSObjectProtocolP", "queries"]
+- !private ["So16NSObjectProtocolP", "raise"]
+- !private ["So16NSObjectProtocolP", "remove"]
+- !private ["So16NSObjectProtocolP", "setData"]
+- !private ["So16NSObjectProtocolP", "startValue"]
+- !private ["So16NSObjectProtocolP", "sync"]
+- !private ["So16NSObjectProtocolP", "type"]
+- !private ["So16NSObjectProtocolP", "updateData"]
+- !private ["So16NSObjectProtocolP", "whereField"]
+- !private ["So14NSSecureCodingP", "CLLocation"]
+- !private ["So14NSSecureCodingP", "GeoPoint"]
+- !private ["So14NSSecureCodingP", "coordinate"]
+- !private ["So14NSSecureCodingP", "distance"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["s7NumericP", "init"]
+- !private ["So9OS_objectC", "async"]
+- !private ["So9OS_objectC", "main"]
+- !private ["So9OS_objectC", "sync"]
+- !private ["So5QueryC", "addSnapshotListener"]
+- !private ["So5QueryC", "document"]
+- !private ["So5QueryC", "getDocuments"]
+- !private ["So5QueryC", "order"]
+- !private ["So5QueryC", "whereField"]
+- !private ["So13QuerySnapshotC", "documentChanges"]
+- !private ["s22RandomAccessCollectionP", "append"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- !private ["s22RandomAccessCollectionP", "subscript"]
+- !private ["s26RangeReplaceableCollectionP", "append"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "subscript"]
+- !private ["s16RawRepresentableP", "added"]
+- !private ["s16RawRepresentableP", "internalInconsistencyException"]
+- !private ["s16RawRepresentableP", "invalidArgumentException"]
+- !private ["s16RawRepresentableP", "modified"]
+- !private ["s16RawRepresentableP", "removed"]
+- !private ["s8SequenceP", "append"]
+- !private ["s8SequenceP", "count"]
+- !private ["s8SequenceP", "enumerated"]
+- !private ["s8SequenceP", "index"]
+- ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "insert"]
+- !private ["s8SequenceP", "isEmpty"]
+- !private ["s8SequenceP", "remove"]
+- !private ["s8SequenceP", "removeAll"]
+- !private ["s8SequenceP", "removeValue"]
+- !private ["s8SequenceP", "subscript"]
+- !private ["s8SequenceP", "subtract"]
+- !private ["s8SequenceP", "union"]
+- !private ["s3SetV", "count"]
+- !private ["s3SetV", "enumerated"]
+- !private ["s3SetV", "index"]
+- ["s3SetV", "init"]
+- !private ["s3SetV", "insert"]
+- !private ["s3SetV", "isEmpty"]
+- !private ["s3SetV", "remove"]
+- !private ["s3SetV", "removeAll"]
+- !private ["s3SetV", "subtract"]
+- !private ["s3SetV", "union"]
+- !private ["s10SetAlgebraP", "count"]
+- !private ["s10SetAlgebraP", "enumerated"]
+- !private ["s10SetAlgebraP", "index"]
+- ["s10SetAlgebraP", "init"]
+- !private ["s10SetAlgebraP", "insert"]
+- !private ["s10SetAlgebraP", "isEmpty"]
+- !private ["s10SetAlgebraP", "remove"]
+- !private ["s10SetAlgebraP", "removeAll"]
+- !private ["s10SetAlgebraP", "subtract"]
+- !private ["s10SetAlgebraP", "union"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["s12StaticStringV", "init"]
+- !private ["s10StrideableP", "init"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s14_ArrayProtocolP", "init"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- !private ["s15_CVarArgAlignedP", "init"]
+- !private ["s22_CVarArgPassedAsDoubleP", "init"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- !private ["s24_DestructorSafeContainerP", "init"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CLLocation"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "GeoPoint"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addSnapshotListener"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "async"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "contains"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "coordinate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "delete"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "distance"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "document"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "documentChanges"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "documentID"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "endValue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "geoHashValue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "get"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getDocument"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getDocuments"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "latitude"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "locationValue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "longitude"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "new"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "order"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "queries"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "raise"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setData"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "startValue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "sync"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "type"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "updateData"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "whereField"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "enumerated"]
+- !private ["s21_ObjectiveCBridgeableP", "index"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "insert"]
+- !private ["s21_ObjectiveCBridgeableP", "internalInconsistencyException"]
+- !private ["s21_ObjectiveCBridgeableP", "invalidArgumentException"]
+- !private ["s21_ObjectiveCBridgeableP", "isEmpty"]
+- !private ["s21_ObjectiveCBridgeableP", "latitude"]
+- !private ["s21_ObjectiveCBridgeableP", "latitudeDelta"]
+- !private ["s21_ObjectiveCBridgeableP", "longitude"]
+- !private ["s21_ObjectiveCBridgeableP", "longitudeDelta"]
+- !private ["s21_ObjectiveCBridgeableP", "remove"]
+- !private ["s21_ObjectiveCBridgeableP", "removeAll"]
+- !private ["s21_ObjectiveCBridgeableP", "removeValue"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "subtract"]
+- !private ["s21_ObjectiveCBridgeableP", "union"]
+- !private ["s20_SwiftNewtypeWrapperP", "internalInconsistencyException"]
+- !private ["s20_SwiftNewtypeWrapperP", "invalidArgumentException"]
+- !private ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "Sa"
+- !private "s23BidirectionalCollectionP"
+- !private "s19BinaryFloatingPointP"
+- !private "Sb"
+- "So10CLLocationC"
+- !private "SC22CLLocationCoordinate2DV"
+- "s7CVarArgP"
+- "s10CollectionP"
+- !private "So19CollectionReferenceC"
+- !private "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "s9DecodableP"
+- "s10DictionaryV"
+- !private "So14DispatchObjectC"
+- !private "So13DispatchQueueC"
+- !private "So14DocumentChangeC"
+- !private "SC18DocumentChangeTypeO"
+- !private "So17DocumentReferenceC"
+- !private "So16DocumentSnapshotC"
+- !private "Sd"
+- "s9EncodableP"
+- "s9EquatableP"
+- "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- "s30ExpressibleByDictionaryLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "So10FieldValueC"
+- !private "s13FloatingPointP"
+- !private "So9GFGeoHashC"
+- !private "So14GFGeoHashQueryC"
+- "12Geofirestore14GFSCircleQueryC"
+- "12Geofirestore12GFSEventTypeO"
+- "12Geofirestore23GFSGeoHashQueryListenerC"
+- "12Geofirestore8GFSQueryC"
+- "12Geofirestore8GFSQueryC0B12LocationInfoC"
+- "12Geofirestore14GFSRegionQueryC"
+- "12Geofirestore12GeoFirestoreC"
+- "So8GeoPointC"
+- "s8HashableP"
+- !private "So20ListenerRegistrationP"
+- !private "s25LosslessStringConvertibleP"
+- !private "SC18MKCoordinateRegionV"
+- !private "SC16MKCoordinateSpanV"
+- !private "s10MirrorPathP"
+- !private "s17MutableCollectionP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So11NSExceptionC"
+- !private "SC15NSExceptionNameV"
+- "So8NSObjectC"
+- !private "So16NSObjectProtocolP"
+- !private "So14NSSecureCodingP"
+- !private "s7NumericP"
+- !private "So9OS_objectC"
+- !private "So5QueryC"
+- !private "So13QuerySnapshotC"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s16RawRepresentableP"
+- "s8SequenceP"
+- "s3SetV"
+- "s10SetAlgebraP"
+- !private "s13SignedNumericP"
+- !private "s12StaticStringV"
+- !private "s10StrideableP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "s14_ArrayProtocolP"
+- !private "s15_CVarArgAlignedP"
+- !private "s22_CVarArgPassedAsDoubleP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s33_ExpressibleByBuiltinFloatLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+- !private "s20_SwiftNewtypeWrapperP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/MapKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Target Support Files/GeoFire/GeoFire-umbrella.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Target Support Files/FirebaseCore/FirebaseCore-umbrella.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Target Support Files/FirebaseFirestore/FirebaseFirestore-umbrella.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Target Support Files/Geofirestore/Geofirestore-umbrella.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FIRSnapshotMetadata.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FIRCollectionReference.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FIRDocumentReference.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FIRFirestoreSource.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FIRDocumentChange.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/GeoFire/GeoFire/API/GeoFire.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseCore/Firebase/Core/Public/FirebaseCore.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FIRFirestore.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FirebaseFirestore.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/GeoFire/GeoFire/Implementation/GeoFire+Private.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/GeoFire/GeoFire/Implementation/GFQuery+Private.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FIRFieldValue.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FIRWriteBatch.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/GeoFire/GeoFire/Implementation/GFGeoHash.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FIRFieldPath.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseCore/Firebase/Core/Public/FIRLoggerLevel.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FIRListenerRegistration.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseCore/Firebase/Core/Public/FIRConfiguration.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseCore/Firebase/Core/Public/FIRAnalyticsConfiguration.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FIRTransaction.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FIRTimestamp.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseCore/Firebase/Core/Public/FIRApp.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FIRFirestoreSettings.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/GeoFire/GeoFire/Implementation/GFBase32Utils.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseCore/Firebase/Core/Public/FIROptions.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FIRFirestoreErrors.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FIRGeoPoint.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FIRDocumentSnapshot.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FIRQuerySnapshot.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/GeoFire/GeoFire/API/GFQuery.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/FirebaseFirestore/Firestore/Source/Public/FIRQuery.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/GeoFire/GeoFire/API/GFCircleQuery.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/GeoFire/GeoFire/Implementation/GFGeoHashQuery.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/GeoFire/GeoFire/API/GFRegionQuery.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Intermediates/Pods.build/Debug-iphoneos/Geofirestore.build/unextended-module.modulemap"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Intermediates/Pods.build/Debug-iphoneos/GeoFire.build/module.modulemap"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Intermediates/Pods.build/Debug-iphoneos/FirebaseCore.build/module.modulemap"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Intermediates/Pods.build/Debug-iphoneos/FirebaseFirestore.build/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "54c9537050c71e563504d85da4c4d16d"

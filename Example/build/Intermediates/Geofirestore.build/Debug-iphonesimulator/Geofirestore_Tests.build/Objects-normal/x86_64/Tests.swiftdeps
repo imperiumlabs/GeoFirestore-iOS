@@ -1,0 +1,369 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "TableOfContentsSpec"
+provides-nominal:
+- "18Geofirestore_Tests19TableOfContentsSpecC"
+provides-member:
+- ["18Geofirestore_Tests19TableOfContentsSpecC", ""]
+provides-dynamic-lookup:
+- "spec"
+depends-top-level:
+- !private "=="
+- !private "AssignmentPrecedence"
+- !private "DispatchQueue"
+- "QuickSpec"
+- !private "StringLiteralType"
+- "TableOfContentsSpec"
+- !private "Thread"
+- "UnicodeScalarType"
+- !private "context"
+- !private "describe"
+- !private "equal"
+- !private "expect"
+- !private "it"
+- !private "waitUntil"
+depends-member:
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s7CVarArgP", "DispatchQueue"]
+- !private ["s7CVarArgP", "Thread"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "async"]
+- !private ["s7CVarArgP", "context"]
+- !private ["s7CVarArgP", "describe"]
+- !private ["s7CVarArgP", "equal"]
+- !private ["s7CVarArgP", "expect"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "it"]
+- !private ["s7CVarArgP", "main"]
+- !private ["s7CVarArgP", "sleep"]
+- !private ["s7CVarArgP", "waitUntil"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "DispatchQueue"]
+- !private ["s28CustomDebugStringConvertibleP", "Thread"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "async"]
+- !private ["s28CustomDebugStringConvertibleP", "context"]
+- !private ["s28CustomDebugStringConvertibleP", "describe"]
+- !private ["s28CustomDebugStringConvertibleP", "equal"]
+- !private ["s28CustomDebugStringConvertibleP", "expect"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "it"]
+- !private ["s28CustomDebugStringConvertibleP", "main"]
+- !private ["s28CustomDebugStringConvertibleP", "sleep"]
+- !private ["s28CustomDebugStringConvertibleP", "waitUntil"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "DispatchQueue"]
+- !private ["s23CustomStringConvertibleP", "Thread"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "async"]
+- !private ["s23CustomStringConvertibleP", "context"]
+- !private ["s23CustomStringConvertibleP", "describe"]
+- !private ["s23CustomStringConvertibleP", "equal"]
+- !private ["s23CustomStringConvertibleP", "expect"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "it"]
+- !private ["s23CustomStringConvertibleP", "main"]
+- !private ["s23CustomStringConvertibleP", "sleep"]
+- !private ["s23CustomStringConvertibleP", "waitUntil"]
+- !private ["s9DecodableP", "init"]
+- !private ["So14DispatchObjectC", "async"]
+- !private ["So14DispatchObjectC", "main"]
+- !private ["So13DispatchQueueC", "async"]
+- !private ["So13DispatchQueueC", "main"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EquatableP", "DispatchQueue"]
+- !private ["s9EquatableP", "Thread"]
+- ["s9EquatableP", ""]
+- !private ["s9EquatableP", "async"]
+- !private ["s9EquatableP", "context"]
+- !private ["s9EquatableP", "describe"]
+- !private ["s9EquatableP", "equal"]
+- !private ["s9EquatableP", "expect"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "it"]
+- !private ["s9EquatableP", "main"]
+- !private ["s9EquatableP", "sleep"]
+- !private ["s9EquatableP", "waitUntil"]
+- !private ["6Nimble11ExpectationV", "toEventually"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s8HashableP", "DispatchQueue"]
+- !private ["s8HashableP", "Thread"]
+- ["s8HashableP", ""]
+- !private ["s8HashableP", "async"]
+- !private ["s8HashableP", "context"]
+- !private ["s8HashableP", "describe"]
+- !private ["s8HashableP", "equal"]
+- !private ["s8HashableP", "expect"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "it"]
+- !private ["s8HashableP", "main"]
+- !private ["s8HashableP", "sleep"]
+- !private ["s8HashableP", "waitUntil"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["So8NSObjectC", "DispatchQueue"]
+- !private ["So8NSObjectC", "Thread"]
+- !private ["So8NSObjectC", "async"]
+- !private ["So8NSObjectC", "context"]
+- !private ["So8NSObjectC", "describe"]
+- !private ["So8NSObjectC", "equal"]
+- !private ["So8NSObjectC", "expect"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "it"]
+- !private ["So8NSObjectC", "main"]
+- !private ["So8NSObjectC", "sleep"]
+- ["So8NSObjectC", "spec"]
+- !private ["So8NSObjectC", "waitUntil"]
+- !private ["So16NSObjectProtocolP", "DispatchQueue"]
+- !private ["So16NSObjectProtocolP", "Thread"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["So16NSObjectProtocolP", "async"]
+- !private ["So16NSObjectProtocolP", "context"]
+- !private ["So16NSObjectProtocolP", "describe"]
+- !private ["So16NSObjectProtocolP", "equal"]
+- !private ["So16NSObjectProtocolP", "expect"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "it"]
+- !private ["So16NSObjectProtocolP", "main"]
+- !private ["So16NSObjectProtocolP", "sleep"]
+- !private ["So16NSObjectProtocolP", "waitUntil"]
+- !private ["So9OS_objectC", "async"]
+- !private ["So9OS_objectC", "main"]
+- !private ["So9QuickSpecC", "DispatchQueue"]
+- !private ["So9QuickSpecC", "Thread"]
+- ["So9QuickSpecC", ""]
+- !private ["So9QuickSpecC", "context"]
+- !private ["So9QuickSpecC", "describe"]
+- !private ["So9QuickSpecC", "equal"]
+- !private ["So9QuickSpecC", "expect"]
+- ["So9QuickSpecC", "init"]
+- !private ["So9QuickSpecC", "it"]
+- ["So9QuickSpecC", "spec"]
+- !private ["So9QuickSpecC", "waitUntil"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s8SequenceP", "init"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["18Geofirestore_Tests19TableOfContentsSpecC", "DispatchQueue"]
+- !private ["18Geofirestore_Tests19TableOfContentsSpecC", "Thread"]
+- !private ["18Geofirestore_Tests19TableOfContentsSpecC", "context"]
+- ["18Geofirestore_Tests19TableOfContentsSpecC", "deinit"]
+- !private ["18Geofirestore_Tests19TableOfContentsSpecC", "describe"]
+- !private ["18Geofirestore_Tests19TableOfContentsSpecC", "equal"]
+- !private ["18Geofirestore_Tests19TableOfContentsSpecC", "expect"]
+- ["18Geofirestore_Tests19TableOfContentsSpecC", "init"]
+- !private ["18Geofirestore_Tests19TableOfContentsSpecC", "it"]
+- ["18Geofirestore_Tests19TableOfContentsSpecC", "spec"]
+- !private ["18Geofirestore_Tests19TableOfContentsSpecC", "waitUntil"]
+- !private ["6Nimble27TestOutputStringConvertibleP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["So6ThreadC", "sleep"]
+- !private ["So11XCTActivityP", "DispatchQueue"]
+- !private ["So11XCTActivityP", "Thread"]
+- ["So11XCTActivityP", ""]
+- !private ["So11XCTActivityP", "context"]
+- !private ["So11XCTActivityP", "describe"]
+- !private ["So11XCTActivityP", "equal"]
+- !private ["So11XCTActivityP", "expect"]
+- !private ["So11XCTActivityP", "init"]
+- !private ["So11XCTActivityP", "it"]
+- !private ["So11XCTActivityP", "waitUntil"]
+- !private ["So17XCTWaiterDelegateP", "DispatchQueue"]
+- !private ["So17XCTWaiterDelegateP", "Thread"]
+- ["So17XCTWaiterDelegateP", ""]
+- !private ["So17XCTWaiterDelegateP", "context"]
+- !private ["So17XCTWaiterDelegateP", "describe"]
+- !private ["So17XCTWaiterDelegateP", "equal"]
+- !private ["So17XCTWaiterDelegateP", "expect"]
+- !private ["So17XCTWaiterDelegateP", "init"]
+- !private ["So17XCTWaiterDelegateP", "it"]
+- !private ["So17XCTWaiterDelegateP", "waitUntil"]
+- !private ["So6XCTestC", "DispatchQueue"]
+- !private ["So6XCTestC", "Thread"]
+- !private ["So6XCTestC", "context"]
+- !private ["So6XCTestC", "describe"]
+- !private ["So6XCTestC", "equal"]
+- !private ["So6XCTestC", "expect"]
+- ["So6XCTestC", "init"]
+- !private ["So6XCTestC", "it"]
+- ["So6XCTestC", "spec"]
+- !private ["So6XCTestC", "waitUntil"]
+- !private ["So10XCTestCaseC", "DispatchQueue"]
+- !private ["So10XCTestCaseC", "Thread"]
+- !private ["So10XCTestCaseC", "context"]
+- !private ["So10XCTestCaseC", "describe"]
+- !private ["So10XCTestCaseC", "equal"]
+- !private ["So10XCTestCaseC", "expect"]
+- ["So10XCTestCaseC", "init"]
+- !private ["So10XCTestCaseC", "it"]
+- ["So10XCTestCaseC", "spec"]
+- !private ["So10XCTestCaseC", "waitUntil"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "DispatchQueue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Thread"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "async"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "context"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "describe"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "equal"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "expect"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "it"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "sleep"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "waitUntil"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "s23BidirectionalCollectionP"
+- "s7CVarArgP"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "So14DispatchObjectC"
+- !private "So13DispatchQueueC"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "6Nimble11ExpectationV"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "s8HashableP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- !private "So9OS_objectC"
+- "So9QuickSpecC"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s8SequenceP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- "18Geofirestore_Tests19TableOfContentsSpecC"
+- !private "6Nimble27TestOutputStringConvertibleP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "So6ThreadC"
+- "So11XCTActivityP"
+- "So17XCTWaiterDelegateP"
+- "So6XCTestC"
+- "So10XCTestCaseC"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Nimble/Nimble.framework/Modules/Nimble.swiftmodule/x86_64.swiftmodule"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Geofirestore/Geofirestore.framework/Modules/Geofirestore.swiftmodule/x86_64.swiftmodule"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Quick/Quick.framework/Modules/Quick.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/MapKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/XCTest.swiftmodule"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Nimble/Nimble.framework/Headers/DSL.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Quick/Quick.framework/Headers/QCKDSL.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Nimble/Nimble.framework/Headers/Nimble-umbrella.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/GeoFire/GeoFire.framework/Headers/GeoFire-umbrella.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore-umbrella.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FirebaseFirestore-umbrella.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Geofirestore/Geofirestore.framework/Headers/Geofirestore-umbrella.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Quick/Quick.framework/Headers/Quick-umbrella.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRSnapshotMetadata.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Quick/Quick.framework/Headers/QuickSpec.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRCollectionReference.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentReference.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreSource.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentChange.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Nimble/Nimble.framework/Headers/Nimble.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/GeoFire/GeoFire.framework/Headers/GeoFire.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestore.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FirebaseFirestore.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Nimble/Nimble.framework/Headers/NMBExceptionCapture.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/GeoFire/GeoFire.framework/Headers/GeoFire+Private.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/GeoFire/GeoFire.framework/Headers/GFQuery+Private.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFieldValue.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Nimble/Nimble.framework/Headers/CwlPreconditionTesting.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRWriteBatch.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/GeoFire/GeoFire.framework/Headers/GFGeoHash.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFieldPath.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Quick/Quick.framework/Headers/Quick.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRLoggerLevel.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRListenerRegistration.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRConfiguration.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Quick/Quick.framework/Headers/QuickConfiguration.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRTransaction.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Nimble/Nimble.framework/Headers/CwlCatchException.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRTimestamp.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRApp.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Nimble/Nimble.framework/Headers/CwlMachBadInstructionHandler.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Nimble/Nimble.framework/Headers/mach_excServer.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreSettings.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/GeoFire/GeoFire.framework/Headers/GFBase32Utils.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIROptions.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreErrors.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Nimble/Nimble.framework/Headers/Nimble-Swift.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Geofirestore/Geofirestore.framework/Headers/Geofirestore-Swift.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Quick/Quick.framework/Headers/Quick-Swift.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRGeoPoint.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentSnapshot.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRQuerySnapshot.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Nimble/Nimble.framework/Headers/NMBStringify.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/GeoFire/GeoFire.framework/Headers/GFQuery.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRQuery.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/GeoFire/GeoFire.framework/Headers/GFCircleQuery.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/GeoFire/GeoFire.framework/Headers/GFGeoHashQuery.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/GeoFire/GeoFire.framework/Headers/GFRegionQuery.h"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Pods/Firebase/CoreOnly/Sources/module.modulemap"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Nimble/Nimble.framework/Modules/module.modulemap"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/GeoFire/GeoFire.framework/Modules/module.modulemap"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Modules/module.modulemap"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Modules/module.modulemap"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Geofirestore/Geofirestore.framework/Modules/module.modulemap"
+- "/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Quick/Quick.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "64943c4b4069d7a5914491154f8d3172"
