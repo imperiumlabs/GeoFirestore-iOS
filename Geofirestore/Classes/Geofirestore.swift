@@ -468,17 +468,15 @@ public class GFSQuery {
 
     internal func reset() {
         if !queries.isEmpty {
-            for query: GFGeoHashQuery? in queries {
+            for query in queries {
                 var handle: GFSGeoHashQueryListener?
-                if let aQuery = query {
-                    handle = self.handles[aQuery]
-                    if handle == nil {
-                        NSException.raise(.internalInconsistencyException, format: "Wanted to remove a geohash query that was not registered!", arguments: getVaList(["nil"]))
-                    }
-                    handle?.childAddedListener?.remove()
-                    handle?.childChangedListener?.remove()
-                    handle?.childRemovedListener?.remove()
+                handle = self.handles[query]
+                if handle == nil {
+                    NSException.raise(.internalInconsistencyException, format: "Wanted to remove a geohash query that was not registered!", arguments: getVaList(["nil"]))
                 }
+                handle?.childAddedListener?.remove()
+                handle?.childChangedListener?.remove()
+                handle?.childRemovedListener?.remove()
                 
             }
         }
