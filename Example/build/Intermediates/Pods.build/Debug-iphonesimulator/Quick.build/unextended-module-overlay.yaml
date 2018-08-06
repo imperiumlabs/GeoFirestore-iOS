@@ -3,11 +3,11 @@
   'case-sensitive': 'false',
   'roots': [{
     'type': 'directory',
-    'name': '/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Products/Debug-iphonesimulator/Quick/Quick.framework/Modules'
+    'name': '/Users/nikhilsridhar/Desktop/GeoFirestore-iOS/Example/Build/Products/Debug-iphonesimulator/Quick/Quick.framework/Modules'
     'contents': [{
       'type': 'file',
       'name': 'module.modulemap',
-      'external-contents': '/Users/nikhilsridhar/Desktop/Geofirestore-ios/Example/Build/Intermediates/Pods.build/Debug-iphonesimulator/Quick.build/unextended-module.modulemap',
+      'external-contents': '/Users/nikhilsridhar/Desktop/GeoFirestore-iOS/Example/Build/Intermediates/Pods.build/Debug-iphonesimulator/Quick.build/unextended-module.modulemap',
     }]
   }]
 }
