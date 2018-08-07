@@ -144,7 +144,7 @@ public class GeoFirestore {
      * @param radius The radius in kilometers of the geo query
      * @return The `GFSCircleQuery` object that can be used for geo queries.
      */
-    public func query(withCenter center: GeoPoint, radius: Double, searchLimit: Int? = nil) -> GFSCircleQuery {
+    public func query(withCenter center: GeoPoint, radius: Double) -> GFSCircleQuery {
         return GFSCircleQuery(geoFirestore: self, center: center.locationValue(), radius: radius)
     }
     
@@ -154,7 +154,7 @@ public class GeoFirestore {
      * @param radius The radius in kilometers of the geo query
      * @return The `GFSCircleQuery` object that can be used for geo queries.
      */
-    public func query(withCenter center: CLLocation, radius: Double, searchLimit: Int? = nil) -> GFSCircleQuery {
+    public func query(withCenter center: CLLocation, radius: Double) -> GFSCircleQuery {
         return GFSCircleQuery(geoFirestore: self, center: center, radius: radius)
     }
     
@@ -164,7 +164,7 @@ public class GeoFirestore {
      * @param region The region which this query searches
      * @return The GFSRegionQuery object that can be used for geo queries.
      */
-    public func query(inRegion region: MKCoordinateRegion, searchLimit: Int? = nil) -> GFSRegionQuery{
+    public func query(inRegion region: MKCoordinateRegion) -> GFSRegionQuery{
         return GFSRegionQuery(geoFirestore: self, region: region)
     }
     
