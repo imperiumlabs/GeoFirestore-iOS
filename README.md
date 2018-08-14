@@ -199,7 +199,7 @@ let loc4: CLLocation = CLLocation.locationWithGeopoint(geopoint: geopoint)
 
 ## API Reference & Documentation
 
-Full API reference and documentation is available [here](https://imperiumlabs.github.io/Geofirestore-ios/)
+Full API reference and documentation is available [here](http://imperiumlabs.org/GeoFirestore-iOS/)
 
 ## License
 
