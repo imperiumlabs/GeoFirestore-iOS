@@ -1,5 +1,3 @@
-![Imgur](https://i.imgur.com/EE0PfWJ.jpg)
-
 # GeoFirestore for iOS — Realtime location queries with Firestore
 
 GeoFirestore is an open-source library for Swift that allows you to store and query a set of documents based on their geographic location.
