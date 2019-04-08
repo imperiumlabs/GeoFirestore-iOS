@@ -46,6 +46,6 @@ An alternative to the GeoFire library provided by Firebase, but compatible with 
   s.dependency 'Firebase', '~> 5.4'
   s.dependency 'GeoFire', '~> 3.0'
   s.dependency 'FirebaseCore', '~> 5.0'
-  s.dependency 'FirebaseFirestore', '~> 0.12'
+  s.dependency 'FirebaseFirestore', '~> 1.0'
 
 end
