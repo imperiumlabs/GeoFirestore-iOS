@@ -25,7 +25,7 @@ To run the example project, clone the repo, and run `pod repo update` and `pod i
 If you're using [CocoaPods](https://cocoapods.org/) add the following to your Podfile:
 
 ```
-pod ‘Geofirestore'
+pod 'Geofirestore'
 ```
 Then run the following in terminal:
 
@@ -45,6 +45,9 @@ GeoFirestore requires the Firestore database in order to store location data. Yo
 A `GeoFirestore` object is used to read and write geo location data to your Firestore database and to create queries. To create a new `GeoFirestore` instance you need to attach it to a Firestore collection reference:
 
 ````swift
+import Firebase
+import Geofirestore
+
 let geoFirestoreRef = Firestore.firestore().collection("my-collection")
 let geoFirestore = GeoFirestore(collectionRef: geoFirestoreRef)
 ````
@@ -55,7 +58,7 @@ To set the location of a document simply call the `setLocation` method:
 
 ````swift
 geoFirestore.setLocation(location: CLLocation(latitude: 37.7853889, longitude: -122.4056973), forDocumentWithID: "que8B9fxxjcvbC81h32VRjeBSUW2") { (error) in
-    if (error != nil) {
+    if let error = error {
         print("An error occured: \(error)")
     } else {
         print("Saved location successfully!")
@@ -66,7 +69,7 @@ Alternatively set the location using a `GeoPoint` :
 
 ````swift
 geoFirestore.setLocation(geopoint: GeoPoint(latitude: 37.7853889, longitude: -122.4056973), forDocumentWithID: "que8B9fxxjcvbC81h32VRjeBSUW2") { (error) in
-    if (error != nil) {
+    if let error = error {
         print("An error occured: \(error)")
     } else {
         print("Saved location successfully!")
@@ -85,10 +88,10 @@ Retrieving locations happens with callbacks. If the document is not present in G
 
 ````swift
 geoFirestore.getLocation(forDocumentWithID: "que8B9fxxjcvbC81h32VRjeBSUW2") { (location: CLLocation?, error) in
-    if (error != nil) {
+    if let error = error {
         print("An error occurred: \(error)")
-    } else if (location != nil) {
-        print("Location: [\(location!.coordinate.latitude), \(location!.coordinate.longitude)]")
+    } else if let location = location {
+        print("Location: [\(location.coordinate.latitude), \(location.coordinate.longitude)]")
     } else {
         print("GeoFirestore does not contain a location for this document")
     }
@@ -99,10 +102,10 @@ Alternatively get the location as a `GeoPoint` :
 
 ````swift
 geoFirestore.getLocation(forDocumentWithID: "que8B9fxxjcvbC81h32VRjeBSUW2") { (location: GeoPoint?, error) in
-    if (error != nil) {
+    if let error = error {
         print("An error occurred: \(error)")
-    } else if (location != nil) {
-        print("Location: [\(location!.latitude), \(location!.longitude)]")
+    } else if let location = location {
+        print("Location: [\(location.latitude), \(location.longitude)]")
     } else {
         print("GeoFirestore does not contain a location for this document")
     }
