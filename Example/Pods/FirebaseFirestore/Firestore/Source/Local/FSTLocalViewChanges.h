@@ -16,13 +16,12 @@
 
 #import <Foundation/Foundation.h>
 
+#include "Firestore/core/src/firebase/firestore/core/view_snapshot.h"
 #include "Firestore/core/src/firebase/firestore/model/document_key_set.h"
+#include "Firestore/core/src/firebase/firestore/model/types.h"
 
-@class FSTDocumentSet;
 @class FSTMutation;
 @class FSTQuery;
-@class FSTRemoteEvent;
-@class FSTViewSnapshot;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -33,15 +32,16 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface FSTLocalViewChanges : NSObject
 
-+ (instancetype)changesForQuery:(FSTQuery *)query
-                      addedKeys:(firebase::firestore::model::DocumentKeySet)addedKeys
-                    removedKeys:(firebase::firestore::model::DocumentKeySet)removedKeys;
++ (instancetype)changesForTarget:(firebase::firestore::model::TargetId)targetID
+                       addedKeys:(firebase::firestore::model::DocumentKeySet)addedKeys
+                     removedKeys:(firebase::firestore::model::DocumentKeySet)removedKeys;
 
-+ (instancetype)changesForViewSnapshot:(FSTViewSnapshot *)viewSnapshot;
++ (instancetype)changesForViewSnapshot:(const firebase::firestore::core::ViewSnapshot &)viewSnapshot
+                          withTargetID:(firebase::firestore::model::TargetId)targetID;
 
 - (id)init NS_UNAVAILABLE;
 
-@property(nonatomic, strong, readonly) FSTQuery *query;
+@property(readonly) firebase::firestore::model::TargetId targetID;
 
 - (const firebase::firestore::model::DocumentKeySet &)addedKeys;
 - (const firebase::firestore::model::DocumentKeySet &)removedKeys;

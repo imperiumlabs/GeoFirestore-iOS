@@ -20,14 +20,9 @@
 #include <pb.h>
 #include <pb_decode.h>
 
-#include <cstdint>
-#include <functional>
-#include <string>
-
 #include "Firestore/core/include/firebase/firestore/firestore_errors.h"
-#include "Firestore/core/src/firebase/firestore/nanopb/tag.h"
-#include "Firestore/core/src/firebase/firestore/util/hard_assert.h"
 #include "Firestore/core/src/firebase/firestore/util/status.h"
+#include "absl/strings/string_view.h"
 
 namespace firebase {
 namespace firestore {
@@ -36,6 +31,10 @@ namespace nanopb {
 /**
  * Docs TODO(rsgowman). But currently, this just wraps the underlying nanopb
  * pb_istream_t.
+ *
+ * All 'ReadX' methods verify the wiretype (by examining the last_tag_ field, as
+ * set by ReadTag()) to ensure the correct type. If that fails, the status of
+ * the Reader instance is set to non-ok.
  */
 class Reader {
  public:
@@ -51,66 +50,37 @@ class Reader {
   static Reader Wrap(const uint8_t* bytes, size_t length);
 
   /**
-   * Reads a message type from the input stream.
+   * Creates an input stream from bytes backing the string_view. Note that
+   * the backing buffer must remain valid for the lifetime of this Reader.
    *
-   * This essentially wraps calls to nanopb's pb_decode_tag() method.
+   * (This is roughly equivalent to the nanopb function
+   * pb_istream_from_buffer())
    */
-  Tag ReadTag();
-
-  /**
-   * Ensures the specified tag is of the specified type. If not, then
-   * Reader::status() will return a non-ok value (with the code set to
-   * FirestoreErrorCode::DataLoss).
-   *
-   * @return Convenience indicator for success. (If false, then status() will
-   * return a non-ok value.)
-   */
-  bool RequireWireType(pb_wire_type_t wire_type, Tag tag);
+  static Reader Wrap(absl::string_view);
 
   /**
    * Reads a nanopb message from the input stream.
    *
-   * This essentially wraps calls to nanopb's pb_decode() method. If we didn't
-   * use `oneof`s in our protos, this would be the primary way of decoding
-   * messages.
+   * This essentially wraps calls to nanopb's pb_decode() method. This is the
+   * primary way of decoding messages.
+   *
+   * Note that this allocates memory. You must call FreeNanopbMessage() (which
+   * essentially wraps pb_release()) on the dest_struct in order to avoid memory
+   * leaks. (This also implies code that uses this is not exception safe.)
    */
+  // TODO(rsgowman): At the moment we rely on the caller to manually free
+  // dest_struct via FreeNanopbMessage(). We might instead see if we can
+  // register allocated messages, track them, and free them ourselves. This may
+  // be especially relevant if we start to use nanopb messages as the underlying
+  // data within the model objects.
   void ReadNanopbMessage(const pb_field_t fields[], void* dest_struct);
 
-  void ReadNull();
-  bool ReadBool();
-  std::int64_t ReadInteger();
-
-  std::string ReadString();
-
   /**
-   * Reads a message and its length.
+   * Release memory allocated by ReadNanopbMessage().
    *
-   * Analog to Writer::WriteNestedMessage(). See that methods docs for further
-   * details.
-   *
-   * Call this method when reading a nested message. Provide a function to read
-   * the message itself.
-   *
-   * @param read_message_fn Function to read the submessage. Note that this
-   * function is expected to check the Reader's status (via
-   * Reader::status().ok()) and if not ok, to return a placeholder/invalid
-   * value.
+   * This essentially wraps calls to nanopb's pb_release() method.
    */
-  template <typename T>
-  T ReadNestedMessage(const std::function<T(Reader*)>& read_message_fn);
-
-  /**
-   * Discards the bytes associated with the given tag.
-   *
-   * @param tag The tag associated with the field that is otherwise about to be
-   * read. This method uses the tag to determine how many bytes should be
-   * discarded.
-   */
-  void SkipField(const Tag& tag);
-
-  size_t bytes_left() const {
-    return stream_.bytes_left;
-  }
+  void FreeNanopbMessage(const pb_field_t fields[], void* dest_struct);
 
   util::Status status() const {
     return status_;
@@ -118,6 +88,18 @@ class Reader {
 
   void set_status(util::Status status) {
     status_ = status;
+  }
+
+  /**
+   * Ensures this Reader's status is `!ok().
+   *
+   * If this Reader's status is already !ok(), then this may augment the
+   * description, but will otherwise leave it alone. Otherwise, this Reader's
+   * status will be set to FirestoreErrorCode::DataLoss with the specified
+   * description.
+   */
+  void Fail(const absl::string_view description) {
+    status_.Update(util::Status(FirestoreErrorCode::DataLoss, description));
   }
 
  private:
@@ -129,62 +111,10 @@ class Reader {
   explicit Reader(pb_istream_t stream) : stream_(stream) {
   }
 
-  /**
-   * Reads a "varint" from the input stream.
-   *
-   * This essentially wraps calls to nanopb's pb_decode_varint() method.
-   *
-   * Note that (despite the return type) this works for bool, enum, int32,
-   * int64, uint32 and uint64 proto field types.
-   *
-   * Note: This is not expected to be called direclty, but rather only via the
-   * other Decode* methods (i.e. DecodeBool, DecodeLong, etc)
-   *
-   * @return The decoded varint as a uint64_t.
-   */
-  std::uint64_t ReadVarint();
-
   util::Status status_ = util::Status::OK();
 
   pb_istream_t stream_;
 };
-
-template <typename T>
-T Reader::ReadNestedMessage(const std::function<T(Reader*)>& read_message_fn) {
-  // Implementation note: This is roughly modeled on pb_decode_delimited,
-  // adjusted to account for the oneof in FieldValue.
-
-  if (!status_.ok()) return read_message_fn(this);
-
-  pb_istream_t raw_substream;
-  if (!pb_make_string_substream(&stream_, &raw_substream)) {
-    status_ =
-        util::Status(FirestoreErrorCode::DataLoss, PB_GET_ERROR(&stream_));
-    return read_message_fn(this);
-  }
-  Reader substream(raw_substream);
-
-  // If this fails, we *won't* return right away so that we can cleanup the
-  // substream (although technically, that turns out not to matter; no resource
-  // leaks occur if we don't do this.)
-  // TODO(rsgowman): Consider RAII here. (Watch out for Reader class which also
-  // wraps streams.)
-  T message = read_message_fn(&substream);
-  status_ = substream.status();
-
-  // NB: future versions of nanopb read the remaining characters out of the
-  // substream (and return false if that fails) as an additional safety
-  // check within pb_close_string_substream. Unfortunately, that's not present
-  // in the current version (0.38).  We'll make a stronger assertion and check
-  // to make sure there *are* no remaining characters in the substream.
-  HARD_ASSERT(
-      substream.bytes_left() == 0,
-      "Bytes remaining in substream after supposedly reading all of them.");
-
-  pb_close_string_substream(&stream_, &substream.stream_);
-
-  return message;
-}
 
 }  // namespace nanopb
 }  // namespace firestore

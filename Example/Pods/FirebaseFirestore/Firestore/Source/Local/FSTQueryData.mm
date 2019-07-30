@@ -21,8 +21,12 @@
 #import "Firestore/Source/Core/FSTQuery.h"
 
 #include "Firestore/core/src/firebase/firestore/model/snapshot_version.h"
+#include "Firestore/core/src/firebase/firestore/util/hashing.h"
 
+namespace util = firebase::firestore::util;
+using firebase::firestore::model::ListenSequenceNumber;
 using firebase::firestore::model::SnapshotVersion;
+using firebase::firestore::model::TargetId;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -31,8 +35,8 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (instancetype)initWithQuery:(FSTQuery *)query
-                     targetID:(FSTTargetID)targetID
-         listenSequenceNumber:(FSTListenSequenceNumber)sequenceNumber
+                     targetID:(TargetId)targetID
+         listenSequenceNumber:(ListenSequenceNumber)sequenceNumber
                       purpose:(FSTQueryPurpose)purpose
               snapshotVersion:(SnapshotVersion)snapshotVersion
                   resumeToken:(NSData *)resumeToken {
@@ -49,8 +53,8 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (instancetype)initWithQuery:(FSTQuery *)query
-                     targetID:(FSTTargetID)targetID
-         listenSequenceNumber:(FSTListenSequenceNumber)sequenceNumber
+                     targetID:(TargetId)targetID
+         listenSequenceNumber:(ListenSequenceNumber)sequenceNumber
                       purpose:(FSTQueryPurpose)purpose {
   return [self initWithQuery:query
                     targetID:targetID
@@ -74,17 +78,15 @@ NS_ASSUME_NONNULL_BEGIN
 
   FSTQueryData *other = (FSTQueryData *)object;
   return [self.query isEqual:other.query] && self.targetID == other.targetID &&
-         self.purpose == other.purpose && self.snapshotVersion == other.snapshotVersion &&
+         self.sequenceNumber == other.sequenceNumber && self.purpose == other.purpose &&
+         self.snapshotVersion == other.snapshotVersion &&
          [self.resumeToken isEqual:other.resumeToken];
 }
 
 - (NSUInteger)hash {
-  NSUInteger result = [self.query hash];
-  result = result * 31 + self.targetID;
-  result = result * 31 + self.purpose;
-  result = result * 31 + self.snapshotVersion.Hash();
-  result = result * 31 + [self.resumeToken hash];
-  return result;
+  return util::Hash([self.query hash], self.targetID, self.sequenceNumber,
+                    static_cast<NSInteger>(self.purpose), self.snapshotVersion.Hash(),
+                    [self.resumeToken hash]);
 }
 
 - (NSString *)description {
@@ -96,7 +98,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)queryDataByReplacingSnapshotVersion:(SnapshotVersion)snapshotVersion
                                         resumeToken:(NSData *)resumeToken
-                                     sequenceNumber:(FSTListenSequenceNumber)sequenceNumber {
+                                     sequenceNumber:(ListenSequenceNumber)sequenceNumber {
   return [[FSTQueryData alloc] initWithQuery:self.query
                                     targetID:self.targetID
                         listenSequenceNumber:sequenceNumber

@@ -14,10 +14,15 @@
  * limitations under the License.
  */
 
-#import "Firestore/Source/API/FIRWriteBatch+Internal.h"
+#import "FIRWriteBatch.h"
+
+#include <algorithm>
+#include <utility>
+#include <vector>
 
 #import "Firestore/Source/API/FIRDocumentReference+Internal.h"
 #import "Firestore/Source/API/FIRFirestore+Internal.h"
+#import "Firestore/Source/API/FIRWriteBatch+Internal.h"
 #import "Firestore/Source/API/FSTUserDataConverter.h"
 #import "Firestore/Source/Core/FSTFirestoreClient.h"
 #import "Firestore/Source/Model/FSTMutation.h"
@@ -25,6 +30,8 @@
 
 #include "Firestore/core/src/firebase/firestore/model/precondition.h"
 
+using firebase::firestore::core::ParsedSetData;
+using firebase::firestore::core::ParsedUpdateData;
 using firebase::firestore::model::Precondition;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -36,7 +43,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithFirestore:(FIRFirestore *)firestore NS_DESIGNATED_INITIALIZER;
 
 @property(nonatomic, strong, readonly) FIRFirestore *firestore;
-@property(nonatomic, strong, readonly) NSMutableArray<FSTMutation *> *mutations;
 @property(nonatomic, assign) BOOL committed;
 
 @end
@@ -49,13 +55,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@implementation FIRWriteBatch
+@implementation FIRWriteBatch {
+  std::vector<FSTMutation *> _mutations;
+}
 
 - (instancetype)initWithFirestore:(FIRFirestore *)firestore {
   self = [super init];
   if (self) {
     _firestore = firestore;
-    _mutations = [NSMutableArray array];
   }
   return self;
 }
@@ -70,11 +77,13 @@ NS_ASSUME_NONNULL_BEGIN
                      merge:(BOOL)merge {
   [self verifyNotCommitted];
   [self validateReference:document];
-  FSTParsedSetData *parsed = merge
-                                 ? [self.firestore.dataConverter parsedMergeData:data fieldMask:nil]
-                                 : [self.firestore.dataConverter parsedSetData:data];
-  [self.mutations
-      addObjectsFromArray:[parsed mutationsWithKey:document.key precondition:Precondition::None()]];
+
+  ParsedSetData parsed = merge ? [self.firestore.dataConverter parsedMergeData:data fieldMask:nil]
+                               : [self.firestore.dataConverter parsedSetData:data];
+  std::vector<FSTMutation *> append_mutations =
+      std::move(parsed).ToMutations(document.key, Precondition::None());
+  std::move(append_mutations.begin(), append_mutations.end(), std::back_inserter(_mutations));
+
   return self;
 }
 
@@ -83,10 +92,12 @@ NS_ASSUME_NONNULL_BEGIN
                mergeFields:(NSArray<id> *)mergeFields {
   [self verifyNotCommitted];
   [self validateReference:document];
-  FSTParsedSetData *parsed =
-      [self.firestore.dataConverter parsedMergeData:data fieldMask:mergeFields];
-  [self.mutations
-      addObjectsFromArray:[parsed mutationsWithKey:document.key precondition:Precondition::None()]];
+
+  ParsedSetData parsed = [self.firestore.dataConverter parsedMergeData:data fieldMask:mergeFields];
+  std::vector<FSTMutation *> append_mutations =
+      std::move(parsed).ToMutations(document.key, Precondition::None());
+  std::move(append_mutations.begin(), append_mutations.end(), std::back_inserter(_mutations));
+
   return self;
 }
 
@@ -94,17 +105,22 @@ NS_ASSUME_NONNULL_BEGIN
                   forDocument:(FIRDocumentReference *)document {
   [self verifyNotCommitted];
   [self validateReference:document];
-  FSTParsedUpdateData *parsed = [self.firestore.dataConverter parsedUpdateData:fields];
-  [self.mutations addObjectsFromArray:[parsed mutationsWithKey:document.key
-                                                  precondition:Precondition::Exists(true)]];
+
+  ParsedUpdateData parsed = [self.firestore.dataConverter parsedUpdateData:fields];
+  std::vector<FSTMutation *> append_mutations =
+      std::move(parsed).ToMutations(document.key, Precondition::Exists(true));
+  std::move(append_mutations.begin(), append_mutations.end(), std::back_inserter(_mutations));
+
   return self;
 }
 
 - (FIRWriteBatch *)deleteDocument:(FIRDocumentReference *)document {
   [self verifyNotCommitted];
   [self validateReference:document];
-  [self.mutations addObject:[[FSTDeleteMutation alloc] initWithKey:document.key
-                                                      precondition:Precondition::None()]];
+
+  _mutations.push_back([[FSTDeleteMutation alloc] initWithKey:document.key
+                                                 precondition:Precondition::None()]);
+  ;
   return self;
 }
 
@@ -115,7 +131,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)commitWithCompletion:(nullable void (^)(NSError *_Nullable error))completion {
   [self verifyNotCommitted];
   self.committed = TRUE;
-  [self.firestore.client writeMutations:self.mutations completion:completion];
+  [self.firestore.client writeMutations:std::move(_mutations) completion:completion];
 }
 
 - (void)verifyNotCommitted {

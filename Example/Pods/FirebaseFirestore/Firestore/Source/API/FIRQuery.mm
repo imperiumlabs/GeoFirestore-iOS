@@ -16,12 +16,16 @@
 
 #import "FIRQuery.h"
 
+#include <memory>
+#include <utility>
+
 #import "FIRDocumentReference.h"
 #import "FIRFirestoreErrors.h"
 #import "FIRFirestoreSource.h"
 #import "Firestore/Source/API/FIRDocumentReference+Internal.h"
 #import "Firestore/Source/API/FIRDocumentSnapshot+Internal.h"
 #import "Firestore/Source/API/FIRFieldPath+Internal.h"
+#import "Firestore/Source/API/FIRFieldValue+Internal.h"
 #import "Firestore/Source/API/FIRFirestore+Internal.h"
 #import "Firestore/Source/API/FIRListenerRegistration+Internal.h"
 #import "Firestore/Source/API/FIRQuery+Internal.h"
@@ -34,19 +38,25 @@
 #import "Firestore/Source/Core/FSTQuery.h"
 #import "Firestore/Source/Model/FSTDocument.h"
 #import "Firestore/Source/Model/FSTFieldValue.h"
-#import "Firestore/Source/Util/FSTAsyncQueryListener.h"
 #import "Firestore/Source/Util/FSTUsageValidation.h"
 
 #include "Firestore/core/src/firebase/firestore/model/document_key.h"
 #include "Firestore/core/src/firebase/firestore/model/field_path.h"
 #include "Firestore/core/src/firebase/firestore/model/resource_path.h"
+#include "Firestore/core/src/firebase/firestore/util/error_apple.h"
 #include "Firestore/core/src/firebase/firestore/util/hard_assert.h"
+#include "Firestore/core/src/firebase/firestore/util/statusor.h"
 #include "Firestore/core/src/firebase/firestore/util/string_apple.h"
 
 namespace util = firebase::firestore::util;
+using firebase::firestore::core::AsyncEventListener;
+using firebase::firestore::core::EventListener;
+using firebase::firestore::core::ViewSnapshot;
 using firebase::firestore::model::DocumentKey;
 using firebase::firestore::model::FieldPath;
 using firebase::firestore::model::ResourcePath;
+using firebase::firestore::util::MakeNSError;
+using firebase::firestore::util::StatusOr;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -109,10 +119,10 @@ NS_ASSUME_NONNULL_BEGIN
     return;
   }
 
-  FSTListenOptions *listenOptions =
-      [[FSTListenOptions alloc] initWithIncludeQueryMetadataChanges:YES
-                                     includeDocumentMetadataChanges:YES
-                                              waitForSyncWhenOnline:YES];
+  ListenOptions listenOptions(
+      /*include_query_metadata_changes=*/true,
+      /*include_document_metadata_changes=*/true,
+      /*wait_for_sync_when_online=*/true);
 
   dispatch_semaphore_t registered = dispatch_semaphore_create(0);
   __block id<FIRListenerRegistration> listenerRegistration;
@@ -143,8 +153,8 @@ NS_ASSUME_NONNULL_BEGIN
     }
   };
 
-  listenerRegistration =
-      [self addSnapshotListenerInternalWithOptions:listenOptions listener:listener];
+  listenerRegistration = [self addSnapshotListenerInternalWithOptions:listenOptions
+                                                             listener:listener];
   dispatch_semaphore_signal(registered);
 }
 
@@ -153,46 +163,46 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (id<FIRListenerRegistration>)
-addSnapshotListenerWithIncludeMetadataChanges:(BOOL)includeMetadataChanges
-                                     listener:(FIRQuerySnapshotBlock)listener {
-  auto options = [self internalOptionsForIncludeMetadataChanges:includeMetadataChanges];
+    addSnapshotListenerWithIncludeMetadataChanges:(BOOL)includeMetadataChanges
+                                         listener:(FIRQuerySnapshotBlock)listener {
+  auto options = ListenOptions::FromIncludeMetadataChanges(includeMetadataChanges);
   return [self addSnapshotListenerInternalWithOptions:options listener:listener];
 }
 
-- (id<FIRListenerRegistration>)
-addSnapshotListenerInternalWithOptions:(FSTListenOptions *)internalOptions
-                              listener:(FIRQuerySnapshotBlock)listener {
-  FIRFirestore *firestore = self.firestore;
+- (id<FIRListenerRegistration>)addSnapshotListenerInternalWithOptions:(ListenOptions)internalOptions
+                                                             listener:
+                                                                 (FIRQuerySnapshotBlock)listener {
+  Firestore *firestore = self.firestore.wrapped;
   FSTQuery *query = self.query;
 
-  FSTViewSnapshotHandler snapshotHandler = ^(FSTViewSnapshot *snapshot, NSError *error) {
-    if (error) {
-      listener(nil, error);
-      return;
-    }
+  // Convert from ViewSnapshots to QuerySnapshots.
+  auto view_listener = EventListener<ViewSnapshot>::Create(
+      [listener, firestore, query](StatusOr<ViewSnapshot> maybe_snapshot) {
+        if (!maybe_snapshot.status().ok()) {
+          listener(nil, MakeNSError(maybe_snapshot.status()));
+          return;
+        }
 
-    FIRSnapshotMetadata *metadata =
-        [FIRSnapshotMetadata snapshotMetadataWithPendingWrites:snapshot.hasPendingWrites
-                                                     fromCache:snapshot.fromCache];
+        ViewSnapshot snapshot = std::move(maybe_snapshot).ValueOrDie();
+        SnapshotMetadata metadata(snapshot.has_pending_writes(), snapshot.from_cache());
 
-    listener([FIRQuerySnapshot snapshotWithFirestore:firestore
-                                       originalQuery:query
-                                            snapshot:snapshot
-                                            metadata:metadata],
-             nil);
-  };
+        listener([[FIRQuerySnapshot alloc] initWithFirestore:firestore
+                                               originalQuery:query
+                                                    snapshot:std::move(snapshot)
+                                                    metadata:std::move(metadata)],
+                 nil);
+      });
 
-  FSTAsyncQueryListener *asyncListener =
-      [[FSTAsyncQueryListener alloc] initWithExecutor:self.firestore.client.userExecutor
-                                      snapshotHandler:snapshotHandler];
+  // Call the view_listener on the user Executor.
+  auto async_listener = AsyncEventListener<ViewSnapshot>::Create(firestore->client().userExecutor,
+                                                                 std::move(view_listener));
 
-  FSTQueryListener *internalListener =
-      [firestore.client listenToQuery:query
-                              options:internalOptions
-                  viewSnapshotHandler:[asyncListener asyncSnapshotHandler]];
-  return [[FSTListenerRegistration alloc] initWithClient:self.firestore.client
-                                           asyncListener:asyncListener
-                                        internalListener:internalListener];
+  std::shared_ptr<QueryListener> query_listener =
+      [firestore->client() listenToQuery:query options:internalOptions listener:async_listener];
+
+  return [[FSTListenerRegistration alloc]
+      initWithRegistration:ListenerRegistration(firestore->client(), std::move(async_listener),
+                                                std::move(query_listener))];
 }
 
 - (FIRQuery *)queryWhereField:(NSString *)field isEqualTo:(id)value {
@@ -228,8 +238,9 @@ addSnapshotListenerInternalWithOptions:(FSTListenOptions *)internalOptions
 }
 
 - (FIRQuery *)queryWhereField:(NSString *)field isGreaterThan:(id)value {
-  return
-      [self queryWithFilterOperator:FSTRelationFilterOperatorGreaterThan field:field value:value];
+  return [self queryWithFilterOperator:FSTRelationFilterOperatorGreaterThan
+                                 field:field
+                                 value:value];
 }
 
 - (FIRQuery *)queryWhereFieldPath:(FIRFieldPath *)path isGreaterThan:(id)value {
@@ -239,8 +250,9 @@ addSnapshotListenerInternalWithOptions:(FSTListenOptions *)internalOptions
 }
 
 - (FIRQuery *)queryWhereField:(NSString *)field arrayContains:(id)value {
-  return
-      [self queryWithFilterOperator:FSTRelationFilterOperatorArrayContains field:field value:value];
+  return [self queryWithFilterOperator:FSTRelationFilterOperatorArrayContains
+                                 field:field
+                                 value:value];
 }
 
 - (FIRQuery *)queryWhereFieldPath:(FIRFieldPath *)path arrayContains:(id)value {
@@ -338,21 +350,19 @@ addSnapshotListenerInternalWithOptions:(FSTListenOptions *)internalOptions
                                           predicateWithBlock:^BOOL(id obj, NSDictionary *bindings) {
                                             return true;
                                           }] class]]) {
-    FSTThrowInvalidArgument(
-        @"Invalid query. Block-based predicates are not "
-         "supported. Please use predicateWithFormat to "
-         "create predicates instead.");
+    FSTThrowInvalidArgument(@"Invalid query. Block-based predicates are not "
+                             "supported. Please use predicateWithFormat to "
+                             "create predicates instead.");
   } else {
-    FSTThrowInvalidArgument(
-        @"Invalid query. Expect comparison or compound of "
-         "comparison predicate. Please use "
-         "predicateWithFormat to create predicates.");
+    FSTThrowInvalidArgument(@"Invalid query. Expect comparison or compound of "
+                             "comparison predicate. Please use "
+                             "predicateWithFormat to create predicates.");
   }
 }
 
 - (FIRQuery *)queryOrderedByField:(NSString *)field {
-  return
-      [self queryOrderedByFieldPath:[FIRFieldPath pathWithDotSeparatedString:field] descending:NO];
+  return [self queryOrderedByFieldPath:[FIRFieldPath pathWithDotSeparatedString:field]
+                            descending:NO];
 }
 
 - (FIRQuery *)queryOrderedByFieldPath:(FIRFieldPath *)fieldPath {
@@ -376,8 +386,8 @@ addSnapshotListenerInternalWithOptions:(FSTListenOptions *)internalOptions
         @"InvalidQueryException",
         @"Invalid query. You must not specify an ending point before specifying the order by.");
   }
-  FSTSortOrder *sortOrder =
-      [FSTSortOrder sortOrderWithFieldPath:fieldPath.internalValue ascending:!descending];
+  FSTSortOrder *sortOrder = [FSTSortOrder sortOrderWithFieldPath:fieldPath.internalValue
+                                                       ascending:!descending];
   return [FIRQuery referenceWithQuery:[self.query queryByAddingSortOrder:sortOrder]
                             firestore:self.firestore];
 }
@@ -416,26 +426,26 @@ addSnapshotListenerInternalWithOptions:(FSTListenOptions *)internalOptions
 
 - (FIRQuery *)queryEndingBeforeDocument:(FIRDocumentSnapshot *)snapshot {
   FSTBound *bound = [self boundFromSnapshot:snapshot isBefore:YES];
-  return
-      [FIRQuery referenceWithQuery:[self.query queryByAddingEndAt:bound] firestore:self.firestore];
+  return [FIRQuery referenceWithQuery:[self.query queryByAddingEndAt:bound]
+                            firestore:self.firestore];
 }
 
 - (FIRQuery *)queryEndingBeforeValues:(NSArray *)fieldValues {
   FSTBound *bound = [self boundFromFieldValues:fieldValues isBefore:YES];
-  return
-      [FIRQuery referenceWithQuery:[self.query queryByAddingEndAt:bound] firestore:self.firestore];
+  return [FIRQuery referenceWithQuery:[self.query queryByAddingEndAt:bound]
+                            firestore:self.firestore];
 }
 
 - (FIRQuery *)queryEndingAtDocument:(FIRDocumentSnapshot *)snapshot {
   FSTBound *bound = [self boundFromSnapshot:snapshot isBefore:NO];
-  return
-      [FIRQuery referenceWithQuery:[self.query queryByAddingEndAt:bound] firestore:self.firestore];
+  return [FIRQuery referenceWithQuery:[self.query queryByAddingEndAt:bound]
+                            firestore:self.firestore];
 }
 
 - (FIRQuery *)queryEndingAtValues:(NSArray *)fieldValues {
   FSTBound *bound = [self boundFromFieldValues:fieldValues isBefore:NO];
-  return
-      [FIRQuery referenceWithQuery:[self.query queryByAddingEndAt:bound] firestore:self.firestore];
+  return [FIRQuery referenceWithQuery:[self.query queryByAddingEndAt:bound]
+                            firestore:self.firestore];
 }
 
 #pragma mark - Private Methods
@@ -461,52 +471,49 @@ addSnapshotListenerInternalWithOptions:(FSTListenOptions *)internalOptions
     }
     if ([value isKindOfClass:[NSString class]]) {
       NSString *documentKey = (NSString *)value;
-      if ([documentKey containsString:@"/"]) {
-        FSTThrowInvalidArgument(
-            @"Invalid query. When querying by document ID you must provide "
-             "a valid document ID, but '%@' contains a '/' character.",
-            documentKey);
-      } else if (documentKey.length == 0) {
-        FSTThrowInvalidArgument(
-            @"Invalid query. When querying by document ID you must provide "
-             "a valid document ID, but it was an empty string.");
+      if (documentKey.length == 0) {
+        FSTThrowInvalidArgument(@"Invalid query. When querying by document ID you must provide "
+                                 "a valid document ID, but it was an empty string.");
       }
-      ResourcePath path = self.query.path.Append([documentKey UTF8String]);
+      if (![self.query isCollectionGroupQuery] && [documentKey containsString:@"/"]) {
+        FSTThrowInvalidArgument(
+            @"Invalid query. When querying a collection by document ID you must provide "
+             "a plain document ID, but '%@' contains a '/' character.",
+            documentKey);
+      }
+      ResourcePath path =
+          self.query.path.Append(ResourcePath::FromString([documentKey UTF8String]));
+      if (!DocumentKey::IsDocumentKey(path)) {
+        FSTThrowInvalidArgument(
+            @"Invalid query. When querying a collection group by document ID, "
+             "the value provided must result in a valid document path, but '%s' is not because it "
+             "has an odd number of segments.",
+            path.CanonicalString().c_str());
+      }
       fieldValue =
-          [FSTReferenceValue referenceValue:DocumentKey{path} databaseID:self.firestore.databaseID];
+          [FSTReferenceValue referenceValue:[FSTDocumentKey keyWithDocumentKey:DocumentKey{path}]
+                                 databaseID:self.firestore.databaseID];
     } else if ([value isKindOfClass:[FIRDocumentReference class]]) {
       FIRDocumentReference *ref = (FIRDocumentReference *)value;
-      fieldValue = [FSTReferenceValue referenceValue:ref.key databaseID:self.firestore.databaseID];
+      fieldValue = [FSTReferenceValue referenceValue:[FSTDocumentKey keyWithDocumentKey:ref.key]
+                                          databaseID:self.firestore.databaseID];
     } else {
-      FSTThrowInvalidArgument(
-          @"Invalid query. When querying by document ID you must provide a "
-           "valid string or DocumentReference, but it was of type: %@",
-          NSStringFromClass([value class]));
+      FSTThrowInvalidArgument(@"Invalid query. When querying by document ID you must provide a "
+                               "valid string or DocumentReference, but it was of type: %@",
+                              NSStringFromClass([value class]));
     }
   } else {
     fieldValue = [self.firestore.dataConverter parsedQueryValue:value];
   }
 
-  id<FSTFilter> filter;
-  if ([fieldValue isEqual:[FSTNullValue nullValue]]) {
-    if (filterOperator != FSTRelationFilterOperatorEqual) {
-      FSTThrowInvalidUsage(@"InvalidQueryException",
-                           @"Invalid Query. You can only perform equality comparisons on nil / "
-                            "NSNull.");
-    }
-    filter = [[FSTNullFilter alloc] initWithField:fieldPath];
-  } else if ([fieldValue isEqual:[FSTDoubleValue nanValue]]) {
-    if (filterOperator != FSTRelationFilterOperatorEqual) {
-      FSTThrowInvalidUsage(@"InvalidQueryException",
-                           @"Invalid Query. You can only perform equality comparisons on NaN.");
-    }
-    filter = [[FSTNanFilter alloc] initWithField:fieldPath];
-  } else {
-    filter = [FSTRelationFilter filterWithField:fieldPath
-                                 filterOperator:filterOperator
-                                          value:fieldValue];
-    [self validateNewRelationFilter:filter];
+  FSTFilter *filter = [FSTFilter filterWithField:fieldPath
+                                  filterOperator:filterOperator
+                                           value:fieldValue];
+
+  if ([filter isKindOfClass:[FSTRelationFilter class]]) {
+    [self validateNewRelationFilter:(FSTRelationFilter *)filter];
   }
+
   return [FIRQuery referenceWithQuery:[self.query queryByAddingFilter:filter]
                             firestore:self.firestore];
 }
@@ -565,7 +572,9 @@ addSnapshotListenerInternalWithOptions:(FSTListenOptions *)internalOptions
  * Note that the FSTBound will always include the key of the document and the position will be
  * unambiguous.
  *
- * Will throw if the document does not contain all fields of the order by of the query.
+ * Will throw if the document does not contain all fields of the order by of
+ * the query or if any of the fields in the order by are an uncommitted server
+ * timestamp.
  */
 - (FSTBound *)boundFromSnapshot:(FIRDocumentSnapshot *)snapshot isBefore:(BOOL)isBefore {
   if (![snapshot exists]) {
@@ -583,11 +592,20 @@ addSnapshotListenerInternalWithOptions:(FSTListenOptions *)internalOptions
   // orders), multiple documents could match the position, yielding duplicate results.
   for (FSTSortOrder *sortOrder in self.query.sortOrders) {
     if (sortOrder.field == FieldPath::KeyFieldPath()) {
-      [components addObject:[FSTReferenceValue referenceValue:document.key
-                                                   databaseID:self.firestore.databaseID]];
+      [components addObject:[FSTReferenceValue
+                                referenceValue:[FSTDocumentKey keyWithDocumentKey:document.key]
+                                    databaseID:self.firestore.databaseID]];
     } else {
       FSTFieldValue *value = [document fieldForPath:sortOrder.field];
-      if (value != nil) {
+
+      if ([value isKindOfClass:[FSTServerTimestampValue class]]) {
+        FSTThrowInvalidUsage(@"InvalidQueryException",
+                             @"Invalid query. You are trying to start or end a query using a "
+                              "document for which the field '%s' is an uncommitted server "
+                              "timestamp. (Since the value of this field is unknown, you cannot "
+                              "start/end a query with it.)",
+                             sortOrder.field.CanonicalString().c_str());
+      } else if (value != nil) {
         [components addObject:value];
       } else {
         FSTThrowInvalidUsage(@"InvalidQueryException",
@@ -620,13 +638,26 @@ addSnapshotListenerInternalWithOptions:(FSTListenOptions *)internalOptions
                              @"Invalid query. Expected a string for the document ID.");
       }
       NSString *documentID = (NSString *)rawValue;
-      if ([documentID containsString:@"/"]) {
-        FSTThrowInvalidUsage(@"InvalidQueryException",
-                             @"Invalid query. Document ID '%@' contains a slash.", documentID);
+      if (![self.query isCollectionGroupQuery] && [documentID containsString:@"/"]) {
+        FSTThrowInvalidUsage(
+            @"InvalidQueryException",
+            @"Invalid query. When querying a collection and ordering by document ID, "
+             "you must pass a plain document ID, but '%@' contains a slash.",
+            documentID);
       }
-      const DocumentKey key{self.query.path.Append([documentID UTF8String])};
+      ResourcePath path = self.query.path.Append(ResourcePath::FromString([documentID UTF8String]));
+      if (!DocumentKey::IsDocumentKey(path)) {
+        FSTThrowInvalidUsage(
+            @"InvalidQueryException",
+            @"Invalid query. When querying a collection group and ordering by document ID, "
+             "you must pass a value that results in a valid document path, but '%s' "
+             "is not because it contains an odd number of segments.",
+            path.CanonicalString().c_str());
+      }
+      DocumentKey key{path};
       [components
-          addObject:[FSTReferenceValue referenceValue:key databaseID:self.firestore.databaseID]];
+          addObject:[FSTReferenceValue referenceValue:[FSTDocumentKey keyWithDocumentKey:key]
+                                           databaseID:self.firestore.databaseID]];
     } else {
       FSTFieldValue *fieldValue = [self.firestore.dataConverter parsedQueryValue:rawValue];
       [components addObject:fieldValue];
@@ -634,13 +665,6 @@ addSnapshotListenerInternalWithOptions:(FSTListenOptions *)internalOptions
   }];
 
   return [FSTBound boundWithPosition:components isBefore:isBefore];
-}
-
-/** Converts the public API options object to the internal options object. */
-- (FSTListenOptions *)internalOptionsForIncludeMetadataChanges:(BOOL)includeMetadataChanges {
-  return [[FSTListenOptions alloc] initWithIncludeQueryMetadataChanges:includeMetadataChanges
-                                        includeDocumentMetadataChanges:includeMetadataChanges
-                                                 waitForSyncWhenOnline:NO];
 }
 
 @end

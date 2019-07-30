@@ -15,39 +15,49 @@
  */
 
 #import <Foundation/Foundation.h>
+
 #include <memory>
+#include <vector>
 
 #import "Firestore/Source/Core/FSTTypes.h"
-#import "Firestore/Source/Core/FSTViewSnapshot.h"
-#import "Firestore/Source/Remote/FSTRemoteStore.h"
 
+#include "Firestore/core/src/firebase/firestore/api/document_reference.h"
+#include "Firestore/core/src/firebase/firestore/api/document_snapshot.h"
 #include "Firestore/core/src/firebase/firestore/auth/credentials_provider.h"
 #include "Firestore/core/src/firebase/firestore/core/database_info.h"
+#include "Firestore/core/src/firebase/firestore/core/listen_options.h"
+#include "Firestore/core/src/firebase/firestore/core/query_listener.h"
+#include "Firestore/core/src/firebase/firestore/core/view_snapshot.h"
 #include "Firestore/core/src/firebase/firestore/model/database_id.h"
+#include "Firestore/core/src/firebase/firestore/util/async_queue.h"
 #include "Firestore/core/src/firebase/firestore/util/executor.h"
+#include "Firestore/core/src/firebase/firestore/util/statusor_callback.h"
 
 @class FIRDocumentReference;
 @class FIRDocumentSnapshot;
+@class FIRFirestoreSettings;
 @class FIRQuery;
 @class FIRQuerySnapshot;
 @class FSTDatabaseID;
 @class FSTDatabaseInfo;
-@class FSTDispatchQueue;
 @class FSTDocument;
-@class FSTListenOptions;
 @class FSTMutation;
 @class FSTQuery;
-@class FSTQueryListener;
 @class FSTTransaction;
 
 NS_ASSUME_NONNULL_BEGIN
+
+using firebase::firestore::api::DocumentSnapshot;
+using firebase::firestore::core::ListenOptions;
+using firebase::firestore::core::QueryListener;
+using firebase::firestore::core::ViewSnapshot;
 
 /**
  * FirestoreClient is a top-level class that constructs and owns all of the pieces of the client
  * SDK architecture. It is responsible for creating the worker queue that is shared by all of the
  * other components in the system.
  */
-@interface FSTFirestoreClient : NSObject <FSTOnlineStateDelegate>
+@interface FSTFirestoreClient : NSObject
 
 /**
  * Creates and returns a FSTFirestoreClient with the given parameters.
@@ -55,12 +65,12 @@ NS_ASSUME_NONNULL_BEGIN
  * All callbacks and events will be triggered on the provided userExecutor.
  */
 + (instancetype)
-clientWithDatabaseInfo:(const firebase::firestore::core::DatabaseInfo &)databaseInfo
-        usePersistence:(BOOL)usePersistence
-   credentialsProvider:(firebase::firestore::auth::CredentialsProvider *)
-                           credentialsProvider  // no passing ownership
-          userExecutor:(std::unique_ptr<firebase::firestore::util::internal::Executor>)userExecutor
-   workerDispatchQueue:(FSTDispatchQueue *)workerDispatchQueue;
+    clientWithDatabaseInfo:(const firebase::firestore::core::DatabaseInfo &)databaseInfo
+                  settings:(FIRFirestoreSettings *)settings
+       credentialsProvider:(firebase::firestore::auth::CredentialsProvider *)
+                               credentialsProvider  // no passing ownership
+              userExecutor:(std::unique_ptr<firebase::firestore::util::Executor>)userExecutor
+               workerQueue:(std::unique_ptr<firebase::firestore::util::AsyncQueue>)workerQueue;
 
 - (instancetype)init __attribute__((unavailable("Use static constructor method.")));
 
@@ -74,20 +84,19 @@ clientWithDatabaseInfo:(const firebase::firestore::core::DatabaseInfo &)database
 - (void)enableNetworkWithCompletion:(nullable FSTVoidErrorBlock)completion;
 
 /** Starts listening to a query. */
-- (FSTQueryListener *)listenToQuery:(FSTQuery *)query
-                            options:(FSTListenOptions *)options
-                viewSnapshotHandler:(FSTViewSnapshotHandler)viewSnapshotHandler;
+- (std::shared_ptr<QueryListener>)listenToQuery:(FSTQuery *)query
+                                        options:(ListenOptions)options
+                                       listener:(ViewSnapshot::SharedListener &&)listener;
 
 /** Stops listening to a query previously listened to. */
-- (void)removeListener:(FSTQueryListener *)listener;
+- (void)removeListener:(const std::shared_ptr<QueryListener> &)listener;
 
 /**
  * Retrieves a document from the cache via the indicated completion. If the doc
  * doesn't exist, an error will be sent to the completion.
  */
-- (void)getDocumentFromLocalCache:(FIRDocumentReference *)doc
-                       completion:(void (^)(FIRDocumentSnapshot *_Nullable document,
-                                            NSError *_Nullable error))completion;
+- (void)getDocumentFromLocalCache:(const firebase::firestore::api::DocumentReference &)doc
+                       completion:(DocumentSnapshot::Listener &&)completion;
 
 /**
  * Retrieves a (possibly empty) set of documents from the cache via the
@@ -98,7 +107,7 @@ clientWithDatabaseInfo:(const firebase::firestore::core::DatabaseInfo &)database
                                              NSError *_Nullable error))completion;
 
 /** Write mutations. completion will be notified when it's written to the backend. */
-- (void)writeMutations:(NSArray<FSTMutation *> *)mutations
+- (void)writeMutations:(std::vector<FSTMutation *> &&)mutations
             completion:(nullable FSTVoidErrorBlock)completion;
 
 /** Tries to execute the transaction in updateBlock up to retries times. */
@@ -114,7 +123,10 @@ clientWithDatabaseInfo:(const firebase::firestore::core::DatabaseInfo &)database
  * Dispatch queue for user callbacks / events. This will often be the "Main Dispatch Queue" of the
  * app but the developer can configure it to a different queue if they so choose.
  */
-- (firebase::firestore::util::internal::Executor *)userExecutor;
+- (firebase::firestore::util::Executor *)userExecutor;
+
+/** For testing only. */
+- (firebase::firestore::util::AsyncQueue *)workerQueue;
 
 @end
 
