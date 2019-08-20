@@ -18,8 +18,15 @@
 #define FIRESTORE_CORE_SRC_FIREBASE_FIRESTORE_UTIL_HARD_ASSERT_H_
 
 #include <string>
+#include <utility>
 
 #include "Firestore/core/src/firebase/firestore/util/string_format.h"
+
+#if defined(_MSC_VER)
+#define FIRESTORE_FUNCTION_NAME __FUNCSIG__
+#else
+#define FIRESTORE_FUNCTION_NAME __PRETTY_FUNCTION__
+#endif
 
 /**
  * Fails the current function if the given condition is false.
@@ -30,14 +37,14 @@
  * @param format (optional) A format string suitable for util::StringFormat.
  * @param ... format arguments to pass to util::StringFormat.
  */
-#define HARD_ASSERT(condition, ...)                                       \
-  do {                                                                    \
-    if (!(condition)) {                                                   \
-      std::string _message =                                              \
-          firebase::firestore::util::StringFormat(__VA_ARGS__);           \
-      firebase::firestore::util::internal::Fail(                          \
-          __FILE__, __PRETTY_FUNCTION__, __LINE__, _message, #condition); \
-    }                                                                     \
+#define HARD_ASSERT(condition, ...)                                           \
+  do {                                                                        \
+    if (!(condition)) {                                                       \
+      std::string _message =                                                  \
+          firebase::firestore::util::StringFormat(__VA_ARGS__);               \
+      firebase::firestore::util::internal::Fail(                              \
+          __FILE__, FIRESTORE_FUNCTION_NAME, __LINE__, _message, #condition); \
+    }                                                                         \
   } while (0)
 
 /**
@@ -48,12 +55,12 @@
  * @param format A format string suitable for util::StringFormat.
  * @param ... format arguments to pass to util::StringFormat.
  */
-#define HARD_FAIL(...)                                                       \
-  do {                                                                       \
-    std::string _failure =                                                   \
-        firebase::firestore::util::StringFormat(__VA_ARGS__);                \
-    firebase::firestore::util::internal::Fail(__FILE__, __PRETTY_FUNCTION__, \
-                                              __LINE__, _failure);           \
+#define HARD_FAIL(...)                                          \
+  do {                                                          \
+    std::string _failure =                                      \
+        firebase::firestore::util::StringFormat(__VA_ARGS__);   \
+    firebase::firestore::util::internal::Fail(                  \
+        __FILE__, FIRESTORE_FUNCTION_NAME, __LINE__, _failure); \
   } while (0)
 
 /**
@@ -62,6 +69,23 @@
  * do in these cases is to immediately abort.
  */
 #define UNREACHABLE() abort()
+
+/**
+ * Returns the given `ptr` if it is non-null; otherwise, results in a failed
+ * assertion, similar to `HARD_ASSERT`. This macro deliberately expands to an
+ * expression, so that it can be used in initialization and assignment:
+ *
+ *   my_ptr_ = NOT_NULL(suspicious_ptr);
+ *   my_smart_ptr_ = std::move(NOT_NULL(suspicious_smart_ptr));
+ *
+ *   MyClass() : my_ptr_{NOT_NULL(suspicious_ptr)} {}
+ *
+ * @param ptr The pointer to check and return. Can be a smart pointer.
+ */
+#define NOT_NULL(ptr)                                                         \
+  firebase::firestore::util::internal::NotNull(                               \
+      __FILE__, FIRESTORE_FUNCTION_NAME, __LINE__, "Expected non-null " #ptr, \
+      ptr)
 
 namespace firebase {
 namespace firestore {
@@ -79,6 +103,18 @@ ABSL_ATTRIBUTE_NORETURN void Fail(const char* file,
                                   int line,
                                   const std::string& message,
                                   const char* condition);
+
+template <typename T>
+T NotNull(const char* file,
+          const char* func,
+          int line,
+          const std::string& message,
+          T&& ptr) {
+  if (ptr == nullptr) {
+    Fail(file, func, line, message);
+  }
+  return std::forward<T>(ptr);
+}
 
 }  // namespace internal
 }  // namespace util
