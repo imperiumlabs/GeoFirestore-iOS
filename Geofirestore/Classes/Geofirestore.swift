@@ -320,8 +320,11 @@ public class GFSQuery {
                 } else if let l = snapshot?.get("l") as? GeoPoint {
                     let location = l.locationValue()
                     updateLocationInfo(location, forKey: key)
-                } else{
-                    //TODO: error??
+                }
+                    //Handle if location is received as Geopoint e.g. from an Android client
+                else if let l = snapshot?.get("l") as? GeoPoint, let key = snapshot?.documentID {
+                    let location = CLLocation(latitude: l.latitude, longitude: l.longitude)
+                    updateLocationInfo(location, forKey: key)
                 }
                 
             }
@@ -339,8 +342,11 @@ public class GFSQuery {
                 } else if let l = snapshot?.get("l") as? GeoPoint {
                     let location = l.locationValue()
                     updateLocationInfo(location, forKey: key)
-                } else{
-                    //TODO: error??
+                }
+                    //Handle if location is received as Geopoint e.g. from an Android client
+                else if let l = snapshot?.get("l") as? GeoPoint, let key = snapshot?.documentID {
+                    let location = CLLocation(latitude: l.latitude, longitude: l.longitude)
+                    updateLocationInfo(location, forKey: key)
                 }
                 
             }
