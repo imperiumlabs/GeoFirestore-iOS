@@ -17,15 +17,25 @@
 #ifndef FIRESTORE_CORE_SRC_FIREBASE_FIRESTORE_MODEL_DOCUMENT_H_
 #define FIRESTORE_CORE_SRC_FIREBASE_FIRESTORE_MODEL_DOCUMENT_H_
 
+#include <iosfwd>
+#include <memory>
+#include <string>
+
 #include "Firestore/core/src/firebase/firestore/model/field_path.h"
 #include "Firestore/core/src/firebase/firestore/model/field_value.h"
 #include "Firestore/core/src/firebase/firestore/model/maybe_document.h"
+#include "absl/types/any.h"
 #include "absl/types/optional.h"
 
 namespace firebase {
 namespace firestore {
+namespace remote {
+class Serializer;
+}  // namespace remote
+
 namespace model {
 
+/** Describes the `has_pending_writes` state of a document. */
 enum class DocumentState {
   /**
    * Local mutations applied via the mutation queue. Document is potentially
@@ -43,54 +53,62 @@ enum class DocumentState {
   kSynced,
 };
 
+std::ostream& operator<<(std::ostream& os, DocumentState state);
+
 /**
  * Represents a document in Firestore with a key, version, data and whether the
  * data has local mutations applied to it.
  */
 class Document : public MaybeDocument {
  public:
-  /**
-   * Construct a document. ObjectValue must be passed by rvalue.
-   */
-  Document(ObjectValue&& data,
+  Document(ObjectValue data,
            DocumentKey key,
            SnapshotVersion version,
            DocumentState document_state);
 
-  const ObjectValue& data() const {
-    return data_;
-  }
+ private:
+  // TODO(b/146372592): Make this public once we can use Abseil across
+  // iOS/public C++ library boundaries.
+  friend class remote::Serializer;
 
-  absl::optional<FieldValue> field(const FieldPath& path) const {
-    return data_.Get(path);
-  }
+  Document(ObjectValue data,
+           DocumentKey key,
+           SnapshotVersion version,
+           DocumentState document_state,
+           absl::any proto);
 
-  bool HasLocalMutations() const {
-    return document_state_ == DocumentState::kLocalMutations;
-  }
+ public:
+  /**
+   * Casts a MaybeDocument to a Document. This is a checked operation that will
+   * assert if the type of the MaybeDocument isn't actually Type::Document.
+   */
+  explicit Document(const MaybeDocument& document);
 
-  bool HasCommittedMutations() const {
-    return document_state_ == DocumentState::kCommittedMutations;
-  }
+  /** Creates an invalid Document instance. */
+  Document() = default;
 
-  bool HasPendingWrites() const override {
-    return HasLocalMutations() || HasCommittedMutations();
-  }
+  const ObjectValue& data() const;
 
- protected:
-  bool Equals(const MaybeDocument& other) const override;
+  absl::optional<FieldValue> field(const FieldPath& path) const;
+
+  DocumentState document_state() const;
+
+  bool has_local_mutations() const;
+
+  bool has_committed_mutations() const;
+
+  const absl::any& proto() const;
+
+  /** Compares against another Document. */
+  friend bool operator==(const Document& lhs, const Document& rhs);
+
+  friend std::ostream& operator<<(std::ostream& os, const Document& doc);
 
  private:
-  ObjectValue data_;
-  DocumentState document_state_;
-};
+  class Rep;
 
-/** Compares against another Document. */
-inline bool operator==(const Document& lhs, const Document& rhs) {
-  return lhs.version() == rhs.version() && lhs.key() == rhs.key() &&
-         lhs.HasLocalMutations() == rhs.HasLocalMutations() &&
-         lhs.data() == rhs.data();
-}
+  const Rep& doc_rep() const;
+};
 
 inline bool operator!=(const Document& lhs, const Document& rhs) {
   return !(lhs == rhs);

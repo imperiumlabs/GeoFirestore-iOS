@@ -16,6 +16,7 @@
 
 #include "Firestore/core/src/firebase/firestore/remote/grpc_completion.h"
 
+#include <memory>
 #include <utility>
 
 namespace firebase {
@@ -24,22 +25,44 @@ namespace remote {
 
 using util::AsyncQueue;
 
-GrpcCompletion::GrpcCompletion(Type type,
-                               AsyncQueue* worker_queue,
-                               Callback&& callback)
+std::shared_ptr<GrpcCompletion> GrpcCompletion::Create(
+    Type type,
+    const std::shared_ptr<util::AsyncQueue>& worker_queue,
+    Callback&& callback) {
+  // Construct in two steps to use the private constructor.
+  GrpcCompletion partial(type, worker_queue, std::move(callback));
+  auto completion = std::make_shared<GrpcCompletion>(std::move(partial));
+
+  // Prepare the `GrpcCompletion` for submission to gRPC.
+  //
+  // Note: this is done in a separate step because `shared_from_this` cannot be
+  // called in a constructor.
+  completion->grpc_ownership_ = completion;
+
+  return completion;
+}
+
+GrpcCompletion::GrpcCompletion(
+    Type type,
+    const std::shared_ptr<util::AsyncQueue>& worker_queue,
+    Callback&& callback)
     : worker_queue_{worker_queue}, callback_{std::move(callback)}, type_{type} {
 }
 
 void GrpcCompletion::Cancel() {
   worker_queue_->VerifyIsCurrentQueue();
   callback_ = {};
+
+  // Does not release grpc_ownership_. If gRPC still holds this completion it
+  // must remain valid to avoid a use-after-free once Complete is actually
+  // called.
 }
 
 void GrpcCompletion::WaitUntilOffQueue() {
   worker_queue_->VerifyIsCurrentQueue();
 
   EnsureValidFuture();
-  return off_queue_future_.wait();
+  off_queue_future_.wait();
 }
 
 std::future_status GrpcCompletion::WaitUntilOffQueue(
@@ -62,12 +85,21 @@ void GrpcCompletion::Complete(bool ok) {
   // objects to be valid).
   off_queue_.set_value();
 
-  worker_queue_->Enqueue([this, ok] {
-    if (callback_) {
-      callback_(ok, this);
+  // The queued operation needs to also retain this completion. It's possible
+  // for Complete to fire, shutdown to start, and then have this queued
+  // operation run. If this weren't a retain that ordering would have the
+  // callback use after free.
+  auto shared_this = grpc_ownership_;
+  worker_queue_->Enqueue([shared_this, ok] {
+    if (shared_this->callback_) {
+      shared_this->callback_(ok, shared_this);
     }
-    delete this;
   });
+
+  // Having called Complete, gRPC has released its ownership interest in this
+  // object. Once the queued operation completes the `GrpcCompletion` will be
+  // deleted.
+  grpc_ownership_.reset();
 }
 
 }  // namespace remote

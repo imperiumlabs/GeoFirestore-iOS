@@ -17,14 +17,6 @@
 #ifndef FIRESTORE_CORE_SRC_FIREBASE_FIRESTORE_REMOTE_REMOTE_EVENT_H_
 #define FIRESTORE_CORE_SRC_FIREBASE_FIRESTORE_REMOTE_REMOTE_EVENT_H_
 
-#if !defined(__OBJC__)
-// TODO(varconst): the only dependencies are `FSTMaybeDocument` and `NSData`
-// (the latter is used to represent the resume token).
-#error "This header only supports Objective-C++"
-#endif  // !defined(__OBJC__)
-
-#import <Foundation/Foundation.h>
-
 #include <set>
 #include <unordered_map>
 #include <unordered_set>
@@ -32,16 +24,14 @@
 #include <vector>
 
 #include "Firestore/core/src/firebase/firestore/core/view_snapshot.h"
+#include "Firestore/core/src/firebase/firestore/local/target_data.h"
 #include "Firestore/core/src/firebase/firestore/model/document_key.h"
 #include "Firestore/core/src/firebase/firestore/model/document_key_set.h"
+#include "Firestore/core/src/firebase/firestore/model/maybe_document.h"
 #include "Firestore/core/src/firebase/firestore/model/snapshot_version.h"
 #include "Firestore/core/src/firebase/firestore/model/types.h"
+#include "Firestore/core/src/firebase/firestore/nanopb/byte_string.h"
 #include "Firestore/core/src/firebase/firestore/remote/watch_change.h"
-
-@class FSTMaybeDocument;
-@class FSTQueryData;
-
-NS_ASSUME_NONNULL_BEGIN
 
 namespace firebase {
 namespace firestore {
@@ -64,10 +54,10 @@ class TargetMetadataProvider {
       model::TargetId target_id) const = 0;
 
   /**
-   * Returns the FSTQueryData for an active target ID or 'null' if this query
-   * has become inactive
+   * Returns the TargetData for an active target ID or `nullopt` if this query
+   * has become inactive.
    */
-  virtual FSTQueryData* GetQueryDataForTarget(
+  virtual absl::optional<local::TargetData> GetTargetDataForTarget(
       model::TargetId target_id) const = 0;
 };
 
@@ -82,9 +72,13 @@ class TargetMetadataProvider {
  */
 class TargetChange {
  public:
+  static TargetChange CreateSynthesizedTargetChange(bool current) {
+    return TargetChange(current);
+  }
+
   TargetChange() = default;
 
-  TargetChange(NSData* resume_token,
+  TargetChange(nanopb::ByteString resume_token,
                bool current,
                model::DocumentKeySet added_documents,
                model::DocumentKeySet modified_documents,
@@ -97,12 +91,12 @@ class TargetChange {
   }
 
   /**
-   * An opaque, server-assigned token that allows watching a query to be resumed
-   * after disconnecting without retransmitting all the data that matches the
-   * query. The resume token essentially identifies a point in time from which
-   * the server should resume sending results.
+   * An opaque, server-assigned token that allows watching a target to be
+   * resumed after disconnecting without retransmitting all the data that
+   * matches the target. The resume token essentially identifies a point in time
+   * from which the server should resume sending results.
    */
-  NSData* resume_token() const {
+  const nanopb::ByteString& resume_token() const {
     return resume_token_;
   }
 
@@ -140,7 +134,10 @@ class TargetChange {
   }
 
  private:
-  NSData* resume_token_ = nil;
+  explicit TargetChange(bool current) : current_{current} {
+  }
+
+  nanopb::ByteString resume_token_;
   bool current_ = false;
   model::DocumentKeySet added_documents_;
   model::DocumentKeySet modified_documents_;
@@ -152,8 +149,6 @@ bool operator==(const TargetChange& lhs, const TargetChange& rhs);
 /** Tracks the internal state of a Watch target. */
 class TargetState {
  public:
-  TargetState();
-
   /**
    * Whether this target has been marked 'current'.
    *
@@ -167,7 +162,7 @@ class TargetState {
   }
 
   /** The last resume token sent to us for this target. */
-  NSData* resume_token() const {
+  const nanopb::ByteString& resume_token() const {
     return resume_token_;
   }
 
@@ -185,7 +180,7 @@ class TargetState {
    * Applies the resume token to the `TargetChange`, but only when it has a new
    * value. Empty resume tokens are discarded.
    */
-  void UpdateResumeToken(NSData* resume_token);
+  void UpdateResumeToken(nanopb::ByteString resume_token);
 
   /**
    * Creates a target change from the current set of changes.
@@ -223,7 +218,7 @@ class TargetState {
                      model::DocumentKeyHash>
       document_changes_;
 
-  NSData* resume_token_;
+  nanopb::ByteString resume_token_;
 
   bool current_ = false;
 
@@ -242,12 +237,16 @@ class TargetState {
  */
 class RemoteEvent {
  public:
+  using TargetChangeMap = std::unordered_map<model::TargetId, TargetChange>;
+  using TargetSet = std::unordered_set<model::TargetId>;
+  using DocumentUpdateMap = std::unordered_map<model::DocumentKey,
+                                               model::MaybeDocument,
+                                               model::DocumentKeyHash>;
+
   RemoteEvent(model::SnapshotVersion snapshot_version,
-              std::unordered_map<model::TargetId, TargetChange> target_changes,
-              std::unordered_set<model::TargetId> target_mismatches,
-              std::unordered_map<model::DocumentKey,
-                                 FSTMaybeDocument*,
-                                 model::DocumentKeyHash> document_updates,
+              TargetChangeMap target_changes,
+              TargetSet target_mismatches,
+              DocumentUpdateMap document_updates,
               model::DocumentKeySet limbo_document_changes)
       : snapshot_version_{snapshot_version},
         target_changes_{std::move(target_changes)},
@@ -262,8 +261,7 @@ class RemoteEvent {
   }
 
   /** A map from target to changes to the target. See `TargetChange`. */
-  const std::unordered_map<model::TargetId, TargetChange>& target_changes()
-      const {
+  const TargetChangeMap& target_changes() const {
     return target_changes_;
   }
 
@@ -271,7 +269,7 @@ class RemoteEvent {
    * A set of targets that is known to be inconsistent. Listens for these
    * targets should be re-established without resume tokens.
    */
-  const std::unordered_set<model::TargetId>& target_mismatches() const {
+  const TargetSet& target_mismatches() const {
     return target_mismatches_;
   }
 
@@ -279,10 +277,7 @@ class RemoteEvent {
    * A set of which documents have changed or been deleted, along with the doc's
    * new values (if not deleted).
    */
-  const std::unordered_map<model::DocumentKey,
-                           FSTMaybeDocument*,
-                           model::DocumentKeyHash>&
-  document_updates() const {
+  const DocumentUpdateMap& document_updates() const {
     return document_updates_;
   }
 
@@ -295,12 +290,9 @@ class RemoteEvent {
 
  private:
   model::SnapshotVersion snapshot_version_;
-  std::unordered_map<model::TargetId, TargetChange> target_changes_;
-  std::unordered_set<model::TargetId> target_mismatches_;
-  std::unordered_map<model::DocumentKey,
-                     FSTMaybeDocument*,
-                     model::DocumentKeyHash>
-      document_updates_;
+  TargetChangeMap target_changes_;
+  TargetSet target_mismatches_;
+  DocumentUpdateMap document_updates_;
   model::DocumentKeySet limbo_document_changes_;
 };
 
@@ -349,8 +341,8 @@ class WatchChangeAggregator {
 
  private:
   /**
-   * Returns all `targetId`s that the watch change applies to: either the
-   * `targetId`s explicitly listed in the change or the `targetId`s of all
+   * Returns all `TargetId`s that the watch change applies to: either the
+   * `TargetId`s explicitly listed in the change or the `TargetId`s of all
    * currently active targets.
    */
   std::vector<model::TargetId> GetTargetIds(
@@ -361,7 +353,7 @@ class WatchChangeAggregator {
    * document key to the given target's mapping.
    */
   void AddDocumentToTarget(model::TargetId target_id,
-                           FSTMaybeDocument* document);
+                           const model::MaybeDocument& document);
 
   /**
    * Removes the provided document from the target mapping. If the document no
@@ -370,9 +362,10 @@ class WatchChangeAggregator {
    * the filter mismatch), the new document can be provided to update the remote
    * document cache.
    */
-  void RemoveDocumentFromTarget(model::TargetId target_id,
-                                const model::DocumentKey& key,
-                                FSTMaybeDocument* _Nullable updated_document);
+  void RemoveDocumentFromTarget(
+      model::TargetId target_id,
+      const model::DocumentKey& key,
+      const absl::optional<model::MaybeDocument>& updated_document);
 
   /**
    * Returns the current count of documents in the target. This includes both
@@ -397,11 +390,11 @@ class WatchChangeAggregator {
   bool IsActiveTarget(model::TargetId target_id) const;
 
   /**
-   * Returns the `FSTQueryData` for an active target (i.e., a target that the
-   * user is still interested in that has no outstanding target change
-   * requests).
+   * Returns the `TargetData` for an active target (i.e., a target that the user
+   * is still interested in that has no outstanding target change requests).
    */
-  FSTQueryData* QueryDataForActiveTarget(model::TargetId target_id) const;
+  absl::optional<local::TargetData> TargetDataForActiveTarget(
+      model::TargetId target_id) const;
 
   /**
    * Resets the state of a Watch target to its initial state (e.g. sets
@@ -419,10 +412,7 @@ class WatchChangeAggregator {
   std::unordered_map<model::TargetId, TargetState> target_states_;
 
   /** Keeps track of the documents to update since the last raised snapshot. */
-  std::unordered_map<model::DocumentKey,
-                     FSTMaybeDocument*,
-                     model::DocumentKeyHash>
-      pending_document_updates_;
+  RemoteEvent::DocumentUpdateMap pending_document_updates_;
 
   /** A mapping of document keys to their set of target IDs. */
   std::unordered_map<model::DocumentKey,
@@ -435,7 +425,7 @@ class WatchChangeAggregator {
    * to be inconsistent and their listens needs to be re-established by
    * `RemoteStore`.
    */
-  std::unordered_set<model::TargetId> pending_target_resets_;
+  RemoteEvent::TargetSet pending_target_resets_;
 
   TargetMetadataProvider* target_metadata_provider_ = nullptr;
 };
@@ -443,7 +433,5 @@ class WatchChangeAggregator {
 }  // namespace remote
 }  // namespace firestore
 }  // namespace firebase
-
-NS_ASSUME_NONNULL_END
 
 #endif  // FIRESTORE_CORE_SRC_FIREBASE_FIRESTORE_REMOTE_REMOTE_EVENT_H_

@@ -16,6 +16,10 @@
 
 #include "Firestore/core/src/firebase/firestore/model/snapshot_version.h"
 
+#include <ostream>
+
+#include "Firestore/core/src/firebase/firestore/util/hashing.h"
+
 namespace firebase {
 namespace firestore {
 namespace model {
@@ -27,6 +31,23 @@ SnapshotVersion::SnapshotVersion(const Timestamp& timestamp)
 const SnapshotVersion& SnapshotVersion::None() {
   static const SnapshotVersion kNone(Timestamp{});
   return kNone;
+}
+
+util::ComparisonResult SnapshotVersion::CompareTo(
+    const SnapshotVersion& rhs) const {
+  return util::Compare(timestamp(), rhs.timestamp());
+}
+
+size_t SnapshotVersion::Hash() const {
+  return util::Hash(timestamp_.seconds(), timestamp_.nanoseconds());
+}
+
+std::string SnapshotVersion::ToString() const {
+  return timestamp_.ToString();
+}
+
+std::ostream& operator<<(std::ostream& os, const SnapshotVersion& version) {
+  return os << version.timestamp_;
 }
 
 }  // namespace model

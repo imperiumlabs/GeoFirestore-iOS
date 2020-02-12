@@ -83,12 +83,12 @@ void LevelDbTransaction::Iterator::Seek(const std::string& key) {
   last_version_ = txn_->version_;
 }
 
-absl::string_view LevelDbTransaction::Iterator::key() {
+const std::string& LevelDbTransaction::Iterator::key() const {
   HARD_ASSERT(Valid(), "key() called on invalid iterator");
   return current_.first;
 }
 
-absl::string_view LevelDbTransaction::Iterator::value() {
+const std::string& LevelDbTransaction::Iterator::value() const {
   HARD_ASSERT(Valid(), "value() called on invalid iterator");
   return current_.second;
 }
@@ -139,21 +139,18 @@ LevelDbTransaction::LevelDbTransaction(DB* db,
                                        absl::string_view label,
                                        const ReadOptions& read_options,
                                        const WriteOptions& write_options)
-    : db_(db),
-      mutations_(),
-      deletions_(),
+    : db_(NOT_NULL(db)),
       read_options_(read_options),
       write_options_(write_options),
-      version_(0),
-      label_(std::string{label}) {
+      label_(label) {
 }
 
 const ReadOptions& LevelDbTransaction::DefaultReadOptions() {
-  static ReadOptions options = ([]() {
+  static ReadOptions options = [] {
     ReadOptions read_options;
     read_options.verify_checksums = true;
     return read_options;
-  })();
+  }();
   return options;
 }
 
@@ -164,7 +161,7 @@ const WriteOptions& LevelDbTransaction::DefaultWriteOptions() {
 
 void LevelDbTransaction::Put(std::string key, std::string value) {
   deletions_.erase(key);
-  mutations_.emplace(std::make_pair(std::move(key), std::move(value)));
+  mutations_[std::move(key)] = std::move(value);
   version_++;
 }
 

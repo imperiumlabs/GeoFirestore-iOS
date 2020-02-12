@@ -16,9 +16,10 @@
 
 #include "Firestore/core/src/firebase/firestore/model/database_id.h"
 
-#include <utility>
+#include <ostream>
 
 #include "Firestore/core/src/firebase/firestore/util/hard_assert.h"
+#include "Firestore/core/src/firebase/firestore/util/hashing.h"
 
 namespace firebase {
 namespace firestore {
@@ -26,10 +27,31 @@ namespace model {
 
 constexpr const char* DatabaseId::kDefault;
 
-DatabaseId::DatabaseId(std::string project_id, std::string database_id)
-    : project_id_{std::move(project_id)}, database_id_{std::move(database_id)} {
-  HARD_ASSERT(!project_id_.empty());
-  HARD_ASSERT(!database_id_.empty());
+DatabaseId::DatabaseId(std::string project_id, std::string database_id) {
+  HARD_ASSERT(!project_id.empty());
+  HARD_ASSERT(!database_id.empty());
+
+  rep_ = std::make_shared<Rep>(std::move(project_id), std::move(database_id));
+}
+
+util::ComparisonResult DatabaseId::CompareTo(
+    const firebase::firestore::model::DatabaseId& rhs) const {
+  util::ComparisonResult cmp = util::Compare(project_id(), rhs.project_id());
+  if (!util::Same(cmp)) return cmp;
+
+  return util::Compare(database_id(), rhs.database_id());
+}
+
+std::string DatabaseId::ToString() const {
+  return absl::StrCat("DatabaseId(", project_id(), ":", database_id(), ")");
+}
+
+std::ostream& operator<<(std::ostream& out, const DatabaseId& database_id) {
+  return out << database_id.ToString();
+}
+
+size_t DatabaseId::Hash() const {
+  return util::Hash(project_id(), database_id());
 }
 
 }  // namespace model

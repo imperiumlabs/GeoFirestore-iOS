@@ -34,7 +34,7 @@ namespace local {
  * references.
  *
  * A reference can be from either listen targets (identified by their TargetId)
- * or mutation batches (identified by their BatchId). See FSTGarbageCollector
+ * or mutation batches (identified by their BatchId). See GarbageCollector
  * for more details.
  *
  * Not to be confused with FIRDocumentReference.
@@ -55,8 +55,8 @@ class DocumentKeyReference {
   }
 
   /**
-   * The targetId of a referring target or the batchId of a referring mutation
-   * batch. (Which this is depends upon which FSTReferenceSet this reference is
+   * The TargetId of a referring target or the BatchId of a referring mutation
+   * batch. (Which this is depends upon which ReferenceSet this reference is
    * a part of.)
    */
   int32_t ref_id() const {
@@ -71,15 +71,15 @@ class DocumentKeyReference {
   std::string ToString() const;
 
   /** Sorts document references by key then Id. */
-  struct ByKey : public util::Comparator<DocumentKeyReference> {
-    bool operator()(const DocumentKeyReference& lhs,
-                    const DocumentKeyReference& rhs) const;
+  struct ByKey {
+    util::ComparisonResult Compare(const DocumentKeyReference& lhs,
+                                   const DocumentKeyReference& rhs) const;
   };
 
   /** Sorts document references by Id then key. */
-  struct ById : public util::Comparator<DocumentKeyReference> {
-    bool operator()(const DocumentKeyReference& lhs,
-                    const DocumentKeyReference& rhs) const;
+  struct ById {
+    util::ComparisonResult Compare(const DocumentKeyReference& lhs,
+                                   const DocumentKeyReference& rhs) const;
   };
 
  private:

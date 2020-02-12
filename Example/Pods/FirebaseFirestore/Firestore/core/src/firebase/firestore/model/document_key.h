@@ -19,12 +19,9 @@
 
 #include <functional>
 #include <initializer_list>
+#include <iosfwd>
 #include <memory>
 #include <string>
-
-#if defined(__OBJC__)
-#import "Firestore/Source/Model/FSTDocumentKey.h"
-#endif  // defined(__OBJC__)
 
 #include "Firestore/core/src/firebase/firestore/model/resource_path.h"
 #include "Firestore/core/src/firebase/firestore/util/comparison.h"
@@ -38,7 +35,7 @@ namespace model {
 /**
  * DocumentKey represents the location of a document in the Firestore database.
  */
-class DocumentKey {
+class DocumentKey : public util::InequalityComparable<DocumentKey> {
  public:
   /** Creates a "blank" document key not associated with any document. */
   DocumentKey() : path_{std::make_shared<ResourcePath>()} {
@@ -50,22 +47,12 @@ class DocumentKey {
   /** Creates a new document key, taking ownership of the given path. */
   explicit DocumentKey(ResourcePath&& path);
 
-#if defined(__OBJC__)
-  NSUInteger Hash() const {
-    return util::Hash(ToString());
-  }
-#endif  // defined(__OBJC__)
-
-  std::string ToString() const {
-    return path().CanonicalString();
-  }
-
   /**
    * Creates and returns a new document key using '/' to split the string into
    * segments.
    */
-  static DocumentKey FromPathString(absl::string_view path) {
-    return DocumentKey{ResourcePath::FromString(path)};
+  static DocumentKey FromPathString(const std::string& path) {
+    return DocumentKey{ResourcePath::FromStringView(path)};
   }
 
   /** Creates and returns a new document key with the given segments. */
@@ -81,13 +68,27 @@ class DocumentKey {
     return path.size() % 2 == 0;
   }
 
+  util::ComparisonResult CompareTo(const DocumentKey& other) const;
+
+  friend bool operator==(const DocumentKey& lhs, const DocumentKey& rhs) {
+    return lhs.path() == rhs.path();
+  }
+
+  size_t Hash() const {
+    return util::Hash(ToString());
+  }
+
+  std::string ToString() const;
+
+  friend std::ostream& operator<<(std::ostream& os, const DocumentKey& key);
+
   /** The path to the document. */
   const ResourcePath& path() const {
     return path_ ? *path_ : Empty().path();
   }
 
-  /** Returns true if the document is in the specified collectionId. */
-  bool HasCollectionId(absl::string_view collection_id) const {
+  /** Returns true if the document is in the specified collection_id. */
+  bool HasCollectionId(const std::string& collection_id) const {
     size_t size = path().size();
     return size >= 2 && path()[size - 2] == collection_id;
   }
@@ -98,53 +99,13 @@ class DocumentKey {
   std::shared_ptr<const ResourcePath> path_;
 };
 
-inline bool operator==(const DocumentKey& lhs, const DocumentKey& rhs) {
-  return lhs.path() == rhs.path();
-}
-inline bool operator!=(const DocumentKey& lhs, const DocumentKey& rhs) {
-  return lhs.path() != rhs.path();
-}
-inline bool operator<(const DocumentKey& lhs, const DocumentKey& rhs) {
-  return lhs.path() < rhs.path();
-}
-inline bool operator<=(const DocumentKey& lhs, const DocumentKey& rhs) {
-  return lhs.path() <= rhs.path();
-}
-inline bool operator>(const DocumentKey& lhs, const DocumentKey& rhs) {
-  return lhs.path() > rhs.path();
-}
-inline bool operator>=(const DocumentKey& lhs, const DocumentKey& rhs) {
-  return lhs.path() >= rhs.path();
-}
-
 struct DocumentKeyHash {
   size_t operator()(const DocumentKey& key) const {
     return util::Hash(key.path());
   }
 };
 
-#if defined(__OBJC__)
-inline NSComparisonResult CompareKeys(const DocumentKey& lhs,
-                                      const DocumentKey& rhs) {
-  if (lhs < rhs) {
-    return NSOrderedAscending;
-  }
-  if (lhs > rhs) {
-    return NSOrderedDescending;
-  }
-  return NSOrderedSame;
-}
-
-#endif  // defined(__OBJC__)
-
 }  // namespace model
-
-namespace util {
-
-template <>
-struct Comparator<model::DocumentKey> : public std::less<model::DocumentKey> {};
-
-}  // namespace util
 }  // namespace firestore
 }  // namespace firebase
 

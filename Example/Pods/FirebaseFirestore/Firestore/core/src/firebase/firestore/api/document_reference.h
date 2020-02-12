@@ -17,50 +17,47 @@
 #ifndef FIRESTORE_CORE_SRC_FIREBASE_FIRESTORE_API_DOCUMENT_REFERENCE_H_
 #define FIRESTORE_CORE_SRC_FIREBASE_FIRESTORE_API_DOCUMENT_REFERENCE_H_
 
-#if !defined(__OBJC__)
-#error "This header only supports Objective-C++"
-#endif  // !defined(__OBJC__)
-
-#import <Foundation/Foundation.h>
-
+#include <memory>
 #include <string>
 #include <utility>
-#include <vector>
-
-#import "FIRDocumentReference.h"
-#import "FIRFirestoreSource.h"
 
 #include "Firestore/core/src/firebase/firestore/api/document_snapshot.h"
 #include "Firestore/core/src/firebase/firestore/api/listener_registration.h"
 #include "Firestore/core/src/firebase/firestore/core/listen_options.h"
 #include "Firestore/core/src/firebase/firestore/model/document_key.h"
 #include "Firestore/core/src/firebase/firestore/model/resource_path.h"
-#include "Firestore/core/src/firebase/firestore/util/statusor_callback.h"
-
-NS_ASSUME_NONNULL_BEGIN
-
-@class FIRFirestore;
-@class FSTMutation;
+#include "Firestore/core/src/firebase/firestore/util/nullability.h"
+#include "Firestore/core/src/firebase/firestore/util/status.h"
+#include "Firestore/core/src/firebase/firestore/util/status_fwd.h"
 
 namespace firebase {
 namespace firestore {
+namespace core {
+
+class ParsedSetData;
+class ParsedUpdateData;
+
+}  // namespace core
+
 namespace api {
 
+class CollectionReference;
 class Firestore;
+enum class Source;
 
 class DocumentReference {
  public:
-  using Completion = void (^)(NSError* _Nullable error) _Nullable;
-
   DocumentReference() = default;
-  DocumentReference(model::ResourcePath path, Firestore* firestore);
-  DocumentReference(model::DocumentKey document_key, Firestore* firestore)
-      : firestore_{firestore}, key_{std::move(document_key)} {
+  DocumentReference(model::ResourcePath path,
+                    std::shared_ptr<Firestore> firestore);
+  DocumentReference(model::DocumentKey document_key,
+                    std::shared_ptr<Firestore> firestore)
+      : firestore_{std::move(firestore)}, key_{std::move(document_key)} {
   }
 
   size_t Hash() const;
 
-  Firestore* firestore() const {
+  const std::shared_ptr<Firestore>& firestore() const {
     return firestore_;
   }
   const model::DocumentKey& key() const {
@@ -69,29 +66,27 @@ class DocumentReference {
 
   const std::string& document_id() const;
 
-  // TODO(varconst) uncomment when core API CollectionReference is implemented.
-  // CollectionReference Parent() const;
+  CollectionReference Parent() const;
 
   std::string Path() const;
 
-  // TODO(varconst) uncomment when core API CollectionReference is implemented.
-  // CollectionReference GetCollectionReference(
-  //     const std::string& collection_path) const;
+  CollectionReference GetCollectionReference(
+      const std::string& collection_path) const;
 
-  void SetData(std::vector<FSTMutation*>&& mutations, Completion completion);
+  void SetData(core::ParsedSetData&& set_data, util::StatusCallback callback);
 
-  void UpdateData(std::vector<FSTMutation*>&& mutations, Completion completion);
+  void UpdateData(core::ParsedUpdateData&& update_data,
+                  util::StatusCallback callback);
 
-  void DeleteDocument(Completion completion);
+  void DeleteDocument(util::StatusCallback callback);
 
-  void GetDocument(FIRFirestoreSource source,
-                   DocumentSnapshot::Listener&& completion);
+  void GetDocument(Source source, DocumentSnapshot::Listener&& callback);
 
-  ListenerRegistration AddSnapshotListener(
+  std::unique_ptr<ListenerRegistration> AddSnapshotListener(
       core::ListenOptions options, DocumentSnapshot::Listener&& listener);
 
  private:
-  Firestore* firestore_ = nullptr;
+  std::shared_ptr<Firestore> firestore_;
   model::DocumentKey key_;
 };
 
@@ -100,7 +95,5 @@ bool operator==(const DocumentReference& lhs, const DocumentReference& rhs);
 }  // namespace api
 }  // namespace firestore
 }  // namespace firebase
-
-NS_ASSUME_NONNULL_END
 
 #endif  // FIRESTORE_CORE_SRC_FIREBASE_FIRESTORE_API_DOCUMENT_REFERENCE_H_

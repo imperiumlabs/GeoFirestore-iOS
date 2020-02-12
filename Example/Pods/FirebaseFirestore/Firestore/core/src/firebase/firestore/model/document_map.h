@@ -19,12 +19,12 @@
 
 #include <utility>
 
-#import "Firestore/Source/Model/FSTDocument.h"
-
 #include "Firestore/core/src/firebase/firestore/immutable/sorted_map.h"
+#include "Firestore/core/src/firebase/firestore/model/document.h"
 #include "Firestore/core/src/firebase/firestore/model/document_key.h"
-
+#include "Firestore/core/src/firebase/firestore/model/maybe_document.h"
 #include "absl/base/attributes.h"
+#include "absl/types/optional.h"
 
 namespace firebase {
 namespace firestore {
@@ -34,7 +34,10 @@ namespace model {
  * Convenience type for a map of keys to MaybeDocuments, since they are so
  * common.
  */
-using MaybeDocumentMap = immutable::SortedMap<DocumentKey, FSTMaybeDocument*>;
+using MaybeDocumentMap = immutable::SortedMap<DocumentKey, MaybeDocument>;
+
+using OptionalMaybeDocumentMap =
+    immutable::SortedMap<DocumentKey, absl::optional<MaybeDocument>>;
 
 /**
  * Convenience type for a map of keys to Documents, since they are so common.
@@ -44,27 +47,22 @@ using MaybeDocumentMap = immutable::SortedMap<DocumentKey, FSTMaybeDocument*>;
  * alias similar to `MaybeDocumentMap`, it couldn't be passed to functions
  * expecting `MaybeDocumentMap`.
  *
- * To work around this, in C++ `DocumentMap` is a simple wrapper over
- * a `MaybeDocumentMap` that forwards all functions to the underlying map but
- * with added type safety (it only accepts `FSTDocument`s, not
- * `FSTMaybeDocument`s). Use `DocumentMap` in functions creating and/or
- * returning maps that only contain `FSTDocument`s; when the `DocumentMap` needs
- * to be passed to a function accepting a `MaybeDocumentMap`, use
- * `underlying_map` function to get (read-only) access to the representation.
- * Also use `underlying_map` for iterating and searching.
+ * To work around this, in C++ `DocumentMap` is a simple wrapper over a
+ * `MaybeDocumentMap` that forwards all functions to the underlying map but with
+ * added type safety (it only accepts `Document`, not `MaybeDocument`). Use
+ * `DocumentMap` in functions creating and/or returning maps that only contain
+ * `Document`; when the `DocumentMap` needs to be passed to a function accepting
+ * a `MaybeDocumentMap`, use `underlying_map` function to get (read-only) access
+ * to the representation. Also use `underlying_map` for iterating and searching.
  */
 class DocumentMap {
  public:
   DocumentMap() = default;
 
   ABSL_MUST_USE_RESULT DocumentMap insert(const DocumentKey& key,
-                                          FSTDocument* value) const {
-    return DocumentMap{map_.insert(key, value)};
-  }
+                                          const Document& value) const;
 
-  ABSL_MUST_USE_RESULT DocumentMap erase(const DocumentKey& key) const {
-    return DocumentMap{map_.erase(key)};
-  }
+  ABSL_MUST_USE_RESULT DocumentMap erase(const DocumentKey& key) const;
 
   bool empty() const {
     return map_.empty();
@@ -84,17 +82,6 @@ class DocumentMap {
 
   MaybeDocumentMap map_;
 };
-
-inline FSTDocument* GetFSTDocumentOrNil(FSTMaybeDocument* maybeDoc) {
-  if ([maybeDoc isKindOfClass:[FSTDocument class]]) {
-    return static_cast<FSTDocument*>(maybeDoc);
-  }
-  return nil;
-}
-
-inline FSTDocument* GetFSTDocumentOrNil(FSTDocument* doc) {
-  return doc;
-}
 
 }  // namespace model
 }  // namespace firestore

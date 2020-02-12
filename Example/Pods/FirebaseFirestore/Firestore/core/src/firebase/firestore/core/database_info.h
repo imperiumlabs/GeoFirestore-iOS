@@ -28,12 +28,6 @@ namespace core {
 /** DatabaseInfo contains data about the database. */
 class DatabaseInfo {
  public:
-#if defined(__OBJC__)
-  // For objective-c++ initialization; to be removed after migration.
-  // Do NOT use in C++ code.
-  DatabaseInfo() = default;
-#endif  // defined(__OBJC__)
-
   /**
    * Creates a new DatabaseInfo.
    *
@@ -43,12 +37,14 @@ class DatabaseInfo {
    * @param host The hostname of the Firestore backend.
    * @param ssl_enabled Whether to use SSL when connecting.
    */
-  DatabaseInfo(const firebase::firestore::model::DatabaseId& database_id,
+  DatabaseInfo(model::DatabaseId database_id,
                std::string persistence_key,
                std::string host,
                bool ssl_enabled);
 
-  const firebase::firestore::model::DatabaseId& database_id() const {
+  DatabaseInfo() = default;
+
+  const model::DatabaseId& database_id() const {
     return database_id_;
   }
 
@@ -65,10 +61,10 @@ class DatabaseInfo {
   }
 
  private:
-  firebase::firestore::model::DatabaseId database_id_;
+  model::DatabaseId database_id_;
   std::string persistence_key_;
   std::string host_;
-  bool ssl_enabled_;
+  bool ssl_enabled_ = false;
 };
 
 }  // namespace core
