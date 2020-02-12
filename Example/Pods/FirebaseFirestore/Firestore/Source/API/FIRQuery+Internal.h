@@ -16,15 +16,31 @@
 
 #import "FIRQuery.h"
 
-@class FSTQuery;
+#include <memory>
+
+#include "Firestore/core/src/firebase/firestore/api/query_core.h"
+#include "Firestore/core/src/firebase/firestore/core/query.h"
+
+namespace api = firebase::firestore::api;
+namespace core = firebase::firestore::core;
 
 NS_ASSUME_NONNULL_BEGIN
 
+@interface FIRQuery (/* Init */)
+
+- (instancetype)initWithQuery:(api::Query &&)query NS_DESIGNATED_INITIALIZER;
+
+- (instancetype)initWithQuery:(core::Query)query
+                    firestore:(std::shared_ptr<api::Firestore>)firestore;
+
+@end
+
 /** Internal FIRQuery API we don't want exposed in our public header files. */
 @interface FIRQuery (Internal)
-+ (FIRQuery *)referenceWithQuery:(FSTQuery *)query firestore:(FIRFirestore *)firestore;
 
-@property(nonatomic, strong, readonly) FSTQuery *query;
+- (const core::Query &)query;
+
+- (const api::Query &)apiQuery;
 
 @end
 

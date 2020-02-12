@@ -20,8 +20,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class FIRQueryDocumentSnapshot;
 
+#if defined(NS_CLOSED_ENUM)
 /** An enumeration of document change types. */
-typedef NS_ENUM(NSInteger, FIRDocumentChangeType) {
+typedef NS_CLOSED_ENUM(NSInteger, FIRDocumentChangeType)
+#else
+/** An enumeration of document change types. */
+typedef NS_ENUM(NSInteger, FIRDocumentChangeType)
+#endif
+{
   /** Indicates a new document was added to the set of documents matching the query. */
   FIRDocumentChangeTypeAdded,
   /** Indicates a document within the query was modified. */

@@ -19,6 +19,7 @@
 #include <algorithm>
 #include <utility>
 
+#include "Firestore/core/src/firebase/firestore/util/exception.h"
 #include "Firestore/core/src/firebase/firestore/util/hard_assert.h"
 #include "absl/strings/str_join.h"
 #include "absl/strings/str_replace.h"
@@ -27,6 +28,8 @@
 namespace firebase {
 namespace firestore {
 namespace model {
+
+using util::ThrowInvalidArgument;
 
 namespace {
 
@@ -78,7 +81,39 @@ struct JoinEscaped {
 };
 }  // namespace
 
-FieldPath FieldPath::FromServerFormat(const absl::string_view path) {
+constexpr const char* FieldPath::kDocumentKeyPath;
+
+FieldPath FieldPath::FromDotSeparatedString(const std::string& path) {
+  return FromDotSeparatedStringView(path);
+}
+
+FieldPath FieldPath::FromDotSeparatedStringView(absl::string_view path) {
+  if (path.find_first_of("~*/[]") != absl::string_view::npos) {
+    ThrowInvalidArgument(
+        "Invalid field path (%s). Paths must not contain '~', '*', '/', '[', "
+        "or ']'",
+        path);
+  }
+
+  SegmentsT segments =
+      absl::StrSplit(path, '.', [path](absl::string_view segment) {
+        if (segment.empty()) {
+          ThrowInvalidArgument(
+              "Invalid field path (%s). Paths must not be empty, begin with "
+              "'.', end with '.', or contain '..'",
+              path);
+        }
+        return true;
+      });
+
+  return FieldPath(std::move(segments));
+}
+
+FieldPath FieldPath::FromServerFormat(const std::string& path) {
+  return FromServerFormatView(path);
+}
+
+FieldPath FieldPath::FromServerFormatView(absl::string_view path) {
   SegmentsT segments;
   std::string segment;
   segment.reserve(path.size());
@@ -154,6 +189,20 @@ bool FieldPath::IsKeyFieldPath() const {
 
 std::string FieldPath::CanonicalString() const {
   return absl::StrJoin(begin(), end(), ".", JoinEscaped());
+}
+
+void FieldPath::ValidateSegments(const SegmentsT& segments) {
+  if (segments.empty()) {
+    ThrowInvalidArgument(
+        "Invalid field path. Provided names must not be empty.");
+  }
+
+  for (size_t i = 0; i < segments.size(); i++) {
+    if (segments[i].empty()) {
+      ThrowInvalidArgument(
+          "Invalid field name at index %s. Field names must not be empty.", i);
+    }
+  }
 }
 
 }  // namespace model

@@ -17,27 +17,25 @@
 #ifndef FIRESTORE_CORE_SRC_FIREBASE_FIRESTORE_MODEL_DATABASE_ID_H_
 #define FIRESTORE_CORE_SRC_FIREBASE_FIRESTORE_MODEL_DATABASE_ID_H_
 
-#include <cstdint>
+#include <iosfwd>
+#include <memory>
 #include <string>
+#include <utility>
 
-#include "Firestore/core/src/firebase/firestore/util/hashing.h"
-#include "absl/strings/string_view.h"
+#include "Firestore/core/src/firebase/firestore/util/comparison.h"
 
 namespace firebase {
 namespace firestore {
 namespace model {
 
 /** A DatabaseId represents a particular database in the Firestore. */
-class DatabaseId {
+class DatabaseId : public util::Comparable<DatabaseId> {
  public:
   /** The default name for "unset" database ID in resource names. */
   static constexpr const char* kDefault = "(default)";
 
-#if defined(__OBJC__)
-  // For objective-c++ initialization; to be removed after migration.
-  // Do NOT use in C++ code.
+  // TODO(wilhuff): Remove this after FieldValue rewrite.
   DatabaseId() = default;
-#endif  // defined(__OBJC__)
 
   /**
    * Creates and returns a new DatabaseId.
@@ -45,62 +43,44 @@ class DatabaseId {
    * @param project_id The project for the database.
    * @param database_id The database in the project to use.
    */
-  DatabaseId(std::string project_id, std::string database_id);
+  explicit DatabaseId(std::string project_id,
+                      std::string database_id = kDefault);
 
   const std::string& project_id() const {
-    return project_id_;
+    return rep_->project_id;
   }
 
   const std::string& database_id() const {
-    return database_id_;
+    return rep_->database_id;
   }
 
   /** Whether this is the default database of the project. */
   bool IsDefaultDatabase() const {
-    return database_id_ == kDefault;
+    return rep_->database_id == kDefault;
   }
 
-#if defined(__OBJC__)
-  // For objective-c++ hash; to be removed after migration.
-  // Do NOT use in C++ code.
-  size_t Hash() const {
-    return util::Hash(project_id_, database_id_);
-  }
-#endif  // defined(__OBJC__)
+  util::ComparisonResult CompareTo(const DatabaseId& rhs) const;
 
-  friend bool operator<(const DatabaseId& lhs, const DatabaseId& rhs);
+  std::string ToString() const;
+  friend std::ostream& operator<<(std::ostream& out,
+                                  const DatabaseId& database_id);
+
+  size_t Hash() const;
 
  private:
-  std::string project_id_;
-  std::string database_id_;
+  // DocumentIds are copied into every ReferenceValue we create so hide the
+  // actual values behind a shared_ptr to make copying cheaper.
+  struct Rep {
+    Rep(std::string&& project_id, std::string&& database_id)
+        : project_id{std::move(project_id)},
+          database_id{std::move(database_id)} {
+    }
+    std::string project_id;
+    std::string database_id;
+  };
+
+  std::shared_ptr<const Rep> rep_;
 };
-
-/** Compares against another DatabaseId. */
-inline bool operator<(const DatabaseId& lhs, const DatabaseId& rhs) {
-  return lhs.project_id_ < rhs.project_id_ ||
-         (lhs.project_id_ == rhs.project_id_ &&
-          lhs.database_id_ < rhs.database_id_);
-}
-
-inline bool operator>(const DatabaseId& lhs, const DatabaseId& rhs) {
-  return rhs < lhs;
-}
-
-inline bool operator>=(const DatabaseId& lhs, const DatabaseId& rhs) {
-  return !(lhs < rhs);
-}
-
-inline bool operator<=(const DatabaseId& lhs, const DatabaseId& rhs) {
-  return !(lhs > rhs);
-}
-
-inline bool operator!=(const DatabaseId& lhs, const DatabaseId& rhs) {
-  return lhs < rhs || lhs > rhs;
-}
-
-inline bool operator==(const DatabaseId& lhs, const DatabaseId& rhs) {
-  return !(lhs != rhs);
-}
 
 }  // namespace model
 }  // namespace firestore

@@ -17,10 +17,6 @@
 #ifndef FIRESTORE_CORE_SRC_FIREBASE_FIRESTORE_CORE_VIEW_SNAPSHOT_H_
 #define FIRESTORE_CORE_SRC_FIREBASE_FIRESTORE_CORE_VIEW_SNAPSHOT_H_
 
-#if !defined(__OBJC__)
-#error "This header only supports Objective-C++"
-#endif  // !defined(__OBJC__)
-
 #include <functional>
 #include <iosfwd>
 #include <memory>
@@ -29,16 +25,13 @@
 #include <vector>
 
 #include "Firestore/core/src/firebase/firestore/core/event_listener.h"
+#include "Firestore/core/src/firebase/firestore/core/query.h"
 #include "Firestore/core/src/firebase/firestore/immutable/sorted_map.h"
+#include "Firestore/core/src/firebase/firestore/model/document.h"
 #include "Firestore/core/src/firebase/firestore/model/document_key.h"
 #include "Firestore/core/src/firebase/firestore/model/document_key_set.h"
 #include "Firestore/core/src/firebase/firestore/model/document_set.h"
 #include "Firestore/core/src/firebase/firestore/util/statusor.h"
-
-NS_ASSUME_NONNULL_BEGIN
-
-@class FSTDocument;
-@class FSTQuery;
 
 namespace firebase {
 namespace firestore {
@@ -52,17 +45,13 @@ class DocumentViewChange {
    * NOTE: We sort document changes by their type, so the ordering of this enum
    * is significant.
    */
-  enum class Type { kRemoved = 0, kAdded, kModified, kMetadata };
+  enum class Type { Removed = 0, Added, Modified, Metadata };
 
   DocumentViewChange() = default;
 
-  DocumentViewChange(FSTDocument* document, Type type)
-      : document_{document}, type_{type} {
-  }
+  DocumentViewChange(model::Document document, Type type);
 
-  FSTDocument* document() const {
-    return document_;
-  }
+  const model::Document& document() const;
   DocumentViewChange::Type type() const {
     return type_;
   }
@@ -71,7 +60,7 @@ class DocumentViewChange {
   size_t Hash() const;
 
  private:
-  FSTDocument* document_ = nullptr;
+  model::Document document_;
   Type type_{};
 };
 
@@ -111,7 +100,7 @@ class ViewSnapshot {
   using Listener = std::unique_ptr<EventListener<ViewSnapshot>>;
   using SharedListener = std::shared_ptr<EventListener<ViewSnapshot>>;
 
-  ViewSnapshot(FSTQuery* query,
+  ViewSnapshot(Query query,
                model::DocumentSet documents,
                model::DocumentSet old_documents,
                std::vector<DocumentViewChange> document_changes,
@@ -124,16 +113,14 @@ class ViewSnapshot {
    * Returns a view snapshot as if all documents in the snapshot were
    * added.
    */
-  static ViewSnapshot FromInitialDocuments(FSTQuery* query,
+  static ViewSnapshot FromInitialDocuments(Query query,
                                            model::DocumentSet documents,
                                            model::DocumentKeySet mutated_keys,
                                            bool from_cache,
                                            bool excludes_metadata_changes);
 
   /** The query this view is tracking the results for. */
-  FSTQuery* query() const {
-    return query_;
-  }
+  const Query& query() const;
 
   /** The documents currently known to be results of the query. */
   const model::DocumentSet& documents() const {
@@ -180,7 +167,7 @@ class ViewSnapshot {
   size_t Hash() const;
 
  private:
-  FSTQuery* query_ = nil;
+  Query query_;
 
   model::DocumentSet documents_;
   model::DocumentSet old_documents_;
@@ -197,7 +184,5 @@ bool operator==(const ViewSnapshot& lhs, const ViewSnapshot& rhs);
 }  // namespace core
 }  // namespace firestore
 }  // namespace firebase
-
-NS_ASSUME_NONNULL_END
 
 #endif  // FIRESTORE_CORE_SRC_FIREBASE_FIRESTORE_CORE_VIEW_SNAPSHOT_H_

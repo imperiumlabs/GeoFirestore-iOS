@@ -22,51 +22,62 @@
 
 #import <Foundation/Foundation.h>
 
-#import <FirebaseFirestore/FIRFirestoreErrors.h>  // for FIRFirestoreErrorDomain
+#include <functional>
+#include <utility>
 
 #include "Firestore/core/include/firebase/firestore/firestore_errors.h"
-#include "Firestore/core/src/firebase/firestore/util/status.h"
-#include "Firestore/core/src/firebase/firestore/util/string_apple.h"
+#include "Firestore/core/src/firebase/firestore/util/status_fwd.h"
 #include "absl/strings/string_view.h"
+
+NS_ASSUME_NONNULL_BEGIN
+
+// The Cloud Firestore error domain. Keep in sync with FIRFirestoreErrors.h.
+// Exposed here to make it possible to build in CMake without bringing in the
+// sources under Firestore/Source.
+FOUNDATION_EXPORT NSString* const FIRFirestoreErrorDomain
+    NS_SWIFT_NAME(FirestoreErrorDomain);
 
 namespace firebase {
 namespace firestore {
 namespace util {
 
 // Translates a set of error_code and error_msg to an NSError.
-inline NSError* MakeNSError(const int64_t error_code,
-                            const absl::string_view error_msg) {
-  if (error_code == FirestoreErrorCode::Ok) {
-    return nil;
+NSError* MakeNSError(int64_t error_code,
+                     const absl::string_view error_msg,
+                     NSError* cause = nil);
+
+NSError* MakeNSError(const util::Status& status);
+
+Status MakeStatus(NSError* error);
+
+using VoidErrorBlock = void (^)(NSError* _Nullable error);
+
+util::StatusCallback MakeCallback(VoidErrorBlock _Nullable block);
+
+template <typename T>
+using VoidValueErrorBlock = void (^)(T _Nullable value,
+                                     NSError* _Nullable error);
+
+template <typename T>
+util::StatusOrCallback<T> MakeCallback(VoidValueErrorBlock<T> _Nullable block) {
+  if (block) {
+    return [block](StatusOr<T> maybe_value) {
+      if (maybe_value.ok()) {
+        block(std::move(maybe_value).ValueOrDie(), nil);
+      } else {
+        block(nil, MakeNSError(std::move(maybe_value).status()));
+      }
+    };
+  } else {
+    return [](StatusOr<T> maybe_value) { (void)maybe_value; };
   }
-  return [NSError
-      errorWithDomain:FIRFirestoreErrorDomain
-                 code:static_cast<NSInteger>(error_code)
-             userInfo:@{NSLocalizedDescriptionKey : WrapNSString(error_msg)}];
-}
-
-inline NSError* MakeNSError(const util::Status& status) {
-  return MakeNSError(status.code(), status.error_message());
-}
-
-inline Status MakeStatus(NSError* error) {
-  if (!error) {
-    return Status::OK();
-  }
-
-  HARD_ASSERT(error.domain == FIRFirestoreErrorDomain,
-              "Can only translate a Firestore error to a status");
-  auto error_code = static_cast<int>(error.code);
-  HARD_ASSERT(error_code >= FirestoreErrorCode::Cancelled &&
-                  error_code <= FirestoreErrorCode::Unauthenticated,
-              "Unknown error code");
-  return Status{static_cast<FirestoreErrorCode>(error_code),
-                MakeString(error.localizedDescription)};
 }
 
 }  // namespace util
 }  // namespace firestore
 }  // namespace firebase
+
+NS_ASSUME_NONNULL_END
 
 #endif  // __OBJC__
 

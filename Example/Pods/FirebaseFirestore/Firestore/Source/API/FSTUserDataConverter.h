@@ -18,16 +18,19 @@
 
 #include <vector>
 
+#include "Firestore/core/include/firebase/firestore/timestamp.h"
 #include "Firestore/core/src/firebase/firestore/core/user_data.h"
 #include "Firestore/core/src/firebase/firestore/model/database_id.h"
 #include "Firestore/core/src/firebase/firestore/model/document_key.h"
 #include "Firestore/core/src/firebase/firestore/model/field_mask.h"
 #include "Firestore/core/src/firebase/firestore/model/field_transform.h"
+#include "Firestore/core/src/firebase/firestore/model/field_value.h"
 #include "Firestore/core/src/firebase/firestore/model/precondition.h"
 
-@class FSTObjectValue;
-@class FSTFieldValue;
-@class FSTMutation;
+@class FIRTimestamp;
+
+namespace core = firebase::firestore::core;
+namespace model = firebase::firestore::model;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -42,14 +45,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)init NS_UNAVAILABLE;
 
-- (instancetype)initWithKey:(firebase::firestore::model::DocumentKey)key
-                 databaseID:(const firebase::firestore::model::DatabaseId *)databaseID
-    NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithKey:(model::DocumentKey)key
+                 databaseID:(model::DatabaseId)databaseID NS_DESIGNATED_INITIALIZER;
 
-- (const firebase::firestore::model::DocumentKey &)key;
+- (const model::DocumentKey &)key;
 
-// Does not own the DatabaseId instance.
-@property(nonatomic, assign, readonly) const firebase::firestore::model::DatabaseId *databaseID;
+@property(nonatomic, assign, readonly) const model::DatabaseId &databaseID;
 
 @end
 
@@ -66,21 +67,28 @@ typedef id _Nullable (^FSTPreConverterBlock)(id _Nullable);
 @interface FSTUserDataConverter : NSObject
 
 - (instancetype)init NS_UNAVAILABLE;
-- (instancetype)initWithDatabaseID:(const firebase::firestore::model::DatabaseId *)databaseID
+- (instancetype)initWithDatabaseID:(model::DatabaseId)databaseID
                       preConverter:(FSTPreConverterBlock)preConverter NS_DESIGNATED_INITIALIZER;
 
 /** Parse document data from a non-merge setData call.*/
-- (firebase::firestore::core::ParsedSetData)parsedSetData:(id)input;
+- (core::ParsedSetData)parsedSetData:(id)input;
 
 /** Parse document data from a setData call with `merge:YES`. */
-- (firebase::firestore::core::ParsedSetData)parsedMergeData:(id)input
-                                                  fieldMask:(nullable NSArray<id> *)fieldMask;
+- (core::ParsedSetData)parsedMergeData:(id)input fieldMask:(nullable NSArray<id> *)fieldMask;
 
 /** Parse update data from an updateData call. */
-- (firebase::firestore::core::ParsedUpdateData)parsedUpdateData:(id)input;
+- (core::ParsedUpdateData)parsedUpdateData:(id)input;
 
 /** Parse a "query value" (e.g. value in a where filter or a value in a cursor bound). */
-- (FSTFieldValue *)parsedQueryValue:(id)input;
+- (model::FieldValue)parsedQueryValue:(id)input;
+
+/**
+ * Parse a "query value" (e.g. value in a where filter or a value in a cursor bound).
+ *
+ * @param allowArrays Whether the query value is an array that may directly contain additional
+ * arrays (e.g.) the operand of an `in` query).
+ */
+- (model::FieldValue)parsedQueryValue:(id)input allowArrays:(bool)allowArrays;
 
 @end
 

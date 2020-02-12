@@ -14,31 +14,36 @@
  * limitations under the License.
  */
 
-#include "Firestore/core/src/firebase/firestore/util/warnings.h"
-
 #import "FIRFirestoreSettings.h"
 
-#import "Firestore/Source/Util/FSTUsageValidation.h"
+#include "Firestore/core/src/firebase/firestore/api/settings.h"
+#include "Firestore/core/src/firebase/firestore/util/exception.h"
+#include "Firestore/core/src/firebase/firestore/util/string_apple.h"
+#include "Firestore/core/src/firebase/firestore/util/warnings.h"
+#include "absl/base/attributes.h"
+#include "absl/memory/memory.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-static NSString *const kDefaultHost = @"firestore.googleapis.com";
-static const BOOL kDefaultSSLEnabled = YES;
-static const BOOL kDefaultPersistenceEnabled = YES;
-static const int64_t kDefaultCacheSizeBytes = 100 * 1024 * 1024;
-static const int64_t kMinimumCacheSizeBytes = 1 * 1024 * 1024;
-static const BOOL kDefaultTimestampsInSnapshotsEnabled = YES;
+namespace api = firebase::firestore::api;
+namespace util = firebase::firestore::util;
+using api::Settings;
+using util::ThrowInvalidArgument;
+
+// Public constant
+ABSL_CONST_INIT extern "C" const int64_t kFIRFirestoreCacheSizeUnlimited =
+    api::Settings::CacheSizeUnlimited;
 
 @implementation FIRFirestoreSettings
 
 - (instancetype)init {
   if (self = [super init]) {
-    _host = kDefaultHost;
-    _sslEnabled = kDefaultSSLEnabled;
+    _host = [NSString stringWithUTF8String:Settings::DefaultHost];
+    _sslEnabled = Settings::DefaultSslEnabled;
     _dispatchQueue = dispatch_get_main_queue();
-    _persistenceEnabled = kDefaultPersistenceEnabled;
-    _timestampsInSnapshotsEnabled = kDefaultTimestampsInSnapshotsEnabled;
-    _cacheSizeBytes = kDefaultCacheSizeBytes;
+    _persistenceEnabled = Settings::DefaultPersistenceEnabled;
+    _timestampsInSnapshotsEnabled = Settings::DefaultTimestampsInSnapshotsEnabled;
+    _cacheSizeBytes = Settings::DefaultCacheSizeBytes;
   }
   return self;
 }
@@ -88,30 +93,40 @@ static const BOOL kDefaultTimestampsInSnapshotsEnabled = YES;
 
 - (void)setHost:(NSString *)host {
   if (!host) {
-    FSTThrowInvalidArgument(
-        @"host setting may not be nil. You should generally just use the default value "
-         "(which is %@)",
-        kDefaultHost);
+    ThrowInvalidArgument("Host setting may not be nil. You should generally just use the default "
+                         "value (which is %s)",
+                         Settings::DefaultHost);
   }
   _host = [host mutableCopy];
 }
 
 - (void)setDispatchQueue:(dispatch_queue_t)dispatchQueue {
   if (!dispatchQueue) {
-    FSTThrowInvalidArgument(
-        @"dispatch queue setting may not be nil. Create a new dispatch queue with "
-         "dispatch_queue_create(\"com.example.MyQueue\", NULL) or just use the default "
-         "(which is the main queue, returned from dispatch_get_main_queue())");
+    ThrowInvalidArgument(
+        "Dispatch queue setting may not be nil. Create a new dispatch queue with "
+        "dispatch_queue_create(\"com.example.MyQueue\", NULL) or just use the default (which is "
+        "the main queue, returned from dispatch_get_main_queue())");
   }
   _dispatchQueue = dispatchQueue;
 }
 
 - (void)setCacheSizeBytes:(int64_t)cacheSizeBytes {
   if (cacheSizeBytes != kFIRFirestoreCacheSizeUnlimited &&
-      cacheSizeBytes < kMinimumCacheSizeBytes) {
-    FSTThrowInvalidArgument(@"Cache size must be set to at least %i bytes", kMinimumCacheSizeBytes);
+      cacheSizeBytes < Settings::MinimumCacheSizeBytes) {
+    ThrowInvalidArgument("Cache size must be set to at least %s bytes",
+                         Settings::MinimumCacheSizeBytes);
   }
   _cacheSizeBytes = cacheSizeBytes;
+}
+
+- (api::Settings)internalSettings {
+  api::Settings settings;
+  settings.set_host(util::MakeString(_host));
+  settings.set_ssl_enabled(_sslEnabled);
+  settings.set_persistence_enabled(_persistenceEnabled);
+  settings.set_timestamps_in_snapshots_enabled(_timestampsInSnapshotsEnabled);
+  settings.set_cache_size_bytes(_cacheSizeBytes);
+  return settings;
 }
 
 @end

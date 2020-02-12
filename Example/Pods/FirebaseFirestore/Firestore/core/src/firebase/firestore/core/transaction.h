@@ -17,39 +17,38 @@
 #ifndef FIRESTORE_CORE_SRC_FIREBASE_FIRESTORE_CORE_TRANSACTION_H_
 #define FIRESTORE_CORE_SRC_FIREBASE_FIRESTORE_CORE_TRANSACTION_H_
 
-#if !defined(__OBJC__)
-#error "This header only supports Objective-C++"
-#endif  // !defined(__OBJC__)
-
 #include <functional>
+#include <memory>
 #include <unordered_map>
+#include <unordered_set>
 #include <vector>
 
-#include "Firestore/core/src/firebase/firestore/core/user_data.h"
 #include "Firestore/core/src/firebase/firestore/model/document_key.h"
+#include "Firestore/core/src/firebase/firestore/model/mutation.h"
 #include "Firestore/core/src/firebase/firestore/model/precondition.h"
 #include "Firestore/core/src/firebase/firestore/model/snapshot_version.h"
-#include "Firestore/core/src/firebase/firestore/remote/datastore.h"
 #include "Firestore/core/src/firebase/firestore/util/status.h"
 #include "Firestore/core/src/firebase/firestore/util/statusor.h"
+#include "absl/types/any.h"
 #include "absl/types/optional.h"
-
-NS_ASSUME_NONNULL_BEGIN
-
-@class FSTMaybeDocument;
-@class FSTMutation;
 
 namespace firebase {
 namespace firestore {
+namespace remote {
+
+class Datastore;
+
+}  // namespace remote
+
 namespace core {
+
+class ParsedSetData;
+class ParsedUpdateData;
 
 class Transaction {
  public:
-  // TODO(varconst): once `FSTMaybeDocument` is replaced with a C++ equivalent,
-  // this function could take a single `StatusOr` parameter.
   using LookupCallback = std::function<void(
-      const std::vector<FSTMaybeDocument*>&, const util::Status&)>;
-  using CommitCallback = std::function<void(const util::Status&)>;
+      const util::StatusOr<std::vector<model::MaybeDocument>>&)>;
 
   Transaction() = default;
   explicit Transaction(remote::Datastore* transaction);
@@ -84,7 +83,18 @@ class Transaction {
    * callback when finished. Once this is called, no other mutations or
    * commits are allowed on the transaction.
    */
-  void Commit(CommitCallback&& callback);
+  void Commit(util::StatusCallback&& callback);
+
+  /**
+   * Marks the transaction as permanently failed, so the transaction will not
+   * retry.
+   */
+  void MarkPermanentlyFailed();
+
+  /**
+   * Checks if the transaction is permanently failed.
+   */
+  bool IsPermanentlyFailed() const;
 
  private:
   /**
@@ -93,10 +103,10 @@ class Transaction {
    * error. When the transaction is committed, the versions recorded will be set
    * as preconditions on the writes sent to the backend.
    */
-  util::Status RecordVersion(FSTMaybeDocument* doc);
+  util::Status RecordVersion(const model::MaybeDocument& doc);
 
   /** Stores mutations to be written when `Commit` is called. */
-  void WriteMutations(std::vector<FSTMutation*>&& mutations);
+  void WriteMutations(std::vector<model::Mutation>&& mutations);
 
   /**
    * Returns version of this doc when it was read in this transaction as a
@@ -118,14 +128,23 @@ class Transaction {
 
   remote::Datastore* datastore_ = nullptr;
 
-  std::vector<FSTMutation*> mutations_;
+  std::vector<model::Mutation> mutations_;
   bool committed_ = false;
+  bool permanent_error_ = false;
 
   /**
-   * An error that may have occurred as a consequence of a write. If set, needs
-   * to be raised in the completion handler instead of trying to commit.
+   * A deferred usage error that occurred previously in this transaction that
+   * will cause the transaction to fail once it actually commits.
    */
   util::Status last_write_error_;
+
+  /**
+   * Set of documents that have been written in the transaction.
+   *
+   * When there's more than one write to the same key in a transaction, any
+   * writes after the first are handled differently.
+   */
+  std::unordered_set<model::DocumentKey, model::DocumentKeyHash> written_docs_;
 
   std::unordered_map<model::DocumentKey,
                      model::SnapshotVersion,
@@ -133,10 +152,22 @@ class Transaction {
       read_versions_;
 };
 
+using TransactionResultCallback = util::StatusCallback;
+
+/**
+ * TransactionUpdateCallback is a block that wraps a user's transaction update
+ * block internally.
+ *
+ * The update block will be called with two parameters:
+ *   * The transaction: an object with methods for performing reads and writes
+ * within the transaction.
+ *   * The callback: to be called by the block once the user's code is finished.
+ */
+using TransactionUpdateCallback = std::function<void(
+    std::shared_ptr<Transaction>, TransactionResultCallback)>;
+
 }  // namespace core
 }  // namespace firestore
 }  // namespace firebase
-
-NS_ASSUME_NONNULL_END
 
 #endif  // FIRESTORE_CORE_SRC_FIREBASE_FIRESTORE_CORE_TRANSACTION_H_

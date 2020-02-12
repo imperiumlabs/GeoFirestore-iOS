@@ -20,7 +20,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** Internal FIRGeoPoint API we don't want exposed in our public header files. */
 @interface FIRGeoPoint (Internal)
+
 - (NSComparisonResult)compare:(FIRGeoPoint *)other;
+
 @end
 
 NS_ASSUME_NONNULL_END
