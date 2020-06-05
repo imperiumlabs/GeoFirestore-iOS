@@ -175,6 +175,22 @@ When the query criteria is updated, the existing locations are re-queried and th
 ready event is fired again once all events for the updated query have been
 fired. This includes document exited events for documents that no longer match the query.
 
+#### Query the location "one-shot"
+Sometimes it's useful to have the possibility to search for all the documents present in a geographical area without, however, listening to data variations; to do so simply call:
+
+````swift
+query.getAtLocation() {
+    documentSnapshots, err in
+    if let err = err {
+        // Handle error here
+    } else {
+        // access documentSnapshots here
+        documentSnapshots.map{print($0.documentID)}
+    }
+}
+````
+It returns a list of all the documents presents in the area and an error if something goes wrong.
+
 #### Updating the query criteria
 
 To update the query criteria you can use the `center` and `radius` properties on
