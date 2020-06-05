@@ -197,6 +197,7 @@ public enum GFSEventType {
 public typealias GFSQueryResultBlock = (String?, CLLocation?) -> Void
 public typealias GFSReadyBlock = () -> Void
 public typealias GFSQueryHandle = UInt
+public typealias GFSQuerySnapshotsBlock = ([QueryDocumentSnapshot], Error?) -> Void
 
 internal class GFSGeoHashQueryListener {
     var childAddedListener: ListenerRegistration?
@@ -592,6 +593,36 @@ public class GFSQuery {
         }
         return firebaseHandle
         
+    }
+
+    /**
+     * Return Array of Document Snapshots matching the Query
+     */
+    public func getAtLocation(completionHandler: @escaping GFSQuerySnapshotsBlock) {
+        let requestGroup = DispatchGroup()
+        let newQueries = queriesForCurrentCriteria()
+        var queryErr : Error?
+        var result = [QueryDocumentSnapshot]()
+        for (_, element: query) in newQueries.enumerated() {
+            requestGroup.enter()
+            if let query = query as? GFGeoHashQuery{
+                let queryFirestore: Query = self.fireStoreQueryForGeoHashQuery(query: query)
+                queryFirestore.getDocuments() {
+                    snapshot, err in
+                    if let err = err {
+                        queryErr = err
+                        requestGroup.leave()
+                        return
+                    }
+                    result.append(contentsOf: snapshot!.documents)
+                    requestGroup.leave()
+                }
+            }
+        }
+        
+        requestGroup.notify(queue: geoFirestore.callbackQueue) {
+            completionHandler(result, queryErr)
+        }
     }
     
     /**
